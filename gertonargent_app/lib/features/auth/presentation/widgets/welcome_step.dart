@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/onboarding_provider.dart';
 import '../../../../data/local/registration_cache.dart';
+import '../../../../data/services/api_service.dart';
 import '../../providers/auth_provider.dart';
 import '../../../navigation/main_navigation.dart';
 
@@ -23,13 +24,16 @@ class WelcomeStep extends ConsumerWidget {
     );
 
     try {
-      // Gather cached registration data and merge with onboarding provider fields
-      final reg = RegistrationCache.all();
-      final email = reg['email']?.toString() ?? onboardingData.email!;
-      final password = reg['password']?.toString() ?? onboardingData.password!;
-      final firstName =
-          reg['firstName']?.toString() ?? onboardingData.firstName;
-      final lastName = reg['lastName']?.toString() ?? onboardingData.lastName;
+      // Use data from onboarding provider
+      final email = onboardingData.email!;
+      final password = onboardingData.password!;
+      final firstName = onboardingData.firstName;
+      final lastName = onboardingData.lastName;
+      final phone = onboardingData.fullPhoneNumber;
+      final profession = onboardingData.profession;
+      final incomeRange = onboardingData.incomeRange;
+      final goals = onboardingData.goals;
+      final categories = onboardingData.categories;
 
       // Enregistrer l'utilisateur avec toutes les données via ApiService
       final api = ref.read(apiServiceProvider);
@@ -38,11 +42,11 @@ class WelcomeStep extends ConsumerWidget {
         'password': password,
         'first_name': firstName,
         'last_name': lastName,
-        // include extra profile fields if present in cache
-        'profession': reg['profession'],
-        'income_range': reg['incomeRange'],
-        'goals': reg['goals'],
-        'spending_categories': reg['categories'],
+        if (phone != null) 'phone': phone,
+        'profession': profession,
+        'income_range': incomeRange,
+        'goals': goals,
+        'spending_categories': categories,
       };
 
       try {
@@ -116,7 +120,7 @@ class WelcomeStep extends ConsumerWidget {
                 child: Container(
                   padding: const EdgeInsets.all(40),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
+                    color: Colors.white.withValues(alpha: 0.2),
                     shape: BoxShape.circle,
                   ),
                   child: const Text(

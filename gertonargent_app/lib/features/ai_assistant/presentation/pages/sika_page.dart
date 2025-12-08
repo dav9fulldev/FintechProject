@@ -81,7 +81,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                 Text(
                   _getStatusText(sikaData.state),
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.8),
+                    color: Colors.white.withValues(alpha: 0.8),
                     fontSize: 12,
                   ),
                 ),
@@ -124,7 +124,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                 borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.black.withValues(alpha: 0.1),
                     blurRadius: 4,
                   ),
                 ],
@@ -209,7 +209,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.08),
+                        color: Colors.black.withValues(alpha: 0.08),
                         blurRadius: 8,
                         offset: const Offset(0, 2),
                       ),
@@ -301,7 +301,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),
@@ -397,8 +397,8 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                       boxShadow: [
                         BoxShadow(
                           color: isListening
-                              ? const Color(0xFFFF6B00).withOpacity(0.4)
-                              : const Color(0xFF00A86B).withOpacity(0.4),
+                              ? const Color(0xFFFF6B00).withValues(alpha: 0.4)
+                              : const Color(0xFF00A86B).withValues(alpha: 0.4),
                           blurRadius: 20,
                           offset: const Offset(0, 4),
                         ),

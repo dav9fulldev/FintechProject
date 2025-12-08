@@ -28,19 +28,31 @@ class _GoalsListPageState extends ConsumerState<GoalsListPage> {
       appBar: AppBar(
         backgroundColor: const Color(0xFF00A86B),
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: const Text('Mes Objectifs', style: TextStyle(color: Colors.white)),
+        title:
+            const Text('Mes Objectifs', style: TextStyle(color: Colors.white)),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add, color: Colors.white),
+            onPressed: () async {
+              await Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const AddGoalPage()));
+              ref.read(goalProvider.notifier).loadGoals();
+            },
+          ),
+        ],
       ),
       body: Column(
         children: [
           Container(
             width: double.infinity,
             decoration: const BoxDecoration(
-              gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [Color(0xFF00A86B), Color(0xFF00D084)]),
-              borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xFF00A86B), Color(0xFF00D084)]),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30)),
             ),
             padding: const EdgeInsets.all(24),
             child: Column(
@@ -48,29 +60,49 @@ class _GoalsListPageState extends ConsumerState<GoalsListPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    _StatCard(label: 'Objectifs actifs', value: '${goalState.activeGoals.length}', icon: Icons.flag),
-                    _StatCard(label: 'Completes', value: '${goalState.completedGoals.length}', icon: Icons.check_circle),
+                    _StatCard(
+                        label: 'Objectifs actifs',
+                        value: '${goalState.activeGoals.length}',
+                        icon: Icons.flag),
+                    _StatCard(
+                        label: 'Completes',
+                        value: '${goalState.completedGoals.length}',
+                        icon: Icons.check_circle),
                   ],
                 ),
                 const SizedBox(height: 16),
                 Container(
                   padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(16)),
+                  decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.2),
+                      borderRadius: BorderRadius.circular(16)),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text('Total economise', style: TextStyle(color: Colors.white, fontSize: 14)),
-                          Text('${NumberFormat('#,###').format(goalState.totalSavedAmount)} FCFA', style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+                          const Text('Total economise',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 14)),
+                          Text(
+                              '${NumberFormat('#,###').format(goalState.totalSavedAmount)} FCFA',
+                              style: const TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold)),
                         ],
                       ),
                       const SizedBox(height: 8),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text('Objectif total', style: TextStyle(color: Colors.white70, fontSize: 12)),
-                          Text('${NumberFormat('#,###').format(goalState.totalTargetAmount)} FCFA', style: const TextStyle(color: Colors.white70, fontSize: 14)),
+                          const Text('Objectif total',
+                              style: TextStyle(
+                                  color: Colors.white70, fontSize: 12)),
+                          Text(
+                              '${NumberFormat('#,###').format(goalState.totalTargetAmount)} FCFA',
+                              style: const TextStyle(
+                                  color: Colors.white70, fontSize: 14)),
                         ],
                       ),
                     ],
@@ -87,16 +119,22 @@ class _GoalsListPageState extends ConsumerState<GoalsListPage> {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.flag_outlined, size: 80, color: Colors.grey[400]),
+                            Icon(Icons.flag_outlined,
+                                size: 80, color: Colors.grey[400]),
                             const SizedBox(height: 16),
-                            Text('Aucun objectif', style: TextStyle(fontSize: 18, color: Colors.grey[600])),
+                            Text('Aucun objectif',
+                                style: TextStyle(
+                                    fontSize: 18, color: Colors.grey[600])),
                             const SizedBox(height: 8),
-                            Text('Creez votre premier objectif', style: TextStyle(fontSize: 14, color: Colors.grey[500])),
+                            Text('Creez votre premier objectif',
+                                style: TextStyle(
+                                    fontSize: 14, color: Colors.grey[500])),
                           ],
                         ),
                       )
                     : RefreshIndicator(
-                        onRefresh: () => ref.read(goalProvider.notifier).loadGoals(),
+                        onRefresh: () =>
+                            ref.read(goalProvider.notifier).loadGoals(),
                         child: ListView.builder(
                           padding: const EdgeInsets.all(16),
                           itemCount: goalState.activeGoals.length,
@@ -109,14 +147,6 @@ class _GoalsListPageState extends ConsumerState<GoalsListPage> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          await Navigator.push(context, MaterialPageRoute(builder: (context) => const AddGoalPage()));
-          ref.read(goalProvider.notifier).loadGoals();
-        },
-        backgroundColor: const Color(0xFF00A86B),
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
@@ -126,20 +156,29 @@ class _StatCard extends StatelessWidget {
   final String value;
   final IconData icon;
 
-  const _StatCard({required this.label, required this.value, required this.icon});
+  const _StatCard(
+      {required this.label, required this.value, required this.icon});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(16)),
+      decoration: BoxDecoration(
+          color: Colors.white.withValues(alpha: 0.2),
+          borderRadius: BorderRadius.circular(16)),
       child: Column(
         children: [
           Icon(icon, color: Colors.white, size: 24),
           const SizedBox(height: 8),
-          Text(value, style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold)),
+          Text(value,
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold)),
           const SizedBox(height: 4),
-          Text(label, style: const TextStyle(color: Colors.white, fontSize: 12), textAlign: TextAlign.center),
+          Text(label,
+              style: const TextStyle(color: Colors.white, fontSize: 12),
+              textAlign: TextAlign.center),
         ],
       ),
     );
@@ -162,7 +201,12 @@ class _GoalCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, 2))],
+        boxShadow: [
+          BoxShadow(
+              color: Colors.black.withValues(alpha: 0.05),
+              blurRadius: 10,
+              offset: const Offset(0, 2))
+        ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -175,21 +219,35 @@ class _GoalCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(goal.name, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                    Text(goal.name,
+                        style: const TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold)),
                     const SizedBox(height: 4),
                     if (goal.targetDate != null)
-                      Text('Echeance: ${DateFormat('dd/MM/yyyy').format(goal.targetDate!)}', style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+                      Text(
+                          'Echeance: ${DateFormat('dd/MM/yyyy').format(goal.targetDate!)}',
+                          style:
+                              TextStyle(fontSize: 12, color: Colors.grey[600])),
                   ],
                 ),
               ),
               if (goal.targetDate != null)
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
-                    color: daysLeft < 30 ? Colors.red.withOpacity(0.1) : const Color(0xFF00A86B).withOpacity(0.1),
+                    color: daysLeft < 30
+                        ? Colors.red.withValues(alpha: 0.1)
+                        : const Color(0xFF00A86B).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Text('$daysLeft jours', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: daysLeft < 30 ? Colors.red : const Color(0xFF00A86B))),
+                  child: Text('$daysLeft jours',
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: daysLeft < 30
+                              ? Colors.red
+                              : const Color(0xFF00A86B))),
                 ),
             ],
           ),
@@ -197,8 +255,13 @@ class _GoalCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('${NumberFormat('#,###').format(goal.currentAmount)} FCFA', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xFF00A86B))),
-              Text('${NumberFormat('#,###').format(goal.targetAmount)} FCFA', style: TextStyle(fontSize: 14, color: Colors.grey[600])),
+              Text('${NumberFormat('#,###').format(goal.currentAmount)} FCFA',
+                  style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF00A86B))),
+              Text('${NumberFormat('#,###').format(goal.targetAmount)} FCFA',
+                  style: TextStyle(fontSize: 14, color: Colors.grey[600])),
             ],
           ),
           const SizedBox(height: 12),
@@ -208,15 +271,25 @@ class _GoalCard extends StatelessWidget {
               value: percentage / 100,
               minHeight: 10,
               backgroundColor: Colors.grey[200],
-              valueColor: AlwaysStoppedAnimation<Color>(percentage >= 80 ? const Color(0xFF00A86B) : percentage >= 50 ? Colors.orange : Colors.red),
+              valueColor: AlwaysStoppedAnimation<Color>(percentage >= 80
+                  ? const Color(0xFF00A86B)
+                  : percentage >= 50
+                      ? Colors.orange
+                      : Colors.red),
             ),
           ),
           const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('${percentage.toStringAsFixed(1)}% atteint', style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-              Text('Reste: ${NumberFormat('#,###').format(goal.remainingAmount)} FCFA', style: TextStyle(fontSize: 12, color: Colors.grey[600], fontWeight: FontWeight.bold)),
+              Text('${percentage.toStringAsFixed(1)}% atteint',
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+              Text(
+                  'Reste: ${NumberFormat('#,###').format(goal.remainingAmount)} FCFA',
+                  style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.grey[600],
+                      fontWeight: FontWeight.bold)),
             ],
           ),
         ],

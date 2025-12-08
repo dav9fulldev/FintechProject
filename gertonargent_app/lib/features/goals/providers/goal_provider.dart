@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../data/services/api_service.dart';
 import '../../../data/models/goal_model.dart';
-import '../../auth/providers/auth_provider.dart';
 
 final goalProvider = StateNotifierProvider<GoalNotifier, GoalState>((ref) {
   return GoalNotifier(ref.read(apiServiceProvider));

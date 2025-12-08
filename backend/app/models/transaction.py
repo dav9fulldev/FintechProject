@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Float, DateTime, ForeignKey, Enum, Boolean
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from .database import Base
 from .budget import CategoryEnum
@@ -17,3 +18,6 @@ class Transaction(Base):
     ai_recommendation = Column(String)
     was_approved = Column(Boolean, default=True)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    
+    # Relation avec PlannedPurchase (si cette transaction correspond à un achat planifié)
+    planned_purchase = relationship("PlannedPurchase", back_populates="transaction", uselist=False)

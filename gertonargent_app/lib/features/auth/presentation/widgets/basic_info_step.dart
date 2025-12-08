@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/onboarding_provider.dart';
 import '../../../../data/local/registration_cache.dart';
+import '../../../../core/constants/country_codes.dart';
 
 class BasicInfoStep extends ConsumerStatefulWidget {
   final VoidCallback onNext;
@@ -18,7 +19,10 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
   final _lastNameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _phoneController = TextEditingController();
   bool _obscurePassword = true;
+  CountryCode _selectedCountry =
+      CountryCodes.coteDivoire; // Défaut: Côte d'Ivoire
 
   @override
   void dispose() {
@@ -26,6 +30,7 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
     _lastNameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    _phoneController.dispose();
     super.dispose();
   }
 
@@ -60,6 +65,11 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
             _lastNameController.text,
             _emailController.text,
             _passwordController.text,
+            phone:
+                _phoneController.text.isNotEmpty ? _phoneController.text : null,
+            countryCode: _phoneController.text.isNotEmpty
+                ? _selectedCountry.dialCode
+                : null,
           );
       widget.onNext();
     }
@@ -83,7 +93,7 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF00A86B).withOpacity(0.1),
+                      color: const Color(0xFF00A86B).withValues(alpha: 0.1),
                       shape: BoxShape.circle,
                     ),
                     child: const Icon(
@@ -173,6 +183,63 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                 }
                 return null;
               },
+            ),
+            const SizedBox(height: 16),
+
+            // Téléphone avec sélecteur de pays
+            Row(
+              children: [
+                // Sélecteur d'indicatif
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<CountryCode>(
+                      value: _selectedCountry,
+                      items: CountryCodes.all.map((country) {
+                        return DropdownMenuItem<CountryCode>(
+                          value: country,
+                          child: Row(
+                            children: [
+                              Text(
+                                country.flag,
+                                style: const TextStyle(fontSize: 20),
+                              ),
+                              const SizedBox(width: 8),
+                              Text(country.dialCode),
+                            ],
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (CountryCode? newValue) {
+                        if (newValue != null) {
+                          setState(() {
+                            _selectedCountry = newValue;
+                          });
+                        }
+                      },
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                // Champ téléphone
+                Expanded(
+                  child: TextFormField(
+                    controller: _phoneController,
+                    keyboardType: TextInputType.phone,
+                    decoration: InputDecoration(
+                      labelText: 'Téléphone (optionnel)',
+                      prefixIcon: const Icon(Icons.phone_outlined),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 16),
 

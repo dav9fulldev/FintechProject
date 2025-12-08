@@ -260,7 +260,7 @@ class SikaWakeWordService : Service() {
                     for (i in 0 until read step 2) {
                         if (i + 1 < read) {
                             val sample = ((buffer[i].toInt() and 0xFF) or ((buffer[i + 1].toInt() and 0xFF) shl 8)).toShort()
-                            if (Math.abs(sample) > 2000) loudSamples++
+                            if (kotlin.math.abs(sample.toInt()) > 2000) loudSamples++
                         }
                     }
                     

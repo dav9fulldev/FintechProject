@@ -81,7 +81,7 @@ class _AddGoalPageState extends ConsumerState<AddGoalPage> {
                 Center(
                   child: Container(
                     padding: const EdgeInsets.all(24),
-                    decoration: BoxDecoration(color: const Color(0xFF00A86B).withOpacity(0.1), shape: BoxShape.circle),
+                    decoration: BoxDecoration(color: const Color(0xFF00A86B).withValues(alpha: 0.1), shape: BoxShape.circle),
                     child: const Icon(Icons.flag, size: 80, color: Color(0xFF00A86B)),
                   ),
                 ),

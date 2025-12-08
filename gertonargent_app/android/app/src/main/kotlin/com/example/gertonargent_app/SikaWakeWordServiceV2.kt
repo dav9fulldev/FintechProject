@@ -159,7 +159,7 @@ class SikaWakeWordServiceV2 : Service(), TextToSpeech.OnInitListener {
                         if (i + 1 < read) {
                             val sample = ((buffer[i].toInt() and 0xFF) or
                                     ((buffer[i + 1].toInt() and 0xFF) shl 8)).toShort()
-                            if (Math.abs(sample) > 3000) loudSamples++
+                            if (kotlin.math.abs(sample.toInt()) > 3000) loudSamples++
                         }
                     }
 

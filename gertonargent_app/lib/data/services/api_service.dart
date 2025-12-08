@@ -1,6 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../core/constants/api_constants.dart';
+
+// Provider Riverpod pour ApiService
+final apiServiceProvider = Provider<ApiService>((ref) => ApiService());
 
 class ApiService {
   late Dio _dio;
@@ -13,8 +17,8 @@ class ApiService {
   ApiService._internal() {
     _dio = Dio(BaseOptions(
       baseUrl: ApiConstants.baseUrl,
-      connectTimeout: const Duration(seconds: 15),
-      receiveTimeout: const Duration(seconds: 15),
+      connectTimeout: const Duration(seconds: 30),
+      receiveTimeout: const Duration(seconds: 30),
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -111,10 +115,10 @@ class ApiService {
     try {
       final response = await _dio.post(
         ApiConstants.login,
-        data: FormData.fromMap({
-          'username': email,
+        data: {
+          'email': email,
           'password': password,
-        }),
+        },
       );
       if (response.data['access_token'] != null) {
         setToken(response.data['access_token']);
@@ -132,6 +136,42 @@ class ApiService {
         setUserId(response.data['id']);
       }
       return response.data;
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
+  Future<Map<String, dynamic>> updateProfile({
+    String? firstName,
+    String? phone,
+  }) async {
+    try {
+      final data = <String, dynamic>{};
+      if (firstName != null) data['first_name'] = firstName;
+      if (phone != null) data['phone'] = phone;
+
+      final response = await _dio.put(
+        ApiConstants.me,
+        data: data,
+      );
+      return response.data;
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
+  Future<void> changePassword({
+    required String currentPassword,
+    required String newPassword,
+  }) async {
+    try {
+      await _dio.post(
+        '/auth/change-password',
+        data: {
+          'current_password': currentPassword,
+          'new_password': newPassword,
+        },
+      );
     } on DioException catch (e) {
       throw _handleError(e);
     }
@@ -486,6 +526,110 @@ class ApiService {
         },
         queryParameters: {'user_id': _userId},
       );
+      return response.data;
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
+  // ==================== PLANNED PURCHASES (Liste d'achats) ====================
+
+  Future<List<Map<String, dynamic>>> getPlannedPurchases(
+      {String? status}) async {
+    try {
+      final queryParams = <String, dynamic>{};
+      if (status != null) queryParams['status_filter'] = status;
+
+      final response = await _dio.get(
+        '/planned-purchases/',
+        queryParameters: queryParams,
+      );
+      return List<Map<String, dynamic>>.from(response.data);
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
+  Future<Map<String, dynamic>> createPlannedPurchase({
+    required String name,
+    required double amount,
+    required String category,
+    String? description,
+    DateTime? plannedDate,
+  }) async {
+    try {
+      final response = await _dio.post(
+        '/planned-purchases/',
+        data: {
+          'name': name,
+          'amount': amount,
+          'category': category,
+          'description': description,
+          'planned_date': plannedDate?.toIso8601String(),
+        },
+      );
+      return response.data;
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
+  Future<Map<String, dynamic>> updatePlannedPurchase({
+    required int id,
+    String? name,
+    double? amount,
+    String? category,
+    String? description,
+    DateTime? plannedDate,
+    String? status,
+  }) async {
+    try {
+      final data = <String, dynamic>{};
+      if (name != null) data['name'] = name;
+      if (amount != null) data['amount'] = amount;
+      if (category != null) data['category'] = category;
+      if (description != null) data['description'] = description;
+      if (plannedDate != null)
+        data['planned_date'] = plannedDate.toIso8601String();
+      if (status != null) data['status'] = status;
+
+      final response = await _dio.put(
+        '/planned-purchases/$id',
+        data: data,
+      );
+      return response.data;
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
+  Future<void> deletePlannedPurchase(int id) async {
+    try {
+      await _dio.delete('/planned-purchases/$id');
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
+  Future<Map<String, dynamic>> markPurchaseAsCompleted({
+    required int id,
+    int? transactionId,
+  }) async {
+    try {
+      final response = await _dio.post(
+        '/planned-purchases/$id/mark-purchased',
+        queryParameters:
+            transactionId != null ? {'transaction_id': transactionId} : null,
+      );
+      return response.data;
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
+  Future<Map<String, dynamic>> getPlannedPurchasesSummary() async {
+    try {
+      final response = await _dio.get('/planned-purchases/stats/summary');
       return response.data;
     } on DioException catch (e) {
       throw _handleError(e);
