@@ -2,7 +2,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../data/services/api_service.dart';
 import '../../../data/models/transaction_model.dart';
 import '../../../data/models/budget_model.dart';
-import '../../auth/providers/auth_provider.dart';
 
 final transactionProvider =
     StateNotifierProvider<TransactionNotifier, TransactionState>((ref) {

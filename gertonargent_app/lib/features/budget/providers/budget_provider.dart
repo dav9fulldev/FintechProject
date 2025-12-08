@@ -1,7 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../data/services/api_service.dart';
 import '../../../data/models/budget_model.dart';
-import '../../auth/providers/auth_provider.dart';
 
 final budgetProvider =
     StateNotifierProvider<BudgetNotifier, BudgetState>((ref) {

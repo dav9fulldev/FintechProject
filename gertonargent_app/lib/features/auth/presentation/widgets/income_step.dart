@@ -107,7 +107,7 @@ class _IncomeStepState extends ConsumerState<IncomeStep> {
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         color: isSelected
-                            ? (income['color'] as Color).withOpacity(0.1)
+                            ? (income['color'] as Color).withValues(alpha: 0.1)
                             : Colors.white,
                         borderRadius: BorderRadius.circular(16),
                         border: Border.all(
@@ -118,7 +118,7 @@ class _IncomeStepState extends ConsumerState<IncomeStep> {
                         ),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.05),
+                            color: Colors.black.withValues(alpha: 0.05),
                             blurRadius: 10,
                             offset: const Offset(0, 2),
                           ),
@@ -130,7 +130,7 @@ class _IncomeStepState extends ConsumerState<IncomeStep> {
                             padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
                               color:
-                                  (income['color'] as Color).withOpacity(0.2),
+                                  (income['color'] as Color).withValues(alpha: 0.2),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Icon(
@@ -175,7 +175,7 @@ class _IncomeStepState extends ConsumerState<IncomeStep> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF00A86B).withOpacity(0.1),
+              color: const Color(0xFF00A86B).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(

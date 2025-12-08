@@ -2,8 +2,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../data/services/api_service.dart';
 import '../../../data/models/user_model.dart';
 
-final apiServiceProvider = Provider((ref) => ApiService());
-
 final authProvider = StateNotifierProvider<AuthNotifier, AuthState>((ref) {
   return AuthNotifier(ref.read(apiServiceProvider));
 });
@@ -89,7 +87,9 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
     try {
       // Créer un username à partir du prénom et nom
-      final username = '${firstName ?? 'user'}${lastName ?? ''}'.toLowerCase().replaceAll(' ', '');
+      final username = '${firstName ?? 'user'}${lastName ?? ''}'
+          .toLowerCase()
+          .replaceAll(' ', '');
 
       final response = await _apiService.register(
         email: email,
@@ -123,6 +123,17 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
   void clearError() {
     state = state.copyWith(error: null);
+  }
+
+  Future<void> refreshUser() async {
+    try {
+      final userResponse = await _apiService.getMe();
+      final user = UserModel.fromJson(userResponse);
+
+      state = state.copyWith(user: user);
+    } catch (e) {
+      // Ignorer les erreurs de rafraîchissement
+    }
   }
 
   void logout() {

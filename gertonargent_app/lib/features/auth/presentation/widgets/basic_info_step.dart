@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../providers/onboarding_provider.dart';
 import '../../../../data/local/registration_cache.dart';
+import '../../../../core/constants/country_codes.dart';
 
 class BasicInfoStep extends ConsumerStatefulWidget {
   final VoidCallback onNext;
@@ -18,7 +19,10 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
   final _lastNameController = TextEditingController();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _phoneController = TextEditingController();
   bool _obscurePassword = true;
+  CountryCode _selectedCountry =
+      CountryCodes.coteDivoire; // Défaut: Côte d'Ivoire
 
   @override
   void dispose() {
@@ -26,6 +30,7 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
     _lastNameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
+    _phoneController.dispose();
     super.dispose();
   }
 
@@ -60,6 +65,11 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
             _lastNameController.text,
             _emailController.text,
             _passwordController.text,
+            phone:
+                _phoneController.text.isNotEmpty ? _phoneController.text : null,
+            countryCode: _phoneController.text.isNotEmpty
+                ? _selectedCountry.dialCode
+                : null,
           );
       widget.onNext();
     }
@@ -67,173 +77,258 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(24),
-      child: Form(
-        key: _formKey,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 20),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final screenWidth = constraints.maxWidth;
+        final horizontalPadding = screenWidth * 0.06; // 6% de l'écran
+        final iconSize = screenWidth * 0.15; // 15% de l'écran
+        final titleFontSize = screenWidth * 0.065; // 6.5% de l'écran
+        final subtitleFontSize = screenWidth * 0.04; // 4% de l'écran
 
-            // Icône et titre
-            Center(
-              child: Column(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF00A86B).withOpacity(0.1),
-                      shape: BoxShape.circle,
-                    ),
-                    child: const Icon(
-                      Icons.person_add,
-                      size: 60,
-                      color: Color(0xFF00A86B),
-                    ),
-                  ),
-                  const SizedBox(height: 24),
-                  const Text(
-                    'Créons ton compte',
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(height: 8),
-                  Text(
-                    'Quelques informations pour commencer',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey[600],
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            ),
+        return SingleChildScrollView(
+          padding: EdgeInsets.symmetric(
+            horizontal: horizontalPadding.clamp(16.0, 24.0),
+            vertical: 16,
+          ),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 8),
 
-            const SizedBox(height: 40),
-
-            // Prénom
-            TextFormField(
-              controller: _firstNameController,
-              decoration: InputDecoration(
-                labelText: 'Prénom',
-                prefixIcon: const Icon(Icons.person_outline),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                // Icône et titre
+                Center(
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(iconSize * 0.3),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+                          shape: BoxShape.circle,
+                        ),
+                        child: Icon(
+                          Icons.person_add,
+                          size: iconSize.clamp(40.0, 60.0),
+                          color: const Color(0xFF00A86B),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          'Créons ton\ncompte',
+                          style: TextStyle(
+                            fontSize: titleFontSize.clamp(20.0, 28.0),
+                            fontWeight: FontWeight.bold,
+                            height: 1.2,
+                          ),
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            'Quelques informations pour commencer',
+                            style: TextStyle(
+                              fontSize: subtitleFontSize.clamp(12.0, 16.0),
+                              color: Colors.grey[600],
+                            ),
+                            textAlign: TextAlign.center,
+                            maxLines: 2,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Entre ton prénom';
-                }
-                return null;
-              },
-            ),
-            const SizedBox(height: 16),
 
-            // Nom
-            TextFormField(
-              controller: _lastNameController,
-              decoration: InputDecoration(
-                labelText: 'Nom',
-                prefixIcon: const Icon(Icons.person),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Entre ton nom';
-                }
-                return null;
-              },
-            ),
-            const SizedBox(height: 16),
+                const SizedBox(height: 24),
 
-            // Email
-            TextFormField(
-              controller: _emailController,
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                labelText: 'Email',
-                prefixIcon: const Icon(Icons.email_outlined),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Entre ton email';
-                }
-                if (!value.contains('@')) {
-                  return 'Email invalide';
-                }
-                return null;
-              },
-            ),
-            const SizedBox(height: 16),
-
-            // Mot de passe
-            TextFormField(
-              controller: _passwordController,
-              obscureText: _obscurePassword,
-              decoration: InputDecoration(
-                labelText: 'Mot de passe',
-                prefixIcon: const Icon(Icons.lock_outline),
-                suffixIcon: IconButton(
-                  icon: Icon(
-                    _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                // Prénom
+                TextFormField(
+                  controller: _firstNameController,
+                  decoration: InputDecoration(
+                    labelText: 'Prénom',
+                    prefixIcon: const Icon(Icons.person_outline),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
-                  onPressed: () {
-                    setState(() {
-                      _obscurePassword = !_obscurePassword;
-                    });
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Entre ton prénom';
+                    }
+                    return null;
                   },
                 ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
+                const SizedBox(height: 16),
+
+                // Nom
+                TextFormField(
+                  controller: _lastNameController,
+                  decoration: InputDecoration(
+                    labelText: 'Nom',
+                    prefixIcon: const Icon(Icons.person),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Entre ton nom';
+                    }
+                    return null;
+                  },
                 ),
-              ),
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return 'Entre un mot de passe';
-                }
-                if (value.length < 6) {
-                  return 'Minimum 6 caractères';
-                }
-                return null;
-              },
-            ),
+                const SizedBox(height: 16),
 
-            const SizedBox(height: 32),
+                // Email
+                TextFormField(
+                  controller: _emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    labelText: 'Email',
+                    prefixIcon: const Icon(Icons.email_outlined),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Entre ton email';
+                    }
+                    if (!value.contains('@')) {
+                      return 'Email invalide';
+                    }
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 16),
 
-            // Bouton suivant
-            SizedBox(
-              width: double.infinity,
-              height: 50,
-              child: ElevatedButton(
-                onPressed: _submit,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF00A86B),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
+                // Téléphone avec sélecteur de pays
+                Row(
+                  children: [
+                    // Sélecteur d'indicatif
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton<CountryCode>(
+                          value: _selectedCountry,
+                          items: CountryCodes.all.map((country) {
+                            return DropdownMenuItem<CountryCode>(
+                              value: country,
+                              child: Row(
+                                children: [
+                                  Text(
+                                    country.flag,
+                                    style: const TextStyle(fontSize: 20),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Text(country.dialCode),
+                                ],
+                              ),
+                            );
+                          }).toList(),
+                          onChanged: (CountryCode? newValue) {
+                            if (newValue != null) {
+                              setState(() {
+                                _selectedCountry = newValue;
+                              });
+                            }
+                          },
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    // Champ téléphone
+                    Expanded(
+                      child: TextFormField(
+                        controller: _phoneController,
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                          labelText: 'Téléphone (optionnel)',
+                          prefixIcon: const Icon(Icons.phone_outlined),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+
+                // Mot de passe
+                TextFormField(
+                  controller: _passwordController,
+                  obscureText: _obscurePassword,
+                  decoration: InputDecoration(
+                    labelText: 'Mot de passe',
+                    prefixIcon: const Icon(Icons.lock_outline),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        _obscurePassword
+                            ? Icons.visibility_off
+                            : Icons.visibility,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          _obscurePassword = !_obscurePassword;
+                        });
+                      },
+                    ),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Entre un mot de passe';
+                    }
+                    if (value.length < 6) {
+                      return 'Minimum 6 caractères';
+                    }
+                    return null;
+                  },
+                ),
+
+                const SizedBox(height: 32),
+
+                // Bouton suivant
+                SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: ElevatedButton(
+                    onPressed: _submit,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF00A86B),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: const Text(
+                      'Suivant',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ),
-                child: const Text(
-                  'Suivant',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

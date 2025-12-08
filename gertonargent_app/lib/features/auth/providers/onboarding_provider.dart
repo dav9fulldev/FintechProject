@@ -10,12 +10,15 @@ class OnboardingNotifier extends StateNotifier<OnboardingData> {
   OnboardingNotifier() : super(OnboardingData());
 
   void updateBasicInfo(
-      String firstName, String lastName, String email, String password) {
+      String firstName, String lastName, String email, String password,
+      {String? phone, String? countryCode}) {
     state = OnboardingData(
       firstName: firstName,
       lastName: lastName,
       email: email,
       password: password,
+      phone: phone ?? state.phone,
+      countryCode: countryCode ?? state.countryCode,
       profession: state.profession,
       incomeRange: state.incomeRange,
       goals: state.goals,

@@ -64,7 +64,7 @@ class SikaFloatingButton extends ConsumerWidget {
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF00A86B).withOpacity(0.4),
+                  color: const Color(0xFF00A86B).withValues(alpha: 0.4),
                   blurRadius: 15,
                   offset: const Offset(0, 4),
                 ),
@@ -152,7 +152,7 @@ class SikaCompactCard extends ConsumerWidget {
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF00A86B).withOpacity(0.3),
+              color: const Color(0xFF00A86B).withValues(alpha: 0.3),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -164,7 +164,7 @@ class SikaCompactCard extends ConsumerWidget {
               width: 50,
               height: 50,
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(25),
               ),
               child: const Center(
@@ -188,7 +188,7 @@ class SikaCompactCard extends ConsumerWidget {
                   Text(
                     'Ton assistant financier intelligent',
                     style: TextStyle(
-                      color: Colors.white.withOpacity(0.9),
+                      color: Colors.white.withValues(alpha: 0.9),
                       fontSize: 13,
                     ),
                   ),
@@ -198,7 +198,7 @@ class SikaCompactCard extends ConsumerWidget {
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Icon(

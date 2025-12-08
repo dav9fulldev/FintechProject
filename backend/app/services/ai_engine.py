@@ -1,6 +1,7 @@
 from typing import Dict, Any, List, Optional
 import os
 import re
+from .sika_nlp import SikaNLP
 
 
 # Mapping des catégories en français vers l'enum
@@ -21,6 +22,58 @@ CATEGORY_KEYWORDS = {
 class AIEngine:
     def __init__(self):
         self.gemini_api_key = os.getenv("GEMINI_API_KEY")
+        self.nlp = SikaNLP()  # Module pour réponses naturelles
+
+    def check_planned_purchase(
+        self,
+        amount: float,
+        category: str,
+        description: str,
+        planned_purchases: List
+    ) -> Dict[str, Any]:
+        """
+        Vérifie si une dépense correspond à un achat planifié
+        
+        Returns:
+            {
+                "is_planned": bool,
+                "matched_purchase": dict or None,
+                "warning_message": str,
+                "severity": "low" | "medium" | "high"
+            }
+        """
+        # Vérifier si la dépense correspond à un achat planifié
+        matched = None
+        for purchase in planned_purchases:
+            # Correspondance si même catégorie et montant similaire (±20%)
+            category_match = purchase.get('category', '').lower() == category.lower()
+            amount_diff = abs(purchase.get('amount', 0) - amount)
+            amount_tolerance = purchase.get('amount', 0) * 0.2  # 20% de tolérance
+            amount_match = amount_diff <= amount_tolerance
+            
+            if category_match and amount_match:
+                matched = purchase
+                break
+        
+        if matched:
+            return {
+                "is_planned": True,
+                "matched_purchase": matched,
+                "warning_message": f"✅ Achat prévu : {matched.get('name')}. Montant prévu : {matched.get('amount'):,.0f} FCFA.",
+                "severity": "low"
+            }
+        else:
+            # Dépense non planifiée - alerter l'utilisateur
+            return {
+                "is_planned": False,
+                "matched_purchase": None,
+                "warning_message": (
+                    f"⚠️ ATTENTION ! Cette dépense de {amount:,.0f} FCFA ({category}) "
+                    f"n'était pas prévue dans ta liste d'achats. "
+                    f"Es-tu vraiment sûr(e) d'en avoir besoin maintenant ?"
+                ),
+                "severity": "high"
+            }
 
     def calculate_score(
         self,

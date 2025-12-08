@@ -43,6 +43,30 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // IMPORTANT : Sika fonctionne TOUJOURS en mode hors-ligne
+    // Les transactions vocales sont stockées localement (SharedPreferences Android)
+    // La synchronisation avec le backend se fait uniquement si l'utilisateur est connecté
+
+    // Listen for auth changes (login/logout)
+    ref.listen<AuthState>(authProvider, (previous, next) async {
+      if (next.token != null && previous?.token != next.token) {
+        debugPrint(
+            '[MyApp] User logged in, syncing offline transactions to backend');
+        final apiService = ref.read(apiServiceProvider);
+        apiService.setToken(next.token!);
+
+        // Set personalized firstname in native service
+        if (next.user?.firstName != null) {
+          await SikaNative.setUserFirstname(next.user!.firstName!);
+        }
+
+        // Sync all pending offline transactions to backend
+        await SikaSync.syncPendingTransactions(apiService: apiService);
+      } else if (next.token == null && previous?.token != null) {
+        debugPrint('[MyApp] User logged out - Sika continues in offline mode');
+      }
+    });
+
     // Initialize Sika sync and handle lifecycle events
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       debugPrint('[MyApp] Setting up Sika sync handlers...');
@@ -54,33 +78,19 @@ class MyApp extends ConsumerWidget {
         final apiService = ref.read(apiServiceProvider);
         apiService.setToken(auth.token!);
 
-        // Sync pending transactions
+        // Sync pending transactions from local storage to backend
         await SikaSync.syncPendingTransactions(apiService: apiService);
 
-        // Also set user firstname in native service for Sika to use
+        // Set user firstname in native service for personalized greeting
         if (auth.user?.firstName != null) {
           await SikaNative.setUserFirstname(auth.user!.firstName!);
         }
+      } else {
+        debugPrint(
+            '[MyApp] No token - Sika works offline with default name "utilisateur"');
       }
 
-      // 2. Listen for auth changes (login/logout)
-      ref.listen<AuthState>(authProvider, (previous, next) async {
-        if (next.token != null && previous?.token != next.token) {
-          debugPrint('[MyApp] Auth state changed, performing sync');
-          final apiService = ref.read(apiServiceProvider);
-          apiService.setToken(next.token!);
-
-          // Set firstname in native service
-          if (next.user?.firstName != null) {
-            await SikaNative.setUserFirstname(next.user!.firstName!);
-          }
-
-          // Sync pending transactions
-          await SikaSync.syncPendingTransactions(apiService: apiService);
-        }
-      });
-
-      // 3. Handle app resume (when user comes back to app)
+      // 2. Handle app resume (when user comes back to app)
       SystemChannels.lifecycle.setMessageHandler((msg) async {
         if (msg == AppLifecycleState.resumed.toString()) {
           debugPrint('[MyApp] App resumed, checking for pending transactions');
@@ -89,7 +99,7 @@ class MyApp extends ConsumerWidget {
             final apiService = ref.read(apiServiceProvider);
             apiService.setToken(auth2.token!);
 
-            // Sync pending transactions
+            // Sync pending transactions from local storage to backend
             await SikaSync.syncPendingTransactions(apiService: apiService);
           }
         }

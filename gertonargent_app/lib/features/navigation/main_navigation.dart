@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../budget/presentation/pages/budget_list_page.dart';
+import '../budget/presentation/pages/shopping_list_page.dart';
 import '../goals/presentation/pages/goals_list_page.dart';
 import '../transactions/presentation/pages/transaction_history_page.dart';
 import '../transactions/presentation/pages/add_transaction_page.dart';
-import '../overlay/presentation/pages/permissions_page.dart';
+import '../profile/presentation/pages/profile_page.dart';
 import '../ai_assistant/presentation/widgets/sika_floating_button.dart';
 
 class MainNavigation extends ConsumerStatefulWidget {
@@ -19,7 +19,7 @@ class _MainNavigationState extends ConsumerState<MainNavigation> {
 
   final List<Widget> _pages = [
     const DashboardHome(),
-    const BudgetListPage(),
+    const ShoppingListPage(),
     const GoalsListPage(),
     const TransactionHistoryPage(),
   ];
@@ -32,7 +32,7 @@ class _MainNavigationState extends ConsumerState<MainNavigation> {
           _pages[_selectedIndex],
           // Bouton flottant Sika en bas à droite
           const Positioned(
-            bottom: 90,
+            bottom: 20,
             right: 16,
             child: SikaFloatingButton(mini: true),
           ),
@@ -54,8 +54,8 @@ class _MainNavigationState extends ConsumerState<MainNavigation> {
             label: 'Accueil',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_wallet),
-            label: 'Budgets',
+            icon: Icon(Icons.shopping_cart),
+            label: 'Ma Liste',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.flag),
@@ -117,6 +117,17 @@ class DashboardHome extends ConsumerWidget {
             icon: const Icon(Icons.notifications_outlined, color: Colors.white),
             onPressed: () {},
           ),
+          IconButton(
+            icon: const Icon(Icons.person_outline, color: Colors.white),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ProfilePage(),
+                ),
+              );
+            },
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -154,7 +165,7 @@ class DashboardHome extends ConsumerWidget {
                     'Gérez vos finances intelligemment',
                     style: TextStyle(
                       fontSize: 14,
-                      color: Colors.white.withOpacity(0.9),
+                      color: Colors.white.withValues(alpha: 0.9),
                     ),
                   ),
                   const SizedBox(height: 24),
@@ -166,7 +177,7 @@ class DashboardHome extends ConsumerWidget {
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.1),
+                          color: Colors.black.withValues(alpha: 0.1),
                           blurRadius: 10,
                           offset: const Offset(0, 5),
                         ),
@@ -192,7 +203,7 @@ class DashboardHome extends ConsumerWidget {
                                 vertical: 6,
                               ),
                               decoration: BoxDecoration(
-                                color: const Color(0xFF00A86B).withOpacity(0.1),
+                                color: const Color(0xFF00A86B).withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: const Text(
@@ -275,29 +286,6 @@ class DashboardHome extends ConsumerWidget {
               child: const SikaCompactCard(),
             ),
 
-            const SizedBox(height: 16),
-
-            // Bouton paramètres
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: OutlinedButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const PermissionsPage(),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.settings_outlined),
-                label: const Text('Paramètres des alertes'),
-                style: OutlinedButton.styleFrom(
-                  foregroundColor: const Color(0xFF00A86B),
-                  minimumSize: const Size(double.infinity, 45),
-                  side: const BorderSide(color: Color(0xFF00A86B)),
-                ),
-              ),
-            ),
             const SizedBox(height: 80), // Espace pour le FAB
           ],
         ),

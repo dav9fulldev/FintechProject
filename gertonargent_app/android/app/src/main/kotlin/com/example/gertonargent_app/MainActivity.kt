@@ -5,6 +5,7 @@ import android.content.Context
 import android.net.Uri
 import android.os.Build
 import android.provider.Settings
+import android.util.Log
 import androidx.annotation.NonNull
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -47,6 +48,26 @@ class MainActivity: FlutterActivity() {
                 }
                 "requestOverlayPermission" -> { requestOverlayPermission(); result.success(true) }
                 "requestAccessibilityPermission" -> { requestAccessibilityPermission(); result.success(true) }
+                "startOverlayService" -> {
+                    try {
+                        val action = call.argument<String>("ACTION") ?: "SHOW_ALERT"
+                        val amount = call.argument<Double>("AMOUNT") ?: 0.0
+                        
+                        val intent = Intent(this, OverlayService::class.java).apply {
+                            putExtra("ACTION", action)
+                            putExtra("AMOUNT", amount)
+                        }
+                        
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            startForegroundService(intent)
+                        } else {
+                            startService(intent)
+                        }
+                        result.success(true)
+                    } catch (e: Exception) {
+                        result.error("ERROR", e.message, null)
+                    }
+                }
                 else -> { result.notImplemented() }
             }
         }
