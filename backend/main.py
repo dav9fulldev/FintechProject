@@ -4,7 +4,7 @@ from app.models.database import engine, Base
 from app.routes import auth, budgets, transactions, goals, ai, reports, planned_purchases
 
 # Créer toutes les tables
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="GèrTonArgent API",
