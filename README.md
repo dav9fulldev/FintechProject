@@ -1,333 +1,53 @@
 # 🎯 GèrTonArgent v2.0
 
-**L'application qui PRÉVIENT vos dépenses avant qu'elles n'arrivent**
-
-[![Flutter](https://img.shields.io/badge/Flutter-3.0+-blue.svg)](https://flutter.dev/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
-[![Python](https://img.shields.io/badge/Python-3.11+-yellow.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
+**L'application qui PRÉVIENT vos dépenses avant qu'elles n'arrivent.**
 
 ---
 
-## 📈 Rapport d'Avancement (26 Nov 2025)
+## 🔥 La Révolution Fintech en Afrique
 
-### 🎯 Objectifs Atteints (Sprint Nov 2025)
+GèrTonArgent n'est pas une simple application de budget. C'est un **garde du corps financier** intelligent qui utilise l'IA pour intervenir au moment le plus critique : *juste avant la transaction*.
 
-#### ✅ **Compilation & Stabilité Code** (100%)
-- [x] Corrigé erreurs de type génériques (`RegistrationCache.getStep<T>()` → `getStepAs<T>()`)
-- [x] Ajout du champ `firstName` au modèle `UserModel` avec sérialisation complète
-- [x] Implémentation getter `hasToken` dans `ApiService`
-- [x] Synchronisation `SikaSync` avec contrat API
-- [x] Correction des chemins d'import (8 fichiers)
-- [x] **Résultat**: Zéro erreur de compilation, 100% prêt pour production
+### 🚀 Points Forts
+- 🎤 **Assistant Vocal Sika** : Une commande vocale 100% hors-ligne pour enregistrer vos dépenses sans effort.
+- 🛡️ **Protection Mobile Money** : Détection automatique des flux Wave, Orange, MTN et Moov pour une analyse de budget en temps réel.
+- 🧠 **Analyse Prédictive** : Des conseils personnalisés basés sur votre historique pour éviter le découvert.
+- 🔐 **Confidentialité Totale** : Vos données financières et vocales restent sur votre appareil.
 
-#### ✅ **Assistant Vocal SIKA** (100%)
-- [x] Service Android wake-word detection (Vosk)
-- [x] Overlay système flottant persistant
-- [x] Speech-to-Text & Text-to-Speech
-- [x] Interface Flutter complète avec Riverpod
-- [x] Communication bidirectionnelle Flutter ↔ Native
-- [x] **Fonctionnalité**: Détecte "Sika" de n'importe où + analyse contextuelle des dépenses
+---
 
-#### ✅ **Architecture & Infrastructure** (100%)
-- [x] Backend FastAPI structuré (routes, services, modèles)
-- [x] Base de données persistante (Hive + SQLite)
-- [x] Système d'authentification JWT
-- [x] Intégration calendrier iOS/Android
-- [x] Synchronisation offline-first
-- [x] Gestion des permissions (microphone, overlay, calendrier)
+## 📚 Documentation Sika
 
-#### ✅ **Présentation Investisseurs** (100%)
-- [x] Slides conçues (10 + couverture + utilisation des fonds)
-- [x] Chiffres financiers calculés (Y1-Y3, CAC, LTV)
-- [x] Analyse de marché (TAM $8.5B, SAM $150M)
-- [x] Positionnement concurrentiel (vs Nala, PalmPay, MoneyBox)
-- [x] Business model détaillé (freemium + B2B)
+Pour plus de détails sur l'assistant vocal, consultez les guides suivants :
+- **[Point d'entrée Sika](README_SIKA.md)**
+- **[Guide de démarrage rapide](SIKA_QUICK_START.md)**
+- **[Commandes vocales](SIKA_VOICE_COMMANDS.md)**
+- **[Scénarios de test](SIKA_TEST_SCENARIOS.md)**
 
-### 📊 Tableau de Bord du Projet
+---
 
-| Composant | Status | % Complété | Notes |
-|-----------|--------|-----------|-------|
-| **Frontend Flutter** | ✅ Stable | 95% | Onboarding + Dashboard + SIKA prêts |
-| **Backend FastAPI** | ✅ Stable | 90% | Auth + Transactions + IA prêts |
-| **Native Android** | ✅ Stable | 95% | SIKA + Services + Permissions OK |
-| **iOS Support** | ⚠️ En cours | 70% | Calendrier + Permissions configurées |
-| **Tests Unitaires** | 🔄 En cours | 60% | Core logic couverts, UI tests restants |
-| **CI/CD Pipeline** | 📅 Planifié | 0% | À mettre en place post-MVP |
-| **Déploiement App Store** | 📅 Planifié | 0% | Post-stabilisation code |
-
-### 📁 Structure du Code (État Actuel)
+## 🏗️ Structure du Projet
 
 ```
-gertonargent_app/
-├── lib/
-│   ├── main.dart                          ✅ Complète
-│   ├── core/
-│   │   ├── constants/                     ✅ Complète
-│   │   ├── routes/                        ✅ Complète
-│   │   └── utils/                         ✅ Complète
-│   ├── data/
-│   │   ├── models/                        ✅ Complète (UserModel + transactions + budgets)
-│   │   ├── local/                         ✅ Complète (Hive caching)
-│   │   ├── services/                      ✅ Stable (ApiService, LocalService)
-│   │   └── repositories/                  ✅ Complète (abstraction couche data)
-│   ├── features/
-│   │   ├── onboarding/                    ✅ Complète (4-step registration)
-│   │   ├── dashboard/                     ✅ Complète (overview + analytics)
-│   │   ├── budgets/                       ✅ Complète (CRUD + visualisation)
-│   │   ├── transactions/                  ✅ Complète (historique + filtres)
-│   │   ├── goals/                         ✅ Complète (suivi d'objectifs)
-│   │   ├── ai_assistant/                  ✅ Complète (SIKA vocal)
-│   │   └── settings/                      ✅ Complète (profil + préférences)
-│   └── services/
-│       ├── sika_sync.dart                 ✅ Synchronisation offline-first
-│       ├── sika_native.dart               ✅ Communication Native ↔ Dart
-│       └── background_sync.dart           ✅ Tâches périodiques
-│
-├── android/
-│   └── app/src/main/kotlin/
-│       ├── MainActivity.kt                ✅ Complète
-│       ├── SikaWakeWordService.kt        ✅ Complète (Vosk)
-│       ├── SikaOverlayService.kt         ✅ Complète
-│       └── SikaConfig.kt                 ✅ Configuration
-│
-├── ios/
-│   └── Runner/                            ⚠️ Partiellement (Calendar integration)
-│
-└── test/
-    ├── unit/                              🔄 En cours (Core logic)
-    └── widget/                            📅 Planifié
-```
-
-### 🚀 Prochaines Étapes (Décembre 2025)
-
-#### Courte Terme (This Week)
-- [ ] Tests unitaires pour les transformations de données
-- [ ] Vérification des cas limites (edge cases) du système de synchronisation
-- [ ] Documentation de l'API backend (Swagger)
-- [ ] Guide de déploiement local
-
-#### Moyen Terme (This Month)
-- [ ] Support iOS complet (calendrier + notifications push)
-- [ ] Intégration GPT pour conversations naturelles avec SIKA
-- [ ] Tests de charge backend (1000+ utilisateurs concurrents)
-- [ ] Audit de sécurité code + dépendances
-
-#### Long Terme (Q1 2026)
-- [ ] Multi-langue (Anglais, Wolof, Pidgin)
-- [ ] Intégration mobile money (MTN Money, Orange Money)
-- [ ] Routines automatiques et rappels intelligents
-- [ ] Déploiement sur App Store & Google Play
-- [ ] Premier lancement Côte d'Ivoire (1000 beta testers)
-
-### 💡 Métriques de Qualité
-
-| Métrique | Cible | Actuel | Status |
-|----------|-------|--------|--------|
-| Code Coverage | 80% | 65% | 🟡 En cours |
-| Compilation Errors | 0 | 0 | ✅ Atteint |
-| Performance (App Startup) | < 2s | 1.2s | ✅ Excellent |
-| Battery Usage (SIKA) | < 5% par heure | 3% | ✅ Excellent |
-| Sync Reliability | 99.5% | 99.2% | ✅ Bon |
-| User Data Privacy | 100% Local | 100% | ✅ Garantie |
-
-### 🎁 Livrables Récents
-
-- ✅ **README complet** avec documentation SIKA et présentation investisseurs
-- ✅ **Code stabiliσé** (8 fichiers corrigés, zéro erreur de compilation)
-- ✅ **Slides investisseurs** prêtes (10 slides professionnelles)
-- ✅ **Documentation API** (routes, authentification, formats de données)
-- ✅ **Guide d'installation** (Flutter setup, dépendances, permissions)
-
-### 📝 Fichiers Clés du Projet
-
-```
-README.md                                      ← Documentation complète (TU ES ICI!)
-SIKA_QUICK_START.md                            ← Guide démarrage rapide
-SIKA_IMPLEMENTATION_GUIDE.md                   ← Architecture détaillée SIKA
-SIKA_TEST_SCENARIOS.md                         ← Scénarios de test
-SIKA_VOICE_COMMANDS.md                         ← Commandes vocales possibles
-FILE_MANIFEST.md                               ← Manifest complet du projet
+gertonargent_v2/
+├── backend/                # API FastAPI (Python)
+├── gertonargent_app/       # Application Flutter (Dart)
+│   ├── android/            # Services natifs Kotlin
+│   └── lib/                # Logique métier et UI Flutter
+└── docs/                   # Documentation technique
 ```
 
 ---
 
-## 📊 Présentation Investisseurs (26 Nov 2025)
+## 🛠️ État d'Avancement (Février 2026)
 
-Préparation complète d'une présentation PowerPoint professionnelle pour investisseurs internationaux.
-
-### 📋 Contenu de la Présentation (10 Slides)
-
-| Slide | Titre | Focus | Durée |
-|-------|-------|-------|-------|
-| 1 | **Couverture** | Hook investisseur | 1 min |
-| 2 | **L'Entreprise** | Crédibilité, vision panafricaine | 1.5 min |
-| 3 | **Le Problème** | 400M Africains endettés sans prévention | 2 min |
-| 4 | **Notre Solution** | SIKA + prévention proactive + privacy | 2.5 min |
-| 5 | **Proposition de Valeur** | Économies 35%, conscience financière | 1.5 min |
-| 6 | **Opportunité Marché** | TAM $8.5B, SAM $150M, SOM $500K | 2 min |
-| 7 | **Business Model** | Freemium $2/mois + partenariats | 2 min |
-| 8 | **Comment Ça Marche** | Stack tech: Vosk → STT → IA → TTS | 2 min |
-| 9 | **Concurrence** | Nala, PalmPay vs GèrTonArgent (clear winner) | 2 min |
-| 10 | **Objectifs & Fonds** | Y1: 50K users, Y2: break-even, $500K allocation | 2.5 min |
-
-### 🎯 Points Clés
-
-✨ **Unique Selling Points**:
-- SEULE app avec **prévention PROACTIVE** des dépenses (avant la transaction)
-- SEULE avec **assistant vocal offline** (Vosk, fonctionne sans connexion)
-- **100% confidentiel** - zéro données partagées avec tiers
-- Marché **non-compétitif** en Côte d'Ivoire/Afrique de l'Ouest
-- **Path to profitability clair** (break-even month 14-18)
-
-💡 **Chiffres Clés**:
-- **TAM**: $8.5B (fintech africaine 2027)
-- **CAC**: $0.50 (très bas via viral)
-- **LTV**: $25 (ratio 50:1 excellent)
-- **CAGR**: 120% (croissance forte)
-- **Y1 Revenue**: $300K (50K users × $72 ARPU)
-- **Y2 Revenue**: $1.5M (250K users, break-even)
-- **Y3 Revenue**: $3.5M (500K users)
+- [x] **Backend** : Entièrement documenté et stable.
+- [x] **Frontend** : UI Premium et State Management (Riverpod) fonctionnels.
+- [x] **Natif Android** : Détection Sika V2 et Mobile Money opérationnels.
+- [x] **Documentation** : Entièrement refondue en français pour une approche pédagogique.
 
 ---
-
-## 🔧 Mises à jour récentes (25 Nov 2025)
-
-Cette section liste les corrections récentes effectuées dans le code (utile quand l'IDE affiche certains fichiers en "rouge").
-
-- **Appels RegistrationCache** : remplacement des appels `RegistrationCache.getStep<T>(...)` par `RegistrationCache.getStepAs<T>(...)` dans les widgets d'onboarding.
-- **UserModel** : ajout de `firstName` (optionnel) dans `lib/data/models/user_model.dart` (constructeur, `fromJson`, `toJson`, `copyWith`).
-- **ApiService** : ajout du getter `hasToken` dans `lib/data/services/api_service.dart` pour vérifier rapidement la présence du token.
-- **SikaSync** : adaptation de `lib/services/sika_sync.dart` pour l'API de `ApiService` — passage des paramètres nommés `amount`/`category`/`description` et vérification de la présence d'un `id` dans la Map de réponse.
-- **Imports** : correction des chemins d'import (vers `data/services/api_service.dart`) et suppression d'un import inutilisé dans `lib/main.dart`.
-
-Pour vérifier localement :
-
-```powershell
-cd "c:\MON DISQUE AVANT\Disque D\Gertonargent\Gertonargent_v2\gertonargent_app"
-flutter pub get
-flutter analyze
-```
-
-Si `flutter analyze` retourne encore des erreurs, copie la sortie ici et je m'en occupe.
-
----
-
-## 🎤 **NOUVEAUTÉ : Assistant Vocal "SIKA"** - Implémenté!
-
-### L'Innovation Qui Change Tout
-
-**Sika** est votre assistant financier personnel qui fonctionne exactement comme Siri d'Apple, mais pour vos finances! La grande différence? **Il fonctionne même quand l'app est fermée**.
-
-### Comment Utiliser Sika
-
-1. **Activation** : Allez dans "Assistant IA" > Activez le toggle "Assistant Sika"
-2. **Permissions** : Autorisez les permissions microphone et overlay
-3. **Utilisation** : Dites simplement **"Sika"** n'importe où sur votre téléphone!
-
-### Exemples d'Utilisation
-
-```
-Vous : "Sika"
-🟢 [Overlay apparaît avec animation pulsante verte]
-
-Vous : "Puis-je dépenser 50,000 FCFA pour un nouveau téléphone?"
-
-Sika : "Analysons ça ensemble... Tu as 120,000 FCFA de budget restant
-ce mois-ci. Cette dépense représente 42% de ton budget. Tu as aussi
-un objectif 'Nouveau PC' à 500,000 FCFA dont il reste 200,000 FCFA.
-Cette dépense ralentirait cet objectif de 3 semaines.
-
-Mon conseil : Si c'est urgent, vas-y. Sinon, attends le mois prochain
-pour être plus confortable financièrement."
-```
-
-### Architecture Technique de Sika
-
-#### Services Android Natifs
-- **SikaWakeWordService.kt** : Détection continue du mot-clé "Sika" avec Vosk
-- **SikaOverlayService.kt** : Interface flottante style Siri
-- **MainActivity.kt** : Gestion des permissions et communication Flutter ↔ Native
-
-#### Composants Flutter
-- **sika_provider.dart** : Logique métier et communication avec le backend
-- **sika_service_provider.dart** : Contrôle des services Android
-- **sika_page.dart** : Interface principale de Sika
-- **sika_floating_button.dart** : Bouton flottant dans l'app
-- **sika_service_toggle.dart** : Toggle pour activer/désactiver le service
-
-### Technologies Utilisées pour Sika
-
-```
-🎙️ Vosk (vosk-android:0.3.47)    - Wake word detection offline
-🗣️ Android SpeechRecognizer       - Speech-to-Text
-🔊 Android TextToSpeech           - Réponses vocales
-🪟 System Overlay Window          - Interface flottante
-⚡ Foreground Service             - Fonctionnement en arrière-plan
-💬 FastAPI Backend                - Analyse IA des requêtes
-🧠 GPT Integration (prévu)        - Conversations naturelles
-```
-
-### Permissions Requises pour Sika
-
-```xml
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
-<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-<uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
-<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-```
-
-### Fichiers Modifiés/Ajoutés pour Sika
-
-#### Android (Kotlin)
-```
-android/app/src/main/kotlin/com/example/gertonargent_app/
-├── SikaWakeWordService.kt          [NOUVEAU - 450 lignes]
-├── SikaOverlayService.kt           [NOUVEAU - 380 lignes]
-└── MainActivity.kt                 [MODIFIÉ - Ajout SIKA_CHANNEL]
-```
-
-#### Flutter (Dart)
-```
-lib/features/ai_assistant/
-├── presentation/
-│   ├── pages/
-│   │   └── sika_page.dart                      [NOUVEAU - 450 lignes]
-│   └── widgets/
-│       ├── sika_floating_button.dart           [NOUVEAU - 250 lignes]
-│       └── sika_service_toggle.dart            [NOUVEAU - 125 lignes]
-└── providers/
-    ├── sika_provider.dart                      [NOUVEAU - 200 lignes]
-    └── sika_service_provider.dart              [NOUVEAU - 125 lignes]
-```
-
-### Roadmap Sika
-
-#### ✅ Phase 1 - TERMINÉE (Nov 2024)
-- [x] Wake word detection avec Vosk
-- [x] Service en arrière-plan
-- [x] Overlay flottant
-- [x] Speech-to-Text
-- [x] Text-to-Speech
-- [x] Interface Flutter
-- [x] Providers Riverpod
-- [x] Communication Flutter ↔ Native
-
-#### 🔄 Phase 2 - En Cours (Déc 2024)
-- [ ] Intégration GPT pour conversations naturelles
-- [ ] Analyse contextuelle des transactions
-- [ ] Recommandations intelligentes
-- [ ] Historique des conversations
-- [ ] Personnalisation de la voix
-
-#### 📅 Phase 3 - Prévue (Jan 2025)
-- [ ] Commandes vocales avancées
-- [ ] Routines automatiques
-- [ ] Intégration calendrier
-- [ ] Rappels intelligents
-- [ ] Multi-langue (Anglais, Wolof, etc.)
-
+*GèrTonArgent — Reprenez le contrôle.*
 ---
 
 **Note**: Sika est une innovation unique qui différencie GèrTonArgent de toutes les autres applications de gestion financière. C'est le premier assistant vocal dédié aux finances personnelles en Afrique!
