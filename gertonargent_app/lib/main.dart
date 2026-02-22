@@ -15,15 +15,17 @@ import 'features/navigation/main_navigation.dart';
 import 'data/services/api_service.dart';
 
 void main() async {
+  /// Point d'entrée de l'application Flutter.
+  /// Initialise le stockage local (Hive), le cache d'inscription et le service vocal natif.
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Hive and registration cache
+  // Initialisation de Hive (stockage NoSQL local)
   await Hive.initFlutter();
   await RegistrationCache.init();
 
   debugPrint('[Main] ✅ App initialization started');
 
-  // Start native Sika wake-word service via MethodChannel
+  // Lancement du service vocal Sika via les canaux natifs (Android/iOS)
   try {
     await SikaNative.startSikaService();
     debugPrint('[Main] ✅ Native Sika service started');
@@ -47,7 +49,8 @@ class MyApp extends ConsumerWidget {
     // Les transactions vocales sont stockées localement (SharedPreferences Android)
     // La synchronisation avec le backend se fait uniquement si l'utilisateur est connecté
 
-    // Listen for auth changes (login/logout)
+    // Sécurité & Synchro : Écoute les changements d'état d'authentification
+    // Pourquoi : Déclencher la synchronisation dès que l'utilisateur se connecte
     ref.listen<AuthState>(authProvider, (previous, next) async {
       if (next.token != null && previous?.token != next.token) {
         debugPrint(
@@ -55,12 +58,12 @@ class MyApp extends ConsumerWidget {
         final apiService = ref.read(apiServiceProvider);
         apiService.setToken(next.token!);
 
-        // Set personalized firstname in native service
+        // Personnalisation : Met à jour le prénom pour l'assistant vocal
         if (next.user?.firstName != null) {
           await SikaNative.setUserFirstname(next.user!.firstName!);
         }
 
-        // Sync all pending offline transactions to backend
+        // Synchronisation des transactions effectuées en mode hors-ligne
         await SikaSync.syncPendingTransactions(apiService: apiService);
       } else if (next.token == null && previous?.token != null) {
         debugPrint('[MyApp] User logged out - Sika continues in offline mode');

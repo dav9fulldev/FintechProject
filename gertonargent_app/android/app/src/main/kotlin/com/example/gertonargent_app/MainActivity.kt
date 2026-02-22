@@ -14,6 +14,11 @@ import android.content.IntentFilter
 import android.content.BroadcastReceiver
 
 class MainActivity: FlutterActivity() {
+    /** 
+     * Pont de communication (Bridge).
+     * MainActivity gère les "MethodChannels" qui permettent au code Dart d'appeler
+     * des fonctionnalités natives (permissions, overlay, services en arrière-plan).
+     */
     private val CHANNEL = "com.gertonargent/overlay"
     private val SIKA_CHANNEL = "com.gertonargent/sika"
     private val OVERLAY_PERMISSION_REQUEST = 1001
@@ -21,9 +26,11 @@ class MainActivity: FlutterActivity() {
 
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-        // Method channel for Sika commands from native services
+        // Canal Sika : Écoute les commandes vocales venant du service Kotlin
         val sikaChannel = MethodChannel(flutterEngine.dartExecutor.binaryMessenger, SIKA_CHANNEL)
-        // BroadcastReceiver to forward native Sika commands to Flutter
+        
+        // BroadcastReceiver : Intercepteur de messages système internes.
+        // Pourquoi : Transmettre les évènements "Sika a entendu quelque chose" du service vers l'interface.
         sikaReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent?) {
                 if (intent == null) return

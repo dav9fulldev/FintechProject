@@ -49,7 +49,10 @@ def create_transaction(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Créer une nouvelle transaction et mettre à jour le budget correspondant"""
+    """
+    Enregistre un mouvement financier (dépense ou revenu).
+    Si c'est une dépense : déclenche l'analyse IA et met à jour le budget consommé.
+    """
 
     # Analyser la transaction avec l'IA si c'est une dépense
     ai_score = None
@@ -121,7 +124,10 @@ def get_transactions_summary(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Obtenir un résumé des transactions (total dépenses, revenus, etc.)"""
+    """
+    Calcule le bilan financier global de l'utilisateur.
+    Résultat : Total revenus, total dépenses, solde actuel et répartition par catégorie.
+    """
     transactions = db.query(Transaction).filter(Transaction.user_id == user_id).all()
 
     total_expenses = sum(t.amount for t in transactions if t.transaction_type == "expense")
@@ -180,7 +186,7 @@ def delete_transaction(transaction_id: int, db: Session = Depends(get_db)):
     if not transaction:
         raise HTTPException(status_code=404, detail="Transaction non trouvée")
 
-    # Si c'était une dépense, remettre le montant dans le budget
+    # Réconciliation : Si c'était une dépense, on recrédite le budget du montant supprimé
     if transaction.transaction_type == "expense":
         budget = db.query(Budget).filter(
             Budget.user_id == transaction.user_id,

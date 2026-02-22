@@ -6,11 +6,20 @@ import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityNodeInfo
 
+/**
+ * Service d'accessibilité pour la détection transactionnelle.
+ * "Lit" le contenu des applications de Mobile Money (Wave, Orange, MTN) 
+ * pour intercepter les montants avant que l'utilisateur ne valide son transfert.
+ */
 class MoneyDetectionService : AccessibilityService() {
 
     companion object {
         private const val TAG = "MoneyDetection"
         
+        /**
+         * Liste des applications cibles surveillées.
+         * Pédagogie : On se limite aux apps financières pour ne pas lire de données privées inutiles.
+         */
         private val MOBILE_MONEY_APPS = setOf(
             "com.wave.personal",
             "sn.senlabs.orange",
@@ -68,7 +77,7 @@ class MoneyDetectionService : AccessibilityService() {
         val rootNode = rootInActiveWindow ?: return
         val screenText = extractAllText(rootNode).lowercase()
         
-        // 1. Chercher un montant
+        // 1. Chercher un montant via une analyse phonétique et textuelle (Regex)
         val foundAmount = findLargestAmount(rootNode)
         if (foundAmount != null && foundAmount >= 100) {
             state.amount = foundAmount
@@ -181,6 +190,10 @@ class MoneyDetectionService : AccessibilityService() {
         return amounts.maxOrNull()
     }
 
+    /**
+     * Déclenche l'affichage d'un message d'alerte (Overlay) au-dessus de l'application de paiement.
+     * C'est ici que se joue la "friction cognitive" pour sauver l'épargne de l'utilisateur.
+     */
     private fun triggerAlert(amount: Double) {
         val intent = Intent(this, OverlayService::class.java).apply {
             putExtra("ACTION", "SHOW_TRANSACTION_ALERT")

@@ -35,6 +35,10 @@ class GoalAddAmount(BaseModel):
 
 
 class GoalResponse(BaseModel):
+    """
+    Modèle de réponse pour un objectif, incluant le calcul de progression.
+    Aide l'application à afficher des barres de progression précises.
+    """
     id: int
     user_id: int
     name: str
@@ -115,7 +119,10 @@ def get_goals_summary(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Obtenir un résumé des objectifs"""
+    """
+    Résumé de la santé de l'épargne.
+    Retourne le nombre d'objectifs, la progression globale et le montant total économisé.
+    """
     goals = db.query(Goal).filter(Goal.user_id == user_id).all()
 
     total_target = sum(g.target_amount for g in goals)
@@ -158,7 +165,7 @@ def update_goal(
     for key, value in update_data.items():
         setattr(goal, key, value)
 
-    # Vérifier si l'objectif est atteint
+    # Logique métier : Marquer automatiquement comme complété si le montant cible est atteint
     if goal.current_amount >= goal.target_amount:
         goal.is_completed = True
 
@@ -174,7 +181,10 @@ def add_to_goal(
     data: GoalAddAmount,
     db: Session = Depends(get_db)
 ):
-    """Ajouter un montant à un objectif d'épargne"""
+    """
+    Alimente un objectif d'épargne.
+    Un tel ajout peut déclencher la complétion de l'objectif.
+    """
     goal = db.query(Goal).filter(Goal.id == goal_id).first()
     if not goal:
         raise HTTPException(status_code=404, detail="Objectif non trouvé")

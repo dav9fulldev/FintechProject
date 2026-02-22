@@ -32,15 +32,8 @@ class AIEngine:
         planned_purchases: List
     ) -> Dict[str, Any]:
         """
-        Vérifie si une dépense correspond à un achat planifié
-        
-        Returns:
-            {
-                "is_planned": bool,
-                "matched_purchase": dict or None,
-                "warning_message": str,
-                "severity": "low" | "medium" | "high"
-            }
+        Vérifie si une transaction entrante correspond à un achat déjà planifié.
+        Pédagogie : Félicite si prévu, alerte si achat impulsif (non listé).
         """
         # Vérifier si la dépense correspond à un achat planifié
         matched = None
@@ -345,20 +338,8 @@ class AIEngine:
         total_spent: float
     ) -> Dict[str, Any]:
         """
-        Traiter une requête pour Sika et retourner une réponse structurée
-
-        Returns:
-            {
-                "message": str,           # Message de Sika
-                "intent": str,            # intention détectée
-                "can_add_transaction": bool,  # Si on peut proposer d'ajouter une transaction
-                "suggested_transaction": {    # Transaction suggérée (si applicable)
-                    "amount": float,
-                    "category": str,
-                    "description": str,
-                    "recommendation_score": int
-                }
-            }
+        Cœur de l'assistant Sika : orchestre la compréhension et la réponse.
+        Intègre la détection d'intentions financières et l'extraction de montants.
         """
         query_lower = query.lower()
         remaining = total_budget - total_spent

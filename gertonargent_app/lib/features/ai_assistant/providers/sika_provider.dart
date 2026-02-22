@@ -5,12 +5,14 @@ import 'package:flutter_tts/flutter_tts.dart';
 import '../../../data/services/api_service.dart';
 
 // État de Sika
+/// Différents états possibles pour l'assistant Sika.
+/// Guide l'UI pour afficher l'animation appropriée (écoute, traitement, parole).
 enum SikaState {
-  idle,        // En attente
-  listening,   // Écoute en cours
-  processing,  // Traitement de la requête
-  speaking,    // Sika parle
-  error,       // Erreur
+  idle, // En attente : prêt à être activé
+  listening, // Écoute en cours : capture de la voix de l'utilisateur
+  processing, // Traitement : appel à l'API IA
+  speaking, // Sika parle : restitution vocale de la réponse
+  error, // Erreur : problème réseau ou vocal
 }
 
 // Message dans la conversation
@@ -64,6 +66,8 @@ class SikaData {
 }
 
 // Provider principal de Sika
+/// Cerveau de l'assistant Sika côté Frontend.
+/// Orchestre la reconnaissance vocale (STT) et la synthèse vocale (TTS).
 class SikaNotifier extends StateNotifier<SikaData> {
   final ApiService _apiService;
   final SpeechToText _speechToText = SpeechToText();
@@ -106,7 +110,7 @@ class SikaNotifier extends StateNotifier<SikaData> {
       // Message de bienvenue
       final welcomeMessage = SikaMessage(
         text: "Salut ! Je suis Sika, ton assistant financier. "
-              "Appuie sur le micro et parle-moi de tes dépenses !",
+            "Appuie sur le micro et parle-moi de tes dépenses !",
         isUser: false,
       );
 
@@ -167,7 +171,8 @@ class SikaNotifier extends StateNotifier<SikaData> {
     }
   }
 
-  // Envoyer un message texte (alternative au vocal)
+  /// Traitement manuel d'une requête textuelle.
+  /// Pédagogie : Sika peut être utilisé par clavier si l'environnement est bruyant.
   Future<void> sendTextMessage(String text) async {
     if (text.trim().isEmpty) return;
     await _processQuery(text);
@@ -194,7 +199,8 @@ class SikaNotifier extends StateNotifier<SikaData> {
 
       // Créer le message de réponse
       final sikaMessage = SikaMessage(
-        text: response['message'] ?? "Je n'ai pas compris, peux-tu reformuler ?",
+        text:
+            response['message'] ?? "Je n'ai pas compris, peux-tu reformuler ?",
         isUser: false,
         suggestedTransaction: response['suggested_transaction'],
         canAddTransaction: response['can_add_transaction'] ?? false,
@@ -206,13 +212,12 @@ class SikaNotifier extends StateNotifier<SikaData> {
 
       // Faire parler Sika
       await _speak(sikaMessage.text);
-
     } catch (e) {
       debugPrint('Sika API error: $e');
 
       final errorMessage = SikaMessage(
         text: "Oups ! Je n'arrive pas à me connecter au serveur. "
-              "Vérifie ta connexion internet.",
+            "Vérifie ta connexion internet.",
         isUser: false,
       );
 
@@ -246,13 +251,12 @@ class SikaNotifier extends StateNotifier<SikaData> {
       );
 
       await _speak(confirmMessage.text);
-
     } catch (e) {
       debugPrint('Transaction confirmation error: $e');
 
       final errorMessage = SikaMessage(
         text: "Désolé, je n'ai pas pu enregistrer la transaction. "
-              "Réessaie plus tard.",
+            "Réessaie plus tard.",
         isUser: false,
       );
 

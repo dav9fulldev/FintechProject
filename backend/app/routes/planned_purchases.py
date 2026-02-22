@@ -55,7 +55,10 @@ def create_planned_purchase(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """Créer un nouvel achat planifié dans la liste"""
+    """
+    Ajoute un article à la liste des achats futurs.
+    L'IA s'en servira pour valider les futures transactions de l'utilisateur.
+    """
     try:
         category_enum = CategoryEnum(purchase.category)
     except ValueError:
@@ -183,7 +186,10 @@ def mark_as_purchased(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
-    """Marquer un achat comme effectué"""
+    """
+    Réconciliation : Marque un achat planifié comme 'effectué'.
+    Lien optionnel avec une transaction réelle pour le suivi comptable.
+    """
     purchase = db.query(PlannedPurchase).filter(
         PlannedPurchase.id == purchase_id,
         PlannedPurchase.user_id == current_user.id

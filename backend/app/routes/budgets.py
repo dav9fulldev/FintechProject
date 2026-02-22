@@ -20,6 +20,10 @@ class BudgetUpdate(BaseModel):
 
 
 class BudgetResponse(BaseModel):
+    """
+    Modèle de réponse enrichi avec des statistiques de consommation.
+    Calcule dynamiquement le reste à dépenser et le pourcentage d'usage.
+    """
     id: int
     user_id: int
     category: CategoryEnum
@@ -34,6 +38,7 @@ class BudgetResponse(BaseModel):
 
     @classmethod
     def from_orm_with_stats(cls, budget: Budget):
+        """Transforme un modèle DB en réponse avec calculs financiers."""
         remaining = budget.monthly_limit - budget.current_spent
         percentage = (budget.current_spent / budget.monthly_limit * 100) if budget.monthly_limit > 0 else 0
         return cls(
@@ -54,7 +59,10 @@ def create_budget(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Créer un nouveau budget pour une catégorie"""
+    """
+    Crée un nouveau budget pour une catégorie donnée.
+    Empêche la création de doublons pour une même catégorie chez un utilisateur.
+    """
     # Vérifier si un budget existe déjà pour cette catégorie
     existing = db.query(Budget).filter(
         Budget.user_id == user_id,
@@ -94,7 +102,10 @@ def get_budgets_summary(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Obtenir un résumé global des budgets"""
+    """
+    Obtenir un résumé global des comptes de l'utilisateur.
+    Agrège les limites et les dépenses de toutes les catégories.
+    """
     budgets = db.query(Budget).filter(Budget.user_id == user_id).all()
 
     total_limit = sum(b.monthly_limit for b in budgets)
@@ -159,7 +170,10 @@ def reset_budgets(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Réinitialiser les dépenses de tous les budgets (nouveau mois)"""
+    """
+    Réinitialise les dépenses à zéro (typiquement au 1er du mois).
+    Remet à jour la date de début de période pour le suivi.
+    """
     budgets = db.query(Budget).filter(Budget.user_id == user_id).all()
 
     for budget in budgets:

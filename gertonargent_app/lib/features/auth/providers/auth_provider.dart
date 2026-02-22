@@ -6,6 +6,8 @@ final authProvider = StateNotifierProvider<AuthNotifier, AuthState>((ref) {
   return AuthNotifier(ref.read(apiServiceProvider));
 });
 
+/// État global de l'authentification.
+/// Contient les informations de session (token) et le profil de l'utilisateur.
 class AuthState {
   final bool isAuthenticated;
   final UserModel? user;
@@ -38,6 +40,8 @@ class AuthState {
   }
 }
 
+/// Contrôleur de l'authentification.
+/// Gère les appels à l'API pour la connexion et l'inscription.
 class AuthNotifier extends StateNotifier<AuthState> {
   final ApiService _apiService;
 

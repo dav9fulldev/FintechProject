@@ -3,23 +3,28 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 
 /// SikaNative — Wrapper MethodChannel pour l'intégration native Sika
-/// 
+///
 /// Expose les méthodes natives pour :
 /// - Gestion du service wake-word
 /// - Lecture/écriture de transactions pendantes
 /// - Récupération du prénom utilisateur
 /// - Contrôle de l'overlay
+/// Pont de communication entre Flutter et le code natif Android/iOS.
+/// Permet à l'interface d'interagir avec les capteurs et le stockage bas-niveau.
 class SikaNative {
+  /// Le canal `com.gertonargent/sika` est la ligne directe vers le service Kotlin.
   static const platform = MethodChannel('com.gertonargent/sika');
 
   // ============================================================================
   // SERVICE CONTROL
   // ============================================================================
 
-  /// Démarre le service wake-word Sika
+  /// Active le moteur de détection vocale ("Sika") en arrière-plan.
+  /// Cette méthode demande au système Android de rester à l'écoute.
   static Future<bool> startSikaService() async {
     try {
-      final bool result = await platform.invokeMethod<bool>('startSikaService') ?? false;
+      final bool result =
+          await platform.invokeMethod<bool>('startSikaService') ?? false;
       debugPrint('[SikaNative] Service started: $result');
       return result;
     } catch (e) {
@@ -31,7 +36,8 @@ class SikaNative {
   /// Arrête le service wake-word Sika
   static Future<bool> stopSikaService() async {
     try {
-      final bool result = await platform.invokeMethod<bool>('stopSikaService') ?? false;
+      final bool result =
+          await platform.invokeMethod<bool>('stopSikaService') ?? false;
       debugPrint('[SikaNative] Service stopped: $result');
       return result;
     } catch (e) {
@@ -43,7 +49,8 @@ class SikaNative {
   /// Vérifie si le service est en cours d'exécution
   static Future<bool> isSikaServiceRunning() async {
     try {
-      final bool result = await platform.invokeMethod<bool>('isSikaServiceRunning') ?? false;
+      final bool result =
+          await platform.invokeMethod<bool>('isSikaServiceRunning') ?? false;
       return result;
     } catch (e) {
       debugPrint('[SikaNative] Error checking service status: $e');
@@ -58,7 +65,8 @@ class SikaNative {
   /// Récupère le prénom de l'utilisateur stocké côté natif
   static Future<String?> getUserFirstname() async {
     try {
-      final String? result = await platform.invokeMethod<String>('getUserFirstname');
+      final String? result =
+          await platform.invokeMethod<String>('getUserFirstname');
       debugPrint('[SikaNative] Retrieved firstname: $result');
       return result;
     } catch (e) {
@@ -72,9 +80,10 @@ class SikaNative {
   static Future<bool> setUserFirstname(String firstname) async {
     try {
       final bool result = await platform.invokeMethod<bool>(
-        'setUserFirstname',
-        {'firstname': firstname},
-      ) ?? false;
+            'setUserFirstname',
+            {'firstname': firstname},
+          ) ??
+          false;
       debugPrint('[SikaNative] Firstname set: $result');
       return result;
     } catch (e) {
@@ -87,10 +96,12 @@ class SikaNative {
   // PENDING TRANSACTIONS
   // ============================================================================
 
-  /// Récupère toutes les transactions en attente
+  /// Récupère les dépenses enregistrées alors que l'app était fermée ou hors-ligne.
+  /// Les données transitent du stockage Android sécurisé vers le monde Flutter en JSON.
   static Future<List<Map<String, dynamic>>> readPendingTransactions() async {
     try {
-      final String? jsonStr = await platform.invokeMethod<String>('readPendingTransactions');
+      final String? jsonStr =
+          await platform.invokeMethod<String>('readPendingTransactions');
       if (jsonStr == null || jsonStr.isEmpty) {
         return [];
       }
@@ -103,13 +114,15 @@ class SikaNative {
   }
 
   /// Ajoute une transaction en attente
-  static Future<bool> addPendingTransaction(Map<String, dynamic> transaction) async {
+  static Future<bool> addPendingTransaction(
+      Map<String, dynamic> transaction) async {
     try {
       final String txJson = jsonEncode(transaction);
       final bool result = await platform.invokeMethod<bool>(
-        'addPendingTransaction',
-        {'transaction': txJson},
-      ) ?? false;
+            'addPendingTransaction',
+            {'transaction': txJson},
+          ) ??
+          false;
       debugPrint('[SikaNative] Transaction added: $result');
       return result;
     } catch (e) {
@@ -122,9 +135,10 @@ class SikaNative {
   static Future<bool> removePendingTransaction(int index) async {
     try {
       final bool result = await platform.invokeMethod<bool>(
-        'removePendingTransaction',
-        {'index': index},
-      ) ?? false;
+            'removePendingTransaction',
+            {'index': index},
+          ) ??
+          false;
       debugPrint('[SikaNative] Transaction removed at index $index: $result');
       return result;
     } catch (e) {
@@ -136,7 +150,9 @@ class SikaNative {
   /// Efface toutes les transactions en attente
   static Future<bool> clearPendingTransactions() async {
     try {
-      final bool result = await platform.invokeMethod<bool>('clearPendingTransactions') ?? false;
+      final bool result =
+          await platform.invokeMethod<bool>('clearPendingTransactions') ??
+              false;
       debugPrint('[SikaNative] Pending transactions cleared: $result');
       return result;
     } catch (e) {
@@ -150,12 +166,14 @@ class SikaNative {
   // ============================================================================
 
   /// Affiche l'overlay Sika avec un message
-  static Future<bool> showSikaOverlay({String message = 'Sika vous écoute...'}) async {
+  static Future<bool> showSikaOverlay(
+      {String message = 'Sika vous écoute...'}) async {
     try {
       final bool result = await platform.invokeMethod<bool>(
-        'showSikaOverlay',
-        {'message': message},
-      ) ?? false;
+            'showSikaOverlay',
+            {'message': message},
+          ) ??
+          false;
       debugPrint('[SikaNative] Overlay shown: $result');
       return result;
     } catch (e) {
@@ -167,7 +185,8 @@ class SikaNative {
   /// Masque l'overlay Sika
   static Future<bool> hideSikaOverlay() async {
     try {
-      final bool result = await platform.invokeMethod<bool>('hideSikaOverlay') ?? false;
+      final bool result =
+          await platform.invokeMethod<bool>('hideSikaOverlay') ?? false;
       debugPrint('[SikaNative] Overlay hidden: $result');
       return result;
     } catch (e) {
@@ -183,7 +202,9 @@ class SikaNative {
   /// Vérifie si la permission microphone est accordée
   static Future<bool> checkMicrophonePermission() async {
     try {
-      final bool result = await platform.invokeMethod<bool>('checkMicrophonePermission') ?? false;
+      final bool result =
+          await platform.invokeMethod<bool>('checkMicrophonePermission') ??
+              false;
       return result;
     } catch (e) {
       debugPrint('[SikaNative] Error checking microphone permission: $e');

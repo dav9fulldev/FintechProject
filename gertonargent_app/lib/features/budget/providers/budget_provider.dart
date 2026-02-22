@@ -7,6 +7,8 @@ final budgetProvider =
   return BudgetNotifier(ref.read(apiServiceProvider));
 });
 
+/// État de la gestion budgétaire.
+/// Regroupe la liste des budgets par catégorie et les statistiques globales.
 class BudgetState {
   final List<BudgetModel> budgets;
   final BudgetSummary? summary;
@@ -39,6 +41,8 @@ class BudgetState {
   }
 }
 
+/// Contrôleur des budgets.
+/// Effectue les calculs de synthèse et synchronise avec l'API.
 class BudgetNotifier extends StateNotifier<BudgetState> {
   final ApiService _apiService;
 

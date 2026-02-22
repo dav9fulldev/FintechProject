@@ -4,6 +4,8 @@ import '../../../../data/models/transaction_model.dart';
 import '../../../../data/models/budget_model.dart';
 import '../../providers/transaction_provider.dart';
 
+/// Page de saisie manuelle d'une transaction.
+/// Permet à l'utilisateur d'enregistrer ses revenus ou dépenses quotidiennement.
 class AddTransactionPage extends ConsumerStatefulWidget {
   const AddTransactionPage({super.key});
 
@@ -27,16 +29,21 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
     super.dispose();
   }
 
+  /// Envoie la transaction au backend via le Provider.
+  /// Pédagogie : Centralise la validation de surface avant l'envoi réseau.
   Future<void> _addTransaction() async {
     if (_formKey.currentState!.validate()) {
       setState(() => _isLoading = true);
 
-      final success = await ref.read(transactionProvider.notifier).createTransaction(
-        amount: double.parse(_amountController.text),
-        category: _category,
-        description: _descriptionController.text.isEmpty ? null : _descriptionController.text,
-        type: _type,
-      );
+      final success =
+          await ref.read(transactionProvider.notifier).createTransaction(
+                amount: double.parse(_amountController.text),
+                category: _category,
+                description: _descriptionController.text.isEmpty
+                    ? null
+                    : _descriptionController.text,
+                type: _type,
+              );
 
       setState(() => _isLoading = false);
 
@@ -97,7 +104,8 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                         icon: Icons.arrow_upward,
                         color: Colors.red,
                         isSelected: _type == TransactionType.expense,
-                        onTap: () => setState(() => _type = TransactionType.expense),
+                        onTap: () =>
+                            setState(() => _type = TransactionType.expense),
                       ),
                     ),
                     const SizedBox(width: 16),
@@ -107,7 +115,8 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                         icon: Icons.arrow_downward,
                         color: Colors.green,
                         isSelected: _type == TransactionType.income,
-                        onTap: () => setState(() => _type = TransactionType.income),
+                        onTap: () =>
+                            setState(() => _type = TransactionType.income),
                       ),
                     ),
                   ],
@@ -125,16 +134,20 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.money),
                     suffixText: 'FCFA',
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12)),
                     filled: true,
                     fillColor: Colors.grey[50],
                     hintText: '0',
                   ),
                   keyboardType: TextInputType.number,
-                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 24, fontWeight: FontWeight.bold),
                   validator: (value) {
-                    if (value == null || value.isEmpty) return 'Entrez un montant';
-                    if (double.tryParse(value) == null) return 'Montant invalide';
+                    if (value == null || value.isEmpty)
+                      return 'Entrez un montant';
+                    if (double.tryParse(value) == null)
+                      return 'Montant invalide';
                     return null;
                   },
                 ),
@@ -151,9 +164,11 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                   decoration: InputDecoration(
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(12),
-                      child: Text(_category.icon, style: const TextStyle(fontSize: 24)),
+                      child: Text(_category.icon,
+                          style: const TextStyle(fontSize: 24)),
                     ),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12)),
                     filled: true,
                     fillColor: Colors.grey[50],
                   ),
@@ -185,7 +200,8 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                   controller: _descriptionController,
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.note),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12)),
                     filled: true,
                     fillColor: Colors.grey[50],
                     hintText: 'Ex: Achat de provisions',
@@ -202,13 +218,17 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                     onPressed: _isLoading ? null : _addTransaction,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF00A86B),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
                     ),
                     child: _isLoading
                         ? const CircularProgressIndicator(color: Colors.white)
                         : const Text(
                             'Ajouter la transaction',
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
                           ),
                   ),
                 ),
@@ -245,7 +265,8 @@ class _TypeButton extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: isSelected ? color.withValues(alpha: 0.1) : Colors.grey[100],
-          border: Border.all(color: isSelected ? color : Colors.grey[300]!, width: 2),
+          border: Border.all(
+              color: isSelected ? color : Colors.grey[300]!, width: 2),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -253,7 +274,10 @@ class _TypeButton extends StatelessWidget {
           children: [
             Icon(icon, color: isSelected ? color : Colors.grey[600]),
             const SizedBox(width: 8),
-            Text(label, style: TextStyle(fontWeight: FontWeight.bold, color: isSelected ? color : Colors.grey[600])),
+            Text(label,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: isSelected ? color : Colors.grey[600])),
           ],
         ),
       ),

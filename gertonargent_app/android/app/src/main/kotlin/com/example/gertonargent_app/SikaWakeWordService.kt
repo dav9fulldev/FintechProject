@@ -20,6 +20,11 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
 
+/**
+ * Service d'écoute passive (Wake-word).
+ * Ce service tourne en tâche de fond pour détecter le mot "Sika".
+ * Pédagogie : Utilise Vosk pour la reconnaissance vocale 100% HORS-LIGNE (respect de la vie privée).
+ */
 class SikaWakeWordService : Service() {
 
     companion object {
@@ -107,6 +112,10 @@ class SikaWakeWordService : Service() {
             .build()
     }
 
+    /**
+     * Initialisation du moteur de reconnaissance vocale Vosk.
+     * Charge le modèle acoustique français depuis les assets de l'application.
+     */
     private fun initializeVosk() {
         Log.d(TAG, "Starting Vosk initialization in background thread...")
         Thread {

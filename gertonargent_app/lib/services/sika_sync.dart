@@ -9,6 +9,8 @@ import 'package:gertonargent_app/data/services/api_service.dart';
 /// - Tentative de synchronisation avec le backend
 /// - Gestion du verrouillage (mutex) pour éviter les exécutions concurrentes
 /// - Logs détaillés pour le débogage
+/// Orchestre le transfert des données financières du téléphone vers le Cloud (Backend).
+/// Assure que les transactions dictées à la voix ("Sika") finissent dans la base de données.
 class SikaSync {
   static bool _isSyncing = false;
 
@@ -20,11 +22,13 @@ class SikaSync {
   /// 3. Pour chaque transaction, tenter la sync avec le backend
   /// 4. En cas de succès, supprimer de la liste locale
   /// 5. En cas d'erreur réseau, conserver la transaction
+  /// Transfère les transactions locales vers le serveur.
+  /// Utilise un mécanisme de 'verrou' pour ne pas lancer plusieurs synchros en même temps.
   static Future<void> syncPendingTransactions({
     required ApiService apiService,
     int maxRetries = 3,
   }) async {
-    // Verrouillage mutex : éviter les exécutions concurrentes
+    // Sécurité : Évite les doublons ou la corruption de données si appelé trop souvent
     if (_isSyncing) {
       debugPrint('[SikaSync] Already syncing, skipping...');
       return;

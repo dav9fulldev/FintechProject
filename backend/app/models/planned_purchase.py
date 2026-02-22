@@ -5,10 +5,13 @@ import enum
 from .database import Base
 
 class PurchaseStatus(str, enum.Enum):
-    """Statut d'un achat planifié"""
-    PENDING = "pending"      # En attente
-    PURCHASED = "purchased"  # Acheté
-    CANCELLED = "cancelled"  # Annulé
+    """
+    Cycle de vie d'un achat planifié.
+    Permet de distinguer les envies en attente des dépenses réalisées.
+    """
+    PENDING = "pending"      # En attente de validation ou d'argent
+    PURCHASED = "purchased"  # Converti en transaction réelle
+    CANCELLED = "cancelled"  # Abandonné pour économiser
 
 class CategoryEnum(str, enum.Enum):
     """Catégories de dépenses"""
@@ -25,8 +28,8 @@ class CategoryEnum(str, enum.Enum):
 
 class PlannedPurchase(Base):
     """
-    Modèle pour la liste d'achats planifiés
-    Permet à l'utilisateur de définir ce qu'il veut acheter
+    Liste de souhaits ("Wishlist") financière.
+    Aide l'utilisateur à différer ses achats pour éviter l'impulsivité.
     """
     __tablename__ = "planned_purchases"
 

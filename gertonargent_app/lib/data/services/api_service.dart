@@ -6,6 +6,9 @@ import '../../core/constants/api_constants.dart';
 // Provider Riverpod pour ApiService
 final apiServiceProvider = Provider<ApiService>((ref) => ApiService());
 
+/// Service central de communication avec l'API FastAPI.
+/// Utilise le client Dio avec des intercepteurs pour la gestion des tokens.
+/// Design Pattern : Singleton (Instance unique pour toute l'app).
 class ApiService {
   late Dio _dio;
   String? _token;
@@ -27,6 +30,7 @@ class ApiService {
 
     _dio.interceptors.add(InterceptorsWrapper(
       onRequest: (options, handler) {
+        // Injection automatique du token JWT dans les headers
         if (_token != null) {
           options.headers['Authorization'] = 'Bearer $_token';
         }
@@ -639,6 +643,8 @@ class ApiService {
   // ==================== ERROR HANDLING ====================
 
   String _handleError(DioException e) {
+    /// Traduit les erreurs techniques réseau en messages compréhensibles pour l'utilisateur.
+    /// Gère les timeouts, les erreurs HTTP (400, 401, 500) et les pertes de connexion.
     switch (e.type) {
       case DioExceptionType.connectionTimeout:
       case DioExceptionType.sendTimeout:

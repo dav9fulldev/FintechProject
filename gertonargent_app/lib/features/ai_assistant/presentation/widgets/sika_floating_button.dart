@@ -4,8 +4,9 @@ import 'package:avatar_glow/avatar_glow.dart';
 import '../../providers/sika_provider.dart';
 import '../pages/sika_page.dart';
 
-/// Bouton flottant Sika - comme le bouton Siri sur iPhone
-/// Affiche l'état de Sika et permet d'ouvrir l'assistant
+/// Bouton flottant Sika - l'âme conversationnelle de l'application.
+/// S'anime (Pulse/Glow) lorsque Sika écoute ou analyse.
+/// Design inspiré de l'assistant Siri pour une sensation "Premium".
 class SikaFloatingButton extends ConsumerWidget {
   final bool mini;
   final EdgeInsets? margin;
@@ -32,7 +33,8 @@ class SikaFloatingButton extends ConsumerWidget {
             PageRouteBuilder(
               pageBuilder: (context, animation, secondaryAnimation) =>
                   const SikaPage(),
-              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
                 return SlideTransition(
                   position: Tween<Offset>(
                     begin: const Offset(0, 1),

@@ -30,7 +30,11 @@ def analyze_transaction(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Analyser une transaction avant de la valider"""
+    """
+    Simule l'impact d'une transaction AVANT son enregistrement.
+    Pourquoi : Créer une friction cognitive pour éviter les achats impulsifs.
+    Résultat : Score de 1 à 5, couleur (Vert/Orange/Rouge) et impact sur les objectifs.
+    """
     budget = db.query(Budget).filter(
         Budget.user_id == user_id,
         Budget.category == data.category
@@ -92,7 +96,10 @@ def get_recommendations(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Obtenir des recommandations personnalisées basées sur les habitudes de dépenses"""
+    """
+    Analyse les habitudes de dépenses pour générer des conseils personnalisés.
+    Pédagogie : Alerte sur les dépassements, félicitations sur les économies, relance sur les objectifs.
+    """
     budgets = db.query(Budget).filter(Budget.user_id == user_id).all()
     transactions = db.query(Transaction).filter(
         Transaction.user_id == user_id
@@ -168,7 +175,10 @@ def predict_end_of_month(
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
-    """Prédire la situation financière en fin de mois"""
+    """
+    Prédit le solde final à partir du rythme de dépense actuel (projection linéaire).
+    Aide l'utilisateur à anticiper un découvert ou un surplus en fin de mois.
+    """
     budgets = db.query(Budget).filter(Budget.user_id == user_id).all()
     transactions = db.query(Transaction).filter(
         Transaction.user_id == user_id,
@@ -286,6 +296,10 @@ def sika_chat(
     db: Session = Depends(get_db)
 ):
     """
+    Interface de discussion avec Sika (Assistant Vocal).
+    Traite le langage naturel pour extraire des intentions financières.
+    """
+    """
     Endpoint principal de Sika - l'assistant vocal intelligent
 
     Retourne:
@@ -331,7 +345,8 @@ def sika_confirm_transaction(
     db: Session = Depends(get_db)
 ):
     """
-    Confirmer et enregistrer une transaction suggérée par Sika
+    Valide et enregistre une dépense détectée par Sika.
+    Met à jour simultanément le registre des transactions et le budget consommé.
     """
     from ..models.transaction import Transaction
 

@@ -14,6 +14,8 @@ import os
 
 router = APIRouter(prefix="/auth", tags=["authentication"])
 
+# Configuration de la sécurité JWT
+# SECRET_KEY doit rester privé pour empêcher la forge de faux tokens
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key")
 ALGORITHM = os.getenv("ALGORITHM", "HS256")
 
@@ -38,8 +40,11 @@ class Token(BaseModel):
     token_type: str
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
-    """Verify password using bcrypt directly (avoids passlib compatibility issues)"""
-    # Truncate password to 72 bytes (bcrypt limit)
+    """
+    Vérifie si le mot de passe en clair correspond au hash stocké.
+    Utilise bcrypt directement pour plus de robustesse sur Windows.
+    """
+    # Sécurité : bcrypt limite les mots de passe à 72 octets
     password_bytes = plain_password.encode('utf-8')[:72]
     hashed_bytes = hashed_password.encode('utf-8')
     return bcrypt.checkpw(password_bytes, hashed_bytes)
@@ -53,6 +58,10 @@ def get_password_hash(password: str) -> str:
     return hashed.decode('utf-8')
 
 def create_access_token(data: dict):
+    """
+    Génère un jeton JWT signé pour authentifier les requêtes futures.
+    Le jeton contient l'identifiant utilisateur (sub) et une date d'expiration.
+    """
     to_encode = data.copy()
     expire = datetime.utcnow() + timedelta(minutes=int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30)))
     to_encode.update({"exp": expire})
@@ -61,6 +70,10 @@ def create_access_token(data: dict):
 
 @router.post("/register", response_model=Token)
 def register(user: UserCreate, db: Session = Depends(get_db)):
+    """
+    Inscrit un nouvel utilisateur et initialise son profil financier.
+    Crée automatiquement des objectifs d'épargne basés sur ses choix.
+    """
     db_user = db.query(User).filter(User.email == user.email).first()
     if db_user:
         raise HTTPException(status_code=400, detail="Email déjà enregistré")
@@ -168,7 +181,10 @@ class UserResponse(BaseModel):
 
 
 def get_current_user(authorization: Optional[str] = Header(None), db: Session = Depends(get_db)):
-    """Extract and validate token from Authorization header"""
+    """
+    Sécurité : Dépendance pour protéger les routes.
+    Extrait le token JWT du header 'Authorization', le valide, et récupère l'utilisateur en DB.
+    """
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Token invalide ou expiré",
