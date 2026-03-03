@@ -1,0 +1,1156 @@
+Date,title,category,account,amount,currency,type,transfer-amount,transfer-currency,to-account,receive-amount,receive-currency,description,due-date,id
+2024-08-11 13:56:59.652,Karthik,Bills & Fees,Savings Bank,45.00,INR,EXPENSE,,,,,,,,74e78631-db14-4495-bfb9-85546b0bd2fe
+2024-08-10 16:09:55.986,Juice,Food & Drinks,Cash,40.00,INR,EXPENSE,,,,,,,,65e12e62-9f63-4c6c-b452-6c7b42fbfb7f
+2024-08-09 10:25:21.618,Tire,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,9ecd93bd-a835-4263-86e2-99fea475fa37
+2024-08-07 03:57:24.944,Baba,Bills & Fees,Savings Bank,200.00,INR,EXPENSE,,,,,,,,00d39b2c-e722-485a-85ca-28f6506dc674
+2024-08-04 13:09:08.452,Reward,Bills & Fees,Salary Bank,4.00,INR,INCOME,,,,,,,,3861d205-3245-4926-ad69-4491b0bff547
+2024-08-04 13:07:41.831,Baba,Bills & Fees,Savings Bank,500.00,INR,EXPENSE,,,,,,,,d56409a4-8deb-4a73-84e7-dfcc630b90dd
+2024-08-02 15:25:39.300,Grocery,Bills & Fees,Salary Bank,30.00,INR,EXPENSE,,,,,,,,063983ae-2b62-4ba6-b53f-405af48101c2
+2024-08-02 05:25:11.454,Petrol,Transport,Savings Bank,100.00,INR,EXPENSE,,,,,,,,593dec7f-97fe-4114-89ff-71c8c7591ef8
+2024-08-02 03:58:59.121,Adjust balance,,Cash,74.00,INR,EXPENSE,,,,,,,,71621720-2c82-4a49-8474-ba22cc9a3c99
+2024-08-02 03:56:52.237,Adjust balance,,Savings Bank,102.00,INR,EXPENSE,,,,,,,,9d36ebc2-45e0-4dc2-8bf5-ec9cdb05925c
+2024-08-01 13:47:08.112,Haircut,Bills & Fees,Savings Bank,152.00,INR,EXPENSE,,,,,,,,dba89b5e-346d-439b-aa8b-19c42ea5a8ca
+2024-08-01 13:46:53.758,Baba,Bills & Fees,Savings Bank,500.00,INR,EXPENSE,,,,,,,,3c916050-ffd6-45bd-a24c-6d5a9ffda846
+2024-07-31 14:34:25.800,Print,Bills & Fees,Savings Bank,22.00,INR,EXPENSE,,,,,,,,a474cddc-bbe2-4cfc-8fa8-8aa013b0260a
+2024-07-31 13:49:37.981,License,Bills & Fees,Savings Bank,300.00,INR,EXPENSE,,,,,,,,00ee0c6b-7b05-4daa-9a55-0aa7b444be17
+2024-07-26 14:48:03.223,Noodles,Food & Drinks,Savings Bank,70.00,INR,EXPENSE,,,,,,,,e58169a9-810b-4539-b94c-8d5f009697c2
+2024-07-20 04:54:12.554,Adjust balance,,Savings Bank,0.00,INR,INCOME,,,,,,,,5f6d8272-22b5-4e0f-9890-21458f421a85
+2024-07-20 04:53:54.600,Breakfast,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,81a3f436-7623-419e-8e87-2cbdd29a0476
+2024-07-20 04:53:37.992,Maa,Bills & Fees,Cash,50.00,INR,EXPENSE,,,,,,,,eff51027-fd36-4e8b-858c-70bc173f17c2
+2024-07-15 16:02:44.240,Adjust balance,,Cash,3.00,INR,EXPENSE,,,,,,,,bd394f07-67b4-44ec-8071-e7fbcf43c84d
+2024-07-15 08:50:27.789,Rent,Bills & Fees,Savings Bank,"3,800.00",INR,EXPENSE,,,,,,,,94568f6d-f1d2-43bb-bf34-d93c7f124262
+2024-07-14 14:26:20.654,Grocery,Bills & Fees,Cash,171.00,INR,EXPENSE,,,,,,,,bda86294-0706-4b32-9a90-e3c4be9af40f
+2024-07-14 14:26:07.147,Grocery,Bills & Fees,Cash,90.00,INR,EXPENSE,,,,,,,,accdbb7a-7664-4e1a-9f7b-e29f1a2f8da1
+2024-07-12 15:51:37.276,Adjust balance,,Salary Bank,41.00,INR,INCOME,,,,,,,,ac0ee509-f503-42f4-99d2-f7ef107f464d
+2024-07-12 15:50:33.462,Baba,Bills & Fees,Savings Bank,300.00,INR,EXPENSE,,,,,,,,2375ce27-4d2b-4055-9322-1181bed3e6aa
+2024-07-12 15:49:26.564,Adjust balance,,Cash,50.00,INR,EXPENSE,,,,,,,,9eab3dbc-4884-468a-bd27-6b183bfe1276
+2024-07-12 13:29:24.460,,,Savings Bank,50.00,INR,EXPENSE,,,,,,,,67f1d176-7ff5-4345-9983-de5c73b1fb7f
+2024-07-10 08:46:15.659,Maa,Bills & Fees,Cash,50.00,INR,EXPENSE,,,,,,,,ef205271-e09d-4662-b6ff-8ddb0c467121
+2024-07-10 08:45:59.387,Breakfast,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,3424ecfa-0a8b-4049-aa00-59777cd39690
+2024-07-07 05:17:18.519,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,cac698e7-c811-427d-9ed5-b0673fffc6ae
+2024-07-03 16:49:38.345,Netflix,Bills & Fees,Savings Bank,199.00,INR,EXPENSE,,,,,,,,1e4d5f78-89f0-484f-bc8b-5633b654465b
+2024-07-03 08:20:57.694,Baba,Bills & Fees,Savings Bank,200.00,INR,EXPENSE,,,,,,,,585baf2d-4c48-4241-a771-04d6d34a127d
+2024-07-02 09:04:42.442,Lunch,Food & Drinks,Cash,120.00,INR,EXPENSE,,,,,,,,d948522f-8b58-4780-a36b-36212de2be24
+2024-07-01 14:37:19.760,Baba,Bills & Fees,Savings Bank,500.00,INR,EXPENSE,,,,,,,,4331ab35-e22f-4484-bfd9-78f03f31f54f
+2024-07-01 14:37:10.673,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,3cad8c57-2bc9-43a2-8b41-2e7fef80c559
+2024-07-01 12:52:37.467,Printouts,Bills & Fees,Salary Bank,13.00,INR,EXPENSE,,,,,,,,a85b5ca6-e273-4889-912f-143d71087128
+2024-07-01 12:27:47.375,Printouts,Bills & Fees,Cash,42.00,INR,EXPENSE,,,,,,,,6202ac2c-5f86-4b8e-bec8-7570f00f7052
+2024-06-30 15:25:49.013,Biryani 🍚,Food & Drinks,Savings Bank,520.00,INR,EXPENSE,,,,,,,,778bf69f-8e6e-4f19-9eec-de8e87da0e86
+2024-06-30 15:25:39.318,Breakfast,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,b53e80d8-7726-4cc2-98b4-c241e10df863
+2024-06-30 03:06:51.000,Baba,Bills & Fees,Savings Bank,"2,000.00",INR,EXPENSE,,,,,,,,6e502c80-ea65-4c14-ae52-229484f4785a
+2024-06-30 01:53:16.946,Adjust balance,,Savings Bank,71.00,INR,INCOME,,,,,,,,25f7df22-f310-4dbf-80a8-ddc0ad9f0976
+2024-06-29 17:30:41.555,Juice,Food & Drinks,Cash,20.00,INR,EXPENSE,,,,,,,,49dcb2a0-d990-404e-bb8a-6b76eb8ac8fe
+2024-06-29 17:30:35.612,Cab,Transport,Cash,180.00,INR,EXPENSE,,,,,,,,c903cc52-742e-4e85-8aa4-daabb68ca918
+2024-06-29 04:07:00.354,Snacks,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,efa32c0e-a89c-4051-a00a-f2ca192f7aa8
+2024-06-29 04:06:02.094,Chai,Food & Drinks,Cash,20.00,INR,EXPENSE,,,,,,,,2e898b7c-cf33-4eea-ab9c-241d4b79f5ab
+2024-06-29 01:51:00.000,Recharge,Bills & Fees,Savings Bank,266.90,INR,EXPENSE,,,,,,,,c20fffe7-e626-40b9-a328-abbfee07f117
+2024-06-28 14:15:00.814,Curd,Food & Drinks,Cash,25.00,INR,EXPENSE,,,,,,,,2d4a5c01-e44c-4757-833c-1d224ac4add8
+2024-06-28 12:13:37.896,Adjust balance,,Cash,30.00,INR,EXPENSE,,,,,,,,d59805a3-20d8-41a4-b091-687934e18b5e
+2024-06-28 12:12:54.777,Tea,Food & Drinks,Cash,10.00,INR,EXPENSE,,,,,,,,412e5881-81f4-4f1b-8f5b-44b37494efef
+2024-06-28 08:03:54.409,Water,Food & Drinks,Cash,10.00,INR,EXPENSE,,,,,,,,1a9e3a8c-317c-4201-9062-31dbcecb63d5
+2024-06-28 01:21:47.390,Adjust balance,,Cash,358.00,INR,EXPENSE,,,,,,,,d98b8e50-f465-4388-be20-ee4ce02687ce
+2024-06-27 14:46:47.643,Water,Food & Drinks,Cash,40.00,INR,EXPENSE,,,,,,,,153de8c3-7909-498e-9d43-7c4ee326d083
+2024-06-27 14:46:14.704,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,c0e4f5d9-5bd4-49e4-aefd-3ff48595f91b
+2024-06-27 14:45:25.041,Metro,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,03783226-9430-4f1a-b8b8-57bd24885e9a
+2024-06-27 14:44:58.599,Haldiram,Food & Drinks,Cash,207.00,INR,EXPENSE,,,,,,,,c54801c1-0b35-4957-a3ce-909fb198186c
+2024-06-27 14:43:37.895,Tickets victoria,Bills & Fees,Cash,100.00,INR,EXPENSE,,,,,,,,5364aeef-79f3-4645-8f98-a058c5e7d215
+2024-06-27 14:43:17.268,Lunch,Food & Drinks,Cash,95.00,INR,EXPENSE,,,,,,,,c379664f-1940-49bb-820f-7366e229fb3f
+2024-06-27 14:42:56.410,Ferry,Transport,Cash,50.00,INR,EXPENSE,,,,,,,,942ad094-4a94-444c-8f43-54e8fe5a39f0
+2024-06-27 14:42:45.061,Baba,Bills & Fees,Cash,500.00,INR,EXPENSE,,,,,,,,c0684741-93d6-46b2-a47d-32f7e09d8ad7
+2024-06-27 14:42:09.168,Museum,Bills & Fees,Savings Bank,150.00,INR,EXPENSE,,,,,,,,819ae93c-51e7-4974-895f-7713a3bf6b89
+2024-06-27 14:35:22.527,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,eb2c31b4-5ac3-4e97-b296-2fb47ee65648
+2024-06-27 14:33:37.949,Metro,Transport,Salary Bank,10.00,INR,EXPENSE,,,,,,,,13a48e11-8267-4ad0-832d-e6ad5804f0dd
+2024-06-27 13:24:27.059,Grocery,Bills & Fees,Cash,200.00,INR,EXPENSE,,,,,,,,c28c190a-92c5-4d05-9c89-310befca5467
+2024-06-27 02:20:46.881,Withdraw,Bills & Fees,Salary Bank,0.00,INR,TRANSFER,"2,500.00",INR,Cash,"2,500.00",INR,,,b16e55e0-bd1b-4362-a9b4-8796f9901621
+2024-06-26 16:20:10.049,Cab,Transport,Salary Bank,200.00,INR,EXPENSE,,,,,,,,00d8e305-4141-4188-81e9-32a191ccaf68
+2024-06-26 14:34:00.000,Train,Transport,Salary Bank,20.00,INR,EXPENSE,,,,,,,,b1438c76-e86d-49e6-b6c8-aa9a01b721f8
+2024-06-24 01:42:02.212,Tickets,Bills & Fees,Salary Bank,20.00,INR,EXPENSE,,,,,,,,4d633abc-5c86-4813-a93a-39cfd53b7dbe
+2024-06-23 15:49:22.486,Maa stuff,Bills & Fees,Salary Bank,240.00,INR,EXPENSE,,,,,,,,4a0333b6-e068-439e-a9b7-fb09b8571130
+2024-06-23 15:26:55.087,Toto,Transport,Salary Bank,20.00,INR,EXPENSE,,,,,,,,38d13eb9-67dc-4e76-b32e-63764016b470
+2024-06-23 15:20:07.076,Snacks,Food & Drinks,Salary Bank,70.00,INR,EXPENSE,,,,,,,,c39e0b28-2498-4d06-b509-cf07381a9010
+2024-06-23 15:18:18.631,Adjust balance,,Salary Bank,102.00,INR,EXPENSE,,,,,,,,d7a24953-5fcf-471b-ba8a-2b5b53989393
+2024-06-23 14:44:54.072,Snacks,Food & Drinks,Salary Bank,44.00,INR,EXPENSE,,,,,,,,6cb158ba-8edf-448b-b72d-2d644b11b090
+2024-06-23 08:19:55.534,Shaka pola,Bills & Fees,Salary Bank,600.00,INR,EXPENSE,,,,,,,,c692fa2a-cc2e-452c-9017-ec8b1f5d99dd
+2024-06-21 15:16:00.000,Tickets,Transport,Salary Bank,40.00,INR,EXPENSE,,,,,,,,7731b44a-90a9-490f-b0dc-32b1607174f7
+2024-06-20 12:39:19.568,Adjust balance,,Salary Bank,60.00,INR,EXPENSE,,,,,,,,445dc212-caca-40e6-b82f-6202a34dfc4f
+2024-06-20 12:30:33.462,Lunch,Food & Drinks,Salary Bank,20.00,INR,EXPENSE,,,,,,,,ba1ad731-ddb9-4b43-8dee-8c51f9eeca51
+2024-06-20 12:30:04.622,Recharge,Bills & Fees,Salary Bank,259.00,INR,EXPENSE,,,,,,,,02c4ef39-dc24-41c7-a661-9aabec8e2759
+2024-06-19 12:34:00.000,Shave,Bills & Fees,Salary Bank,20.00,INR,EXPENSE,,,,,,,,a615e949-d311-4d68-90e8-b7c3c185e3e2
+2024-06-17 15:10:03.406,Water,Food & Drinks,Cash,20.00,INR,EXPENSE,,,,,,,,a69d23ab-b64c-4433-bcd0-287150241428
+2024-06-17 14:56:11.086,Tickets,Transport,Cash,260.00,INR,EXPENSE,,,,,,,,a3648944-0536-4103-9b05-b1a2c10b97f0
+2024-06-17 12:22:07.086,Water,Food & Drinks,Cash,20.00,INR,EXPENSE,,,,,,,,ab6d1bd8-fca7-456f-891a-9c4d4b4cc200
+2024-06-17 10:07:14.477,Ticket Refund,Bills & Fees,Salary Bank,"1,570.72",INR,INCOME,,,,,,,,134b84d9-d069-4dc3-b3d8-2ad31a9914df
+2024-06-17 08:10:41.282,Lunch,Food & Drinks,Salary Bank,250.00,INR,EXPENSE,,,,,,,,7acd4795-7a52-40c1-b8c9-516b42b0ed75
+2024-06-17 05:15:33.151,Adjust balance,,Cash,120.00,INR,EXPENSE,,,,,,,,76522f59-ef2e-418d-ae78-6ca7a400eb01
+2024-06-16 23:32:32.665,Baba,Bills & Fees,Cash,500.00,INR,EXPENSE,,,,,,,,0bc78b39-86a4-4563-aa48-601fb29d8c11
+2024-06-16 08:17:00.000,Cab,Transport,Salary Bank,170.00,INR,EXPENSE,,,,,,,,558a01e8-4b80-461e-ae4a-d8463cb918ac
+2024-06-16 07:45:50.967,Snacks,Food & Drinks,Salary Bank,200.00,INR,EXPENSE,,,,,,,,37d15a02-2d34-4653-9d59-b70a24fa53ed
+2024-06-16 07:45:35.414,Chotu,Bills & Fees,Cash,500.00,INR,EXPENSE,,,,,,,,b4c1f454-2b37-4ed5-8458-e86c0048b7ee
+2024-06-16 07:45:25.649,Withdraw,Bills & Fees,Salary Bank,0.00,INR,TRANSFER,"1,500.00",INR,Cash,"1,500.00",INR,,,2e1389f8-269b-431b-afd8-9de7c6ab74e0
+2024-06-16 07:45:01.144,Tickets,Bills & Fees,Salary Bank,"1,702.70",INR,EXPENSE,,,,,,,,fb0cf317-8075-4f05-adb6-c924435db5a3
+2024-06-15 18:30:01.003,Baba,Bills & Fees,Salary Bank,500.00,INR,EXPENSE,,,,,,,,2572b1a9-bcb3-48e1-985d-c9fd31e71f6d
+2024-06-14 18:29:00.000,Petrol,Transport,Cash,100.00,INR,EXPENSE,,,,,,,,a1fe4f07-b2f4-4179-9fa5-410bc804607d
+2024-06-14 18:29:00.000,Sriya payback,Bills & Fees,Cash,100.00,INR,INCOME,,,,,,,,ecd7db96-ad5e-49ce-bc6c-907829cf806b
+2024-06-14 03:57:50.574,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,4228d945-c519-4c74-9c97-e9b1e1a1673c
+2024-06-13 15:22:37.432,Snacks,Food & Drinks,Salary Bank,208.50,INR,EXPENSE,,,,,,,,3bb28e6e-8680-4a2c-b19a-307f1d665e88
+2024-06-13 15:22:05.293,Petrol,Transport,Salary Bank,200.00,INR,EXPENSE,,,,,,,,7f2fbd7d-ebd8-40cc-b72e-ebf59781ac81
+2024-06-11 08:25:03.581,Chips,Food & Drinks,Salary Bank,10.00,INR,EXPENSE,,,,,,,,ae884f4f-f532-4ba2-810e-7f40415b00c9
+2024-06-10 05:26:27.942,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,b85cd16c-5ced-4393-9bb7-4b2a599d850e
+2024-06-09 05:26:00.000,Petrol,Transport,Salary Bank,200.00,INR,EXPENSE,,,,,,,,062e59cb-5373-4791-a0ee-e499208deb1d
+2024-06-09 05:24:00.000,Clothes,Bills & Fees,Salary Bank,799.00,INR,EXPENSE,,,,,,,,4c221e0f-4ea9-45f1-95ac-048906819f10
+2024-06-09 05:21:00.000,Snacks,Food & Drinks,Salary Bank,198.88,INR,EXPENSE,,,,,,,,16773874-1f14-4c60-950e-c039a3814588
+2024-06-07 16:56:39.988,Baba,Bills & Fees,Salary Bank,500.00,INR,EXPENSE,,,,,,,,05e0f471-b671-48cb-9a83-e9c2dce2cc8e
+2024-06-07 16:56:30.798,Snacks,Food & Drinks,Salary Bank,90.00,INR,EXPENSE,,,,,,,,efe635ab-b644-4d51-99cd-d8ffa76fcab9
+2024-06-07 16:56:18.253,Sriya,Bills & Fees,Salary Bank,100.00,INR,EXPENSE,,,,,,,,1ed370e7-b050-47c4-b24a-8dce1aea7e82
+2024-06-07 16:56:10.389,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,3cbef138-72cc-4820-a76f-c87b9a8cf165
+2024-06-07 05:49:15.113,Karthik payback,Bills & Fees,Salary Bank,200.00,INR,INCOME,,,,,,,,c05e6998-4ece-4c6e-9310-f51a58b922f5
+2024-06-07 05:48:57.032,Karthik payback,Bills & Fees,Cash,100.00,INR,INCOME,,,,,,,,aa5bcfad-c580-4a2b-b9a3-414df3804624
+2024-06-05 14:47:55.268,Grocery,Bills & Fees,Salary Bank,175.00,INR,EXPENSE,,,,,,,,e5e0b394-d70c-48bb-81da-363d85a81880
+2024-06-05 13:59:13.995,Netflix,Bills & Fees,Savings Bank,200.00,INR,EXPENSE,,,,,,,,bed7ee92-d044-4398-9b48-91b12308c2e8
+2024-06-05 13:55:51.663,Settlement,Bills & Fees,Salary Bank,0.00,INR,TRANSFER,"2,175.00",INR,Savings Bank,"2,175.00",INR,,,bba071ab-57fd-48d6-a653-d57d22977e46
+2024-06-05 08:22:32.878,Salary,Bills & Fees,Salary Bank,"11,688.00",INR,INCOME,,,,,,,,d7ab8a16-5521-4a7c-a62a-ad66e4f629ee
+2024-06-05 05:29:00.000,Snacks,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,ecbb7610-76b5-4f3f-964f-abb01c486ec8
+2024-06-05 04:36:19.506,Adjust balance,,Cash,67.00,INR,EXPENSE,,,,,,,,92182a4d-5c30-466d-9183-24297e618f26
+2024-06-05 04:33:40.272,Chotu,Bills & Fees,Savings Bank,155.00,INR,EXPENSE,,,,,,,,e4213549-3613-4058-96cc-933df529f820
+2024-06-05 04:31:51.877,Adjust balance,,Salary Bank,10.00,INR,EXPENSE,,,,,,,,3c361c1b-5349-455d-84be-6689570b532a
+2024-06-05 04:31:24.237,Netflix,Bills & Fees,Salary Bank,199.00,INR,EXPENSE,,,,,,,,f9f55fad-e59f-4f00-8b37-3a82954424b4
+2024-06-05 04:31:12.252,Netflix,Bills & Fees,Salary Bank,200.00,INR,INCOME,,,,,,,,deb59219-cca3-4b90-8f77-c8e1f8aff192
+2024-06-05 04:30:53.200,,Bills & Fees,Salary Bank,70.00,INR,INCOME,,,,,,,,21ee236b-528a-4fdf-a663-c711785f40fe
+2024-06-04 03:35:41.791,Baba,Bills & Fees,Salary Bank,200.00,INR,EXPENSE,,,,,,,,2bfe2d14-db8a-45c2-9fa3-b1b78cc9210e
+2024-06-03 12:36:00.077,Snacks,Food & Drinks,Cash,90.00,INR,EXPENSE,,,,,,,,b12e0db0-9da4-49cb-999b-98357aff6dfb
+2024-06-03 05:07:41.196,Goje,Bills & Fees,Savings Bank,300.00,INR,EXPENSE,,,,,,,,8f3ae772-1551-44bc-b056-7f800f30cc54
+2024-06-03 05:04:36.556,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,02e1c2da-3f99-4fe3-96b3-68f968750013
+2024-05-31 03:09:00.000,Biryani 🍚,Food & Drinks,Savings Bank,520.00,INR,EXPENSE,,,,,,,,f0a1ca79-e8c3-4a46-bcdf-59c803eff53d
+2024-05-31 03:08:00.000,Adjust balance,,Salary Bank,54.00,INR,EXPENSE,,,,,,,,1a7cd23f-49ee-4101-9858-012068855deb
+2024-05-31 03:03:00.000,Juice,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,d06b82a1-977b-4e07-a56b-1e846157e695
+2024-05-31 03:03:00.000,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,6d43985c-2e33-4281-9bf8-0c8e6f9b260b
+2024-05-31 03:01:00.000,Smthng,Bills & Fees,Cash,10.00,INR,EXPENSE,,,,,,,,39f842d8-92d0-4108-bfae-5b3802a25523
+2024-05-30 14:19:51.971,Pizza,Food & Drinks,Salary Bank,190.00,INR,EXPENSE,,,,,,,,43ac317c-1fa9-4748-81c8-40cc674a196a
+2024-05-30 08:34:31.739,Baba,Bills & Fees,Savings Bank,"1,000.00",INR,EXPENSE,,,,,,,,2be3b36d-cbf8-423c-b51c-55e7e999595b
+2024-05-29 11:05:25.670,Snacks,Food & Drinks,Salary Bank,35.00,INR,EXPENSE,,,,,,,,bb50734a-f6b8-47c4-a707-92b2be34aa3b
+2024-05-29 04:27:14.022,Reward,Bills & Fees,Salary Bank,11.00,INR,INCOME,,,,,,,,8dce71df-070d-47b8-92c9-2f617cabc9a0
+2024-05-29 04:26:59.011,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,ec50fd6d-7b75-4dd7-87d9-b95506f15c56
+2024-05-28 14:50:27.897,Shirt,Bills & Fees,Salary Bank,160.00,INR,EXPENSE,,,,,,,,4976a205-5563-43b6-817d-8840969592a2
+2024-05-28 14:49:47.594,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,fcf6c72c-9988-482a-ba5f-f58b5c2f2bea
+2024-05-28 14:49:32.484,Juice,Food & Drinks,Salary Bank,35.00,INR,EXPENSE,,,,,,,,90e3f00f-96c4-425d-b28b-4b10e0d2a648
+2024-05-28 14:49:13.738,Withdraw,Bills & Fees,Salary Bank,0.00,INR,TRANSFER,300.00,INR,Cash,300.00,INR,,,3892857d-ffc3-4200-9612-aeb73ec09903
+2024-05-28 14:48:52.931,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,d293f0c2-bf08-4d17-9ea0-7bb17d4d9855
+2024-05-27 15:14:02.274,Recharge,Bills & Fees,Salary Bank,155.00,INR,EXPENSE,,,,,,,,d52842dc-5f52-4f8f-a61c-807d355df654
+2024-05-27 15:13:47.982,Chotu,Bills & Fees,Salary Bank,500.00,INR,EXPENSE,,,,,,,,586a29c2-b32c-4943-b3b1-798f025add1c
+2024-05-27 12:09:12.844,Adjust balance,,Salary Bank,56.00,INR,EXPENSE,,,,,,,,b0dcb84a-92d4-4160-898d-fd4927da97e8
+2024-05-27 12:08:00.000,Snacks,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,06c8760b-4e21-497b-a26f-9d24b0ba5e12
+2024-05-26 12:49:22.743,Shampoo,Bills & Fees,Cash,4.00,INR,EXPENSE,,,,,,,,4c6fb575-dfd3-4307-a9e7-f2bcefe4db4c
+2024-05-26 12:08:00.000,Petrol,Bills & Fees,Salary Bank,250.00,INR,EXPENSE,,,,,,,,1318d331-e052-4925-afca-32671034ad33
+2024-05-26 12:08:00.000,Stationary,Bills & Fees,Salary Bank,20.00,INR,EXPENSE,,,,,,,,1596fd8b-a723-446f-99da-8bc8f18cf435
+2024-05-25 15:20:10.319,Ice cream,Food & Drinks,Salary Bank,20.00,INR,EXPENSE,,,,,,,,c7e0e490-9a26-4613-87e6-d01169bc50e0
+2024-05-25 15:19:41.615,Snacks,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,f7b20515-5b20-4530-b5fa-10e3e6d51f6d
+2024-05-25 08:21:43.140,Lunch,Food & Drinks,Salary Bank,70.00,INR,EXPENSE,,,,,,,,a52ca5ed-eb3e-46ad-ba4b-075bbe43a4ad
+2024-05-25 08:21:34.647,Auto,Transport,Salary Bank,20.00,INR,EXPENSE,,,,,,,,eac3929c-ce7c-4188-9853-b75fad0935b6
+2024-05-24 08:43:00.000,Bus,Transport,Cash,40.00,INR,EXPENSE,,,,,,,,70767dbf-6508-4b71-b541-b12f4ed5fa08
+2024-05-24 08:20:00.000,Auto,Transport,Salary Bank,20.00,INR,EXPENSE,,,,,,,,a1e0a217-2509-4704-a89b-9a378d369ac6
+2024-05-24 08:20:00.000,Juice,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,3ac3d8dc-837d-4775-90a0-c60397b82a62
+2024-05-24 06:37:00.000,Printing,Bills & Fees,Salary Bank,555.00,INR,EXPENSE,,,,,,,,111d7810-1d9c-4440-ad9a-b0a38aaa862e
+2024-05-23 04:48:28.675,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,11b63743-5dd4-4a12-af09-ed5adf96116f
+2024-05-21 16:32:00.000,Recharge,Bills & Fees,Salary Bank,259.00,INR,EXPENSE,,,,,,,,88f8fa2a-102f-400a-aab7-6f5a5cafdd04
+2024-05-21 16:32:00.000,Internet,Bills & Fees,Salary Bank,470.82,INR,EXPENSE,,,,,,,,f12182fe-8230-49b7-afc7-cf00fe33df1b
+2024-05-21 16:09:59.066,Juice,Food & Drinks,Salary Bank,10.00,INR,EXPENSE,,,,,,,,83b46998-5170-4b50-a939-d364e991f5f3
+2024-05-21 16:09:46.701,Brake,Bills & Fees,Salary Bank,50.00,INR,EXPENSE,,,,,,,,f6d5fdfa-1155-425d-a5a8-358aa4fe8643
+2024-05-21 16:09:35.189,Ice Cream,Food & Drinks,Salary Bank,35.00,INR,EXPENSE,,,,,,,,cf6a35f0-18b0-40e1-b837-dd7022d96129
+2024-05-21 16:09:22.620,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,04706684-ba57-446b-8c30-74bc8dfbeff5
+2024-05-21 16:07:26.434,Adjust balance,,Cash,40.00,INR,EXPENSE,,,,,,,,92bf81c0-a7b5-4a80-ac8d-2fd412a5d682
+2024-05-20 16:08:00.000,Juice,Food & Drinks,Salary Bank,75.00,INR,EXPENSE,,,,,,,,e688f069-4412-408c-a7ac-ff4c87ff875f
+2024-05-20 16:08:00.000,Juice,Food & Drinks,Salary Bank,20.00,INR,EXPENSE,,,,,,,,be393797-8976-4b99-85a1-f9241f7e0e5a
+2024-05-19 16:01:00.286,Tickets,Bills & Fees,Salary Bank,"1,341.80",INR,EXPENSE,,,,,,,,89dc11da-bc16-4021-a23c-1d896ec460bd
+2024-05-19 16:00:35.999,Tickets,Bills & Fees,Salary Bank,"1,341.80",INR,EXPENSE,,,,,,,,20544f7f-8ec6-4895-8332-8be4ed11d66c
+2024-05-19 15:41:26.721,Maggi,Food & Drinks,Salary Bank,14.00,INR,EXPENSE,,,,,,,,a67511da-2ca2-4eff-a28b-a0bab482fe0f
+2024-05-17 04:12:00.000,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,a790edcc-dddd-4324-8e65-14b2d36ccedb
+2024-05-16 04:11:00.000,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,9ba7e97f-b449-4a7f-ba94-1cf126e962c1
+2024-05-15 17:52:40.255,Juice,Food & Drinks,Salary Bank,130.00,INR,EXPENSE,,,,,,,,6ee76b88-daa0-4ca0-872b-86910582ec99
+2024-05-15 17:52:10.428,Shawarma 🌯,Food & Drinks,Salary Bank,220.00,INR,EXPENSE,,,,,,,,7a04f85d-8ae6-48ea-872f-2e4e7d182d82
+2024-05-15 17:51:58.694,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,e244b224-73ea-4f20-b051-c6833048b121
+2024-05-15 08:17:35.531,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,a92ff9ec-45b8-401d-80da-77ff88d0412a
+2024-05-15 08:17:02.946,AtR,Transport,Salary Bank,35.00,INR,EXPENSE,,,,,,,,91e16f4f-635d-467b-8da1-ce284077e76f
+2024-05-14 17:56:02.463,Recharge,Transport,Salary Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,a33a155b-ca7d-4562-a87f-89bc82696753
+2024-05-14 17:55:02.389,Juice,Food & Drinks,Cash,10.00,INR,EXPENSE,,,,,,,,312ea3c7-fd8d-40ee-bcf9-9ee382fb9e71
+2024-05-14 17:54:56.837,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,19226009-98a4-4867-8cc7-7c441b3190ef
+2024-05-14 17:54:47.434,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,40420718-2e72-49f7-a0c1-eee663b5c35d
+2024-05-14 17:54:46.663,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,f688a5f5-29fc-429b-b1f1-58ae749df8cc
+2024-05-12 17:55:00.000,Snacks,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,0ef25ffb-a3db-4ef1-8a8f-3446f87d961b
+2024-05-10 13:40:00.000,Snacks,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,508ff447-c1e6-442e-b521-11f1a6909a23
+2024-05-10 12:20:52.330,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,4a4426b0-b4cf-4a10-b17a-af10098311c4
+2024-05-10 12:20:51.356,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,fd83b29f-45ca-4d74-b5aa-aea3f4e30014
+2024-05-09 14:04:51.085,Screen,Bills & Fees,Salary Bank,"1,400.00",INR,EXPENSE,,,,,,,,fa7ed52f-db05-417b-bea8-d197bdfe73e9
+2024-05-09 14:04:30.298,Snacks,Food & Drinks,Salary Bank,20.00,INR,EXPENSE,,,,,,,,b4c52cef-c5ed-4413-a986-d631def38ae6
+2024-05-09 14:04:20.041,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,a49ad761-2d0c-4360-b0d1-919767fc5226
+2024-05-08 04:14:00.000,Juice,Food & Drinks,Salary Bank,80.00,INR,EXPENSE,,,,,,,,7a7da6a6-df34-4f87-8008-1f54b281da93
+2024-05-08 04:14:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,3e3f3638-f323-4934-8c0e-cc6f885a1678
+2024-05-08 04:13:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,3489e490-54a8-4aeb-9f0a-d312a10dd10a
+2024-05-08 03:46:18.433,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,a1f86aa7-540c-48a1-b730-522179275527
+2024-05-08 03:46:14.380,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ec49d0e2-f60e-4572-bd2a-05c165a202dd
+2024-05-07 13:46:21.123,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,6beab6b5-8ad2-4405-8209-35d351371db4
+2024-05-07 13:46:19.740,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,82d6a6ae-0f2e-4741-89cc-d62ca760048a
+2024-05-07 03:46:00.000,Shawarma 🌯,Food & Drinks,Salary Bank,120.00,INR,EXPENSE,,,,,,,,224c5bd7-7ae2-4c34-bb10-7fe899c4dbff
+2024-05-07 03:45:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,32fb9d18-e584-45e4-9778-e884caf79cf9
+2024-05-06 15:16:28.152,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,e3e59dbc-4585-4794-968a-a25b74635ab8
+2024-05-06 15:15:51.819,Petrol,Bills & Fees,Salary Bank,100.00,INR,EXPENSE,,,,,,,,231b4928-e59b-4e37-8bc2-3cf110628c82
+2024-05-06 15:15:41.755,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,e86cd4ca-f861-4b84-bd21-d3924ca9d854
+2024-05-06 15:15:40.067,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,fbe815ee-f0f2-49b0-b6ad-f5bd54ffd06b
+2024-05-06 08:43:44.835,Juice,Food & Drinks,Salary Bank,40.00,INR,EXPENSE,,,,,,,,12c2ad26-a465-43d3-8cb1-1a08d842937a
+2024-05-06 08:43:34.035,Lunch,Food & Drinks,Salary Bank,100.00,INR,EXPENSE,,,,,,,,91969a70-3150-4b01-bc97-26e35c00f24b
+2024-05-06 03:28:14.651,Adjust balance,,Salary Bank,80.00,INR,INCOME,,,,,,,,272a637e-935e-45cf-a151-f96dd5867530
+2024-05-06 03:22:18.337,Adjust balance,,Cash,30.00,INR,EXPENSE,,,,,,,,a226c682-212e-43fa-8f28-bd562c86ca49
+2024-05-04 03:27:00.000,Petrol,Transport,Salary Bank,200.00,INR,EXPENSE,,,,,,,,8856e7fe-ea51-49fd-8e08-732a1029f759
+2024-05-04 03:27:00.000,Medic,Bills & Fees,Salary Bank,20.00,INR,EXPENSE,,,,,,,,93bf965f-fd3f-45ce-be3e-7f8acad23500
+2024-05-03 03:26:00.000,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,85c7287a-67c6-47a2-b09b-db10b1767c83
+2024-05-03 03:26:00.000,Recharge,Bills & Fees,Salary Bank,266.90,INR,EXPENSE,,,,,,,,c0350a6b-313c-40f9-96df-bc09d4ab1b21
+2024-05-03 03:26:00.000,Petrol,Transport,Salary Bank,50.00,INR,EXPENSE,,,,,,,,aefddc5a-45f9-428a-9562-660e5430e26c
+2024-05-02 06:59:13.423,Exam Fees,Bills & Fees,Salary Bank,"2,000.00",INR,EXPENSE,,,,,,,,c41d8549-50b7-4ed3-8c20-661c1aabe068
+2024-05-02 06:59:01.605,Juice,Food & Drinks,Salary Bank,80.00,INR,EXPENSE,,,,,,,,3bb50eca-d2f2-488a-96a0-2228fae10012
+2024-05-02 06:58:52.514,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,2bb8783b-91b4-41ed-9693-f602e0614575
+2024-05-02 06:58:47.253,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,f3d8e0bf-93f8-4a14-8fc4-12a5cfb566ad
+2024-05-02 03:25:00.000,Juice,Food & Drinks,Salary Bank,80.00,INR,EXPENSE,,,,,,,,02201ad3-181f-4829-aab5-82ff49adabc1
+2024-05-02 03:25:00.000,Snacks,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,89363752-fa3b-4bb3-b5bd-cf5f2fe78125
+2024-05-02 01:49:29.202,Savings,,Salary Bank,0.00,INR,TRANSFER,"2,000.00",INR,Savings Bank,"2,000.00",INR,,,d5c5a778-77d0-427a-8a25-bea074464e1f
+2024-05-02 01:49:07.739,Netflix,Bills & Fees,Salary Bank,199.00,INR,EXPENSE,,,,,,,,cf4d2147-844b-4d8a-a53c-052fdc69cf08
+2024-05-02 01:46:00.656,Baba,Bills & Fees,Salary Bank,"5,000.00",INR,EXPENSE,,,,,,,,22f14513-6bf6-4c2a-8db2-e6bb0c2a44d2
+2024-05-01 16:01:11.889,Adjust balance,,Salary Bank,30.00,INR,EXPENSE,,,,,,,,6511f107-793d-40c5-85d6-a25672fcd158
+2024-05-01 16:00:51.168,Recharge,Bills & Fees,Salary Bank,155.00,INR,EXPENSE,,,,,,,,88d1725a-bb66-435c-bbe0-4de70e749fc7
+2024-05-01 16:00:00.363,Juice,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,f4f13756-1197-4ffe-9ae1-4e357666b7c8
+2024-05-01 15:59:19.629,Recharge,Transport,Salary Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,bb0f7535-0a80-4c12-8776-954fdd0fd79e
+2024-05-01 15:58:54.202,Withdraw,,Salary Bank,0.00,INR,TRANSFER,300.00,INR,Cash,300.00,INR,,,d676f96e-cc64-4cad-ae61-6ad50c6adcf1
+2024-05-01 15:57:45.381,RtA,Transport,Cash,35.00,INR,EXPENSE,,,,,,,,93e4b05a-c62e-4415-a0a2-d44b497fb11d
+2024-05-01 03:50:02.977,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,258ad797-30ea-4182-8954-5e2e62170dd8
+2024-05-01 03:25:35.843,Water,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,39def290-90c7-4538-a84d-74736543a1f8
+2024-04-30 14:50:06.823,Salary,Bills & Fees,Salary Bank,"19,367.00",INR,INCOME,,,,,,,,2e7a54a6-8f1b-4132-bb0a-e1e1add888f0
+2024-04-30 14:49:49.288,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,223e59b5-7482-4071-b778-e48fef8a1a27
+2024-04-30 14:49:41.429,AtR,Transport,Salary Bank,35.00,INR,EXPENSE,,,,,,,,cfe9fe1d-5d66-4a57-b4bd-d4fecddecf35
+2024-04-30 14:49:29.643,RtA,Transport,Salary Bank,35.00,INR,EXPENSE,,,,,,,,e2738ea5-560b-470d-8f3d-dcf4f55bb6b5
+2024-04-30 02:03:00.000,Juice,Food & Drinks,Salary Bank,90.00,INR,EXPENSE,,,,,,,,6f203563-6af9-4e30-9213-362808479cba
+2024-04-29 18:43:47.723,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,241f2f9d-adec-4016-a54c-fb3f14b7c1b8
+2024-04-29 18:43:40.127,RtA,Transport,Salary Bank,35.00,INR,EXPENSE,,,,,,,,a6e443f4-424e-45b3-9dcd-66a35eb78bdf
+2024-04-29 12:05:51.225,Adjust balance,,Cash,80.00,INR,EXPENSE,,,,,,,,2bf9e586-bf61-4630-8f8a-1264c4277cb7
+2024-04-29 08:51:18.570,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ca732d24-ab2e-4928-828b-08ae8246c0c8
+2024-04-29 08:51:06.330,AtR,Transport,Salary Bank,35.00,INR,EXPENSE,,,,,,,,20b0e0d5-2587-4033-a4d4-af88ade8281e
+2024-04-28 15:27:48.931,Baba,Bills & Fees,Salary Bank,500.00,INR,EXPENSE,,,,,,,,bcd5e720-c629-405d-92ce-a63f78b4fe4e
+2024-04-28 14:17:36.623,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,898b5084-1696-4762-9dd1-a309b83348c2
+2024-04-27 14:17:00.000,🍰,Food & Drinks,Salary Bank,100.00,INR,EXPENSE,,,,,,,,cc950855-0206-41da-a80c-c3029267ffee
+2024-04-27 14:17:00.000,Milk,Bills & Fees,Salary Bank,40.00,INR,EXPENSE,,,,,,,,8872e260-1d9b-41e5-a7af-739baa5c9d94
+2024-04-27 14:16:00.000,Snacks,Food & Drinks,Salary Bank,90.00,INR,EXPENSE,,,,,,,,96623580-7f22-4b17-95ba-a5923dcc532d
+2024-04-27 14:15:00.000,Water,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,7e97a3c7-7731-47dc-8c82-322d5f552f20
+2024-04-27 14:07:00.000,Juice,Food & Drinks,Salary Bank,120.00,INR,EXPENSE,,,,,,,,cd891ba6-62e1-448d-bd7a-1067528a4dc7
+2024-04-27 14:06:00.000,Water,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,8218dade-b95a-42f4-af7b-f49bd8e00a1a
+2024-04-27 14:06:00.000,Lunch,Food & Drinks,Salary Bank,100.00,INR,EXPENSE,,,,,,,,8c688926-48c5-4043-835c-1864ee2c4b5a
+2024-04-27 14:05:00.000,Sujith,Bills & Fees,Salary Bank,100.00,INR,INCOME,,,,,,,,53b5768e-83fb-45a2-8ae1-8b91cb250ede
+2024-04-27 14:05:00.000,Priyanka,Bills & Fees,Salary Bank,300.00,INR,INCOME,,,,,,,,130c4200-c84d-49ed-a32f-99c5c113c05d
+2024-04-27 14:04:00.000,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,5db87f93-4f96-4925-a06f-6ebb5d0f8fab
+2024-04-26 14:04:00.000,Juice,Food & Drinks,Salary Bank,49.00,INR,EXPENSE,,,,,,,,cfe93cb8-4d9e-491d-8112-dcf7bc356718
+2024-04-26 14:04:00.000,Chotu,Bills & Fees,Salary Bank,500.00,INR,EXPENSE,,,,,,,,2c3ab3b3-c29b-403b-995d-ffca7031439d
+2024-04-26 14:03:00.000,Snacks,Food & Drinks,Salary Bank,10.00,INR,EXPENSE,,,,,,,,fde12671-069e-4902-9b8b-9ff25aa4fbb4
+2024-04-26 14:03:00.000,Drink,Food & Drinks,Salary Bank,49.00,INR,EXPENSE,,,,,,,,080d00a7-eff8-4afa-b05b-b1978df5870f
+2024-04-26 14:03:00.000,Lunch,Food & Drinks,Salary Bank,120.00,INR,EXPENSE,,,,,,,,c689d249-3ea2-4f33-96de-562d61eaf0e2
+2024-04-26 14:02:00.000,Water,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,d35b7b34-4cee-441b-8536-51d87b0280f0
+2024-04-26 14:01:00.000,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,87bc3d98-21f8-4594-830a-65f3194aebc1
+2024-04-25 14:01:00.000,Snacks,Food & Drinks,Salary Bank,20.00,INR,EXPENSE,,,,,,,,67bb9b24-515c-460b-9ee7-0caf306426fd
+2024-04-25 14:00:00.000,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,304d3124-3599-4697-8c41-387bbbfa7c3b
+2024-04-24 14:00:00.000,Shirt,Bills & Fees,Salary Bank,699.00,INR,EXPENSE,,,,,,,,a6f6cecd-3aa8-4980-b1df-698685a7b495
+2024-04-24 13:42:04.617,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,85244f40-cdd6-4703-94d0-83f4c05750af
+2024-04-24 13:41:51.834,Petrol,Transport,Salary Bank,50.00,INR,EXPENSE,,,,,,,,3b6e9e6a-f590-4b0e-996e-301df8dfbb9b
+2024-04-24 13:41:40.008,Snacks,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,c033f55b-4b8b-46b4-9062-255ceca7461c
+2024-04-23 17:13:53.508,Team lunch,Food & Drinks,Salary Bank,795.00,INR,EXPENSE,,,,,,,,f453f211-da65-4ebd-86cb-1e76eeeab835
+2024-04-23 14:43:27.195,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,fa88c642-0f31-475b-af47-42d14c122045
+2024-04-23 14:40:43.848,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,cef59635-4e95-47b3-8d08-162a96eeaeb9
+2024-04-23 14:40:43.047,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,86290f86-9587-4953-9e9c-08d3f78fe28b
+2024-04-22 14:43:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,89490386-793b-4b56-ae73-7b75ab9a5b63
+2024-04-22 14:41:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,22ed2a16-9eeb-4704-900d-c57ddb6b97d8
+2024-04-22 14:41:00.000,Bus Pass,Transport,Salary Bank,430.00,INR,EXPENSE,,,,,,,,f9d1f72b-571d-4a51-bc63-1fed65c0c727
+2024-04-22 04:55:34.117,Recharge,Bills & Fees,Salary Bank,259.00,INR,EXPENSE,,,,,,,,78641f2b-8615-4c7e-ace8-b995f369d04e
+2024-04-22 04:50:23.089,Adjust balance,,Savings Bank,44.02,INR,INCOME,,,,,,,,21420e78-ed3a-4c32-a040-25969feefc6f
+2024-04-22 04:49:49.403,Settlement,,Salary Bank,20.00,INR,EXPENSE,,,,,,,,caae5a83-5d36-46df-9832-056d9f631195
+2024-04-22 04:49:11.195,Adjust balance,,Cash,20.00,INR,EXPENSE,,,,,,,,fa774275-a1ac-4748-b6a3-3defc6d3be0e
+2024-04-22 04:48:34.081,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,a2b01bbe-619c-466c-a1a1-e8769b35a7d4
+2024-04-22 04:48:22.957,,Bills & Fees,Cash,30.00,INR,INCOME,,,,,,,,c82328a0-7ceb-4d3c-9053-dc44ad0e738c
+2024-04-22 04:47:21.338,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,c4e66e65-0635-41e6-8a2c-27053942453d
+2024-04-21 04:47:00.000,Juice,Food & Drinks,Salary Bank,40.00,INR,EXPENSE,,,,,,,,da63805a-1404-4f27-8561-64fa5f76fd44
+2024-04-21 04:47:00.000,Manchuria,Food & Drinks,Cash,70.00,INR,EXPENSE,,,,,,,,7de23ae0-6434-4a5a-801e-498744d12c47
+2024-04-21 03:26:06.969,Breakfast,Food & Drinks,Salary Bank,25.00,INR,EXPENSE,,,,,,,,c38ecaeb-2832-4e53-bbca-59991c235cc7
+2024-04-21 03:25:59.594,Petrol,Transport,Salary Bank,100.00,INR,EXPENSE,,,,,,,,e50c7c0d-1b01-43ed-8392-4ed36eb7e969
+2024-04-21 03:25:50.659,Tyre,Bills & Fees,Cash,10.00,INR,EXPENSE,,,,,,,,9d6e1164-eca4-43d6-a297-94dd74513fe5
+2024-04-20 18:28:32.596,Shirt,Bills & Fees,Salary Bank,799.00,INR,EXPENSE,,,,,,,,c75d702b-721a-4249-b31e-aa48e2a2813e
+2024-04-20 18:28:20.117,Burrito,Food & Drinks,Salary Bank,83.00,INR,EXPENSE,,,,,,,,5d213420-bdb4-4dc7-87c3-ba8a227aa2e7
+2024-04-20 18:28:00.000,Sid PayUp,Bills & Fees,Salary Bank,89.52,INR,INCOME,,,,,,,,e675ad21-0ff7-4add-b8e7-74cb235e7524
+2024-04-20 18:27:48.295,Ice Cream,Food & Drinks,Salary Bank,88.01,INR,EXPENSE,,,,,,,,70c8bf0f-33b3-4e1c-8ff5-dea0d249fd79
+2024-04-20 01:58:00.000,Water,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,69ee468f-b045-4b68-8ece-4b2796cf07f2
+2024-04-19 08:03:00.699,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,8eb3f736-9b8b-41e5-bf67-c7303f7a300b
+2024-04-19 08:02:45.501,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,bf9cac22-e84b-4789-8df7-09cf9327f049
+2024-04-19 08:02:43.381,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,282095ad-26ea-43a9-a073-96c08f6ea5c9
+2024-04-18 16:46:10.130,Snacks,Food & Drinks,Salary Bank,75.00,INR,EXPENSE,,,,,,,,64cae55d-06f1-41ae-93e0-115dc44844c8
+2024-04-18 16:45:14.900,Snacks,Food & Drinks,Salary Bank,130.00,INR,EXPENSE,,,,,,,,e4f37e8b-2f2f-4b3a-a533-819e8fa462f4
+2024-04-17 15:36:48.740,,,Cash,5.00,INR,EXPENSE,,,,,,,,2bfb6713-ab01-4b6f-9998-dedab45d17af
+2024-04-17 05:06:48.154,Reacharge,,Salary Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,9536b873-151d-43ed-b6a3-43a4be8b15a5
+2024-04-17 04:00:52.496,AtR,Transport,Cash,35.00,INR,EXPENSE,,,,,,,,d5fb955e-cfbc-4602-95d7-c4a37877a3a5
+2024-04-17 04:00:42.283,Withdraw,,Salary Bank,0.00,INR,TRANSFER,300.00,INR,Cash,300.00,INR,,,63ddb530-ac2a-4185-8698-609d06a746bc
+2024-04-16 12:38:52.794,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,4320c442-4118-4718-bdfc-d41938cb4a64
+2024-04-16 07:09:53.181,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,9f3d2290-3cd6-4f8e-8d70-7920798c5e0b
+2024-04-16 07:09:46.768,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,c627e400-ca70-4dc5-a9b4-6d5c04aa6a74
+2024-04-15 14:59:31.037,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,50b0be3a-fcf0-45f5-8563-ba2e9ce8a4de
+2024-04-15 14:59:23.954,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,b1e0e78e-a75a-41fb-8532-57fec16343a3
+2024-04-15 14:59:21.617,Snacks,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,d4fcda75-8b2a-4d55-9625-1ef27113f942
+2024-04-15 12:38:00.000,Domain,Bills & Fees,Salary Bank,616.32,INR,EXPENSE,,,,,,,,6fd5d116-e6a4-48c9-91b4-ad74e76fd663
+2024-04-15 06:55:17.895,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,da84716c-3965-4ab4-8ff0-5d26ac555829
+2024-04-15 06:55:10.570,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,51ff7712-b942-470d-bd30-a0e67aee3a60
+2024-04-14 16:42:19.952,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,eb48ad4f-c670-4dfb-8c7c-a8d0dd7af005
+2024-04-12 15:16:13.135,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,0cbeec5d-7581-4978-b52c-2a3dfe3c20ec
+2024-04-12 12:47:51.097,Recharge,,Salary Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,dd15ea5b-c423-433e-b907-c7dba7bad0af
+2024-04-12 12:47:39.692,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,7eb6d8c1-17b2-4477-83b1-fbcf1cab8029
+2024-04-12 12:47:37.044,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,674a61ae-f7b3-4b1c-9a43-0cfe6c511b46
+2024-04-12 03:11:12.881,Adjust balance,,Metro Card,40.00,INR,EXPENSE,,,,,,,,75fdf260-2de4-46ef-ad14-be73200d03b8
+2024-04-10 13:03:30.729,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,a6cb88eb-6f9f-438a-9a67-73d58a6bb773
+2024-04-10 04:25:25.680,Adjust balance,,Cash,30.00,INR,EXPENSE,,,,,,,,bfa75682-b795-435a-8566-2057a02b18e8
+2024-04-10 04:24:13.571,Adjust balance,,Salary Bank,70.99,INR,EXPENSE,,,,,,,,1a537a15-ffa4-43e5-acb8-ae2a39a1998e
+2024-04-10 04:21:51.672,Gym,Bills & Fees,Salary Bank,"1,000.00",INR,EXPENSE,,,,,,,,db4d5d93-9d36-4622-9f33-ffe3a81f5187
+2024-04-10 04:21:38.710,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,e84d01b9-287d-45e2-8de9-05c54092b598
+2024-04-10 03:10:00.000,Shawarma 🌯,Food & Drinks,Salary Bank,140.00,INR,EXPENSE,,,,,,,,395b3c2e-58b4-4db5-a9d8-4e42b818db08
+2024-04-08 10:36:18.446,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,e3b176ce-d3cf-4786-90dc-e9042f57f6b5
+2024-04-08 10:36:12.580,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,66ba10cb-56f7-4313-afd1-48690e8cabdc
+2024-04-07 14:17:41.212,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,94f701db-6572-4e35-85b6-648db71b617a
+2024-04-07 14:17:28.139,Fest,Bills & Fees,Salary Bank,250.00,INR,EXPENSE,,,,,,,,79c1e6b0-51f6-4e6d-9f7d-98b626720490
+2024-04-06 03:42:00.000,Juice,Food & Drinks,Salary Bank,10.00,INR,EXPENSE,,,,,,,,fb74083b-ea28-4af5-80eb-84f4df9052cf
+2024-04-06 03:41:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,057e1b71-c054-4539-9b55-7bf470e68a30
+2024-04-06 03:41:00.000,Juice,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,c53d9d07-d910-445e-801c-d41f0c7f5309
+2024-04-06 03:40:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,d0ab442a-52ec-445b-84ea-273755da3fb3
+2024-04-05 13:25:05.480,Juice,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,6e1e0f1c-25e7-488b-a5ac-07346327315c
+2024-04-05 13:24:56.623,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,113c8e7b-b90e-4076-8586-d10404e8b74e
+2024-04-05 12:22:46.731,Recharge,,Salary Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,2eaf92f1-dfab-4078-a95c-cd378fe0e5eb
+2024-04-05 08:47:42.107,Wow,Bills & Fees,Salary Bank,309.84,INR,EXPENSE,,,,,,,,bd7c7a55-0da0-4697-b90b-3d3423da3788
+2024-04-05 05:34:22.364,Juice,Food & Drinks,Salary Bank,25.00,INR,EXPENSE,,,,,,,,09b6a757-ef2d-41af-b5f6-11a018562cf0
+2024-04-05 05:34:05.807,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,d6d06f16-a9cf-4004-b5dc-cd1ab650372f
+2024-04-04 08:37:47.351,Snacks,Food & Drinks,Salary Bank,75.00,INR,EXPENSE,,,,,,,,9a254132-ba75-4604-a7b2-0c32e6b6d2b8
+2024-04-04 03:43:27.547,Petrol,Bills & Fees,Salary Bank,100.00,INR,EXPENSE,,,,,,,,15d4007d-437e-41f1-b476-cefe1a408b5a
+2024-04-04 02:07:59.508,Stonks,Bills & Fees,Salary Bank,761.44,INR,INCOME,,,,,,,,1df1ce5b-1d36-4172-9031-950a2cb7bc78
+2024-04-03 14:58:09.114,Settlement,,Salary Bank,0.00,INR,TRANSFER,"3,199.00",INR,Savings Bank,"3,199.00",INR,,,6440e4bf-f9ac-4649-819d-000b833264eb
+2024-04-03 14:55:47.327,Maa,Bills & Fees,Salary Bank,"10,000.00",INR,INCOME,,,,,,,,925f49ab-6a95-4ba7-85b5-40ebf01c0f46
+2024-04-03 10:25:10.802,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,77ef7682-a11e-488f-87b1-09fbfa08761b
+2024-04-03 10:23:49.761,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,28259330-312f-4173-bdd7-20d8ffe441f1
+2024-04-02 10:24:00.000,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,9763f058-f4cd-4239-b3b4-decacaba4938
+2024-04-02 10:24:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,263a68dd-b4b5-43b5-8c20-d53ff12921b7
+2024-04-02 10:24:00.000,Juice,Food & Drinks,Cash,10.00,INR,EXPENSE,,,,,,,,5c4eb6d5-ef06-453f-b1c1-c5377e01be36
+2024-04-02 10:24:00.000,Juice,Food & Drinks,Cash,60.00,INR,EXPENSE,,,,,,,,340a1e1d-ada0-49c9-97d6-18244d566b89
+2024-04-02 10:24:00.000,Chotu,Bills & Fees,Cash,60.00,INR,INCOME,,,,,,,,8f5f4a24-742f-4ab4-9821-3fbfac31c591
+2024-04-02 03:33:39.883,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,5fad39bf-5473-4c24-8869-7dde53268f6d
+2024-04-01 18:29:57.016,Netflix,Bills & Fees,Savings Bank,199.00,INR,EXPENSE,,,,,,,,fdb6c9d4-f0a4-43d7-9c38-48376417a722
+2024-04-01 18:28:27.576,Chotu,Bills & Fees,Savings Bank,"3,000.00",INR,EXPENSE,,,,,,,,6a0c41ac-05ea-4453-b966-0d8da9015154
+2024-04-01 18:18:37.086,Bhagwat,Bills & Fees,Cash,100.00,INR,INCOME,,,,,,,,5de6713f-e6c6-490c-ada4-080c3bcf70e9
+2024-04-01 18:18:27.349,Snacks,Food & Drinks,Salary Bank,160.00,INR,EXPENSE,,,,,,,,0e3be43f-e9cb-405c-8fa1-3c56ae959f43
+2024-04-01 15:09:51.209,Juice,Food & Drinks,Salary Bank,50.00,INR,EXPENSE,,,,,,,,73b78e97-9b36-4d8c-afe5-8b88faff1778
+2024-04-01 03:17:56.352,Adjust balance,,Cash,50.00,INR,EXPENSE,,,,,,,,75469fc3-9c9d-4f9c-8f4c-46241e84de79
+2024-03-31 18:34:00.000,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,411136d0-fc08-4266-acba-d1006d6e192e
+2024-03-31 18:34:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ee4fd400-7140-47df-ab4b-3716b705b24e
+2024-03-31 17:00:28.422,Baba,Bills & Fees,Salary Bank,"1,700.00",INR,EXPENSE,,,,,,,,680d5b03-3f8e-4af0-9b78-d5bed3643c1c
+2024-03-31 13:58:13.008,Shoes,Bills & Fees,Salary Bank,"2,499.00",INR,EXPENSE,,,,,,,,ba26720e-7166-4de2-b3eb-fd3f584c7480
+2024-03-31 12:45:00.691,Haircut,Bills & Fees,Salary Bank,150.00,INR,EXPENSE,,,,,,,,6c4b7d01-9c99-4b44-965e-19fa240d4f40
+2024-03-30 03:09:01.045,Chotu,Bills & Fees,Cash,100.00,INR,EXPENSE,,,,,,,,e9922e06-03a2-481a-b1ad-7e5f3103c331
+2024-03-29 18:47:00.000,Snacks,Food & Drinks,Salary Bank,90.00,INR,EXPENSE,,,,,,,,8757b497-c06b-4443-b4b7-9ca049f76c0f
+2024-03-29 15:27:48.850,Maa,Bills & Fees,Salary Bank,"13,000.00",INR,EXPENSE,,,,,,,,cbcbc73b-cffb-49dd-ab94-cc919801ddef
+2024-03-29 15:27:39.829,Breakfast,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,8ed18456-97ee-46ac-aae8-cfc341aef822
+2024-03-28 11:31:59.355,Petrol,Bills & Fees,Salary Bank,100.00,INR,EXPENSE,,,,,,,,aa003083-8c02-4991-8ede-530d13933bb4
+2024-03-28 10:58:48.815,Snacks,Food & Drinks,Salary Bank,250.00,INR,EXPENSE,,,,,,,,efa39518-8a43-4e57-b9bc-973892e84bea
+2024-03-28 06:39:45.408,Settle,,Salary Bank,5.00,INR,EXPENSE,,,,,,,,fe27a98e-2d07-48d0-ad58-f05d4939f2ca
+2024-03-28 06:38:50.642,Salary,Bills & Fees,Salary Bank,"22,700.00",INR,INCOME,,,,,,,,a7be4577-1c79-470a-9b9f-f8901cd5c58e
+2024-03-28 06:38:12.426,Transfer,,Salary Bank,0.00,INR,TRANSFER,"4,123.00",INR,Savings Bank,"4,123.00",INR,,,904fab18-9b7d-4984-9c00-1312bd9a96b6
+2024-03-27 15:39:26.573,Ice cream,Food & Drinks,Cash,70.00,INR,EXPENSE,,,,,,,,841c07c5-e7e2-4566-9516-96d5f1ead847
+2024-03-26 16:59:57.985,Juice,Food & Drinks,Salary Bank,40.00,INR,EXPENSE,,,,,,,,9c0fe60e-ac97-4502-b9ab-c31dc240e173
+2024-03-26 16:59:46.122,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,a1d360ab-6273-4642-ad39-10d19ba8db47
+2024-03-25 15:53:52.918,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ffcb6133-537a-4421-9097-c97ec0936aa3
+2024-03-25 13:17:40.044,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,2a49ae2e-2449-4a87-aaf7-ab92e2a066a1
+2024-03-25 13:17:15.511,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,ec34f5cc-a926-4894-bc1d-382bbbbcf14f
+2024-03-25 13:17:13.755,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,71741307-625d-493a-82a1-1f38440b088a
+2024-03-25 13:17:10.519,Recharge,,Cash,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,58b1c7e6-fc56-4c37-81cc-4f7fc18f6c5d
+2024-03-24 16:40:59.707,Adjust balance,,Salary Bank,105.00,INR,EXPENSE,,,,,,,,266daf7d-9d01-4dbd-b858-a530c67f97fe
+2024-03-22 13:26:42.165,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,ae5713d1-7827-4e4e-bc54-5f1bbcef05aa
+2024-03-22 13:26:34.794,Juice,Food & Drinks,Salary Bank,10.00,INR,EXPENSE,,,,,,,,8daf75ef-e618-4896-8ac5-4450d89d4c6f
+2024-03-22 13:26:28.610,Snacks,Food & Drinks,Salary Bank,80.00,INR,EXPENSE,,,,,,,,d96ead87-603d-4cd8-91e8-c4a0adbcfe53
+2024-03-22 13:26:21.200,Withdraw,,Salary Bank,0.00,INR,TRANSFER,500.00,INR,Cash,500.00,INR,,,364df0cf-66f8-4a2b-9d89-e7f3dce4dcc4
+2024-03-22 13:26:06.797,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,6e9332c0-9bf8-40d3-9938-037d727e7f20
+2024-03-21 14:54:03.976,Baba,Bills & Fees,Salary Bank,500.00,INR,EXPENSE,,,,,,,,c0e14014-4631-436b-85e0-8550435fa129
+2024-03-21 10:09:12.859,Recharge,Bills & Fees,Salary Bank,259.00,INR,EXPENSE,,,,,,,,50fd698c-38d6-44b4-a1ed-493fa5706446
+2024-03-21 10:07:32.266,Maa,Bills & Fees,Salary Bank,"2,000.00",INR,INCOME,,,,,,,,8274c1c3-e626-437d-acf5-ad258be714b5
+2024-03-21 10:05:14.371,Stonks,Bills & Fees,Salary Bank,230.00,INR,EXPENSE,,,,,,,,a7c3aab2-ec15-4525-b66a-0f979bd1987f
+2024-03-21 10:04:54.277,Petrol,Transport,Salary Bank,200.00,INR,EXPENSE,,,,,,,,c5b49577-75a9-4001-aadb-4b54ec878b87
+2024-03-19 18:44:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,ba5e8072-3901-4d13-8bc9-d3a3cc065263
+2024-03-19 18:43:00.000,Snacks,Food & Drinks,Salary Bank,25.00,INR,EXPENSE,,,,,,,,621b521d-e327-4e91-bcfa-4af0110ded62
+2024-03-19 07:06:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,65c23e96-b7d0-41db-94c1-021911fbfd93
+2024-03-19 07:06:00.000,Shawarma 🌯,Food & Drinks,Salary Bank,260.00,INR,EXPENSE,,,,,,,,4ca12ed6-ed5c-4a30-899b-a9b118b48ff7
+2024-03-19 06:05:26.422,Bus pass,Bills & Fees,Salary Bank,430.00,INR,EXPENSE,,,,,,,,162750b7-9ebb-4350-94fa-9bf9b41e74c5
+2024-03-18 06:05:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,05ae842e-597e-4763-9cdf-d08b53f33c3e
+2024-03-17 17:03:54.268,Adjust balance,,Cash,110.00,INR,EXPENSE,,,,,,,,cd3063ea-711a-41f4-b93f-b41ef3ad78b3
+2024-03-16 18:40:00.000,Snacks,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,ead69b7a-41f0-4ec8-85ad-22bb15e2c706
+2024-03-16 01:55:57.271,Rent,Bills & Fees,Salary Bank,"3,800.00",INR,EXPENSE,,,,,,,,d860cada-8a39-4cd3-8c88-013010ef88d7
+2024-03-15 18:39:00.000,Juice,Food & Drinks,Salary Bank,40.00,INR,EXPENSE,,,,,,,,3a4623f6-b762-4db5-9f56-f0bfb0524d3c
+2024-03-15 18:39:00.000,Snacks,Food & Drinks,Salary Bank,20.00,INR,EXPENSE,,,,,,,,3832a47b-857f-49a9-b49c-edf2a3d18d62
+2024-03-15 17:04:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,32da42d1-0c4c-4bd7-bd8f-a3b3875b0243
+2024-03-15 01:55:00.000,Bike,Transport,Salary Bank,74.00,INR,EXPENSE,,,,,,,,ffa618ac-e7fc-4a48-bee3-721da4810004
+2024-03-14 01:54:00.000,Snacks,Food & Drinks,Salary Bank,105.00,INR,EXPENSE,,,,,,,,0de260a7-ebc6-408a-a781-4f328b406386
+2024-03-13 01:53:00.000,Snacks,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,b72fc70c-f53c-4ae8-b780-26b1704d2086
+2024-03-13 01:52:00.000,Bandages,Bills & Fees,Salary Bank,8.00,INR,EXPENSE,,,,,,,,b0b8d6ab-7cd1-44fb-aa3f-e5188dc7bb61
+2024-03-12 17:33:34.220,Baba,Bills & Fees,Salary Bank,"2,000.00",INR,EXPENSE,,,,,,,,e47c326e-cb25-475c-9fdb-83f83b170cc0
+2024-03-12 17:33:12.758,Doc,Bills & Fees,Salary Bank,60.00,INR,EXPENSE,,,,,,,,dcb191ed-3007-4de4-91ae-12ca43db6530
+2024-03-12 17:33:00.145,Juice,Food & Drinks,Salary Bank,90.00,INR,EXPENSE,,,,,,,,3fea7d47-8ade-4011-862e-f074e6d559ac
+2024-03-12 17:32:45.399,Shawarma 🌯,Food & Drinks,Salary Bank,150.00,INR,EXPENSE,,,,,,,,c74de4d5-f628-456b-acf9-368c1d13bb56
+2024-03-12 17:32:28.109,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,1049850c-828e-4874-beb6-e184ed0270a2
+2024-03-11 17:31:00.000,Jalebi,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,62636a34-7e2c-4f1a-970e-16e1ef618c5b
+2024-03-10 17:30:00.000,,Bills & Fees,Salary Bank,9.00,INR,EXPENSE,,,,,,,,210f7a28-e04c-4bc1-bb39-a8254ee69074
+2024-03-10 03:29:43.493,Baba,Bills & Fees,Salary Bank,"1,000.00",INR,EXPENSE,,,,,,,,27c6c615-72fc-4e42-9358-2dd1caacff90
+2024-03-09 17:30:00.000,Juice,Food & Drinks,Salary Bank,10.00,INR,EXPENSE,,,,,,,,1f5659e8-450e-4781-83cf-1294c5dfa901
+2024-03-09 03:29:00.000,Petrol,Transport,Salary Bank,200.00,INR,EXPENSE,,,,,,,,fe3fb8d7-e688-4217-9a48-04fc6e9572cf
+2024-03-08 10:13:57.611,Snacks,Food & Drinks,Salary Bank,10.00,INR,EXPENSE,,,,,,,,01864be3-6df3-48dd-ab05-4a799a941eb9
+2024-03-08 10:12:12.982,Breakfast,Food & Drinks,Salary Bank,30.00,INR,EXPENSE,,,,,,,,cf7747b9-5d14-4bc7-9902-94d533cb54ec
+2024-03-07 14:36:57.940,Snacks,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,d005d095-d5fe-4299-ba02-f0446e73e40f
+2024-03-07 13:45:37.905,RtA,Transport,Cash,35.00,INR,EXPENSE,,,,,,,,3d12199c-1ab3-4795-904c-d108bb8fcf48
+2024-03-07 13:45:26.150,,,Cash,20.00,INR,EXPENSE,,,,,,,,5ccfaedb-0859-4852-84a1-8225aa26937f
+2024-03-07 05:21:42.255,Adjust balance,,Cash,25.00,INR,EXPENSE,,,,,,,,a5dc41d8-e604-47dc-ad7e-297e10e9ed04
+2024-03-07 05:20:46.631,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,466c0871-1271-4a37-84fb-69cc5748add8
+2024-03-07 05:20:39.735,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,c3ce527e-d1da-418d-9264-5a77009e0233
+2024-03-07 05:20:28.040,Withdraw,,Salary Bank,0.00,INR,TRANSFER,200.00,INR,Cash,200.00,INR,,,d536c44e-589c-497a-b4b0-974bf6619ea8
+2024-03-07 05:20:07.762,Recharge,,Salary Bank,0.00,INR,TRANSFER,250.00,INR,Metro Card,250.00,INR,,,d1fb48c1-35d5-4007-a91c-cd7bb0a65430
+2024-03-06 14:21:26.486,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,7483047d-dba6-4328-bb56-214d2091005d
+2024-03-06 14:21:20.169,Snacks,Food & Drinks,Cash,10.00,INR,EXPENSE,,,,,,,,91b013e6-85e4-4db2-adfa-c9cffa9fdff8
+2024-03-06 06:37:05.798,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,ae9f4483-fa3b-4f9a-950b-f4c10e366350
+2024-03-06 06:36:57.627,RB 🐂,Food & Drinks,Salary Bank,125.00,INR,EXPENSE,,,,,,,,8f696a31-7fbd-4dbb-9429-ba273db9a395
+2024-03-06 03:26:03.538,Baba,Bills & Fees,Salary Bank,"1,000.00",INR,EXPENSE,,,,,,,,21226b92-8b72-43e0-8c7d-8fab18a1896b
+2024-03-06 01:31:33.779,Netflix,Bills & Fees,Salary Bank,99.00,INR,EXPENSE,,,,,,,,154eb891-db7a-47b0-b83c-125825331c2b
+2024-03-06 01:31:15.093,,,Savings Bank,5.53,INR,INCOME,,,,,,,,978228fc-201d-404a-9254-e3ac8acb1b04
+2024-03-05 12:53:13.025,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,cc3d1d9a-1fdb-42d9-b118-26d48d1d31e6
+2024-03-05 12:53:03.972,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,429417a0-a502-4cfe-b08e-1fd1d916c295
+2024-03-05 01:31:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,319a098b-3fc0-49a0-a652-7b5c8fc5a88b
+2024-03-04 15:01:34.885,Snacks,Food & Drinks,Salary Bank,20.00,INR,EXPENSE,,,,,,,,a672e06a-a8cd-412f-9261-c9ba102a57fe
+2024-03-04 15:01:24.734,Snacks,Food & Drinks,Salary Bank,25.00,INR,EXPENSE,,,,,,,,31ed121a-93d6-4228-965c-731c57d1e1cd
+2024-03-04 15:01:04.247,RtA,Transport,Cash,35.00,INR,EXPENSE,,,,,,,,5506aed7-4e40-4d15-b496-800556a66e95
+2024-03-04 08:29:40.741,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,df8b34dc-aad0-4b05-8c5b-83715f1ec036
+2024-03-04 08:29:28.861,Baba,Bills & Fees,Cash,80.00,INR,EXPENSE,,,,,,,,4e6dfdac-b123-4b08-b00e-ec797f7ace0b
+2024-03-04 02:41:54.279,Recharge,,Salary Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,f6dae437-30cf-45da-bb2a-9b8d9154f3aa
+2024-03-03 02:41:00.000,Snacks,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,ef5b7f34-6f2c-4b79-b821-ddc17cccd23b
+2024-03-03 02:40:00.000,Laptop fixes,Bills & Fees,Salary Bank,150.00,INR,EXPENSE,,,,,,,,f39a347a-0043-49bf-a4b3-44334eb66f0f
+2024-03-03 02:40:00.000,Juice,Food & Drinks,Salary Bank,100.00,INR,EXPENSE,,,,,,,,749e7c2c-d444-4f22-8229-4cc7450b02b8
+2024-03-03 02:40:00.000,Snacks,Food & Drinks,Salary Bank,150.00,INR,EXPENSE,,,,,,,,c8a59a4a-6dd6-467c-90df-afd20a54da5a
+2024-03-02 02:40:00.000,Cab,Bills & Fees,Salary Bank,419.00,INR,EXPENSE,,,,,,,,ac3de325-7d50-45f9-ae74-ff0f94668ae5
+2024-03-02 02:39:00.000,Can,Bills & Fees,Salary Bank,476.00,INR,EXPENSE,,,,,,,,7f5a9c5a-f0a6-499f-aac3-6b362288219a
+2024-03-02 02:39:00.000,Dinner,Bills & Fees,Salary Bank,"2,154.00",INR,EXPENSE,,,,,,,,00afcf13-caf5-467c-bd46-84ff60e800e2
+2024-03-02 02:34:01.350,Gym,Bills & Fees,Salary Bank,"1,000.00",INR,EXPENSE,,,,,,,,ad66a270-0056-4148-be7c-6199eae7d39d
+2024-03-01 12:58:00.000,Snacks,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,40b7079e-37c7-401d-9dae-5bf0e533b631
+2024-03-01 12:54:00.000,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,7025737f-0608-4b31-9154-23b2227b234f
+2024-03-01 12:54:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,89f3150a-f603-4654-a154-cedc073384cb
+2024-03-01 03:28:51.286,Baba,Bills & Fees,Salary Bank,"5,000.00",INR,EXPENSE,,,,,,,,df67e7ac-58c8-45a7-965b-5ee8bfe11fa1
+2024-02-29 18:02:30.841,Fancode,Bills & Fees,Salary Bank,599.00,INR,EXPENSE,,,,,,,,0ad70268-59c2-401a-9dde-75d0e522a975
+2024-02-29 16:16:17.255,Snacks,Food & Drinks,Salary Bank,60.00,INR,EXPENSE,,,,,,,,b1624d02-5311-4b53-be35-0e1f60a494c1
+2024-02-29 16:16:04.801,Salary,,Salary Bank,"22,700.00",INR,INCOME,,,,,,,,a3deccb4-c8cb-4ad6-86c7-2d36d7cf269c
+2024-02-29 04:36:14.818,Adjust balance,,Savings Bank,45.02,INR,EXPENSE,,,,,,,,4c5a88f6-594d-4ad7-a8ba-5f455bc72f54
+2024-02-29 04:24:37.293,Adjust balance,,Savings Bank,0.00,INR,INCOME,,,,,,,,9ada27bb-efbf-4daf-aac1-74110da39327
+2024-02-29 02:59:46.403,Petrol,Transport,Savings Bank,100.00,INR,EXPENSE,,,,,,,,e2e5b5a7-348f-4f31-9250-23d6499e0152
+2024-02-29 02:06:26.648,Baba,Bills & Fees,Cash,100.00,INR,EXPENSE,,,,,,,,5360227b-775b-47d3-8489-7f1679f067f1
+2024-02-29 02:06:19.586,Maa,Bills & Fees,Cash,150.00,INR,EXPENSE,,,,,,,,06538b64-9e2d-4e7b-8734-a8fd3c880717
+2024-02-28 16:41:21.326,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,653f0ed6-dc67-4461-8de2-5f0acef7f4ef
+2024-02-28 14:06:47.574,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,a3be3b72-f952-42bf-b44c-8af2edd26e1f
+2024-02-28 14:06:40.364,Snacks,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,5b30eea0-0977-4218-b662-d3187e51e872
+2024-02-28 04:15:17.483,AtR,Transport,Cash,35.00,INR,EXPENSE,,,,,,,,efc7195a-c510-47ff-984e-75957f4c2471
+2024-02-28 03:36:25.923,Adjust balance,,Cash,15.00,INR,EXPENSE,,,,,,,,0688881a-02ea-4e75-a18c-0aacf86d4f3e
+2024-02-27 14:14:39.153,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,177da0e6-fc87-4d70-9e0f-d380556705d6
+2024-02-27 14:14:24.421,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,37596680-833a-4ce2-af28-0fb48c79e2fc
+2024-02-27 14:01:20.741,Shawarma 🌯,Food & Drinks,Savings Bank,140.00,INR,EXPENSE,,,,,,,,b187bdd8-06d4-4a33-81e7-0b640f131fbe
+2024-02-27 09:11:35.079,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,0ada151b-3915-404a-9591-71d1919208e4
+2024-02-27 09:11:24.889,Snacks,Food & Drinks,Savings Bank,35.00,INR,EXPENSE,,,,,,,,3220398f-eba2-4c2a-90c5-b07e6c36e506
+2024-02-27 04:23:28.568,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,a99d7484-c4af-46f6-bfc4-79e9d5707588
+2024-02-26 15:11:00.093,Withdraw,,Savings Bank,0.00,INR,TRANSFER,500.00,INR,Cash,500.00,INR,,,0af77061-734f-4899-b5e0-2c2d27528bdd
+2024-02-26 14:25:00.924,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,fed14e7d-aec4-4dd8-bae2-f453ad59b039
+2024-02-26 14:24:51.605,Snacks,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,6d7529a3-d8fc-41e5-a8a5-1ac1e1eeacf8
+2024-02-26 12:17:57.526,Recharge,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,4fe8ab61-116d-47fc-aa31-4bad0bba0340
+2024-02-26 06:18:30.886,Adjust balance,,Savings Bank,940.00,INR,INCOME,,,,,,,,e37a62bc-79d5-4915-828d-8495b7108f71
+2024-02-26 06:15:19.217,Adjust balance,,Cash,10.00,INR,EXPENSE,,,,,,,,b4dd44d5-ee95-4f42-b96c-06a9cd753c63
+2024-02-26 04:29:25.514,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,dd308ccf-2f76-4a54-9d24-ecf39266a704
+2024-02-26 03:36:00.000,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,716d7c97-72f0-46ac-9e85-45f29cc28af7
+2024-02-26 03:35:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,d42b4524-2121-42ff-b062-d0521f619197
+2024-02-26 03:29:28.213,Baba,Bills & Fees,Cash,200.00,INR,EXPENSE,,,,,,,,edd48883-c17b-4393-a60c-8a49229dfea1
+2024-02-26 03:29:21.480,Maa,Bills & Fees,Cash,50.00,INR,EXPENSE,,,,,,,,ce5ddaa2-2d10-490c-87fb-3a9e21fadd00
+2024-02-24 07:53:19.532,Snacks,Food & Drinks,Cash,50.00,INR,EXPENSE,,,,,,,,53324354-3b71-4ffe-80a7-efc4079d6c91
+2024-02-24 07:20:41.051,Snacks,Food & Drinks,Cash,35.00,INR,EXPENSE,,,,,,,,073f8087-3cc6-4314-84c0-0c023fa91f95
+2024-02-23 14:45:15.570,Snacks,Food & Drinks,Cash,25.00,INR,EXPENSE,,,,,,,,fd892637-d1c5-4d9a-898e-500aba22e05a
+2024-02-23 14:45:08.008,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,d0610ed8-9a05-4588-9575-77a9fe802563
+2024-02-23 14:44:59.772,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,3da4b106-96ea-4311-9578-a4127fea6d3f
+2024-02-23 05:30:44.474,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,33866342-67a8-464c-b8f6-39e54cf9dd35
+2024-02-23 05:30:37.686,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,d8652f8d-b0a1-4d30-8047-a56046f97482
+2024-02-22 16:58:54.432,Bb,Bills & Fees,Savings Bank,50.00,INR,EXPENSE,,,,,,,,c9d3934b-a742-404f-87fe-72bde8ae316f
+2024-02-22 15:12:47.507,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,31bf0c14-b26a-43a1-9df8-8ce264c0884a
+2024-02-22 15:12:41.854,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,c5f31217-d9d2-444c-8fa1-f9257ee33c39
+2024-02-22 05:29:24.587,Stonks,Bills & Fees,Savings Bank,180.00,INR,EXPENSE,,,,,,,,a86a3725-dad4-46f3-8a7a-81d68a3946ae
+2024-02-22 05:28:30.990,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,93ccac34-be5e-4b3c-8504-edf51d7f613e
+2024-02-22 05:28:21.373,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,630b7038-0702-4b8e-adf5-8a7a54e89e22
+2024-02-21 15:43:20.895,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,c31c32d5-b959-4913-853d-263d8425641a
+2024-02-21 13:43:04.893,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,3cfb096f-72a9-4edd-aa47-b3e17da58afb
+2024-02-21 12:29:38.628,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,51e37474-61ae-4527-a4d0-f2b324930fb5
+2024-02-21 12:29:28.216,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,9790eae9-6d97-4779-b0d8-8acc525c3d2f
+2024-02-20 17:01:00.000,Play store,Bills & Fees,Savings Bank,9.00,INR,EXPENSE,,,,,,,,79ceb914-5c60-4e8c-a497-9ddd3c9d922c
+2024-02-20 14:05:45.725,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,32de8e9c-fb09-4e3b-9508-1a00331b580b
+2024-02-20 14:05:34.287,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,75850324-3443-49ee-89ca-7aec5cc54dbd
+2024-02-20 04:48:04.567,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,ed5b0405-8c30-4abb-86db-be53123f7392
+2024-02-19 14:43:33.478,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,20c71085-aa48-44ed-a48c-9f0b2f8dc72c
+2024-02-19 14:43:19.809,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,c8088ac9-839c-4618-ba2f-2afba7656be4
+2024-02-19 04:28:13.342,AtR,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,2132e968-ad60-4321-a8b2-0894a42eb461
+2024-02-19 04:27:55.686,Reacharge,,Savings Bank,0.00,INR,TRANSFER,300.00,INR,Metro Card,300.00,INR,,,2bfceddd-bccd-4b42-8430-b53359586443
+2024-02-18 15:09:03.757,Biryani,,Savings Bank,0.00,INR,TRANSFER,230.00,INR,Cash,230.00,INR,,,805d8ed7-f77f-465c-8aff-c4f8cbd4d4e5
+2024-02-18 15:08:52.317,Biryani 🍚,Food & Drinks,Savings Bank,250.00,INR,EXPENSE,,,,,,,,f2afa71b-f8c2-42a9-a2a4-e2aa3d24e908
+2024-02-18 13:05:06.921,Juice,Food & Drinks,Savings Bank,40.00,INR,EXPENSE,,,,,,,,a5f17721-694a-4706-a280-8d6130c13171
+2024-02-18 13:05:00.369,Snacks,Food & Drinks,Cash,40.00,INR,EXPENSE,,,,,,,,994c153b-7e78-4836-bba0-c85a2d9107b1
+2024-02-18 13:04:50.844,Book,Bills & Fees,Savings Bank,150.00,INR,EXPENSE,,,,,,,,b6d991db-af2f-448d-aebb-9a66d949e77b
+2024-02-18 13:04:34.238,Entry fee,Bills & Fees,Cash,50.00,INR,EXPENSE,,,,,,,,f8b7204e-daf1-4c2d-9df0-89046ae8d011
+2024-02-17 14:58:49.354,Bus pass,Bills & Fees,Savings Bank,430.00,INR,EXPENSE,,,,,,,,92ce0350-9438-4955-8be1-cc7ef7389e40
+2024-02-17 14:58:38.786,Juice,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,1c093793-5337-4af0-8e1c-79695f2145ae
+2024-02-17 04:31:58.952,Adjust balance,,Cash,16.00,INR,EXPENSE,,,,,,,,0a045302-ce7d-4e50-a9f2-c6139e251dcd
+2024-02-17 04:30:09.939,Adjust balance,,Savings Bank,130.00,INR,INCOME,,,,,,,,8ada7b19-09e4-4d74-b9ab-5f41949650c4
+2024-02-16 14:56:36.514,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,7298243c-ca0c-4d59-afd1-0c462d2d1708
+2024-02-16 14:56:26.406,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,21df7b34-2d9f-4f08-8aa0-2446dd36ff00
+2024-02-15 14:56:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,d6a8d284-8c53-4e73-8b34-37af1685b493
+2024-02-14 17:33:35.053,Snack,Food & Drinks,Savings Bank,100.00,INR,EXPENSE,,,,,,,,69e5903c-f9b5-4c14-a570-5f1f9afe4ffb
+2024-02-14 17:33:27.249,Petrol,Transport,Savings Bank,100.00,INR,EXPENSE,,,,,,,,8a95b62e-83fa-4320-8f44-956473cba9a6
+2024-02-14 06:32:47.056,Petrol,Transport,Savings Bank,100.00,INR,EXPENSE,,,,,,,,9f699824-40ff-44a6-9125-871fb9097bdd
+2024-02-13 12:11:37.767,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,474e5115-4a65-4584-98a7-fe0faf7dfdb5
+2024-02-13 12:11:26.401,Recharge,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,163e85e4-a4b3-4eb8-8e70-b50f0c21e07c
+2024-02-13 12:11:11.514,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,ff1178f7-b374-4464-bf56-e0aba41084cb
+2024-02-13 06:32:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,d3da38b8-6ccf-4f4e-935f-bd2c85a37a00
+2024-02-12 12:10:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,7f89deed-d78b-4a12-9fea-3c1a1e4f68c0
+2024-02-12 12:10:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,c29f37a8-a0d2-4234-b8cb-7628edf20d28
+2024-02-12 12:04:06.544,Adjust balance,,Metro Card,2.00,INR,INCOME,,,,,,,,f40fb071-e685-493d-8aa2-6092d2fae6bb
+2024-02-11 14:46:45.004,Snacks,Food & Drinks,Savings Bank,130.00,INR,EXPENSE,,,,,,,,74249cc1-c199-4b99-8730-c6fc7b2dbdc8
+2024-02-10 13:18:00.000,Snacks,Food & Drinks,Savings Bank,45.00,INR,EXPENSE,,,,,,,,e0de97e9-4f44-43c3-b6d2-7993ee603f4e
+2024-02-10 13:18:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,6eb0f01d-e750-4ff1-ab33-6dafaf42855d
+2024-02-09 13:17:00.000,Snacks,Food & Drinks,Savings Bank,145.00,INR,EXPENSE,,,,,,,,d42751f9-e321-4135-afde-cdf1a06abc56
+2024-02-09 13:17:00.000,Pants,Bills & Fees,Savings Bank,998.00,INR,EXPENSE,,,,,,,,060ac70f-bab8-4a4a-a097-6117fa1f624f
+2024-02-09 13:16:00.000,,,Savings Bank,2.00,INR,INCOME,,,,,,,,279c0d55-905f-4251-be74-b63c3132954d
+2024-02-08 14:44:22.286,Ice cream,Bills & Fees,Savings Bank,102.00,INR,EXPENSE,,,,,,,,ad8e486c-5e2a-4a11-b9fe-193436acb103
+2024-02-08 12:48:01.542,Pizza,Food & Drinks,Savings Bank,247.00,INR,EXPENSE,,,,,,,,b01b3057-4d4c-42ca-a415-853988d601f4
+2024-02-08 12:47:51.684,,,Savings Bank,2.00,INR,EXPENSE,,,,,,,,d838872e-9c06-45bc-938c-77fdaa1a262c
+2024-02-08 05:00:00.000,Shirt,Bills & Fees,Savings Bank,999.00,INR,EXPENSE,,,,,,,,1dc7a9b4-0430-4421-b4e4-46c4effd741c
+2024-02-08 05:00:00.000,Pant,Bills & Fees,Savings Bank,799.00,INR,EXPENSE,,,,,,,,471a4ec1-e19e-4733-b634-271fc9125516
+2024-02-07 12:13:11.151,RtA,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,dd5d2835-1b0a-471f-9f71-ec6d80ee22ae
+2024-02-07 03:34:00.000,UPI lite,Bills & Fees,Savings Bank,1.00,INR,EXPENSE,,,,,,,,63eddb48-80da-418f-a86b-dafd95195187
+2024-02-06 08:47:07.084,Bus Pass,Transport,Savings Bank,440.00,INR,EXPENSE,,,,,,,,99328e74-8724-4638-8d70-2d25bfcec92d
+2024-02-06 05:43:00.000,Baba,Bills & Fees,Savings Bank,"1,000.00",INR,EXPENSE,,,,,,,,1d11a99a-7348-4949-ada7-30d3a8097e6f
+2024-02-05 14:21:42.297,Withdraw,,Savings Bank,0.00,INR,TRANSFER,400.00,INR,Cash,400.00,INR,,,b7c0856f-3aae-41b7-84ac-6708a78ca23c
+2024-02-05 14:21:25.901,Snacks,Food & Drinks,Savings Bank,90.00,INR,EXPENSE,,,,,,,,b5cccc28-c12f-4413-9651-d8ecf7af23ce
+2024-02-05 14:21:18.327,Exam,Bills & Fees,Savings Bank,400.00,INR,EXPENSE,,,,,,,,deadec63-2646-49bb-9802-98112a167b2b
+2024-02-05 14:20:10.098,Adjust balance,,Cash,40.00,INR,EXPENSE,,,,,,,,0e303bdc-09f4-47af-bf1f-2e165527d4cb
+2024-02-03 15:19:20.909,Stonks,Bills & Fees,Savings Bank,4.45,INR,INCOME,,,,,,,,820811e1-ba26-45d1-b860-f5368ff83e6a
+2024-02-03 15:15:18.470,Baba birthday,Bills & Fees,Savings Bank,839.00,INR,EXPENSE,,,,,,,,299ce943-18e0-4453-ae93-6fe02398e695
+2024-02-03 03:49:08.591,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,75624ff4-1667-4366-af86-9a159b53d3a8
+2024-02-03 02:57:54.135,Baba,Bills & Fees,Savings Bank,"2,000.00",INR,EXPENSE,,,,,,,,053746fe-3d7b-45c3-b2d2-331b66013b70
+2024-02-02 02:58:00.000,Petrol,Transport,Savings Bank,200.00,INR,EXPENSE,,,,,,,,19717a84-a4af-458e-8f47-cb783c18e2f7
+2024-02-02 02:58:00.000,Book,Bills & Fees,Savings Bank,299.00,INR,EXPENSE,,,,,,,,6cbacbd5-65fd-4b8f-b06e-df2274b10d26
+2024-02-01 15:40:10.023,Netflix,Bills & Fees,Savings Bank,99.00,INR,EXPENSE,,,,,,,,fd6ef510-2661-4442-ab50-2993080907b4
+2024-02-01 15:40:02.903,Snacks,Food & Drinks,Savings Bank,40.00,INR,EXPENSE,,,,,,,,201d5cba-12b0-4bd1-8f39-4af868e31339
+2024-02-01 02:56:00.000,Petrol,Bills & Fees,Savings Bank,100.00,INR,EXPENSE,,,,,,,,3342c9d0-9954-418e-a794-368926d9a0bf
+2024-02-01 02:49:46.271,Chotu,Bills & Fees,Savings Bank,100.00,INR,EXPENSE,,,,,,,,7bf4d996-6c65-4aaf-b3e8-11d6e1920314
+2024-02-01 02:49:36.606,Gym,Bills & Fees,Savings Bank,"1,000.00",INR,EXPENSE,,,,,,,,d691831c-f13e-43db-b7d0-47797e71314b
+2024-01-31 13:33:53.151,Milk,Bills & Fees,Savings Bank,88.00,INR,EXPENSE,,,,,,,,6f7937d1-4f19-43b0-8995-ce40e9f86c11
+2024-01-31 13:33:38.053,Petrol,Transport,Savings Bank,100.00,INR,EXPENSE,,,,,,,,d385a8ba-2629-4327-b06d-10858e5a3431
+2024-01-31 09:29:10.277,Sid,Bills & Fees,Savings Bank,200.00,INR,EXPENSE,,,,,,,,9cda5ee8-bf4c-4cb1-aaeb-3c06ca6383cd
+2024-01-31 09:29:03.375,Baba,Bills & Fees,Savings Bank,"5,000.00",INR,EXPENSE,,,,,,,,e7880d54-b894-4a12-b013-5b03d16b27db
+2024-01-31 08:04:16.692,Snacks,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,b5dc83a3-cb88-42c5-a56f-47cb2239dc44
+2024-01-31 08:04:06.993,Chotu,Bills & Fees,Savings Bank,100.00,INR,INCOME,,,,,,,,0c443baf-5e95-445d-a5c2-656b2c7b1a09
+2024-01-31 08:03:56.481,Petrol,Bills & Fees,Savings Bank,100.00,INR,EXPENSE,,,,,,,,62118d67-5a0f-42f1-bb02-34099c26f44d
+2024-01-31 08:03:25.837,Salary,Bills & Fees,Savings Bank,"22,700.00",INR,INCOME,,,,,,,,91a13914-921d-4b26-af25-d94368470f27
+2024-01-30 15:24:24.004,Baba,Bills & Fees,Savings Bank,100.00,INR,EXPENSE,,,,,,,,53b5304a-921f-4999-a557-43da2f06cf2a
+2024-01-30 15:24:15.470,Sid,Bills & Fees,Savings Bank,200.00,INR,INCOME,,,,,,,,c36b5ccf-3581-4fba-b88d-92479aaf151c
+2024-01-30 15:24:07.281,Oil,Bills & Fees,Savings Bank,100.00,INR,EXPENSE,,,,,,,,8c478434-6a8f-4a3a-a280-b2d1eb159b36
+2024-01-29 15:23:00.000,Baba,Bills & Fees,Savings Bank,100.00,INR,INCOME,,,,,,,,4e4ff565-4f96-4dde-bd08-0a07be2de96b
+2024-01-29 15:23:00.000,RtA,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,489ba951-574c-47e6-9f70-283a8625ac2b
+2024-01-29 10:38:05.916,Tire,Bills & Fees,Savings Bank,700.00,INR,EXPENSE,,,,,,,,07d637a4-e28a-427c-91c2-97166574c171
+2024-01-27 06:10:47.124,Adjust balance,,Cash,26.00,INR,INCOME,,,,,,,,61362b52-55cd-4a35-870c-96c1075cb969
+2024-01-27 04:37:00.000,Petrol,Bills & Fees,Savings Bank,250.00,INR,EXPENSE,,,,,,,,73a54227-a3b9-4371-8991-757c3b4fb080
+2024-01-27 04:37:00.000,Noodles,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,8371faa5-187d-4cb7-9638-0f6dfaa81e66
+2024-01-27 04:36:00.000,Xerox,Bills & Fees,Savings Bank,5.00,INR,EXPENSE,,,,,,,,f1721a7d-5545-47bf-9b90-6b06960977d5
+2024-01-27 04:35:00.000,Xerox,Bills & Fees,Savings Bank,27.00,INR,EXPENSE,,,,,,,,a3ec4156-7982-452e-a216-0e24807db19c
+2024-01-26 04:33:00.000,Snacks,Food & Drinks,Savings Bank,50.00,INR,EXPENSE,,,,,,,,c28e68ff-8145-47dc-9f09-44961badf8e7
+2024-01-25 14:33:31.826,Snacks,Food & Drinks,Savings Bank,120.00,INR,EXPENSE,,,,,,,,bc569445-924a-4f41-ba8a-cfaebad5b670
+2024-01-24 04:32:00.000,AtR,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,e7e84fa0-cad7-4e3a-ab5f-bbbbb660fef4
+2024-01-24 03:47:05.711,Adjust Balance,,Savings Bank,1.00,INR,EXPENSE,,,,,,,,82313b51-7a73-4fda-af6e-c7fadcd160c2
+2024-01-24 03:46:24.198,License,Bills & Fees,Savings Bank,300.00,INR,EXPENSE,,,,,,,,2b4c9f29-f45d-450b-97c2-90e5405939ab
+2024-01-23 03:46:00.000,Snacks,Food & Drinks,Savings Bank,115.00,INR,EXPENSE,,,,,,,,5e6505ce-b9a0-427c-a657-19dde6dc7019
+2024-01-22 03:45:00.000,Grand original,Bills & Fees,Savings Bank,30.00,INR,EXPENSE,,,,,,,,36f3eb09-6f6a-4e5b-91f8-8e41d93ef8a4
+2024-01-21 05:25:27.557,Shampoo,Bills & Fees,Savings Bank,4.00,INR,EXPENSE,,,,,,,,ee3dc653-328a-4970-8b6a-ef34275c8c66
+2024-01-21 05:25:14.108,Haircut,Bills & Fees,Savings Bank,150.00,INR,EXPENSE,,,,,,,,999ee300-2c54-46fa-b342-1de14cfea372
+2024-01-20 04:26:59.396,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,08b1619c-e9fd-4495-bbcc-34657dd1f02c
+2024-01-20 03:48:40.411,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,38b21bfe-b68e-4d98-b6ef-32dcbeac1926
+2024-01-18 12:10:38.789,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,1c861ef9-f216-41f8-b4a7-83fed31c724d
+2024-01-18 02:07:00.000,Snacks,Food & Drinks,Savings Bank,111.00,INR,EXPENSE,,,,,,,,1e9d9edb-85aa-423c-b725-9112a2f93daf
+2024-01-16 07:46:00.000,Juice,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,066cda8c-34ac-483b-9fae-86c251c0b718
+2024-01-16 07:46:00.000,Shawarma 🌯,Food & Drinks,Savings Bank,130.00,INR,EXPENSE,,,,,,,,325d7ce7-3b80-458e-bc2e-2a6f99e0e66e
+2024-01-16 04:36:47.099,Bike,Transport,Savings Bank,30.00,INR,EXPENSE,,,,,,,,e5bc106a-3d23-4934-a2f6-0fa7899c38a0
+2024-01-16 03:41:55.665,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,fb002695-e190-4f6d-98d4-d13ca75ccaa4
+2024-01-16 02:22:09.074,Rent,Bills & Fees,Savings Bank,"3,500.00",INR,EXPENSE,,,,,,,,064cbb70-db59-4ef3-942d-06baaae83f6b
+2024-01-15 12:32:43.650,Juice,Food & Drinks,Savings Bank,75.00,INR,EXPENSE,,,,,,,,ab0b6158-98bd-4e51-b064-e2fc9936c691
+2024-01-14 12:33:00.000,Recharge,Bills & Fees,Savings Bank,0.90,INR,EXPENSE,,,,,,,,145120d9-1acd-4e76-aea0-3f989b3cb972
+2024-01-13 15:08:57.801,Snack,Transport,Savings Bank,30.00,INR,EXPENSE,,,,,,,,7e8df008-d9ee-47e8-85e1-7edb5b8926bc
+2024-01-13 12:32:00.000,Snacks,Bills & Fees,Savings Bank,60.00,INR,EXPENSE,,,,,,,,fac77f58-e2be-4305-9b5f-41235fb83dc6
+2024-01-13 09:35:12.683,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,ff44294b-b77b-44d5-be45-ab449073ba8d
+2024-01-12 09:34:00.000,RtA,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,65c1add8-7f6f-4a18-8b1b-c6c3fc84c9de
+2024-01-12 09:34:00.000,Burger AM,Food & Drinks,Savings Bank,99.00,INR,EXPENSE,,,,,,,,719cc580-7a38-4261-8b62-fb8b1b06750f
+2024-01-12 09:33:00.000,Breakfast,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,f2509f7f-43ee-4eab-9603-1d246916f308
+2024-01-11 09:32:00.000,Aloo bhujia,Food & Drinks,Savings Bank,10.00,INR,EXPENSE,,,,,,,,afc9d2e4-50a3-4659-ab86-885cbaf2be50
+2024-01-11 04:38:04.483,Adjust balance,,Cash,16.00,INR,INCOME,,,,,,,,88e8d97e-5ba9-4ef9-8eef-6815400831f2
+2024-01-11 04:36:59.560,Something,,Cash,5.00,INR,EXPENSE,,,,,,,,92044b8c-15a9-42e3-a82c-a5de71d776a0
+2024-01-11 04:36:32.558,Stonks,Bills & Fees,Savings Bank,400.00,INR,EXPENSE,,,,,,,,631b0e48-8bdb-4b11-a232-5a8f05614a64
+2024-01-11 03:53:59.551,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,3b02b38c-294f-46bc-99a9-1ae80f912127
+2024-01-11 03:53:57.667,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,b3b6b50d-2ce5-4bb4-96c7-6d498e8f7a63
+2024-01-10 10:00:50.505,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,25745581-b08b-45fe-a7a8-b7beb53b435e
+2024-01-10 03:53:00.000,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,832fc5ad-8ad1-4d90-aa63-a37be9bf5646
+2024-01-09 14:55:44.452,Sid PayUp,Bills & Fees,Savings Bank,200.00,INR,EXPENSE,,,,,,,,d6457ef5-8369-4902-9d0f-a0b01a4c8b14
+2024-01-09 12:14:56.340,Adjust balance,,Savings Bank,50.22,INR,EXPENSE,,,,,,,,767d6824-19d2-4f20-9aaf-bc9575386cdc
+2024-01-09 12:14:18.266,Adjust balance,,Cash,20.00,INR,EXPENSE,,,,,,,,5417947f-d604-4ce8-8e2d-96d51ecd8fae
+2024-01-09 12:12:08.566,Sid PayUp,Bills & Fees,Savings Bank,200.00,INR,INCOME,,,,,,,,81ba4bd5-29e6-4e82-9ba9-3e53b50bb099
+2024-01-09 12:11:43.743,RtA,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,026d61f6-1c38-42dc-b3df-6d43d7ab8e82
+2024-01-09 12:11:33.151,Recharge,,Savings Bank,0.00,INR,TRANSFER,100.00,INR,Metro Card,100.00,INR,,,3cb293f6-822e-4eef-837c-18447b92de5f
+2024-01-09 03:50:35.826,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,67b5b70e-1701-4569-a03d-2fcc9d4f776d
+2024-01-08 09:14:26.713,Payup,Food & Drinks,Savings Bank,280.00,INR,EXPENSE,,,,,,,,30df268f-7cd4-4ba5-b1d4-519392b32fb1
+2024-01-08 09:13:22.434,Scholarship,Bills & Fees,Savings Bank,40.00,INR,EXPENSE,,,,,,,,c6424fc9-89bd-4b4a-98a3-e7b725236291
+2024-01-07 10:06:54.505,Juice,Food & Drinks,Cash,25.00,INR,EXPENSE,,,,,,,,a64977ee-015c-4a62-bb84-7134a2d35f55
+2024-01-07 09:14:00.000,Gala nyt,Bills & Fees,Savings Bank,600.00,INR,EXPENSE,,,,,,,,61dab4a8-4da2-458e-8d60-d2c686574151
+2024-01-07 09:13:00.000,Parking,Bills & Fees,Savings Bank,15.00,INR,EXPENSE,,,,,,,,0d8de94b-38b2-4364-aa40-39e8d234817d
+2024-01-07 09:12:00.000,Stationary,Bills & Fees,Savings Bank,72.00,INR,EXPENSE,,,,,,,,2547211d-5d50-483a-8225-f077ad54d5e0
+2024-01-06 12:41:20.459,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,d797f742-d7c8-4344-b5cc-c58aa6c0fcf8
+2024-01-06 07:44:42.274,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,e75f945f-0986-4222-9c1c-58839b645150
+2024-01-06 07:44:31.074,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,593376ba-9009-4dbe-a7fc-b0aab77f2a86
+2024-01-04 12:45:08.344,Snacks,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,79fcbca7-4bbd-4ac9-a3ee-76c6663b6252
+2024-01-04 03:49:57.713,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,a40a2cfb-b43f-49ca-9e28-49bfc915b071
+2024-01-02 12:57:39.490,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,8139b955-d2d0-4155-9962-85b5c088d0d4
+2024-01-02 12:57:29.414,Snacks,Food & Drinks,Savings Bank,50.00,INR,EXPENSE,,,,,,,,7d6bedb3-c626-44d2-b41e-ffd416862e62
+2024-01-02 03:58:55.807,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,197883a7-a5d4-4098-9b61-eab1bf02ee18
+2024-01-02 03:58:47.813,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,8ca07f59-8da9-440a-8b5c-7607697c86ef
+2024-01-01 05:09:11.934,Cake,Food & Drinks,Savings Bank,300.00,INR,EXPENSE,,,,,,,,ef6a730e-df15-4196-b8ce-0957a2756605
+2024-01-01 05:09:01.107,Party,Bills & Fees,Savings Bank,350.00,INR,EXPENSE,,,,,,,,7a9b8b35-3fd9-4c1d-97dd-96c956c79c24
+2023-12-30 09:34:17.414,Breakfast,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,7f731550-8f09-4bdb-b2d4-844c7a5bc2eb
+2023-12-29 14:53:02.460,Goje Payback,Bills & Fees,Savings Bank,30.00,INR,INCOME,,,,,,,,7cd29b8d-31a1-44a6-8c42-e500b7de2d29
+2023-12-29 14:52:52.822,Snacks,Food & Drinks,Savings Bank,100.00,INR,EXPENSE,,,,,,,,29bade65-f8aa-46b2-8bfd-382fd9ddc330
+2023-12-29 14:52:34.978,Help,,Cash,0.00,INR,TRANSFER,100.00,INR,Savings Bank,100.00,INR,,,5f54fa70-0c1d-4e3d-8475-688a686a2e61
+2023-12-29 07:07:45.817,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,b17c4c25-b81b-4c0a-b78d-8600a6a4fd2d
+2023-12-29 07:07:44.907,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,ba6312a5-e59a-4bde-a5ae-aa4285445a7f
+2023-12-28 14:03:08.412,Salary,Bills & Fees,Savings Bank,"3,130.00",INR,INCOME,,,,,,,,f3710b81-8a94-4428-9201-2549ad433814
+2023-12-28 04:47:55.708,Breakfast,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,51715b02-1f3f-407f-9a9e-9431ba36ab0f
+2023-12-27 12:44:25.147,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,91540772-f567-486e-a624-d50a242dc7ea
+2023-12-27 12:44:18.344,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,d83bdd1e-f363-4473-9f37-7c022c870bfb
+2023-12-27 03:22:15.547,Stationary,Bills & Fees,Savings Bank,35.00,INR,EXPENSE,,,,,,,,eafd68d0-0f52-4047-846f-548fc37f6797
+2023-12-27 03:22:05.053,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,88f10926-281c-4e31-9042-649aea871b3e
+2023-12-26 13:24:32.510,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,b2057cd4-7448-409f-bd64-8e65271e453d
+2023-12-26 08:47:33.752,Lunch,Food & Drinks,Savings Bank,70.00,INR,EXPENSE,,,,,,,,925a2fb3-aeb4-44aa-ac95-66016b19dadc
+2023-12-26 04:53:01.660,Adjust balance,,Cash,45.00,INR,EXPENSE,,,,,,,,560c90bf-384c-428b-8848-f8c5f856b0bc
+2023-12-26 03:34:28.984,Breakfast,Food & Drinks,Savings Bank,35.00,INR,EXPENSE,,,,,,,,68920597-14a9-4714-acda-91e6bd6858d9
+2023-12-25 14:00:56.062,Bread,Food & Drinks,Savings Bank,70.00,INR,EXPENSE,,,,,,,,d273d514-16d5-4562-827e-634eff37c6b3
+2023-12-25 09:03:22.892,Lunch,Food & Drinks,Savings Bank,220.00,INR,EXPENSE,,,,,,,,314faab6-0494-4b3d-9c84-db829002fba4
+2023-12-25 06:48:47.727,Tea,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,92f04311-07a7-493b-84ad-d38adcd7222d
+2023-12-25 06:48:41.761,Water,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,33223069-48e7-427a-a8c0-1c4efd525528
+2023-12-25 06:48:34.150,Breakfast,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,09c3c51f-7cfa-4647-a21e-080e67e542dd
+2023-12-25 06:48:28.156,Breakfast,Food & Drinks,Savings Bank,40.00,INR,EXPENSE,,,,,,,,6cb14088-4659-473b-81b3-a17246ae6b18
+2023-12-25 02:59:00.000,Chicken keema,Food & Drinks,Savings Bank,187.20,INR,EXPENSE,,,,,,,,2290db9f-0eff-4600-bf8f-1f02ff51ca32
+2023-12-25 02:59:00.000,Interest,,Savings Bank,30.00,INR,INCOME,,,,,,,,fdc8188b-e3f1-432f-bcb4-e6e40b268f69
+2023-12-24 06:49:00.000,Breakfast,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,4ce9edcc-510e-4d4f-af17-0ad31309a72f
+2023-12-24 06:46:00.000,Coffee,Food & Drinks,Savings Bank,4.00,INR,EXPENSE,,,,,,,,f1663574-2517-4cd1-ab38-d1003184b98e
+2023-12-24 06:46:00.000,Coffee,Food & Drinks,Cash,10.00,INR,EXPENSE,,,,,,,,9674d36a-6dbb-4ce4-b604-48032c7c4d0c
+2023-12-23 14:02:51.092,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,15ffd4c8-96c6-4997-ac8c-e963264cdc8d
+2023-12-22 09:34:46.558,Snacks,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,5adc0ffc-c353-4a97-8a3e-450e9c600802
+2023-12-22 07:41:28.912,Payup,Bills & Fees,Cash,200.00,INR,INCOME,,,,,,,,b2f78cc3-5ec5-4c58-b4ec-7e91b945521e
+2023-12-22 07:41:18.956,Payup,Bills & Fees,Savings Bank,700.00,INR,INCOME,,,,,,,,b9b9f487-3b24-49f7-8a74-48e0a93c0fc9
+2023-12-22 06:59:55.062,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,f8a0462a-deae-48e8-b068-0ffdb31fd8df
+2023-12-22 03:30:00.000,Ticket refund,Bills & Fees,Savings Bank,170.56,INR,INCOME,,,,,,,,e45c43ce-01d1-4bc6-820d-8dfc1d1e28ab
+2023-12-22 03:28:00.000,Juice,Food & Drinks,Savings Bank,130.00,INR,EXPENSE,,,,,,,,7a63f8ae-377a-4c0e-9311-42c1f87eeddd
+2023-12-22 03:28:00.000,Payup,Food & Drinks,Savings Bank,40.00,INR,INCOME,,,,,,,,aa757e90-f3c6-4909-9b04-0d1533979761
+2023-12-22 03:27:00.000,Pizza,Food & Drinks,Savings Bank,170.00,INR,EXPENSE,,,,,,,,a27cab20-3ec8-43ff-902b-7dfa2f4f3a6e
+2023-12-21 08:51:40.915,Tickets,Bills & Fees,Savings Bank,376.00,INR,EXPENSE,,,,,,,,4f355e8f-e329-4cb0-a5df-04fd184f46cd
+2023-12-21 07:46:46.462,Gift 🎁,Bills & Fees,Savings Bank,"1,550.00",INR,EXPENSE,,,,,,,,62394bcb-5474-40b1-b1fa-b075914a0d22
+2023-12-21 04:47:33.906,Stonks Return,Bills & Fees,Savings Bank,83.66,INR,INCOME,,,,,,,,564e1375-e344-4d95-8cf8-9278ea337875
+2023-12-20 15:19:36.021,Shawarma 🌯,Food & Drinks,Savings Bank,330.00,INR,EXPENSE,,,,,,,,6c5084ec-96b0-4cbf-8769-97a6dae9c6b3
+2023-12-20 13:21:25.697,Snacks,Food & Drinks,Savings Bank,55.00,INR,EXPENSE,,,,,,,,6c8e4ece-88fc-4fb6-a1c0-dc205e6fa7d7
+2023-12-20 12:55:23.182,Recharge,Bills & Fees,Savings Bank,257.90,INR,EXPENSE,,,,,,,,432f3a72-7f95-452e-a183-330f5ec1ace1
+2023-12-20 12:52:20.771,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,833c381f-09a6-4375-a592-2c06d15b929d
+2023-12-20 07:12:40.662,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,c2054475-c241-40f7-9c5a-d4f855f2b304
+2023-12-20 07:12:37.700,Snacks,Food & Drinks,Savings Bank,35.00,INR,EXPENSE,,,,,,,,e466961d-3da5-4312-87de-da40811cd2c9
+2023-12-19 06:42:52.173,Cashback,Bills & Fees,Savings Bank,3.00,INR,INCOME,,,,,,,,dfd5ce4d-baa0-401b-a51f-9aca90e78b84
+2023-12-18 14:20:33.375,Adjust balance,,Cash,300.00,INR,INCOME,,,,,,,,a1a3727b-0a2c-453a-856c-b3f90593b6e7
+2023-12-18 13:54:15.211,Adjust balance,,Savings Bank,2.00,INR,INCOME,,,,,,,,227456ba-8dbb-49c1-976b-ee2098f72a41
+2023-12-18 13:53:46.737,Weekend,Food & Drinks,Savings Bank,290.00,INR,EXPENSE,,,,,,,,021cb38e-ae47-4155-8e6d-9522e7974d9e
+2023-12-16 13:51:00.000,Card maintenance,Bills & Fees,Savings Bank,295.00,INR,EXPENSE,,,,,,,,0a817829-a0cb-48e0-b62a-47648d904c5b
+2023-12-16 13:50:00.000,Bus Pass,Transport,Savings Bank,430.00,INR,EXPENSE,,,,,,,,fa98d231-86e3-48ca-bbc7-f27c18c906aa
+2023-12-16 06:15:44.787,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,6c3559f3-063a-4a61-99ce-e594dc0d0f7f
+2023-12-15 17:39:48.434,Goje Payback,Food & Drinks,Cash,30.00,INR,INCOME,,,,,,,,722e9e7e-e308-4518-9c9f-84de96dd7acb
+2023-12-15 17:39:38.159,Sid PayUp,Food & Drinks,Savings Bank,40.00,INR,INCOME,,,,,,,,32e61c00-796a-4f82-9652-5eaf8834d154
+2023-12-15 17:37:53.345,Juice,Food & Drinks,Savings Bank,40.00,INR,EXPENSE,,,,,,,,949bb309-7699-43ff-ab60-ae179a9f7a40
+2023-12-15 17:37:39.927,Snacks,Food & Drinks,Savings Bank,105.00,INR,EXPENSE,,,,,,,,e2badeca-ef83-42a0-826d-c3af2c8d58dc
+2023-12-15 05:26:55.111,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,40408840-9681-4dfb-83ce-630136d9d928
+2023-12-15 05:26:48.237,Snacks,Food & Drinks,Cash,70.00,INR,EXPENSE,,,,,,,,11788ec1-f814-4697-b451-4f2ca8cf80ac
+2023-12-14 04:56:43.264,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,4702862d-7184-4f1f-83e3-5eed5c68bdf3
+2023-12-13 17:49:54.294,Biryani,Bills & Fees,Savings Bank,520.00,INR,EXPENSE,,,,,,,,15fbbcaa-c866-4c18-bd6a-2aa0aefc8e6a
+2023-12-13 14:46:42.668,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,1ac59627-12e6-410d-9ef0-91a26cabbd63
+2023-12-13 14:46:33.503,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,da31bb5f-8e99-4b57-beb5-c404d401e588
+2023-12-13 14:46:31.913,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,f17424d4-1ed1-4ad7-9c2e-8f146bdcfc30
+2023-12-12 17:10:27.370,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,9334ad1f-3f44-4c6c-aa73-5013d4884b73
+2023-12-12 02:48:36.894,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,a7f9d52d-ffe2-40d3-a930-5154f8a4695d
+2023-12-11 13:49:22.709,Adjust balance,,Savings Bank,2.00,INR,EXPENSE,,,,,,,,8abfcea0-95bc-45eb-9ee6-bcb4b40a3910
+2023-12-11 13:45:25.240,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,a9ceb49f-af47-46a4-ae34-e28e160e5d90
+2023-12-11 03:22:38.688,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,7417866f-e161-4d98-9a1c-a10bf266f2f9
+2023-12-10 03:22:00.000,Bonda,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,6ba81c07-7f94-4e7d-8515-7da2db290db5
+2023-12-09 16:11:36.601,Snacks,Food & Drinks,Savings Bank,130.00,INR,EXPENSE,,,,,,,,932e96d5-6fbb-4cdd-99a5-4d9552980303
+2023-12-09 16:10:41.947,Gpay,Bills & Fees,Savings Bank,25.00,INR,INCOME,,,,,,,,f0dd3e5d-addf-405b-9e30-80b577fcf816
+2023-12-09 16:10:06.821,,,Metro Card,2.00,INR,EXPENSE,,,,,,,,f9009d96-9237-4805-8ab6-fa03030094ba
+2023-12-09 03:23:28.486,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,43113418-56e2-4138-81de-33491deed52c
+2023-12-08 13:33:46.243,Snacks,Food & Drinks,Savings Bank,70.00,INR,EXPENSE,,,,,,,,13d6b68a-fa12-495d-aec6-c7aee22d5ca5
+2023-12-08 13:00:35.749,Adjust balance,,Savings Bank,5.00,INR,EXPENSE,,,,,,,,4d21e110-458c-4fe8-88fe-0495ba21877b
+2023-12-08 12:59:59.163,Printouts,Bills & Fees,Savings Bank,10.00,INR,EXPENSE,,,,,,,,2f584bfb-8f02-43ef-94dc-629a4c96a2f1
+2023-12-08 12:59:45.192,Coke,Food & Drinks,Savings Bank,15.00,INR,EXPENSE,,,,,,,,ba9bad5d-11e4-422b-b952-e27c8b4e85ca
+2023-12-08 12:55:08.212,Adjust balance,,Cash,95.00,INR,INCOME,,,,,,,,4a29507c-1e41-48de-920f-a16b6081b3fe
+2023-12-07 12:59:00.000,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,060098bc-c3e6-4127-bec0-314ceee81267
+2023-12-07 12:55:00.000,Withdraw,,Savings Bank,500.00,INR,EXPENSE,,,,,,,,4a369309-254a-4469-be93-b466e6fd2c07
+2023-12-07 11:20:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,dcee1de9-e613-4e76-ab56-b4b98780226f
+2023-12-07 02:58:24.512,Adjust balance,,Cash,20.00,INR,EXPENSE,,,,,,,,14b0a044-46e0-47d3-bbad-2315fdd6d44b
+2023-12-07 02:57:58.498,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,d86aa26b-d80b-4589-9321-6f471dbeea4f
+2023-12-06 18:08:07.880,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,97f40cea-dfc0-4f1c-879c-83f64ae5b23c
+2023-12-06 18:07:55.126,Help,,Savings Bank,0.00,INR,TRANSFER,120.00,INR,Cash,120.00,INR,,,28980670-9ac1-424a-9134-942c644228bb
+2023-12-06 12:57:00.000,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,917b2e0c-b7c5-4898-82e9-cf95d7e5195c
+2023-12-06 03:53:19.450,Adjust balance,,Cash,80.00,INR,INCOME,,,,,,,,624717d4-2452-41ec-a6c5-c0bb5541ee35
+2023-12-06 03:53:13.035,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,a0bd2045-5f35-4511-967e-219381209062
+2023-12-06 03:53:07.487,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,24d3cbba-346c-49ec-a017-dc9df7c04d86
+2023-12-05 01:49:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,90c9e9aa-ad63-4f7c-9669-3fe8f1d1cc77
+2023-12-05 01:49:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,eb990cdf-34c5-427f-a0c6-f502dd37ccf6
+2023-12-04 16:39:13.662,Snacks,Food & Drinks,Savings Bank,75.00,INR,EXPENSE,,,,,,,,34f0f184-0b17-4687-8594-7e8d8838ea44
+2023-12-04 16:36:59.062,Jalebi,Food & Drinks,Savings Bank,50.00,INR,EXPENSE,,,,,,,,d4df7376-a3d8-4106-a6c0-74953da4fd3b
+2023-12-04 16:36:41.801,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,0333ad03-2361-4755-baaa-76cddc71ad85
+2023-12-04 16:36:34.724,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,9b5c9e93-b048-489a-9360-83e610a4cdcf
+2023-12-02 14:46:32.344,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,69f4b6ea-4a8e-451d-a029-3bf1648d0dc0
+2023-12-02 14:46:23.183,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,149baa0f-5ff3-4cae-8ea8-7cdfbbba2690
+2023-12-01 14:07:24.158,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,cfb4c1f4-da4c-44a7-acce-d6bc646f89e3
+2023-12-01 12:47:08.500,Adjust balance,,Cash,10.00,INR,EXPENSE,,,,,,,,663673ed-628e-424e-a8f4-6a5a32fb1650
+2023-12-01 07:51:12.093,Chotu,Bills & Fees,Savings Bank,220.00,INR,INCOME,,,,,,,,3c87fc82-daee-4b05-8e01-01c4789e99ef
+2023-12-01 06:52:48.720,AtrR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,946ba742-cc88-4dd1-95d5-0d53bb4bf601
+2023-11-29 15:34:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,0459d289-e983-483c-af6b-1d528f163ac3
+2023-11-29 15:33:00.000,AtrR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,88ecfc83-404b-490c-9963-f38ee50dc1f7
+2023-11-29 15:33:00.000,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,30854bf7-334a-42c0-9d0b-1d6b04c5abb2
+2023-11-29 14:45:01.328,Biryani 🍚,Food & Drinks,Savings Bank,520.00,INR,EXPENSE,,,,,,,,5ac33667-4651-4eb3-8aa5-ac9ca397dcd8
+2023-11-29 14:44:19.650,Shawarma 🌯,Food & Drinks,Savings Bank,140.00,INR,EXPENSE,,,,,,,,644e88bf-4972-4c7a-bba4-e778ea416246
+2023-11-29 10:53:26.997,Lunch payup,Food & Drinks,Savings Bank,552.00,INR,EXPENSE,,,,,,8500264412.0,,26a94d5a-a6cc-4471-98fb-dd2aa21a5d71
+2023-11-29 08:14:04.299,Baba,Bills & Fees,Savings Bank,"10,000.00",INR,EXPENSE,,,,,,,,8856a324-0da0-4c9d-adc6-477450008e2f
+2023-11-29 08:10:05.768,Salary,,Savings Bank,"22,283.00",INR,INCOME,,,,,,,,2971c087-5442-42c5-b4e6-78430170b8c4
+2023-11-29 02:30:53.478,Chotu,Bills & Fees,Savings Bank,20.00,INR,EXPENSE,,,,,,,,ec8b5888-2e6c-4fe9-aa32-238781160408
+2023-11-28 11:29:44.156,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,197bdb56-9809-439e-8b0c-e9473f4b000b
+2023-11-28 02:32:00.000,Juice,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,0ce745aa-d387-4c37-8c9a-c6f7641e55be
+2023-11-27 00:34:00.000,AtrR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,2a2d238e-53fe-48e3-9626-19f2cfc548a9
+2023-11-26 23:34:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,be0f701d-f9ab-45da-9830-c0cbae52d003
+2023-11-26 13:25:51.138,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,421ea41d-bb8d-4b03-8968-046626bf6439
+2023-11-26 12:30:43.567,Shampoo,Bills & Fees,Savings Bank,4.00,INR,EXPENSE,,,,,,,,7b06ff54-c71c-4b0a-9ed4-390580574d3f
+2023-11-25 17:27:08.559,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,644d7776-1db9-4133-98c9-e5c91ad25ae1
+2023-11-25 14:28:37.182,Adjust balance,,Savings Bank,19.20,INR,EXPENSE,,,,,,,,ee99e108-e2ac-4520-86b6-4881d2b200da
+2023-11-25 14:23:29.453,Exam fees,Bills & Fees,Savings Bank,800.00,INR,EXPENSE,,,,,,,,0cb50773-b197-4d35-bd06-ac371e7557ad
+2023-11-24 17:55:52.227,Snacks,Food & Drinks,Savings Bank,35.00,INR,EXPENSE,,,,,,,,1b90f7f7-9f52-43fd-be51-b292e463bc70
+2023-11-23 17:55:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,5c9dc391-1da4-423a-806f-81c431c30a13
+2023-11-23 17:54:00.000,AtrR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,1feb75ee-36a2-4182-b4cd-cf5e94ea0bdd
+2023-11-23 14:27:00.000,Something,Bills & Fees,Savings Bank,50.00,INR,EXPENSE,,,,,,,,1a57d7b8-8980-42b3-9d9e-fa710bc78cfe
+2023-11-22 03:02:47.117,Recharge,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,5e323923-50fe-44ed-a480-e9dae86c7aa7
+2023-11-22 01:48:00.000,AtrR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,6804ce0f-f9b8-4e80-8557-ce640fea5e7e
+2023-11-22 01:48:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,41f23d61-4e65-4fa3-8704-2ad9a0be0e81
+2023-11-21 14:27:00.000,Curd,Bills & Fees,Savings Bank,46.00,INR,EXPENSE,,,,,,,,97c3a6b9-0d85-4d13-b1d9-c14155b1b5ff
+2023-11-21 14:26:00.000,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,0869a6f5-c8b4-434b-9ceb-ab4f5367c691
+2023-11-21 12:38:04.697,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,d63fad3a-737c-4f49-87bf-1e91b4c740f8
+2023-11-21 06:57:29.028,Chotu pass,Bills & Fees,Savings Bank,200.00,INR,EXPENSE,,,,,,,,e7362139-393e-4fc0-aecc-3e95e0e2d2a9
+2023-11-21 05:04:04.458,AtrR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,71dd54b2-734f-415e-9055-6bf8cfec6ba6
+2023-11-21 03:14:37.522,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,277bf617-06c2-48a9-9b41-bd2492f4d0a0
+2023-11-20 13:09:53.839,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,8b2b2cd4-076a-446c-8c78-a7611661f4b8
+2023-11-20 08:38:31.969,Maa,Bills & Fees,Cash,50.00,INR,EXPENSE,,,,,,,,24fa34a0-5b3a-412a-a7aa-48c00303ebd9
+2023-11-20 04:16:05.047,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,543d9103-afdf-4de5-8fbf-a3a2f3341f58
+2023-11-19 14:35:21.100,Adjust balance,,Cash,20.00,INR,INCOME,,,,,,,,50add2df-c653-4fc9-974e-08c8c8f58433
+2023-11-18 14:33:00.000,Bus pass,Transport,Savings Bank,430.00,INR,EXPENSE,,,,,,,,f69aa535-adb7-4041-ae57-b932274200d9
+2023-11-18 03:45:47.429,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,7c2b7f37-3ca9-4b96-84bb-795c65da17f2
+2023-11-18 02:56:01.771,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,a7e94197-1ee2-46a3-aec3-21da0ba57087
+2023-11-17 15:49:26.245,Withdraw,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Cash,200.00,INR,,,18f48998-134d-4716-aefd-4a57806c7d5f
+2023-11-17 15:45:38.543,Saman,Bills & Fees,Savings Bank,153.00,INR,EXPENSE,,,,,,,,b4c82d8c-d379-41fa-a79f-1ce7b917e010
+2023-11-17 13:24:05.567,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ebea9cf2-b39e-49c3-8263-40e3d5896c16
+2023-11-17 07:24:46.817,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,9f6d08fe-6f10-4927-9260-68795190105f
+2023-11-16 13:15:37.979,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,9b7679df-89b6-4a40-a3b7-e8932e98d504
+2023-11-16 13:13:59.113,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,d12a9c4e-8d52-4701-a49a-2b2deda9d52f
+2023-11-16 13:13:48.761,Adjust balance,,Cash,20.00,INR,EXPENSE,,,,,,,,adcde3b9-cc7d-481e-a4de-7f845e385a4e
+2023-11-16 12:26:08.443,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,ecb52348-a164-4efc-8352-a21dd462df24
+2023-11-16 03:38:46.224,Recharge,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,58b7c8b9-836b-457f-8c6d-17916d6b4bd6
+2023-11-15 04:43:29.264,AtR,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,37772232-b8e2-4688-bc24-9c6aa69ee339
+2023-11-14 04:46:33.165,Adjust balance,,Savings Bank,13.20,INR,INCOME,,,,,,,,81727d8f-e26e-4268-9cf6-200aa3bce138
+2023-11-14 04:40:40.406,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,bb532962-fe2e-4b2a-802c-11002d2c675a
+2023-11-14 02:49:41.199,Maa,,Cash,20.00,INR,EXPENSE,,,,,,,,20446408-5a15-414b-990c-e3d29e2f652a
+2023-11-13 02:50:00.000,Print,Bills & Fees,Savings Bank,100.00,INR,EXPENSE,,,,,,,,fcdaadae-f40a-41d5-a814-90fdda1fc01d
+2023-11-13 02:50:00.000,AtR,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,3f4284fc-a72f-4953-b7e1-878dfe903ae0
+2023-11-12 14:21:28.134,Snacks,Food & Drinks,Savings Bank,70.00,INR,EXPENSE,,,,,,,,7798f163-4dfa-40e2-8207-a1fd2fde64bd
+2023-11-12 13:43:47.628,Clothes,Bills & Fees,Savings Bank,"1,050.00",INR,EXPENSE,,,,,,,,b26a5e5c-4ac5-4c0e-a4b2-16477d2fd01f
+2023-11-12 13:43:30.296,Clothes,Bills & Fees,Savings Bank,"1,607.00",INR,EXPENSE,,,,,,,,bd2bd52e-5cbc-4733-ab4f-13ea9c98f284
+2023-11-11 09:44:13.882,Snacks,Food & Drinks,Savings Bank,105.00,INR,EXPENSE,,,,,,,,c948a557-c0b0-421b-81ed-e22f2d39f155
+2023-11-11 04:41:00.000,Snacks,Food & Drinks,Savings Bank,140.00,INR,EXPENSE,,,,,,,,fe578deb-0f74-4840-8139-f4211f883d5d
+2023-11-11 03:45:36.925,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,bc5e6d26-42c9-43f6-abde-f9b07ff98957
+2023-11-11 03:45:29.506,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,95fa706e-7e4b-407f-93e3-dcb6f49efc0d
+2023-11-10 14:37:48.383,Haircut,Bills & Fees,Savings Bank,150.00,INR,EXPENSE,,,,,,,,843b38b6-8935-41a6-90fa-c1663295a12c
+2023-11-10 12:39:38.851,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,3f85c317-ed8f-498b-8a7b-3c420d50181a
+2023-11-10 12:39:27.438,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,c6365a43-e34d-4c9b-b629-c3db459fbcba
+2023-11-10 12:39:11.482,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,7aafd1e1-88fb-4d26-bead-a42530d0bfc4
+2023-11-09 04:35:00.000,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,1195ea9c-4627-46a1-bb49-2e877cb3e8ba
+2023-11-09 04:35:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,850c874a-9796-4dd1-a8c8-2d2cc8ed55bf
+2023-11-09 04:35:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,b1473f0a-b561-420b-a8e8-0722b3642027
+2023-11-08 14:46:33.699,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,33a81c8a-4cff-410d-bdea-28695365f00e
+2023-11-08 14:46:25.456,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,e2d505a6-3bf0-404c-833c-d84ea1f7d3ca
+2023-11-08 14:46:12.011,DishTV,Bills & Fees,Savings Bank,220.00,INR,EXPENSE,,,,,,,,3c2021b3-92f8-4a91-b343-8c321411edf4
+2023-11-08 04:43:00.000,Juice,Food & Drinks,Savings Bank,10.00,INR,EXPENSE,,,,,,,,2214cf6a-3509-4775-9306-d1c853984d52
+2023-11-08 04:36:02.143,Recharge,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,aec282de-c289-492b-80b9-8cfa216b7acc
+2023-11-07 12:41:00.000,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,cdded4a6-aa21-458d-a863-9982ce6a0d43
+2023-11-07 10:42:39.245,Electricity,Bills & Fees,Savings Bank,774.00,INR,EXPENSE,,,,,,,,016e9b61-dcfa-4e77-9ea4-5b40078becc9
+2023-11-07 04:31:45.580,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,78888e33-2d94-478e-b4d8-35ff9169fea4
+2023-11-07 04:31:33.413,Rapido,Transport,Savings Bank,44.00,INR,EXPENSE,,,,,,,,beef8da0-b407-4076-a562-8a55edb5bce3
+2023-11-06 05:23:14.984,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,b7b2a934-a16c-419f-8b93-7e9e2f9a62c2
+2023-11-05 13:43:25.042,Maida,Bills & Fees,Savings Bank,25.00,INR,EXPENSE,,,,,,,,6cd27df9-3f55-4e65-a77b-9d25259cd29e
+2023-11-05 04:44:00.000,Adjust,,Savings Bank,30.00,INR,EXPENSE,,,,,,,,f01503a7-4e97-4b43-bd2c-cfbd17611edc
+2023-11-04 13:39:41.767,Sid,Food & Drinks,Savings Bank,140.00,INR,EXPENSE,,,,,,,,86eddbaf-1a9f-4b39-a9be-bce386b02cc9
+2023-11-04 05:26:44.731,Printouts,Bills & Fees,Savings Bank,385.00,INR,EXPENSE,,,,,,,,d2679f4e-ce95-4a3e-a7d9-6c6b9007e2c0
+2023-11-04 04:45:00.000,Treat,Food & Drinks,Savings Bank,650.00,INR,EXPENSE,,,,,,,,4fa043c2-f7ca-437e-b6ee-58251377508f
+2023-11-03 05:08:00.000,Chotu,Bills & Fees,Savings Bank,"2,400.00",INR,INCOME,,,,,,,,6ede70eb-b6c4-4447-b8c6-fa2aab9df901
+2023-11-03 05:08:00.000,Seminar print,Bills & Fees,Savings Bank,104.00,INR,EXPENSE,,,,,,,,18a8be6e-6669-4223-9631-a3c29b826841
+2023-11-03 05:06:00.000,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,66fc0879-0791-4134-8789-c0d1b74a6cab
+2023-11-02 12:43:39.434,Amazon,Bills & Fees,Savings Bank,"1,899.00",INR,EXPENSE,,,,,,,,4269f611-6985-4028-85b2-ab9810ac4df7
+2023-11-02 05:06:00.000,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,acf52e36-7fe6-41de-88de-bba899dfd884
+2023-11-01 18:10:55.602,Grocery,Bills & Fees,Savings Bank,"2,320.78",INR,EXPENSE,,,,,,,,eeb36b00-1cde-4cca-8a38-4a997eb35496
+2023-11-01 16:20:37.828,Biryani,Food & Drinks,Savings Bank,520.00,INR,EXPENSE,,,,,,,,922eb3ad-ce92-43ed-82e0-f432251243bb
+2023-11-01 12:21:50.928,Recharge,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,80afa37c-80c8-4f25-864e-4949fc04fd30
+2023-11-01 12:21:35.753,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,aaa2e7fe-1c23-4d65-ba8a-b5fc252b2c25
+2023-11-01 12:21:26.593,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,f7018b1e-fe6e-468f-a3bb-f64bb701c1e2
+2023-11-01 12:21:20.752,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,080dcbbd-f828-4ba0-beac-f5f32391a409
+2023-11-01 02:30:08.193,Shampoo,Bills & Fees,Savings Bank,4.00,INR,EXPENSE,,,,,,,,93598cf4-8222-4ffd-975a-a57bbe6a6c7f
+2023-10-31 16:31:38.103,Salary,Bills & Fees,Savings Bank,"11,033.00",INR,INCOME,,,,,,,,4a84591c-f2a3-4cb2-af50-1b09d06d15c6
+2023-10-31 13:52:07.768,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,f8e9144e-95b6-42b1-aa50-75ca623456d4
+2023-10-31 12:04:29.967,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,77a06c9e-4a6c-4a25-9962-4639e7df0344
+2023-10-30 12:21:01.699,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,265e9b8f-0bb9-41f5-af2b-3adee382c252
+2023-10-30 04:38:50.763,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,7b6c432c-ce1a-4069-b0aa-016345fd4f13
+2023-10-28 05:11:50.025,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,56413879-e433-453c-9635-68c5704a2eeb
+2023-10-27 13:39:24.498,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,97d200a4-8a14-49aa-afd9-6f7096ffb383
+2023-10-27 13:39:13.463,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,e29cc138-af79-4cf1-bb31-bf3147ea054d
+2023-10-27 04:03:33.948,Recharge,,Savings Bank,0.00,INR,TRANSFER,100.00,INR,Metro Card,100.00,INR,,,96367560-d2b9-4f5d-ad6b-21b20ce521d9
+2023-10-26 12:16:39.077,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,7a4a6e3b-c8ee-4544-9360-fb1cfb8f2180
+2023-10-26 12:16:26.990,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,0cfdc995-94a3-49bd-bdc4-22e72dbb704e
+2023-10-26 07:21:17.388,Chotu,Bills & Fees,Savings Bank,200.00,INR,EXPENSE,,,,,,,,bdd73ad9-634f-404c-8d9b-869f6af5a207
+2023-10-26 03:19:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,37abc86e-1ccc-4208-a4ab-c8d82ad550d7
+2023-10-25 18:09:16.546,Adjust balance,,Metro Card,35.00,INR,EXPENSE,,,,,,,,aa94af2f-38b6-4bd4-96a8-a3d702739ab2
+2023-10-25 18:08:06.992,Adjust balance,,Cash,44.00,INR,EXPENSE,,,,,,,,2483c557-c863-44bf-9570-ff856b7601a8
+2023-10-25 18:06:00.940,Nidhish Payup,Bills & Fees,Savings Bank,60.00,INR,EXPENSE,,,,,,,,7cfc848a-405e-4a42-b084-c9cb747e988a
+2023-10-25 18:05:16.186,Recharge,Bills & Fees,Savings Bank,470.82,INR,EXPENSE,,,,,,,,5ee52a27-7ed5-47c1-9e97-130602892c04
+2023-10-25 18:04:46.422,Baba,Bills & Fees,Savings Bank,600.00,INR,INCOME,,,,,,,,80767f2d-2582-4da4-bbee-7a95e06dff10
+2023-10-24 18:04:00.000,Biryani 🍚,Food & Drinks,Savings Bank,356.00,INR,EXPENSE,,,,,,,,6b5bcf06-600e-4921-8b15-f2ad78824b97
+2023-10-24 18:03:00.000,Maa,Bills & Fees,Savings Bank,200.00,INR,INCOME,,,,,,,,b0b6a557-f44a-46e9-bb70-5d9cf3b8b67c
+2023-10-24 18:02:00.000,Egg Roll 🌯,Food & Drinks,Savings Bank,140.00,INR,EXPENSE,,,,,,,,1a6ced53-ddaf-424f-bc75-b4609a8421d5
+2023-10-24 18:01:00.000,Bus Pass 💳,Transport,Savings Bank,440.00,INR,EXPENSE,,,,,,,,e091c498-3f42-4136-855d-9abe5e9c23c6
+2023-10-24 18:00:00.000,Adjust,Bills & Fees,Savings Bank,40.00,INR,EXPENSE,,,,,,,,9f9e561d-fbe6-4cd6-9a86-4f17f17b5e35
+2023-10-23 17:57:00.000,Rapido 🚲,Transport,Savings Bank,74.00,INR,EXPENSE,,,,,,,,adc6a73d-0802-478a-b225-59c573492a37
+2023-10-23 17:47:00.000,Adjust,Bills & Fees,Savings Bank,10.00,INR,EXPENSE,,,,,,,,f30bed0f-ca8e-4698-80c9-e0c215eebfb2
+2023-10-22 17:45:00.000,Egg roll 🌯,Food & Drinks,Savings Bank,160.00,INR,EXPENSE,,,,,,,,809b23a7-509e-439a-8651-0cc57f29ede3
+2023-10-22 16:39:00.000,Nidhish Paid,Bills & Fees,Savings Bank,60.00,INR,INCOME,,,,,,,,295d4db6-def7-490a-89d2-fb9414428b54
+2023-10-22 16:38:00.000,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,be8e28eb-da75-4416-80ca-0c6672e99c28
+2023-10-22 12:42:40.411,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,1226dbe7-b544-45a7-a1dc-600679421ee1
+2023-10-22 12:42:27.696,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,4c6b2085-3835-4b8d-900f-8b777c2613dc
+2023-10-22 10:45:00.000,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,d0b67f09-34f9-4a75-b8ca-6afe9e6b6041
+2023-10-22 02:54:45.615,Maa,Bills & Fees,Cash,50.00,INR,EXPENSE,,,,,,,,30dc6898-a78c-4981-93a6-6876bd02b2db
+2023-10-21 16:02:43.591,Juice,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,9fa38570-f628-42eb-81a3-41ac25eaf077
+2023-10-21 03:07:10.139,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,e5b68f42-1ae9-4087-b70e-0f37247a48b9
+2023-10-20 03:55:42.633,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,a4484350-6cf4-4d4b-9c38-773827a5d49e
+2023-10-20 03:10:00.000,PtA,Transport,Metro Card,10.00,INR,EXPENSE,,,,,,,,e04f9a4a-78b6-4ea5-bd57-66019be37465
+2023-10-20 03:09:00.000,HtP,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,e80d649a-a392-449b-aaf9-bb569a0510d3
+2023-10-20 03:07:00.000,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,0d62c76b-9d29-482f-b63a-9ce7bba105a8
+2023-10-20 03:00:00.000,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,a1e744ae-705e-489d-ab04-47d39d7dd881
+2023-10-19 12:12:05.334,RtA,Transport,Metro Card,45.00,INR,EXPENSE,,,,,,,,d7dc2bec-0060-49b1-8fae-2135b8ab8d56
+2023-10-19 09:44:54.023,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,b75da623-cdeb-4ac4-91e2-6e180d1d58ba
+2023-10-18 13:59:19.658,Recharge,,Savings Bank,0.00,INR,TRANSFER,50.00,INR,Metro Card,50.00,INR,,,654b5c48-e9c3-40f3-a523-6e7ceaeb5bfd
+2023-10-18 13:57:27.120,Snacks,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,affa6bc0-30dc-419e-a503-1afce696d3fc
+2023-10-18 13:56:49.505,Withdraw,,Savings Bank,0.00,INR,TRANSFER,500.00,INR,Cash,500.00,INR,,,4ac9b3d2-3223-4b06-bcd4-e4c870667bd1
+2023-10-18 13:56:15.773,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,5eafe6b2-c6ee-471e-a9b1-d4df02660108
+2023-10-18 11:47:13.193,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,9bbd56aa-e590-4c3d-a360-0ddbbe9a1567
+2023-10-18 03:46:36.511,Adjust balance,,Savings Bank,20.00,INR,INCOME,,,,,,,,fb847a72-11a0-4de9-a9bd-7af8e59107ba
+2023-10-18 03:45:43.457,Recharge,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Metro Card,200.00,INR,,,5a7f66a1-f069-44b8-8596-da49efc87376
+2023-10-17 14:06:51.024,Stonks,Bills & Fees,Savings Bank,111.00,INR,EXPENSE,,,,,,,,4ed9144f-a099-42b6-a750-e168f502f6d5
+2023-10-17 14:05:51.717,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,b0abacd3-96ae-4281-820f-80ab45159bee
+2023-10-17 14:05:45.338,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,102892f2-b50d-48de-95c0-31a8b0f54abf
+2023-10-17 14:05:28.329,Metro,Transport,Savings Bank,35.00,INR,EXPENSE,,,,,,,,8b0af34c-082b-4235-95b9-af521eb4b6bf
+2023-10-17 14:05:15.571,Chotu,Bills & Fees,Savings Bank,"1,000.00",INR,EXPENSE,,,,,,,,137ff062-5b2f-4124-b28a-6351c338d7cf
+2023-10-17 14:05:09.168,Baba,Bills & Fees,Savings Bank,"2,000.00",INR,EXPENSE,,,,,,,,f5770ed6-34f8-4659-976d-d5c4957ae301
+2023-10-16 02:31:46.122,Capt. Payment,Bills & Fees,Savings Bank,"5,000.00",INR,INCOME,,,,,,,,d2dcc2f2-0b75-4383-851e-e0bc369d06f0
+2023-10-15 03:06:47.570,Adjust balance,,Savings Bank,35.00,INR,EXPENSE,,,,,,,,1bdfdea9-d157-482a-8830-a84013b1b4d6
+2023-10-15 03:05:27.517,Adjust balance,,Cash,8.00,INR,INCOME,,,,,,,,706ac425-419e-4c59-a5a0-dd624fa5901e
+2023-10-06 07:54:37.276,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,425f3283-a482-4672-bed4-af89af56f2f1
+2023-10-06 02:28:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,fb613be8-3fea-45a8-bcca-4b9a4d64aa02
+2023-10-05 11:18:59.944,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,be292616-532f-4010-9c20-1c9209e2eb9c
+2023-10-05 02:36:50.722,Baba,Bills & Fees,Cash,90.00,INR,INCOME,,,,,,,,7c6dcdda-a122-4838-972f-ad813fc2b371
+2023-10-03 12:59:56.996,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,695d3e1a-611e-4cfb-a2ec-0e61074949f2
+2023-10-03 02:48:42.707,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,a098bac2-8411-45eb-abf5-93df91df0d19
+2023-09-30 09:59:33.963,Baba,Bills & Fees,Savings Bank,500.00,INR,EXPENSE,,,,,,,,9c51efa5-0626-44d4-82cc-2e08147e1fe8
+2023-09-30 05:06:46.756,Snacks,Food & Drinks,Savings Bank,55.00,INR,EXPENSE,,,,,,,,44f4d4ca-8e97-4b13-a798-2ea9ab2f4b3e
+2023-09-29 17:31:00.000,Auto+Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,67ef2a42-5539-4d8b-96d6-3bbc03044127
+2023-09-28 17:35:00.000,Baba,Bills & Fees,Savings Bank,500.00,INR,EXPENSE,,,,,,,,42f47d1d-175b-4c7a-9ab1-f3a41f12d45b
+2023-09-28 13:48:55.602,Snacks,Food & Drinks,Savings Bank,70.00,INR,EXPENSE,,,,,,,,54552def-f497-4a56-81c6-410afd754c44
+2023-09-28 11:01:06.138,Adjust balance,,Cash,4.00,INR,EXPENSE,,,,,,,,d717ea31-9c25-4861-8a94-1e0afdcdb441
+2023-09-28 10:30:25.262,Baba,Bills & Fees,Savings Bank,"1,000.00",INR,EXPENSE,,,,,,,,c1ec79d5-ea30-4dfd-9905-e1dda40bcfb7
+2023-09-28 06:34:26.839,Chotu,Bills & Fees,Cash,20.00,INR,EXPENSE,,,,,,,,d345b65d-0998-4654-a791-8b1b8e34e4b3
+2023-09-27 06:34:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,1a029d91-ca69-4e79-986b-018c24493673
+2023-09-27 03:14:57.910,Sid,Bills & Fees,Savings Bank,40.00,INR,EXPENSE,,,,,,,,e96c2cf9-b558-4e52-a92f-03bf142ac615
+2023-09-25 17:39:00.000,Interest,Bills & Fees,Savings Bank,3.00,INR,INCOME,,,,,,,,368720e5-aebd-4a98-b0c0-39b6cb3d18d0
+2023-09-25 14:21:44.027,Snacks,Food & Drinks,Savings Bank,25.00,INR,EXPENSE,,,,,,,,fd839a36-c81d-44c9-9c7b-acdab413ca6d
+2023-09-25 14:21:22.409,Jalebi,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,3f797648-64e0-4c0f-8fa8-0b7e3ccbff7a
+2023-09-25 14:21:05.606,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,82220db6-f3f7-41da-b032-df0666122292
+2023-09-25 14:20:59.632,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,9bc31a9c-d617-47b7-8aed-3f46a5bd8475
+2023-09-23 17:41:00.000,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,a687a5db-941c-4445-83dd-607f55caa731
+2023-09-23 07:47:07.440,Adjust balance,,Savings Bank,20.00,INR,EXPENSE,,,,,,,,3ed9f40f-a911-47f3-ba42-805eff58c65e
+2023-09-23 07:46:26.771,Adjust balance,,Cash,40.00,INR,EXPENSE,,,,,,,,0654ac2f-fbfb-4d0c-8ed0-e111fb4b41ed
+2023-09-23 07:45:21.172,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,60f91f51-4369-4e37-9983-f0a32cf8966b
+2023-09-23 07:45:13.516,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,6ea4a6c0-8437-45f5-8ffa-e2daf331858b
+2023-09-23 07:23:40.225,Chotu,Bills & Fees,Savings Bank,50.00,INR,EXPENSE,,,,,,,,3517dcdc-25a5-4cf2-b997-cac90b475030
+2023-09-22 08:11:20.220,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,d1b98b83-4132-419d-b401-e4ac9ae10f26
+2023-09-21 14:31:56.001,Advance,,Savings Bank,"3,001.00",INR,INCOME,,,,,,,,7c8d353e-9dde-434a-acc6-e839af3aef5b
+2023-09-20 09:44:37.871,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,4848a5ea-2893-4fd7-9b0e-1f43a725b50d
+2023-09-19 03:48:45.758,Prints,Bills & Fees,Savings Bank,5.00,INR,EXPENSE,,,,,,,,def4e696-df36-4f16-9dd4-43a6751ba076
+2023-09-19 03:48:37.082,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,5ba30e66-100b-46ad-8a15-97a848b16230
+2023-09-19 03:48:30.961,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,e012e290-e108-4e8b-ba66-d6cc64134cf8
+2023-09-18 13:48:03.901,Parking,Bills & Fees,Cash,25.00,INR,EXPENSE,,,,,,,,e99b9932-99cb-47f6-8a5e-0811366920db
+2023-09-16 07:43:22.684,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,7c0a060e-f3a4-44cd-b9dd-824ae61dac3b
+2023-09-15 07:42:00.000,Pastry,Food & Drinks,Cash,100.00,INR,EXPENSE,,,,,,,,cd3cc6dd-acde-4df6-b521-6cc73f7af28a
+2023-09-15 07:28:22.793,Transport,Transport,Cash,45.00,INR,EXPENSE,,,,,,,,5438c8ab-113f-4628-81f2-73c3bb2080dd
+2023-09-15 07:28:00.752,Bus incident,,Savings Bank,0.00,INR,TRANSFER,20.00,INR,Cash,20.00,INR,,,6fe85ced-7b89-41b1-98ce-74216ddaf340
+2023-09-15 07:06:00.000,Snacks,Food & Drinks,Savings Bank,30.00,INR,INCOME,,,,,,,,b4d65eed-3128-4395-93b1-98ef40af297f
+2023-09-15 07:06:00.000,Drink,Transport,Savings Bank,10.00,INR,EXPENSE,,,,,,,,6938bd27-7796-4f4b-a1ed-23a8d77c02cb
+2023-09-15 07:05:00.000,Snacks,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,0d87bd72-5c47-4e07-9de1-d6d7812adf18
+2023-09-14 14:59:36.598,Adjust balance,,Cash,10.00,INR,EXPENSE,,,,,,,,3b3ca74e-89ad-48d6-85ed-5babd4cebc78
+2023-09-14 14:58:22.536,Adjust balance,,Savings Bank,30.00,INR,EXPENSE,,,,,,,,04297db2-92d4-4458-afe3-e6b32f3d0b65
+2023-09-14 14:55:20.289,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,c691812d-37d6-4b21-b6d3-f64ee888c742
+2023-09-14 03:08:50.790,Sid,Bills & Fees,Savings Bank,56.00,INR,EXPENSE,,,,,,,,ef5a7408-3e1e-4af6-895f-45b2258984d9
+2023-09-14 03:08:38.780,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,276e3349-85c0-4ccd-9538-44f5a9093a5e
+2023-09-13 03:09:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,2fdb0d0f-9d32-423d-b44c-b3d55d9b7998
+2023-09-11 19:11:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,7718a09c-a594-47a0-b739-8dea92fbb46c
+2023-09-11 04:50:42.916,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,4ddf6fe9-7d89-44ec-b0b9-205adf69f3b5
+2023-09-11 04:50:30.609,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,86c0eaeb-2967-4bdc-ade4-8d8b002413f4
+2023-09-10 04:50:00.000,Snacks,Food & Drinks,Savings Bank,140.00,INR,EXPENSE,,,,,,,,ad9aebb6-4c6a-4029-a56c-0432753c55dd
+2023-09-09 11:42:29.034,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,1081a9fa-7cc3-476c-81e9-8db15632c4ee
+2023-09-08 14:57:00.000,,,Savings Bank,64.00,INR,EXPENSE,,,,,,,,f65f482b-596c-4ac3-bf55-84ccd5afe501
+2023-09-08 12:21:51.428,Withdraw,,Savings Bank,0.00,INR,TRANSFER,500.00,INR,Cash,500.00,INR,,,f8076e19-6b6f-46ea-8fd8-fd72bffc5fff
+2023-09-08 09:44:49.580,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,885b7731-fc46-41ed-bb0c-a74c5efad793
+2023-09-08 03:30:38.336,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,5a7eb41a-6f0c-4520-b2cf-37d355df5351
+2023-09-07 16:10:20.510,Snacks,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,79c41cc5-3820-4783-a412-e180f2ef0d36
+2023-09-06 02:53:31.674,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ef4c710a-1aaf-4820-8b52-170d967540ef
+2023-09-06 02:53:22.262,Adjust balance,,Cash,20.00,INR,EXPENSE,,,,,,,,b00bee3e-afdf-4f7a-87ff-003c8ec54eab
+2023-09-06 02:53:13.885,Adjust balance,,Savings Bank,"1,040.00",INR,INCOME,,,,,,,,1111d898-bdbc-4ed2-b00d-0d38c0db2692
+2023-08-23 03:22:20.429,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,21a4dca9-ab09-475b-bfb8-6e39013d08f4
+2023-08-22 03:55:32.936,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,fa63d868-93f0-46ad-a3b6-2cc3e78427b6
+2023-08-21 12:24:39.732,Pass,Transport,Cash,430.00,INR,EXPENSE,,,,,,,,116cbb27-0bc7-4d0d-98ec-f2d80e8e31f6
+2023-08-21 11:59:41.003,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,68f696ac-d8a0-41cd-90fc-8825fc2ffea0
+2023-08-21 11:59:31.716,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,7d33eba6-3275-4e53-ad32-e0fefadfb8fd
+2023-08-21 11:59:25.029,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,4d8263cb-b6f3-41ef-93cd-7609271b4458
+2023-08-21 11:59:18.751,Add,Bills & Fees,Cash,50.00,INR,INCOME,,,,,,,,6f399986-7fc1-4795-993a-5cf3a51d3b94
+2023-08-18 12:21:05.023,Chotu,Bills & Fees,Cash,10.00,INR,EXPENSE,,,,,,,,95847d24-a85f-404d-947e-2293878de723
+2023-08-18 03:45:15.170,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,56cc91a3-3cb8-4e06-a55d-811f973bd691
+2023-08-18 03:00:38.253,Pocket Money,Bills & Fees,Cash,600.00,INR,INCOME,,,,,,,,94fda512-cd23-4417-ba49-364a711a1299
+2023-08-18 03:00:24.246,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,b830d31a-1e86-4add-b772-14e8b36b22ce
+2023-08-17 06:27:50.681,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,62bac057-406c-4d02-87ad-44871eb52f56
+2023-08-17 03:01:00.000,Stickers,Bills & Fees,Savings Bank,20.00,INR,EXPENSE,,,,,,,,b922f796-634f-41ad-8dc9-3c7ed41a5c3e
+2023-08-16 17:23:31.644,Stationary,Bills & Fees,Savings Bank,50.00,INR,EXPENSE,,,,,,,,61e77773-9b65-4ba5-b8d2-3c1e69d686f6
+2023-08-16 17:22:57.562,Juice,Food & Drinks,Savings Bank,40.00,INR,EXPENSE,,,,,,,,08b24daa-7179-43c3-baea-a562dd34b951
+2023-08-16 17:22:40.831,Goje payback,Bills & Fees,Savings Bank,50.00,INR,INCOME,,,,,,,,7d174e97-785e-420f-b8a8-3a0bf65951f5
+2023-08-16 17:21:56.218,Samosa,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,38838b43-2d1d-4c66-9276-cdf0063701f1
+2023-08-16 03:56:23.102,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,926a4567-fd8d-414c-8c48-ec703f2f5250
+2023-08-16 01:30:57.325,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,398ea1da-e525-45cf-a805-daa0dfa13358
+2023-08-16 01:30:53.217,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,b854b2b1-08ce-48cf-bceb-f95960c85c10
+2023-08-15 01:31:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,f40e7739-463f-4d2b-936e-68b6950eca81
+2023-08-14 11:41:09.051,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,20afd925-3793-4ab3-a867-e7fb520ff3ce
+2023-08-14 11:41:00.721,Juice,Food & Drinks,Savings Bank,15.00,INR,EXPENSE,,,,,,,,7d6b58c4-e4dc-4509-9738-b316a8736ee4
+2023-08-14 11:40:29.655,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,144f2c5e-3f37-4d91-9719-d4b47c562cd6
+2023-08-12 03:04:16.418,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,7482e1e9-cf28-4fe1-b8a3-730a03f9787d
+2023-08-11 02:23:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,f570d0d9-a068-4d54-890a-55150e453eae
+2023-08-10 02:24:47.953,,,Cash,200.00,INR,INCOME,,,,,,,,e662e1d3-9c8e-4fc7-8036-d9294dc95651
+2023-08-10 01:00:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,c0186d15-49ad-4aa8-8406-b1a1a7dfce36
+2023-08-09 10:11:01.692,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,5b1faf1d-9b94-413a-b363-b378b65f51df
+2023-08-08 13:26:28.313,Snacks,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,52ebe9d2-8d3f-49e1-b02d-9dd33ad0e3d8
+2023-08-08 03:45:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,ca1bc174-e2f0-4b9a-8d83-7e774d58b043
+2023-08-07 13:27:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,e2dc2523-d002-4a76-a331-76de254a1068
+2023-08-05 07:31:26.364,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,9b32648e-bb30-40af-8838-7bff74dd3bf5
+2023-08-05 07:31:12.973,Auto,Transport,Cash,40.00,INR,EXPENSE,,,,,,,,f541a401-9e3c-4108-b39f-b99e325dfec3
+2023-08-04 18:25:31.566,Snacks,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,8d674dde-d630-4aaa-85e0-9091487f0b19
+2023-08-04 13:58:29.716,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,bfd65e8c-77b0-4306-8ec7-047004acfda0
+2023-08-02 07:21:44.095,Computer stuff,Bills & Fees,Savings Bank,470.00,INR,EXPENSE,,,,,,,,c1628623-7016-4fea-b5b0-98789cd57339
+2023-07-31 11:50:01.801,Goje,,Savings Bank,10.00,INR,EXPENSE,,,,,,,,a799e899-e2b7-4d92-a0f1-d29af90429a6
+2023-07-31 07:19:06.638,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,99c1a430-5823-4966-8af0-c07b28213b63
+2023-07-31 03:03:09.712,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ba912639-cfba-4ab4-bf3b-414ccfa96143
+2023-07-29 14:13:08.456,Shawarma,Food & Drinks,Savings Bank,120.00,INR,EXPENSE,,,,,,,,102dcd09-e832-4e55-8677-671417de4d64
+2023-07-28 15:05:24.026,Adjust balance,,Cash,30.00,INR,EXPENSE,,,,,,,,ad43bdce-2ca7-4d19-9df5-10c2eefd57af
+2023-07-28 05:58:44.561,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,e19fb581-2d37-481d-b744-bd5b9a4e68e9
+2023-07-28 05:38:02.624,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,8287f257-b80e-44c7-87ec-f4fd70a0937a
+2023-07-27 10:22:06.462,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,a9f7ab72-5d50-4881-84c8-91c00aa8d4ef
+2023-07-24 16:09:23.521,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,2f9aff7b-8bc0-4614-9d6d-6184b07c03c6
+2023-07-24 16:09:16.370,,,Cash,100.00,INR,INCOME,,,,,,,,7da2abea-5a4c-4880-97e2-c1f0c390761f
+2023-07-23 06:55:40.729,Chotu,Bills & Fees,Cash,20.00,INR,EXPENSE,,,,,,,,8db1d994-828b-4a9f-8cd2-4179bb49bf4b
+2023-07-22 06:01:00.000,Something,Bills & Fees,Savings Bank,5.00,INR,EXPENSE,,,,,,,,dfa1e44d-0620-4ce4-8242-ea266430b8ed
+2023-07-21 15:34:14.642,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,089f4173-a7e2-4f7c-933a-057e00445af6
+2023-07-19 02:56:14.234,Adjust balance,,Cash,10.00,INR,EXPENSE,,,,,,,,3de97568-0791-4fa7-8b5f-a13f7a68d05b
+2023-07-19 02:55:50.783,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,a240e362-f493-4df3-8a39-34adfbbe97e9
+2023-07-18 12:50:33.225,Pocket money,,Savings Bank,"1,000.00",INR,INCOME,,,,,,,,ad78f483-712e-4487-b71b-402964fbe7cf
+2023-07-18 12:50:17.986,Curd,Bills & Fees,Savings Bank,48.00,INR,EXPENSE,,,,,,,,0c4246fe-d150-4138-a8c7-b2299ff02b28
+2023-07-14 15:04:43.725,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,ec38a43e-49cb-4f44-b8b5-22378c8c74bd
+2023-07-14 14:24:00.000,Snacks,Food & Drinks,Savings Bank,80.00,INR,EXPENSE,,,,,,,,6a488a47-74c9-40cc-a6a7-83dd6ed97bc3
+2023-07-13 19:04:18.558,Adjust balance,,Savings Bank,10.00,INR,EXPENSE,,,,,,,,c8663b30-4cd4-4a7b-96d0-5be2a96ee2f9
+2023-07-13 19:03:25.820,Adjust balance,,Metro Card,95.00,INR,EXPENSE,,,,,,,,993ef29d-3510-492f-8e61-ec199b5d1d31
+2023-07-13 18:05:21.961,🖊️,Bills & Fees,Savings Bank,10.00,INR,EXPENSE,,,,,,,,df266437-f9d9-4a78-b890-8d347d1fab6e
+2023-07-12 12:30:17.265,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,27d77e31-bbd0-4d6e-8468-5a0d73581213
+2023-07-12 12:29:43.822,Juice,Food & Drinks,Cash,20.00,INR,EXPENSE,,,,,,,,c883d05c-6c53-4729-bdb8-ecfe4da468ae
+2023-07-12 12:29:31.596,Snacks,Food & Drinks,Savings Bank,50.00,INR,EXPENSE,,,,,,,,ddb5295f-fb86-4c07-bc24-b2fc1c3aeb9e
+2023-07-12 12:29:17.648,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,d25fd475-979c-4f42-8fff-b255016c0409
+2023-07-10 11:56:25.016,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,2e579c11-d7a1-453c-8318-feb91dcb05f6
+2023-07-05 11:40:48.962,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,abff004c-4d99-4551-bac8-6e04b76a5845
+2023-07-05 03:13:37.014,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,7b97733d-cb97-414f-81aa-ebf099b4c360
+2023-07-04 12:07:10.168,,,Cash,210.00,INR,INCOME,,,,,,,,2b2acaea-692a-4c89-8ee8-b4e1fb151e92
+2023-07-04 02:56:22.663,Pen,Bills & Fees,Savings Bank,10.00,INR,EXPENSE,,,,,,,,abf7ad8f-9353-4b09-899b-236d4d77ee62
+2023-07-04 01:15:37.973,,,Savings Bank,84.00,INR,INCOME,,,,,,,,fcdb71e4-17e9-41ce-9b10-220ef7a7d601
+2023-06-13 18:09:08.763,,Food & Drinks,Savings Bank,60.00,INR,EXPENSE,,,,,,,,5106be05-0fec-410f-9f94-867da62bdf68
+2023-06-12 18:05:00.000,Goje,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,d523fbfe-72f9-4b2d-89f2-001760b5a044
+2023-06-11 10:05:00.000,Mom,Bills & Fees,Savings Bank,"11,500.00",INR,EXPENSE,,,,,,,,94eaf4b1-5de7-43a6-ba81-61432cdaeff4
+2023-06-10 10:03:00.000,Book,Bills & Fees,Savings Bank,180.00,INR,EXPENSE,,,,,,,,02e8c1fc-f7c6-4070-a6fd-38aa6cd1b362
+2023-06-10 05:05:26.229,,,Savings Bank,0.00,INR,TRANSFER,100.00,INR,Metro Card,100.00,INR,,,84ae40f7-762e-433c-a237-0794c1b28d44
+2023-06-10 04:04:00.000,Salary,Bills & Fees,Savings Bank,"8,000.00",INR,INCOME,,,,,,,,8643e457-1f9b-4eb2-8494-484e813a36de
+2023-06-10 03:21:34.716,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,b0719a39-9294-49a1-b593-25178bc842c4
+2023-06-09 13:23:56.829,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,cbdf647e-99a6-467b-a4d8-f34f08e6fe65
+2023-06-09 03:44:45.975,,,Cash,3.00,INR,INCOME,,,,,,,,0692b2cb-9634-4d0e-aafa-fa5d97845770
+2023-06-09 03:44:35.554,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,688d1286-15e4-4c5e-9000-8b811ed3bd68
+2023-06-09 02:53:59.302,Maa,,Cash,50.00,INR,EXPENSE,,,,,,,,171bd281-ebb9-499f-a599-009830083136
+2023-06-08 03:49:50.091,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,cd739e89-208b-466e-823d-f3fb049605b3
+2023-06-07 15:20:03.899,Juice,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,43810d4f-c3e8-45af-b9c3-7e0a9ed088e9
+2023-06-07 15:19:49.292,Exam fees,Bills & Fees,Savings Bank,800.00,INR,EXPENSE,,,,,,,,7e80edad-0ce2-4d79-bb56-7a1de4cbc7a5
+2023-06-07 04:21:48.834,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,a6e6fec9-f06d-4cd6-9b81-783d922c06c6
+2023-06-07 04:21:35.377,Record books,Bills & Fees,Savings Bank,360.00,INR,EXPENSE,,,,,,,,e590c487-ad68-44ef-85b9-dd256dd56620
+2023-06-06 18:02:03.074,Chotu,,Savings Bank,0.00,INR,TRANSFER,170.00,INR,Cash,170.00,INR,,,08303f91-3211-425a-a45e-ff2fc53e001a
+2023-06-06 18:01:41.671,Adjust,,Cash,60.00,INR,EXPENSE,,,,,,,,fa8ed10d-41a6-48fe-b6ff-eaafdd2b1bce
+2023-06-06 18:01:18.614,Adjust,,Cash,100.00,INR,EXPENSE,,,,,,,,9069e92f-7267-4051-920b-a727fce83002
+2023-06-06 04:14:57.334,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,71171976-ee8f-41e5-994e-9e3aac003379
+2023-06-05 13:00:00.000,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,02661093-406d-4b37-a24e-89d428735c04
+2023-06-05 12:30:00.000,Juice,Food & Drinks,Savings Bank,10.00,INR,EXPENSE,,,,,,,,084785e2-78e7-4f96-a268-534e379a016f
+2023-06-05 12:30:00.000,Snacks,Food & Drinks,Savings Bank,25.00,INR,EXPENSE,,,,,,,,1eac3398-5799-4102-b251-7ee015475049
+2023-06-05 03:16:08.866,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,403e623d-4959-4701-8fc4-fcc9d3314f9b
+2023-06-04 18:47:36.659,Adjust,,Savings Bank,40.00,INR,EXPENSE,,,,,,,,1598d104-95db-4207-84a3-f356e107ec17
+2023-06-03 11:48:00.000,Juice,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,76bfa357-9f91-47e0-9601-a7548e83ab40
+2023-06-03 08:04:55.844,Juice,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,c5cf3faa-f59a-4f63-9352-403af78512bb
+2023-06-02 12:14:12.385,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,d30abfea-00e4-4b4b-a0df-f89af292c59c
+2023-06-01 12:20:58.789,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,3b148ac0-f80c-418e-87f8-cdeb0524aa5b
+2023-06-01 04:20:00.000,Medic,Bills & Fees,Savings Bank,53.27,INR,EXPENSE,,,,,,,,6947bdc6-5ae5-4402-9773-44fcd77664a9
+2023-05-31 13:02:43.008,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,13c2d9c2-ec0b-4641-92d9-1d47d46856c5
+2023-05-31 04:17:20.895,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,a6108fae-4158-4f92-abc8-98d2164713e4
+2023-05-30 03:39:15.249,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,bf742954-8ced-4b05-8abb-f83d60a5ddc8
+2023-05-30 03:39:06.540,Maa,,Cash,10.00,INR,EXPENSE,,,,,,,,a9412a4a-1be4-4643-9591-27d952b5aa36
+2023-05-29 11:50:56.495,Juice,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,8bd1d50c-f2d3-4de3-be03-eb29541f0923
+2023-05-29 03:36:54.746,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,6621ec12-3697-4625-8d86-199f6d97ef55
+2023-05-28 15:28:02.300,Adjust,,Cash,7.00,INR,INCOME,,,,,,,,a33b44c4-d605-4ef5-b43b-ac2629d5a4f9
+2023-05-28 15:27:48.969,Adjust,,Cash,153.00,INR,INCOME,,,,,,,,7d1ff941-a147-422c-9ca0-a63b5336c044
+2023-05-28 15:13:59.660,Suit,Bills & Fees,Savings Bank,"3,499.00",INR,EXPENSE,,,,,,,,b0d0925c-5656-4c21-908e-d858508d9742
+2023-05-27 04:47:59.367,Breakfast,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,2a7c16cb-d0d1-4a6e-90fb-f5b9ea1f32a6
+2023-05-26 06:05:40.130,Baba payback,,Savings Bank,"1,400.00",INR,EXPENSE,,,,,,,,8ecb9487-eb8f-4940-ac60-16187698ddc5
+2023-05-25 11:24:27.236,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,fa34dfbc-5421-4758-af97-d62dabc91ca9
+2023-05-25 11:24:15.787,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,d0cec216-deae-478a-aec8-f371f1f18b43
+2023-05-24 10:29:10.540,Juice,Food & Drinks,Savings Bank,25.00,INR,EXPENSE,,,,,,,,f31250fe-db77-4b4e-855e-f2495efbbd55
+2023-05-24 10:28:56.973,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,00a578e4-1950-4134-86d4-0ad760a0bef5
+2023-05-23 13:28:23.128,Auto+Bus,Transport,Cash,50.00,INR,EXPENSE,,,,,,,,e92c947f-3e0d-475c-a6f2-47720ea174a1
+2023-05-23 03:57:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,146d65de-5080-4fda-ab15-9d38222e737d
+2023-05-23 03:00:20.601,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,efd46273-aa95-4657-9753-7de26d3134d8
+2023-05-23 02:26:57.406,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,c4457ff2-9d37-419a-9f40-ba6712cfb025
+2023-05-21 20:27:42.687,Recharge,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,5db0782d-28e8-4bb3-99f4-7a248fe323ec
+2023-05-20 17:08:02.623,Shrenik paid,,Savings Bank,150.00,INR,INCOME,,,,,,,,53ffeefd-9f3c-4079-aafd-787e38a1d001
+2023-05-20 17:07:32.488,Snacks,Food & Drinks,Savings Bank,100.00,INR,EXPENSE,,,,,,,,e80ef95c-1f37-4fa3-b05d-e9ad2201ecb3
+2023-05-20 08:15:26.239,Ice cream,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,ac7e505c-9fd5-4db9-a5ec-7b49027a2aa9
+2023-05-20 08:15:03.308,OGT paid,,Savings Bank,"2,000.00",INR,INCOME,,,,,,,,63fa7ddf-0442-4018-9e6b-e6587d325952
+2023-05-20 04:42:19.438,Chotu,,Cash,10.00,INR,EXPENSE,,,,,,,,064b1298-57c5-498f-8e00-72e28f99ca74
+2023-05-19 13:28:16.140,Bus pass,Transport,Cash,430.00,INR,EXPENSE,,,,,,,,aba11ee8-1dc0-4d37-8169-bca15fab8efc
+2023-05-19 13:28:02.540,Withdraw,,Savings Bank,0.00,INR,TRANSFER,500.00,INR,Cash,500.00,INR,,,3738426e-ccfb-4f8e-9048-ffd775d5a8bf
+2023-05-18 13:29:54.579,Ice cream,Food & Drinks,Savings Bank,75.00,INR,EXPENSE,,,,,,,,9b405d2b-c7ad-44dc-8b73-966966de077d
+2023-05-18 13:29:36.443,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,e5d7ed44-288e-4ddf-8e7e-a5ff17dc4896
+2023-05-18 09:46:00.000,Snacks,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,4090715d-41c2-4a5b-b06e-ecd9d34683d9
+2023-05-18 09:45:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,2e63e98a-eb33-4355-9f02-e03b693f28ac
+2023-05-18 09:45:00.000,Withdraw,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Cash,200.00,INR,,,a2c28fff-4a38-4f8f-98d3-4bd6e7c8889f
+2023-05-17 01:40:00.000,Bus,Transport,Cash,30.00,INR,EXPENSE,,,,,,,,148317cb-9197-435a-90a4-a9a2a16e461a
+2023-05-16 15:04:00.000,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,9ab79fd3-68e1-4855-8cd6-47add0098668
+2023-05-16 14:01:02.385,Snacks,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,591db22a-9fa9-4abb-8216-543a3d876d26
+2023-05-14 14:22:54.727,Adjust,,Cash,30.00,INR,INCOME,,,,,,,,cbec9cd1-3efe-40ac-98dd-b0779e147c55
+2023-05-14 05:12:00.000,Sid payUp,,Savings Bank,631.00,INR,EXPENSE,,,,,,,,0e54fd04-cbbd-4189-8e1d-1a78ac0a495a
+2023-05-13 14:16:00.000,Payment,,Savings Bank,"8,000.00",INR,INCOME,,,,,,,,cfecf929-0c58-42d1-8081-8b3e2ea6ebb0
+2023-05-13 14:15:00.000,Juice,Food & Drinks,Savings Bank,40.00,INR,EXPENSE,,,,,,,,cde4ea46-edfc-4902-8576-00013dcb0ad8
+2023-05-13 14:15:00.000,Juice,Food & Drinks,Savings Bank,10.00,INR,EXPENSE,,,,,,,,67aa63bc-dab4-49a0-9d1b-9c0523be6b0d
+2023-05-13 06:28:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,510ee07c-c3f1-4974-9531-0dce6b100f68
+2023-05-12 03:30:17.477,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,365c2b9a-5f4f-45de-b91a-9b13fa662633
+2023-05-11 03:30:00.000,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,06c55abd-d349-4795-856d-4475a8f04c6d
+2023-05-10 17:28:47.675,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,85df1fe0-d5db-44da-a18f-a24adf2fb815
+2023-05-10 17:28:31.997,Snacks,Food & Drinks,Cash,15.00,INR,EXPENSE,,,,,,,,3e723afd-3817-4704-b916-3f64efa94a49
+2023-05-09 10:50:44.097,Bus: RtG,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,f6424625-0367-44cb-bb31-d27ed49d5304
+2023-05-09 04:12:00.000,,Transport,Cash,40.00,INR,INCOME,,,,,,,,108536ea-0907-4c3e-88ca-b61e358d0915
+2023-05-09 04:11:00.000,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,d2c7f29c-11be-44af-9994-eeb2ff3d0bc1
+2023-05-08 18:09:26.912,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,15bf09b6-161c-47d2-a53f-18ac0d932087
+2023-05-08 04:40:28.771,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,0f85833e-3413-4049-9ee6-ce8bbe54fd0f
+2023-05-07 18:27:02.170,,Bills & Fees,Savings Bank,8.00,INR,EXPENSE,,,,,,,,a7b4a1cc-d024-4eb9-a851-d290576afd21
+2023-05-07 18:26:42.987,Snack,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,49c6486a-01ee-44fb-ba75-6c9e47a62b36
+2023-05-06 04:32:04.945,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,803525e1-8e8e-46df-a3ba-de246e27274c
+2023-05-06 04:31:50.149,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,597cc7f7-ebcd-4986-8a3b-7c9476568bdd
+2023-05-05 16:47:04.845,Stonks Return,Bills & Fees,Savings Bank,50.43,INR,INCOME,,,,,,,,de0f1b44-7505-4150-baeb-966bbe7ddd2c
+2023-05-05 09:19:22.941,Goje,Food & Drinks,Cash,40.00,INR,INCOME,,,,,,,,ab884a7e-0080-4b67-a380-47a1cd5f91a1
+2023-05-05 09:19:02.128,Bonda,Food & Drinks,Savings Bank,70.00,INR,EXPENSE,,,,,,,,b8cbeef7-9fbd-4fea-b4fe-f9cce807e800
+2023-05-04 04:35:17.739,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,4202946d-4fa8-4a88-bee6-856f5b685792
+2023-05-03 18:12:04.495,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,bb3cb1d6-8755-480a-970a-2c7341530687
+2023-05-03 18:11:48.626,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,d2cf792b-106d-40bf-9514-d051f7f774eb
+2023-05-03 18:11:15.950,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,12e698d4-d30a-4b9d-a8de-cf26f9481d21
+2023-05-03 03:11:23.997,Withdraw,,Savings Bank,0.00,INR,TRANSFER,200.00,INR,Cash,200.00,INR,,,a0dc09db-f4d3-4d4f-9549-e1bf801bc18e
+2023-05-02 15:19:23.832,Glasses,Bills & Fees,Savings Bank,5.00,INR,EXPENSE,,,,,,,,6e02ce68-f8c6-4716-b827-aa61e9db4efc
+2023-05-02 15:19:05.941,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,f0bf35f0-36d6-48e7-a22a-78adb583e51a
+2023-05-02 03:28:33.128,Bus,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,a33baaae-ada1-492a-a2fa-fa3a7379fe60
+2023-05-02 02:36:02.548,,,Cash,10.00,INR,INCOME,,,,,,,,312060e6-392f-4e38-a397-6cd08e7a04e7
+2023-05-01 15:51:41.472,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ac0d9f4d-114c-4178-9383-727c7e90f912
+2023-05-01 03:35:26.574,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,0cc64442-0ecf-47c2-9a60-752ef34b0c3b
+2023-04-29 20:38:00.000,Baba,Bills & Fees,Savings Bank,"1,600.00",INR,EXPENSE,,,,,,,,6928d74d-4fe9-4bbb-a6a7-3dd9cf6167ba
+2023-04-29 04:36:18.911,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,b090e3ff-c3f4-48b3-993f-d39ff730a5cf
+2023-04-28 18:05:46.094,Baba,Bills & Fees,Cash,100.00,INR,INCOME,,,,,,,,f641a2a1-24a5-4387-870b-353048dec60c
+2023-04-28 18:05:24.511,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,d62cc695-1580-4331-902d-ace4138ebb93
+2023-04-28 18:05:12.294,Bus: RtG,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,7d25fbbf-55e2-443d-9f59-e87d6dc66f21
+2023-04-28 18:04:53.428,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,14744cb0-bd26-40c6-85a6-b6f8befadc3d
+2023-04-28 10:25:37.433,Bus,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,ec2b564b-01a9-4cd3-9349-3dbf4ebdd013
+2023-04-28 10:25:25.543,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,412542ef-7abc-49e3-96a7-acc9c336e71a
+2023-04-28 10:25:16.491,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,bddde2e8-7934-4e58-9f6e-5e3c6b6002ae
+2023-04-27 13:04:44.625,Ice cream,Food & Drinks,Savings Bank,98.00,INR,EXPENSE,,,,,,,,4891e846-f37e-40b9-9699-0f452cda8679
+2023-04-27 13:04:24.531,Water,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,8709e97a-0c03-41c1-9f57-90b520c3aac2
+2023-04-27 13:03:59.049,Fried rice,Food & Drinks,Cash,80.00,INR,EXPENSE,,,,,,,,fee66d50-81da-40d0-8a8b-11effb557105
+2023-04-27 13:03:46.473,Goli soda,Food & Drinks,Savings Bank,49.00,INR,EXPENSE,,,,,,,,1e929011-cb44-4ef2-9c96-171e6a07896f
+2023-04-27 06:59:00.000,Auto,Transport,Savings Bank,20.00,INR,EXPENSE,,,,,,,,37d32d55-9bd4-45cc-ae88-5aad75f1efdd
+2023-04-27 06:18:43.826,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,71349845-5d13-42d9-85b5-02b4681f6141
+2023-04-26 16:19:30.311,RtA,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,84d9db59-20f4-4894-93de-8c41c4cf455a
+2023-04-26 13:36:29.167,Juice,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,e889143e-2069-4224-a042-fd5c697d2bf9
+2023-04-26 06:42:00.000,Baba sent,,Savings Bank,"3,000.00",INR,INCOME,,,,,,,,2a3cb132-a356-4293-9995-d37d08cf6b8e
+2023-04-26 06:32:33.046,Bus: RtG,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,acf79632-878d-430f-83f5-cf8ff48c2389
+2023-04-26 06:32:09.979,BtR,Transport,Metro Card,40.00,INR,EXPENSE,,,,,,,,00245654-a7da-4328-9b44-82aeea9d0e84
+2023-04-26 04:44:51.810,Metro Recharge,Bills & Fees,Metro Card,200.00,INR,INCOME,,,,,,,,62bdf053-372c-46e4-913b-3841df522793
+2023-04-26 04:44:42.132,Metro recharge,Bills & Fees,Savings Bank,200.00,INR,EXPENSE,,,,,,,,c9b04294-a23e-45de-8992-cbcecff53d2b
+2023-04-25 15:20:23.634,RtA,Transport,Metro Card,31.50,INR,EXPENSE,,,,,,,,a9b36b97-b4e9-4300-b3ac-28bad8c4a63c
+2023-04-25 15:08:52.646,Burger AM,Food & Drinks,Savings Bank,99.00,INR,EXPENSE,,,,,,,,299b92a2-a262-4133-ba62-b3617f8e9ed2
+2023-04-25 11:42:32.690,Bus: RtG,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,17104d7b-7e67-4e28-a3ff-6a89744749cd
+2023-04-25 11:42:19.774,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,f511bf79-0cef-4176-bbe9-cd286a22b4b6
+2023-04-25 06:54:00.000,Stonks return,Bills & Fees,Savings Bank,130.64,INR,INCOME,,,,,,,,5faf2dec-3e48-4461-b8ce-08d38d09c2da
+2023-04-24 15:42:02.351,RtA,Transport,Metro Card,31.50,INR,EXPENSE,,,,,,,,bfa01c7d-01b9-4d58-8259-532e57df5250
+2023-04-24 14:52:19.390,Bus: GtR,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,2a60e425-0482-4c2b-90da-2fd9a3625242
+2023-04-24 12:47:55.727,SQ bands,,Cash,5.00,INR,EXPENSE,,,,,,,,030f09cc-5de1-4e04-b9ac-ed81ae082f00
+2023-04-24 12:47:34.484,Bus: RtG,Transport,Cash,10.00,INR,EXPENSE,,,,,,,,eb162c95-45ff-4a86-9442-01a0d7185843
+2023-04-24 12:47:18.442,AtR,Transport,Metro Card,35.00,INR,EXPENSE,,,,,,,,7e969b7e-781f-4f2b-9846-ccc9f5dd6fcf
+2023-04-24 10:12:24.068,Water,Food & Drinks,Savings Bank,20.00,INR,EXPENSE,,,,,,,,fcef1371-ee9c-4a27-8d40-a4c2941816c5
+2023-04-24 09:13:25.670,Frooti,Food & Drinks,Savings Bank,30.00,INR,EXPENSE,,,,,,,,5774ddc5-fb39-4cf6-bc41-525bd863f31c
+2023-04-24 07:16:21.496,Water,Food & Drinks,Cash,30.00,INR,EXPENSE,,,,,,,,96be7e64-42f2-4572-bfe5-8ca49d07c31b
+2023-04-24 06:53:00.000,FAC,,Savings Bank,30.00,INR,EXPENSE,,,,,,,,ed592098-6bbc-4f2d-9fef-2b3f16c86764
+2023-04-24 06:03:29.520,Auto,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,7de9302c-2afe-47cb-8dde-55995c3053d6
+2023-04-23 13:50:23.357,Shirt,Bills & Fees,Savings Bank,750.00,INR,EXPENSE,,,,,,,,331f6c19-44d8-4058-95df-44132c8b2395
+2023-04-23 06:49:00.000,TO TRANSFER INSUFFICIENT BAL POS DECLINE CHARGE,,Savings Bank,23.60,INR,EXPENSE,,,,,,,,bfda43e2-c9b7-487a-9da6-992242868b3d
+2023-04-22 17:59:20.492,Nidhish payup,Bills & Fees,Savings Bank,"1,551.00",INR,INCOME,,,,,,,,5beca6c2-56bd-413e-b190-0d7716eebdce
+2023-04-22 15:12:02.162,,Bills & Fees,Savings Bank,"1,109.00",INR,EXPENSE,,,,,,,,e364e56c-8686-4db2-aa12-5d0f747d2efe
+2023-04-22 15:11:40.053,,Bills & Fees,Savings Bank,"1,398.00",INR,EXPENSE,,,,,,,,2830ffb1-d04d-430a-b7a1-dc4275ab9b25
+2023-04-22 12:05:08.538,,Transport,Cash,20.00,INR,EXPENSE,,,,,,,,041d7f4c-41a5-4ea6-9eb3-deaa05e47763
+2023-04-22 10:39:20.483,Mobile,Bills & Fees,Savings Bank,259.00,INR,EXPENSE,,,,,,,,cbd3c2b8-7d14-40af-9738-4aa8f9ae315d
+2023-04-22 07:48:32.170,Stonks,,Savings Bank,130.00,INR,EXPENSE,,,,,,,,f581ed64-0165-48f7-8e54-adf0432fe60b
+2023-04-22 07:15:50.741,Change,,Cash,7.00,INR,INCOME,,,,,,,,8aa5ed27-83d2-4daf-b558-63584e7c8dd2
+2023-04-22 07:13:49.341,Sid returns,,Savings Bank,300.00,INR,INCOME,,,,,,,,eff5af0f-0600-47db-93aa-6afb281b612c
+2023-04-22 07:01:43.200,Init,,Metro Card,139.00,INR,INCOME,,,,,,,,55386842-79d1-40ad-b6d6-0250c04f65db
+2023-04-22 06:59:50.288,Init,,Savings Bank,"3,525.77",INR,INCOME,,,,,,,,2a7066f9-c920-46e4-829e-7638668764ae
+2023-04-22 06:58:13.959,Init,,Cash,250.00,INR,INCOME,,,,,,,,717942ae-43dc-4f4c-bb3d-32057ccb00f0

@@ -10,10 +10,16 @@ Utilise OpenAI GPT-4 (ou modèle local Llama) pour:
 
 import os
 import json
+import logging
 from typing import List, Dict, Optional
 from datetime import datetime
 import openai
+import httpx
 from .financial_brain import FinancialBrain
+
+# Configuration du logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("SikaAI")
 
 
 class SikaAI:
@@ -60,20 +66,29 @@ Réponds toujours de façon adaptée aux DONNÉES FINANCIÈRES que je te fournis
 
     def __init__(self, api_key: Optional[str] = None):
         """
-        Initialize Sika AI
-        
-        Args:
-            api_key: OpenAI API key (or None to use env variable)
+        Initialise Sika AI avec le provider choisi dans le .env
         """
+        self.provider = os.getenv("AI_PROVIDER", "openai").lower()
         self.api_key = api_key or os.getenv("OPENAI_API_KEY")
-        if self.api_key:
+        
+        # Ollama config
+        self.ollama_base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
+        self.ollama_model = os.getenv("OLLAMA_MODEL", "llama3")
+        
+        print(f"[SikaAI] Initialisé avec le provider : {self.provider.upper()}")
+        logger.info(f"Initialise avec le provider : {self.provider.upper()}")
+        
+        if self.provider == "openai" and self.api_key:
             openai.api_key = self.api_key
-            self.model = "gpt-4"  # Ou "gpt-3.5-turbo" pour économiser
+            self.model = "gpt-4"
             self.use_openai = True
+        elif self.provider == "ollama":
+            self.use_openai = False
+            self.model = self.ollama_model
         else:
             # Fallback: Réponses basiques sans LLM
             self.use_openai = False
-            print("[SikaAI] ⚠️ No OpenAI API key - using basic responses")
+            logger.warning(f"Provider {self.provider} non configure ou cle absente - fallback basique")
     
     async def chat(
         self,
@@ -84,24 +99,18 @@ Réponds toujours de façon adaptée aux DONNÉES FINANCIÈRES que je te fournis
     ) -> Dict:
         """
         Conversation intelligente avec Sika
-        
-        Args:
-            user_message: Message de l'utilisateur
-            financial_context: Données financières from FinancialBrain
-            conversation_history: Historique conversation [{role, content}]
-            user_firstname: Prénom pour personnalisation
-            
-        Returns:
-            {
-                "response": "Message de Sika",
-                "action": "add_transaction" | "view_budget" | "set_goal" | None,
-                "action_data": {...} | None,
-                "sentiment": "positive" | "warning" | "critical",
-                "suggestions": ["Action 1", "Action 2"]
-            }
         """
-        if self.use_openai:
+        logger.info(f"Requete via {self.provider.upper()} | Modele: {self.model}")
+        
+        if self.provider == "openai" and self.use_openai:
             return await self._chat_with_gpt(
+                user_message,
+                financial_context,
+                conversation_history,
+                user_firstname
+            )
+        elif self.provider == "ollama":
+            return await self._chat_with_ollama(
                 user_message,
                 financial_context,
                 conversation_history,
@@ -146,29 +155,79 @@ Réponds toujours de façon adaptée aux DONNÉES FINANCIÈRES que je te fournis
             response = openai.ChatCompletion.create(
                 model=self.model,
                 messages=messages,
-                temperature=0.7,  # Un peu de créativité
-                max_tokens=300,  # Réponses concises
+                temperature=0.7,
+                max_tokens=300,
             )
             
             sika_response = response.choices[0].message.content.strip()
-            
-            # Analyser la réponse pour détecter les actions
-            action, action_data = self._extract_action(sika_response, user_message)
-            sentiment = self._detect_sentiment(sika_response)
-            suggestions = self._generate_suggestions(financial_context)
-            
-            return {
-                "response": sika_response,
-                "action": action,
-                "action_data": action_data,
-                "sentiment": sentiment,
-                "suggestions": suggestions
-            }
+            return self._format_response(sika_response, user_message, financial_context)
             
         except Exception as e:
-            print(f"[SikaAI] OpenAI error: {e}")
-            # Fallback sur réponse basique
+            logger.error(f"OpenAI error: {e}")
             return self._chat_basic(user_message, financial_context, user_firstname)
+
+    async def _chat_with_ollama(
+        self,
+        user_message: str,
+        financial_context: Dict,
+        conversation_history: List[Dict],
+        user_firstname: str
+    ) -> Dict:
+        """Chat avec Ollama API (/api/chat)"""
+        try:
+            context_summary = self._build_financial_summary(financial_context, user_firstname)
+            
+            messages = [{"role": "system", "content": self.SYSTEM_PROMPT}]
+            messages.append({
+                "role": "system",
+                "content": f"DONNÉES FINANCIÈRES ACTUELLES:\n{context_summary}"
+            })
+            
+            if conversation_history:
+                messages.extend(conversation_history[-6:])
+            
+            messages.append({"role": "user", "content": user_message})
+            
+            async with httpx.AsyncClient(timeout=60.0) as client:
+                response = await client.post(
+                    f"{self.ollama_base_url}/api/chat",
+                    json={
+                        "model": self.model,
+                        "messages": messages,
+                        "stream": False,
+                        "options": {
+                            "temperature": 0.7,
+                            "num_predict": 300
+                        }
+                    }
+                )
+                
+                if response.status_code != 200:
+                    logger.error(f"Ollama error: {response.status_code} - {response.text}")
+                    return self._chat_basic(user_message, financial_context, user_firstname)
+                
+                result = response.json()
+                sika_response = result.get("message", {}).get("content", "").strip()
+                
+                return self._format_response(sika_response, user_message, financial_context)
+                
+        except Exception as e:
+            logger.error(f"Ollama connection error: {e}")
+            return self._chat_basic(user_message, financial_context, user_firstname)
+
+    def _format_response(self, sika_response: str, user_message: str, financial_context: Dict) -> Dict:
+        """Helper pour formater la réponse IA"""
+        action, action_data = self._extract_action(sika_response, user_message)
+        sentiment = self._detect_sentiment(sika_response)
+        suggestions = self._generate_suggestions(financial_context)
+        
+        return {
+            "response": sika_response,
+            "action": action,
+            "action_data": action_data,
+            "sentiment": sentiment,
+            "suggestions": suggestions
+        }
     
     def _chat_basic(
         self,

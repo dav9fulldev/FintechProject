@@ -290,51 +290,55 @@ class SikaConfirmTransaction(BaseModel):
 
 
 @router.post("/sika")
-def sika_chat(
+async def sika_chat(
     data: SikaQuery,
     user_id: int = Query(default=1),
     db: Session = Depends(get_db)
 ):
     """
     Interface de discussion avec Sika (Assistant Vocal).
-    Traite le langage naturel pour extraire des intentions financières.
+    Utilise SikaAI (LLM) pour générer des réponses naturelles basées sur le contexte financier.
     """
-    """
-    Endpoint principal de Sika - l'assistant vocal intelligent
-
-    Retourne:
-    - message: La réponse de Sika
-    - intent: L'intention détectée (expense_past, expense_future, balance, advice, greeting)
-    - can_add_transaction: Si l'utilisateur peut confirmer une transaction
-    - suggested_transaction: Détails de la transaction suggérée (si applicable)
-    """
-    # Récupérer le contexte financier
-    budgets = db.query(Budget).filter(Budget.user_id == user_id).all()
-    goals = db.query(Goal).filter(Goal.user_id == user_id, Goal.is_completed == False).all()
-
-    total_budget = sum(b.monthly_limit for b in budgets)
-    total_spent = sum(b.current_spent for b in budgets)
-
-    # Utiliser le moteur Sika
-    result = ai_engine.sika_process_query(
-        query=data.query,
-        budgets=budgets,
-        goals=goals,
-        total_budget=total_budget,
-        total_spent=total_spent
+    from ..services.sika_ai import SikaAI
+    from ..services.financial_brain import FinancialBrain
+    
+    # 1. Récupérer le contexte financier via FinancialBrain
+    brain = FinancialBrain(db, user_id)
+    context = brain.get_user_context(user_id)
+    
+    # 2. Initialiser SikaAI (détecte automatiquement le provider Ollama/OpenAI via .env)
+    sika = SikaAI()
+    
+    # 3. Récupérer l'historique de conversation (à implémenter via DB, ici simulation vide)
+    history = [] 
+    
+    # 4. Appeler l'IA
+    result = await sika.chat(
+        user_message=data.query,
+        financial_context=context,
+        conversation_history=history,
+        user_firstname="l'ami"
     )
 
     return {
         "query": data.query,
-        "message": result["message"],
-        "intent": result["intent"],
-        "can_add_transaction": result["can_add_transaction"],
-        "suggested_transaction": result["suggested_transaction"],
-        "context": {
-            "total_budget": total_budget,
-            "total_spent": total_spent,
-            "remaining": total_budget - total_spent
-        }
+        "message": result["response"],
+        "intent": result.get("action", "chat"),
+        "sentiment": result.get("sentiment", "positive"),
+        "suggestions": result.get("suggestions", []),
+        "provider": sika.provider.upper()
+    }
+
+@router.get("/sika/test")
+async def test_sika_connection():
+    """Vérifier la connexion à l'IA (Ollama/OpenAI)"""
+    from ..services.sika_ai import SikaAI
+    sika = SikaAI()
+    return {
+        "status": "ready",
+        "provider": sika.provider.upper(),
+        "model": sika.model,
+        "ollama_url": sika.ollama_base_url if sika.provider == "ollama" else None
     }
 
 
