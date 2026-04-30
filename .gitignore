@@ -47,9 +47,17 @@ app.*.map.json
 
 # ===== Python / Backend =====
 **/venv/
-__pycache__/
-*.pyc
 
 # Secrets
 .env
 backend/.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Flutter / iOS / macOS
+ios/Podfile
+macos/Podfile
+*.xcconfig
+pubspec.lock
