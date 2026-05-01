@@ -29,7 +29,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF00A86B), // On conserve votre Vert ivoirien
+      backgroundColor: const Color(0xFF1E40AF), // Bleu premium profond
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -41,45 +41,45 @@ class _SplashPageState extends State<SplashPage> {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    blurRadius: 20,
+                    color: Colors.black.withOpacity(0.15),
+                    blurRadius: 30,
                     offset: const Offset(0, 10),
                   ),
                 ],
               ),
               child: Semantics(
                 label: 'Logo GèrTonArgent',
-                // On conserve votre logo !
                 child: Image.asset(
                   'assets/images/logo.png',
-                  width: 64,
-                  height: 64,
+                  width: 80,
+                  height: 80,
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 32),
             const Text(
               'GèrTonArgent',
               style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
+                fontSize: 36,
+                fontWeight: FontWeight.w900,
                 color: Colors.white,
-                letterSpacing: 1,
+                letterSpacing: 1.2,
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 12),
             Text(
               'Vos finances, simplifiées',
               style: TextStyle(
-                fontSize: 16,
-                color: Colors.white.withOpacity(0.8),
-                letterSpacing: 0.5,
+                fontSize: 18,
+                color: Colors.white.withOpacity(0.9),
+                letterSpacing: 0.8,
+                fontWeight: FontWeight.w300,
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 48),
             const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-              strokeWidth: 3,
+              strokeWidth: 4,
             ),
           ],
         ),

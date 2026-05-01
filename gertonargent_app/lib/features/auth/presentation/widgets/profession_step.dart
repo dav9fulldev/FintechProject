@@ -99,12 +99,12 @@ class _ProfessionStepState extends ConsumerState<ProfessionStep> {
                   child: Container(
                     decoration: BoxDecoration(
                       color: isSelected
-                          ? const Color(0xFF00A86B).withValues(alpha: 0.1)
+                          ? const Color(0xFF1E40AF).withValues(alpha: 0.1)
                           : Colors.white,
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
                         color: isSelected
-                            ? const Color(0xFF00A86B)
+                            ? const Color(0xFF1E40AF)
                             : Colors.grey[300]!,
                         width: isSelected ? 2 : 1,
                       ),
@@ -130,7 +130,7 @@ class _ProfessionStepState extends ConsumerState<ProfessionStep> {
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
                             color: isSelected
-                                ? const Color(0xFF00A86B)
+                                ? const Color(0xFF1E40AF)
                                 : Colors.black87,
                           ),
                         ),
@@ -147,13 +147,15 @@ class _ProfessionStepState extends ConsumerState<ProfessionStep> {
           // Bouton suivant
           SizedBox(
             width: double.infinity,
-            height: 50,
+            height: 56,
             child: ElevatedButton(
               onPressed: _submit,
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF00A86B),
+                backgroundColor: const Color(0xFF1E40AF),
+                foregroundColor: Colors.white,
+                elevation: 0,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
               child: const Text(

@@ -92,13 +92,13 @@ class _GoalsStepState extends ConsumerState<GoalsStep> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             decoration: BoxDecoration(
-              color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+              color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Text(
               '${_selectedGoals.length} objectif${_selectedGoals.length > 1 ? 's' : ''} sélectionné${_selectedGoals.length > 1 ? 's' : ''}',
               style: const TextStyle(
-                color: Color(0xFF00A86B),
+                color: Color(0xFF1E40AF),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -128,12 +128,12 @@ class _GoalsStepState extends ConsumerState<GoalsStep> {
                     padding: const EdgeInsets.all(12), // RÉDUIT de 16 à 12
                     decoration: BoxDecoration(
                       color: isSelected
-                          ? const Color(0xFF00A86B).withValues(alpha: 0.1)
+                          ? const Color(0xFF1E40AF).withValues(alpha: 0.1)
                           : Colors.white,
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(
                         color: isSelected
-                            ? const Color(0xFF00A86B)
+                            ? const Color(0xFF1E40AF)
                             : Colors.grey[300]!,
                         width: isSelected ? 2 : 1,
                       ),
@@ -164,7 +164,7 @@ class _GoalsStepState extends ConsumerState<GoalsStep> {
                                   ? FontWeight.bold
                                   : FontWeight.w500,
                               color: isSelected
-                                  ? const Color(0xFF00A86B)
+                                  ? const Color(0xFF1E40AF)
                                   : Colors.black87,
                               height: 1.2, // AJOUTÉ pour espacement lignes
                             ),
@@ -177,7 +177,7 @@ class _GoalsStepState extends ConsumerState<GoalsStep> {
                           const SizedBox(height: 2), // RÉDUIT de 4 à 2
                           const Icon(
                             Icons.check_circle,
-                            color: Color(0xFF00A86B),
+                            color: Color(0xFF1E40AF),
                             size: 18, // RÉDUIT de 20 à 18
                           ),
                         ],
@@ -194,13 +194,15 @@ class _GoalsStepState extends ConsumerState<GoalsStep> {
           // Bouton suivant
           SizedBox(
             width: double.infinity,
-            height: 50,
+            height: 56,
             child: ElevatedButton(
               onPressed: _submit,
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF00A86B),
+                backgroundColor: const Color(0xFF1E40AF),
+                foregroundColor: Colors.white,
+                elevation: 0,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
               child: Text(

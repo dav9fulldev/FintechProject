@@ -118,13 +118,13 @@ class _CategoriesStepState extends ConsumerState<CategoriesStep> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             decoration: BoxDecoration(
-              color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+              color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Text(
               '${_selectedCategories.length} catégorie${_selectedCategories.length > 1 ? 's' : ''} sélectionnée${_selectedCategories.length > 1 ? 's' : ''}',
               style: const TextStyle(
-                color: Color(0xFF00A86B),
+                color: Color(0xFF1E40AF),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -210,13 +210,15 @@ class _CategoriesStepState extends ConsumerState<CategoriesStep> {
           // Bouton suivant
           SizedBox(
             width: double.infinity,
-            height: 50,
+            height: 56,
             child: ElevatedButton(
               onPressed: _submit,
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF00A86B),
+                backgroundColor: const Color(0xFF1E40AF),
+                foregroundColor: Colors.white,
+                elevation: 0,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
               child: Text(

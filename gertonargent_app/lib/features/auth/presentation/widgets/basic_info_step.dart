@@ -104,27 +104,26 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                       Container(
                         padding: EdgeInsets.all(iconSize * 0.3),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+                          color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
                           shape: BoxShape.circle,
                         ),
                         child: Icon(
-                          Icons.person_add,
+                          Icons.person_add_outlined,
                           size: iconSize.clamp(40.0, 60.0),
-                          color: const Color(0xFF00A86B),
+                          color: const Color(0xFF1E40AF),
                         ),
                       ),
                       const SizedBox(height: 16),
                       FittedBox(
                         fit: BoxFit.scaleDown,
                         child: Text(
-                          'Créons ton\ncompte',
+                          'Créer un compte',
                           style: TextStyle(
                             fontSize: titleFontSize.clamp(20.0, 28.0),
-                            fontWeight: FontWeight.bold,
-                            height: 1.2,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.black87,
                           ),
                           textAlign: TextAlign.center,
-                          maxLines: 2,
                         ),
                       ),
                       const SizedBox(height: 8),
@@ -133,13 +132,12 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                         child: FittedBox(
                           fit: BoxFit.scaleDown,
                           child: Text(
-                            'Quelques informations pour commencer',
+                            'Rejoignez GèrTonArgent pour commencer',
                             style: TextStyle(
                               fontSize: subtitleFontSize.clamp(12.0, 16.0),
                               color: Colors.grey[600],
                             ),
                             textAlign: TextAlign.center,
-                            maxLines: 2,
                           ),
                         ),
                       ),
@@ -147,7 +145,7 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                   ),
                 ),
 
-                const SizedBox(height: 24),
+                const SizedBox(height: 32),
 
                 // Prénom
                 TextFormField(
@@ -156,8 +154,14 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                     labelText: 'Prénom',
                     prefixIcon: const Icon(Icons.person_outline),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      borderSide: BorderSide(color: Colors.grey[200]!),
+                    ),
+                    filled: true,
+                    fillColor: Colors.grey[50],
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -175,8 +179,14 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                     labelText: 'Nom',
                     prefixIcon: const Icon(Icons.person),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      borderSide: BorderSide(color: Colors.grey[200]!),
+                    ),
+                    filled: true,
+                    fillColor: Colors.grey[50],
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -195,8 +205,14 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                     labelText: 'Email',
                     prefixIcon: const Icon(Icons.email_outlined),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      borderSide: BorderSide(color: Colors.grey[200]!),
+                    ),
+                    filled: true,
+                    fillColor: Colors.grey[50],
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -217,8 +233,9 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.grey),
-                        borderRadius: BorderRadius.circular(12),
+                        color: Colors.grey[50],
+                        border: Border.all(color: Colors.grey[200]!),
+                        borderRadius: BorderRadius.circular(16),
                       ),
                       child: DropdownButtonHideUnderline(
                         child: DropdownButton<CountryCode>(
@@ -255,11 +272,17 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                         controller: _phoneController,
                         keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
-                          labelText: 'Téléphone (optionnel)',
+                          labelText: 'Téléphone',
                           prefixIcon: const Icon(Icons.phone_outlined),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(16),
                           ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(16),
+                            borderSide: BorderSide(color: Colors.grey[200]!),
+                          ),
+                          filled: true,
+                          fillColor: Colors.grey[50],
                         ),
                       ),
                     ),
@@ -287,8 +310,14 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                       },
                     ),
                     border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                     ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(16),
+                      borderSide: BorderSide(color: Colors.grey[200]!),
+                    ),
+                    filled: true,
+                    fillColor: Colors.grey[50],
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
@@ -306,17 +335,19 @@ class _BasicInfoStepState extends ConsumerState<BasicInfoStep> {
                 // Bouton suivant
                 SizedBox(
                   width: double.infinity,
-                  height: 50,
+                  height: 56,
                   child: ElevatedButton(
                     onPressed: _submit,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF00A86B),
+                      backgroundColor: const Color(0xFF1E40AF),
+                      foregroundColor: Colors.white,
+                      elevation: 0,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                     child: const Text(
-                      'Suivant',
+                      'S\'inscrire',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,

@@ -18,7 +18,7 @@ class WelcomeStep extends ConsumerWidget {
       barrierDismissible: false,
       builder: (context) => const Center(
         child: CircularProgressIndicator(
-          color: Color(0xFF00A86B),
+          color: Color(0xFF1E40AF),
         ),
       ),
     );
@@ -99,7 +99,7 @@ class WelcomeStep extends ConsumerWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Color(0xFF00A86B), Color(0xFF00D084)],
+          colors: [Color(0xFF1E40AF), Color(0xFF2563EB)],
         ),
       ),
       child: SafeArea(
@@ -210,9 +210,9 @@ class WelcomeStep extends ConsumerWidget {
                     onPressed: () => _finishOnboarding(context, ref),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
-                      foregroundColor: const Color(0xFF00A86B),
+                      foregroundColor: const Color(0xFF1E40AF),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(30),
                       ),
                       elevation: 8,
                     ),

@@ -28,7 +28,7 @@ class _IncomeStepState extends ConsumerState<IncomeStep> {
     {
       'label': '100,000 - 250,000 FCFA',
       'value': '100000-250000',
-      'color': const Color(0xFF00A86B)
+      'color': const Color(0xFF1E40AF)
     },
     {
       'label': '250,000 - 500,000 FCFA',
@@ -175,14 +175,14 @@ class _IncomeStepState extends ConsumerState<IncomeStep> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+              color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Row(
               children: [
                 const Icon(
                   Icons.lock,
-                  color: Color(0xFF00A86B),
+                  color: Color(0xFF1E40AF),
                   size: 20,
                 ),
                 const SizedBox(width: 8),
@@ -204,13 +204,15 @@ class _IncomeStepState extends ConsumerState<IncomeStep> {
           // Bouton suivant
           SizedBox(
             width: double.infinity,
-            height: 50,
+            height: 56,
             child: ElevatedButton(
               onPressed: _submit,
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF00A86B),
+                backgroundColor: const Color(0xFF1E40AF),
+                foregroundColor: Colors.white,
+                elevation: 0,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
               child: const Text(

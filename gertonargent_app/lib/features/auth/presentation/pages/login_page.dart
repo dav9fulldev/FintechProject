@@ -64,37 +64,34 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                     children: [
                       SizedBox(height: constraints.maxHeight * 0.05),
                       // Logo
-                      Image.asset(
-                        'assets/images/logo.png',
-                        width: logoSize.clamp(80.0, 120.0),
-                        height: logoSize.clamp(80.0, 120.0),
+                      Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.blue[50],
+                          shape: BoxShape.circle,
+                        ),
+                        child: Image.asset(
+                          'assets/images/logo.png',
+                          width: 60,
+                          height: 60,
+                        ),
                       ),
-                      const SizedBox(height: 16),
-                      FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: Text(
-                          'GèrTonArgent',
-                          style: TextStyle(
-                            fontSize: titleFontSize.clamp(22.0, 32.0),
-                            fontWeight: FontWeight.bold,
-                            color: const Color(0xFF00A86B),
-                          ),
-                          maxLines: 1,
+                      const SizedBox(height: 24),
+                      Text(
+                        'Bienvenue',
+                        style: TextStyle(
+                          fontSize: 32,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.black87,
                         ),
                       ),
                       const SizedBox(height: 8),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: FittedBox(
-                          fit: BoxFit.scaleDown,
-                          child: Text(
-                            'Connectez-vous à votre compte',
-                            style: TextStyle(
-                              fontSize: subtitleFontSize.clamp(12.0, 14.0),
-                              color: Colors.grey[600],
-                            ),
-                            maxLines: 1,
-                          ),
+                      Text(
+                        'Connectez-vous pour gérer vos finances',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey[600],
                         ),
                       ),
                       SizedBox(height: constraints.maxHeight * 0.04),
@@ -105,7 +102,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           labelText: 'Email',
                           prefixIcon: const Icon(Icons.email_outlined),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(16),
+                            borderSide: BorderSide(color: Colors.grey[300]!),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(16),
+                            borderSide: BorderSide(color: Colors.grey[200]!),
                           ),
                           filled: true,
                           fillColor: Colors.grey[50],
@@ -136,7 +138,12 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                             },
                           ),
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(16),
+                            borderSide: BorderSide(color: Colors.grey[300]!),
+                          ),
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(16),
+                            borderSide: BorderSide(color: Colors.grey[200]!),
                           ),
                           filled: true,
                           fillColor: Colors.grey[50],
@@ -149,39 +156,32 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           return null;
                         },
                       ),
-                      const SizedBox(height: 24),
-                      // Erreur
-                      if (authState.error != null)
-                        Container(
-                          padding: const EdgeInsets.all(12),
-                          margin: const EdgeInsets.only(bottom: 16),
-                          decoration: BoxDecoration(
-                            color: Colors.red[50],
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Row(
-                            children: [
-                              Icon(Icons.error_outline, color: Colors.red[700]),
-                              const SizedBox(width: 8),
-                              Expanded(
-                                child: Text(
-                                  authState.error!,
-                                  style: TextStyle(color: Colors.red[700]),
-                                ),
-                              ),
-                            ],
+                      Align(
+                        alignment: Alignment.centerRight,
+                        child: TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Mot de passe oublié ?',
+                            style: TextStyle(
+                              color: const Color(0xFF1E40AF),
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
+                      ),
+                      const SizedBox(height: 16),
                       // Bouton connexion
                       SizedBox(
                         width: double.infinity,
-                        height: 50,
+                        height: 56,
                         child: ElevatedButton(
                           onPressed: authState.isLoading ? null : _login,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF00A86B),
+                            backgroundColor: const Color(0xFF1E40AF),
+                            foregroundColor: Colors.white,
+                            elevation: 0,
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(30),
                             ),
                           ),
                           child: authState.isLoading
@@ -202,37 +202,37 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                                 ),
                         ),
                       ),
-                      const SizedBox(height: 24),
-                      // Créer un compte
-                      Wrap(
-                        alignment: WrapAlignment.center,
-                        crossAxisAlignment: WrapCrossAlignment.center,
-                        children: [
-                          Text(
-                            'Pas de compte ? ',
-                            style: TextStyle(color: Colors.grey[600]),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const OnboardingFlowPage(),
-                                ),
-                              );
-                            },
-                            child: const Text(
-                              'Créer un compte',
-                              style: TextStyle(
-                                color: Color(0xFF00A86B),
-                                fontWeight: FontWeight.bold,
+                      const SizedBox(height: 16),
+                      // Bouton Créer un compte
+                      SizedBox(
+                        width: double.infinity,
+                        height: 56,
+                        child: OutlinedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const OnboardingFlowPage(),
                               ),
+                            );
+                          },
+                          style: OutlinedButton.styleFrom(
+                            side: BorderSide(color: Colors.grey[300]!),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30),
                             ),
                           ),
-                        ],
+                          child: const Text(
+                            'Créer un compte',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ),
                       ),
-                      const SizedBox(height: 32),
+                      const SizedBox(height: 24),
                       Row(
                         children: [
                           Expanded(child: Divider(color: Colors.grey[300])),
@@ -249,10 +249,10 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                           Expanded(child: Divider(color: Colors.grey[300])),
                         ],
                       ),
-                      const SizedBox(height: 32),
+                      const SizedBox(height: 24),
                       SizedBox(
                         width: double.infinity,
-                        height: 50,
+                        height: 56,
                         child: OutlinedButton.icon(
                           onPressed: authState.isLoading
                               ? null
@@ -263,16 +263,20 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                             'assets/images/google_logo.png',
                             height: 24,
                             width: 24,
-                            errorBuilder: (context, error, stackTrace) => const Icon(Icons.g_mobiledata, size: 24),
+                            errorBuilder: (context, error, stackTrace) =>
+                                const Icon(Icons.g_mobiledata, size: 24),
                           ),
                           label: const Text(
                             'Continuer avec Google',
-                            style: TextStyle(color: Colors.black87),
+                            style: TextStyle(
+                              color: Colors.black87,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                           style: OutlinedButton.styleFrom(
-                            side: const BorderSide(color: Colors.grey),
+                            side: BorderSide(color: Colors.grey[300]!),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(30),
                             ),
                             backgroundColor: Colors.white,
                           ),

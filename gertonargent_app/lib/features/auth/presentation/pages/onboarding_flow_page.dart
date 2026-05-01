@@ -47,26 +47,28 @@ class _OnboardingFlowPageState extends ConsumerState<OnboardingFlowPage> {
             // Barre de progression
             if (_currentPage < _totalPages - 1)
               Padding(
-                padding: const EdgeInsets.all(24),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
                 child: Column(
                   children: [
                     Row(
                       children: [
-                        if (_currentPage > 0)
-                          IconButton(
-                            icon: const Icon(Icons.arrow_back),
-                            onPressed: _previousPage,
-                          ),
+                        IconButton(
+                          icon: const Icon(Icons.arrow_back),
+                          onPressed: _currentPage == 0 
+                              ? () => Navigator.pop(context)
+                              : _previousPage,
+                        ),
                         Expanded(
                           child: LinearProgressIndicator(
                             value: (_currentPage + 1) / _totalPages,
                             backgroundColor: Colors.grey[200],
                             valueColor: const AlwaysStoppedAnimation<Color>(
-                              Color(0xFF00A86B),
+                              Color(0xFF1E40AF),
                             ),
-                            minHeight: 8,
+                            minHeight: 6,
                           ),
                         ),
+                        const SizedBox(width: 48), // Pour équilibrer l'icône de retour
                       ],
                     ),
                     const SizedBox(height: 8),
@@ -74,7 +76,8 @@ class _OnboardingFlowPageState extends ConsumerState<OnboardingFlowPage> {
                       'Étape ${_currentPage + 1} sur $_totalPages',
                       style: TextStyle(
                         fontSize: 12,
-                        color: Colors.grey[600],
+                        color: Colors.grey[500],
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
