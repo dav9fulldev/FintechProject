@@ -1,8 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException, status, Header
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from jose import JWTError, jwt
+from passlib.context import CryptContext
 import bcrypt
 from typing import Optional, List
 from ..models.database import get_db
@@ -13,6 +15,9 @@ from pydantic import BaseModel, EmailStr
 import os
 
 router = APIRouter(prefix="/auth", tags=["authentication"])
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="auth/login")
 
 # Configuration de la sécurité JWT
 # SECRET_KEY doit rester privé pour empêcher la forge de faux tokens
@@ -39,7 +44,11 @@ class Token(BaseModel):
     access_token: str
     token_type: str
 
-def verify_password(plain_password: str, hashed_password: str) -> bool:
+class GoogleAuthRequest(BaseModel):
+    id_token: str
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
     """
     Vérifie si le mot de passe en clair correspond au hash stocké.
     Utilise bcrypt directement pour plus de robustesse sur Windows.
@@ -49,7 +58,8 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     hashed_bytes = hashed_password.encode('utf-8')
     return bcrypt.checkpw(password_bytes, hashed_bytes)
 
-def get_password_hash(password: str) -> str:
+def get_password_hash(password):
+    return pwd_context.hash(password)
     """Hash password using bcrypt directly"""
     # Truncate password to 72 bytes (bcrypt limit)
     password_bytes = password.encode('utf-8')[:72]
@@ -167,7 +177,84 @@ def login(login_data: LoginRequest, db: Session = Depends(get_db)):
     access_token = create_access_token(data={"sub": user.email})
     return {"access_token": access_token, "token_type": "bearer"}
 
+@router.post("/google", response_model=Token)
+def google_auth(google_data: GoogleAuthRequest, db: Session = Depends(get_db)):
+    """
+    Authenticate user with Google ID token
+    
+    This endpoint:
+    1. Verifies the Google ID token
+    2. Checks if user exists by google_id or email
+    3. Creates new user if needed
+    4. Returns JWT access token
+    """
+    try:
+        # Import the google auth verifier
+        from ..utils.google_auth import GoogleAuthVerifier
+        
+        # Get the Google Client ID from environment
+        google_client_id = os.getenv("GOOGLE_CLIENT_ID")
+        if not google_client_id:
+            raise HTTPException(
+                status_code=500,
+                detail="Google Client ID non configuré"
+            )
+        
+        # Verify the ID token
+        verifier = GoogleAuthVerifier(client_id=google_client_id)
+        user_info = verifier.verify_token(google_data.id_token)
 
+        # Check if user exists by google_id
+        user = db.query(User).filter(User.google_id == user_info["google_id"]).first()
+
+        # If not found, check by email
+        if not user:
+            user = db.query(User).filter(User.email == user_info["email"]).first()
+
+            if user:
+                # Update existing user with google info
+                user.google_id = user_info["google_id"]
+                user.auth_provider = "google"
+                user.profile_picture = user_info.get("picture")
+            else:
+                # Create new user
+                username = user_info.get('name') or user_info['email'].split('@')[0]
+
+                # Ensure username is unique
+                base_username = username
+                counter = 1
+                while db.query(User).filter(User.username == username).first():
+                    username = f"{base_username}{counter}"
+                    counter += 1
+
+                user = User(
+                    email=user_info["email"],
+                    username=username,
+                    first_name=user_info.get("given_name"),
+                    last_name=user_info.get("family_name"),
+                    google_id=user_info["google_id"],
+                    auth_provider="google",
+                    profile_picture=user_info.get("picture")
+                )
+                db.add(user)
+                db.commit()
+                db.refresh(user)
+
+        # Generate JWT token
+        access_token = create_access_token(data={"sub": user.email})
+
+        return {"access_token": access_token, "token_type": "bearer"}
+
+    except ValueError as e:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=str(e)
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Authentication failed: {str(e)}"
+        )
 class UserResponse(BaseModel):
     id: int
     email: str

@@ -1,6 +1,6 @@
 class ApiConstants {
   // Base URL - Modifier selon votre configuration
-  static const String baseUrl = 'http://192.168.1.36:8000';
+  static const String baseUrl = 'http://10.0.2.2:8000';
 
   // Auth endpoints
   static const String register = '/auth/register';
@@ -29,4 +29,6 @@ class ApiConstants {
   // Sika Assistant endpoints
   static const String sikaChat = '/ai/sika';
   static const String sikaConfirm = '/ai/sika/confirm';
+
+  static String get googleAuth => '/auth/google';
 }

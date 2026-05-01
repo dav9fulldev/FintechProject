@@ -53,6 +53,7 @@ class TransactionModel {
       'category': category.name,
       'description': description,
       'transaction_type': type.name,
+      'created_at': createdAt.toIso8601String(),
     };
   }
 

@@ -69,6 +69,7 @@ class ApiService {
   Future<Map<String, dynamic>> register({
     required String email,
     required String username,
+    required String phone,
     required String password,
     String? firstName,
     String? lastName,
@@ -77,6 +78,7 @@ class ApiService {
       final data = <String, dynamic>{
         'email': email,
         'username': username,
+        'phone': phone,
         'password': password,
       };
       if (firstName != null) data['first_name'] = firstName;
@@ -133,12 +135,25 @@ class ApiService {
     }
   }
 
+  Future<Map<String, dynamic>> googleAuth({
+    required String idToken,
+  }) async {
+    try {
+      final response = await _dio.post(
+        ApiConstants.googleAuth,
+        data: {
+          'id_token': idToken
+        },
+      );
+      return response.data;
+    } on DioException catch (e) {
+      throw _handleError(e);
+    }
+  }
+
   Future<Map<String, dynamic>> getMe() async {
     try {
       final response = await _dio.get(ApiConstants.me);
-      if (response.data['id'] != null) {
-        setUserId(response.data['id']);
-      }
       return response.data;
     } on DioException catch (e) {
       throw _handleError(e);
@@ -653,16 +668,30 @@ class ApiService {
       case DioExceptionType.badResponse:
         final statusCode = e.response?.statusCode;
         final data = e.response?.data;
+        
+        dynamic detailMsg;
+        if (data is Map && data.containsKey('detail')) {
+          final detail = data['detail'];
+          if (detail is List) {
+            // FastAPI validation errors
+            detailMsg = detail.map((e) => e is Map ? e['msg'] : e.toString()).join(', ');
+          } else {
+            detailMsg = detail.toString();
+          }
+        }
+
         if (statusCode == 400) {
-          return data?['detail'] ?? 'Requête invalide';
+          return detailMsg ?? 'Requête invalide';
         } else if (statusCode == 401) {
-          return data?['detail'] ?? 'Non autorisé. Veuillez vous reconnecter.';
+          return detailMsg ?? 'Non autorisé. Veuillez vous reconnecter.';
         } else if (statusCode == 404) {
-          return data?['detail'] ?? 'Ressource non trouvée';
+          return detailMsg ?? 'Ressource non trouvée';
+        } else if (statusCode == 422) {
+          return detailMsg ?? 'Erreur de validation (vérifiez les champs envoyés)';
         } else if (statusCode == 500) {
           return 'Erreur serveur. Réessayez plus tard.';
         }
-        return data?['detail'] ?? 'Erreur inconnue';
+        return detailMsg ?? 'Erreur inconnue';
       case DioExceptionType.connectionError:
         return 'Impossible de se connecter au serveur. Vérifiez que le backend est lancé.';
       default:

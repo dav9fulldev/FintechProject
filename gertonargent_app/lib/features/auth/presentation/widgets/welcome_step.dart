@@ -51,11 +51,12 @@ class WelcomeStep extends ConsumerWidget {
 
       try {
         await api.registerWithPayload(payload);
-        // after successful registration, login to obtain token and user
-        final logged = await ref
+        await ref
             .read(authProvider.notifier)
             .login(email: email, password: password);
-        if (logged) {
+        
+        final authState = ref.read(authProvider);
+        if (authState.isAuthenticated) {
           await RegistrationCache.clear();
         }
       } catch (e) {
