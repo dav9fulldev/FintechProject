@@ -18,7 +18,7 @@ class ProfilePage extends ConsumerWidget {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         title: const Text('Mon Profil', style: TextStyle(color: Colors.white)),
         leading: IconButton(
@@ -49,7 +49,7 @@ class ProfilePage extends ConsumerWidget {
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xFF00A86B), Color(0xFF00D084)],
+                  colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
                 ),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(30),
@@ -76,13 +76,13 @@ class ProfilePage extends ConsumerWidget {
                     child: CircleAvatar(
                       radius: 50,
                       backgroundColor:
-                          const Color(0xFF00A86B).withValues(alpha: 0.2),
+                          const Color(0xFF1E40AF).withValues(alpha: 0.2),
                       child: Text(
                         user?.firstName?.substring(0, 1).toUpperCase() ?? 'U',
                         style: const TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFF00A86B),
+                          color: Color(0xFF1E40AF),
                         ),
                       ),
                     ),
@@ -287,10 +287,10 @@ class ProfilePage extends ConsumerWidget {
       leading: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+          color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(8),
         ),
-        child: Icon(icon, color: const Color(0xFF00A86B)),
+        child: Icon(icon, color: const Color(0xFF1E40AF)),
       ),
       title: Text(
         title,
@@ -319,10 +319,10 @@ class ProfilePage extends ConsumerWidget {
       leading: Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
-          color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+          color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(8),
         ),
-        child: Icon(icon, color: const Color(0xFF00A86B)),
+        child: Icon(icon, color: const Color(0xFF1E40AF)),
       ),
       title: Text(
         title,

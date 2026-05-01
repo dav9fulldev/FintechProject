@@ -72,6 +72,9 @@ class AuthNotifier extends StateNotifier<AuthState> {
       }
 
       _apiService.setToken(token);
+      if (user != null) {
+        _apiService.setUserId(user.id);
+      }
 
       state = state.copyWith(
         isAuthenticated: true,

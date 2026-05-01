@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 /// Palette de couleurs de l'application GèrTonArgent
 /// Utilise withValues() pour une meilleure précision des couleurs
 class AppColors {
-  // Couleurs principales
-  static const Color primary = Color(0xFF00A86B);
-  static const Color primaryDark = Color(0xFF008556);
-  static const Color primaryLight = Color(0xFF00D084);
+  // Couleurs principales — Bleu premium
+  static const Color primary = Color(0xFF1E40AF);
+  static const Color primaryDark = Color(0xFF1E3A8A);
+  static const Color primaryLight = Color(0xFF3B82F6);
 
   // Couleurs secondaires
   static const Color secondary = Color(0xFF2196F3);
@@ -18,10 +18,10 @@ class AppColors {
   static const Color accentLight = Color(0xFFBA68C8);
 
   // Couleurs de statut
-  static const Color success = Color(0xFF4CAF50);
-  static const Color successLight = Color(0xFF81C784);
-  static const Color warning = Color(0xFFFF9800);
-  static const Color warningLight = Color(0xFFFFB74D);
+  static const Color success = Color(0xFF059669);
+  static const Color successLight = Color(0xFF34D399);
+  static const Color warning = Color(0xFFF59E0B);
+  static const Color warningLight = Color(0xFFFBBF24);
   static const Color error = Color(0xFFF44336);
   static const Color errorLight = Color(0xFFE57373);
   static const Color info = Color(0xFF2196F3);
@@ -56,8 +56,8 @@ class AppColors {
 
   // Gradients
   static const LinearGradient primaryGradient = LinearGradient(
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
     colors: [primary, primaryLight],
   );
 
@@ -86,7 +86,7 @@ class AppColors {
   static const Color autre = Color(0xFF8D99AE);
 
   // Couleurs de fond
-  static const Color backgroundLight = grey50;
+  static const Color backgroundLight = Color(0xFFF0F4FF);
   static const Color surfaceLight = white;
   static const Color cardLight = white;
 

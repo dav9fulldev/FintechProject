@@ -5,8 +5,6 @@ import '../../../../core/theme/app_colors.dart';
 import '../../../../core/theme/app_text_styles.dart';
 import '../../../../core/theme/app_spacing.dart';
 import '../../../../core/theme/app_radius.dart';
-import '../../../../core/theme/app_shadows.dart';
-import '../../../../core/widgets/modern_cards.dart';
 import '../../../../core/utils/page_transitions.dart';
 import '../../../auth/providers/auth_provider.dart';
 import '../../../budget/providers/budget_provider.dart';
@@ -45,414 +43,632 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
 
   String _getCurrentMonth() {
     final months = [
-      'Janvier',
-      'Février',
-      'Mars',
-      'Avril',
-      'Mai',
-      'Juin',
-      'Juillet',
-      'Août',
-      'Septembre',
-      'Octobre',
-      'Novembre',
-      'Décembre'
+      'Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+      'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'
     ];
     return months[DateTime.now().month - 1];
+  }
+
+  String _getGreeting() {
+    final hour = DateTime.now().hour;
+    if (hour < 12) return 'Bonjour';
+    if (hour < 18) return 'Bon après-midi';
+    return 'Bonsoir';
   }
 
   @override
   Widget build(BuildContext context) {
     final budgetState = ref.watch(budgetProvider);
     final transactionState = ref.watch(transactionProvider);
+    final goalState = ref.watch(goalProvider);
     final authState = ref.watch(authProvider);
 
     final totalBudget = budgetState.totalBudget;
     final totalSpent = budgetState.totalSpent;
     final progress = totalBudget > 0 ? (totalSpent / totalBudget) : 0.0;
 
+    final firstName = authState.user?.firstName ?? authState.user?.username ?? 'vous';
+    final initials = firstName.isNotEmpty
+        ? firstName.substring(0, 1).toUpperCase()
+        : 'U';
+
     return Scaffold(
-      backgroundColor: AppColors.backgroundLight,
-      appBar: AppBar(
-        backgroundColor: AppColors.primary,
-        elevation: 0,
-        title: Row(
-          children: [
-            Container(
-              width: 32,
-              height: 32,
-              decoration: BoxDecoration(
-                color: AppColors.white,
-                borderRadius: BorderRadius.circular(AppRadius.sm),
-              ),
-              child: const Icon(
-                Icons.account_balance_wallet,
-                color: AppColors.primary,
-                size: 20,
-              ),
-            ),
-            const SizedBox(width: AppSpacing.sm),
-            Text(
-              'GèrTonArgent',
-              style: AppTextStyles.h6.copyWith(color: AppColors.white),
-            ),
-          ],
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.refresh, color: AppColors.white),
-            onPressed: _loadData,
-          ),
-          IconButton(
-            icon: const Icon(Icons.logout, color: Colors.white),
-            onPressed: () {
-              ref.read(authProvider.notifier).logout();
-              Navigator.pushReplacementNamed(context, '/login');
-            },
-          ),
-        ],
-      ),
+      backgroundColor: const Color(0xFFF0F4FF),
       body: RefreshIndicator(
+        color: AppColors.primary,
         onRefresh: _loadData,
-        child: SingleChildScrollView(
+        child: CustomScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Header avec gradient
-              GradientCard(
-                gradient: AppColors.primaryGradient,
-                padding: EdgeInsets.all(AppSpacing.lg),
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(AppRadius.xl),
-                  bottomRight: Radius.circular(AppRadius.xl),
+          slivers: [
+            // === HEADER SLIVER ===
+            SliverAppBar(
+              expandedHeight: 220,
+              floating: false,
+              pinned: true,
+              backgroundColor: AppColors.primary,
+              elevation: 0,
+              automaticallyImplyLeading: false,
+              actions: [
+                IconButton(
+                  icon: const Icon(Icons.refresh, color: Colors.white),
+                  onPressed: _loadData,
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Bienvenue${authState.user != null ? ", ${authState.user!.username}" : ""} !',
-                      style: AppTextStyles.h4.copyWith(color: AppColors.white),
+                GestureDetector(
+                  onTap: () {
+                    ref.read(authProvider.notifier).logout();
+                    Navigator.pushReplacementNamed(context, '/login');
+                  },
+                  child: Container(
+                    margin: const EdgeInsets.only(right: 16),
+                    width: 38,
+                    height: 38,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.2),
+                      shape: BoxShape.circle,
                     ),
-                    SizedBox(height: AppSpacing.xs),
-                    Text(
-                      'Gérez vos finances intelligemment',
-                      style: AppTextStyles.bodyMedium.copyWith(
-                        color: AppColors.white.withValues(alpha: 0.9),
+                    child: Center(
+                      child: Text(
+                        initials,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
                       ),
                     ),
-                    SizedBox(height: AppSpacing.lg),
-                    // Carte Budget
-                    ModernCard(
-                      padding: EdgeInsets.all(AppSpacing.md),
-                      boxShadow: AppShadows.card,
-                      child: budgetState.isLoading
-                          ? const Center(child: CircularProgressIndicator())
-                          : Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'Budget du mois',
-                                      style: AppTextStyles.h6,
-                                    ),
-                                    Container(
-                                      padding: EdgeInsets.symmetric(
-                                        horizontal: AppSpacing.sm,
-                                        vertical: AppSpacing.xs,
-                                      ),
-                                      decoration: BoxDecoration(
-                                        color: AppColors.primary
-                                            .withValues(alpha: 0.1),
-                                        borderRadius: BorderRadius.circular(
-                                            AppRadius.full),
-                                      ),
-                                      child: Text(
-                                        _getCurrentMonth(),
-                                        style: AppTextStyles.label.copyWith(
-                                          color: AppColors.primary,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: AppSpacing.md),
-                                Text(
-                                  _formatCurrency(totalSpent),
-                                  style: AppTextStyles.amount.copyWith(
-                                    color: progress > 0.9
-                                        ? AppColors.error
-                                        : progress > 0.7
-                                            ? AppColors.warning
-                                            : AppColors.primary,
-                                  ),
-                                ),
-                                SizedBox(height: AppSpacing.xs),
-                                Text(
-                                  'Dépensés sur ${_formatCurrency(totalBudget)}',
-                                  style: AppTextStyles.bodySmall.copyWith(
-                                    color: AppColors.textSecondary,
-                                  ),
-                                ),
-                                SizedBox(height: AppSpacing.md),
-                                ClipRRect(
-                                  borderRadius:
-                                      BorderRadius.circular(AppRadius.sm),
-                                  child: LinearProgressIndicator(
-                                    value: progress.clamp(0, 1),
-                                    minHeight: 8,
-                                    backgroundColor: AppColors.grey200,
-                                    valueColor: AlwaysStoppedAnimation<Color>(
-                                      progress > 0.9
-                                          ? AppColors.error
-                                          : progress > 0.7
-                                              ? AppColors.warning
-                                              : AppColors.primary,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: AppSpacing.xs),
-                                Text(
-                                  'Reste: ${_formatCurrency(budgetState.totalRemaining)}',
-                                  style: AppTextStyles.caption.copyWith(
-                                    color: AppColors.textSecondary,
-                                  ),
-                                ),
-                              ],
-                            ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: AppSpacing.lg),
-              // Actions rapides
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Actions rapides',
-                      style: AppTextStyles.h5,
-                    ),
-                    SizedBox(height: AppSpacing.md),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: _ActionCard(
-                            icon: Icons.account_balance_wallet,
-                            title: 'Mes budgets',
-                            subtitle:
-                                '${budgetState.budgets.length} catégories',
-                            color: AppColors.primary,
-                            onTap: () {
-                              context.pushSlideFade(const BudgetListPage());
-                            },
-                          ),
-                        ),
-                        SizedBox(width: AppSpacing.md),
-                        Expanded(
-                          child: _ActionCard(
-                            icon: Icons.flag,
-                            title: 'Mes objectifs',
-                            subtitle:
-                                '${ref.watch(goalProvider).activeGoals.length} en cours',
-                            color: AppColors.warning,
-                            onTap: () {
-                              context.pushSlideFade(const GoalsListPage());
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: AppSpacing.md),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: _ActionCard(
-                            icon: Icons.add_circle_outline,
-                            title: 'Nouvelle dépense',
-                            subtitle: 'Ajouter',
-                            color: AppColors.info,
-                            onTap: () async {
-                              await context
-                                  .pushSlideFade(const AddTransactionPage());
-                              _loadData();
-                            },
-                          ),
-                        ),
-                        SizedBox(width: AppSpacing.md),
-                        Expanded(
-                          child: _ActionCard(
-                            icon: Icons.history,
-                            title: 'Historique',
-                            subtitle:
-                                '${transactionState.transactions.length} transactions',
-                            color: AppColors.accent,
-                            onTap: () {
-                              context.pushSlideFade(
-                                  const TransactionHistoryPage());
-                            },
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: AppSpacing.lg),
-
-              // Carte Sika Setup
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-                child: const SikaSetupCard(),
-              ),
-
-              SizedBox(height: AppSpacing.lg),
-              // Transactions récentes
-              if (transactionState.recentTransactions.isNotEmpty) ...[
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: AppSpacing.lg),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Transactions récentes',
-                        style: AppTextStyles.h5,
-                      ),
-                      TextButton(
-                        onPressed: () {
-                          context.pushSlideFade(const TransactionHistoryPage());
-                        },
-                        child: Text('Voir tout',
-                            style: AppTextStyles.button
-                                .copyWith(color: AppColors.primary)),
-                      ),
-                    ],
                   ),
                 ),
-                SizedBox(height: AppSpacing.sm),
-                ...transactionState.recentTransactions
-                    .take(5)
-                    .map((transaction) {
-                  return Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: AppSpacing.lg, vertical: AppSpacing.xs),
-                    child: ModernCard(
-                      padding: EdgeInsets.all(AppSpacing.md),
-                      child: Row(
+              ],
+              flexibleSpace: FlexibleSpaceBar(
+                background: Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
+                    ),
+                  ),
+                  child: SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
-                            padding: EdgeInsets.all(AppSpacing.sm),
-                            decoration: BoxDecoration(
-                              color: AppColors.primary.withValues(alpha: 0.1),
-                              borderRadius: BorderRadius.circular(AppRadius.sm),
-                            ),
-                            child: Text(
-                              transaction.categoryIcon,
-                              style: AppTextStyles.h6,
-                            ),
-                          ),
-                          SizedBox(width: AppSpacing.sm),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  transaction.description ??
-                                      transaction.categoryName,
-                                  style: AppTextStyles.bodyMedium.copyWith(
-                                    fontWeight: FontWeight.w600,
-                                  ),
+                          // Logo & App name
+                          Row(
+                            children: [
+                              Container(
+                                width: 32,
+                                height: 32,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
                                 ),
-                                Text(
-                                  transaction.formattedDate,
-                                  style: AppTextStyles.caption.copyWith(
-                                    color: AppColors.textSecondary,
-                                  ),
+                                child: const Icon(
+                                  Icons.account_balance_wallet,
+                                  color: Color(0xFF1E40AF),
+                                  size: 20,
                                 ),
-                              ],
-                            ),
+                              ),
+                              const SizedBox(width: 8),
+                              const Text(
+                                'GèrTonArgent',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
                           ),
+                          const SizedBox(height: 20),
+                          // Greeting
                           Text(
-                            transaction.formattedAmount,
-                            style: AppTextStyles.bodyLarge.copyWith(
+                            '${_getGreeting()}, $firstName 👋',
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
                               fontWeight: FontWeight.bold,
-                              color: transaction.type.name == 'expense'
-                                  ? AppColors.error
-                                  : AppColors.success,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            'Voici votre tableau de bord · ${_getCurrentMonth()}',
+                            style: TextStyle(
+                              color: Colors.white.withValues(alpha: 0.75),
+                              fontSize: 13,
                             ),
                           ),
                         ],
                       ),
                     ),
-                  );
-                }),
-              ],
-              SizedBox(height: AppSpacing.xxxl * 2),
-            ],
-          ),
+                  ),
+                ),
+              ),
+            ),
+
+            SliverToBoxAdapter(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // === BUDGET CARD (flottante sur le header) ===
+                  Transform.translate(
+                    offset: const Offset(0, -16),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0xFF1E40AF).withValues(alpha: 0.12),
+                              blurRadius: 20,
+                              offset: const Offset(0, 8),
+                            ),
+                          ],
+                        ),
+                        padding: const EdgeInsets.all(20),
+                        child: budgetState.isLoading
+                            ? const Center(child: CircularProgressIndicator())
+                            : Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      const Text(
+                                        'Budget du mois',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          color: Color(0xFF6B7280),
+                                          fontWeight: FontWeight.w500,
+                                        ),
+                                      ),
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
+                                          borderRadius: BorderRadius.circular(20),
+                                        ),
+                                        child: Text(
+                                          _getCurrentMonth(),
+                                          style: const TextStyle(
+                                            color: Color(0xFF1E40AF),
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 12),
+                                  Text(
+                                    _formatCurrency(totalSpent),
+                                    style: TextStyle(
+                                      fontSize: 32,
+                                      fontWeight: FontWeight.bold,
+                                      color: progress > 0.9
+                                          ? Colors.red
+                                          : progress > 0.7
+                                              ? Colors.orange
+                                              : const Color(0xFF1E40AF),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    'dépensés sur ${_formatCurrency(totalBudget)}',
+                                    style: const TextStyle(
+                                      color: Color(0xFF9CA3AF),
+                                      fontSize: 13,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: LinearProgressIndicator(
+                                      value: progress.clamp(0.0, 1.0),
+                                      minHeight: 10,
+                                      backgroundColor: const Color(0xFFF0F4FF),
+                                      valueColor: AlwaysStoppedAnimation<Color>(
+                                        progress > 0.9
+                                            ? Colors.red
+                                            : progress > 0.7
+                                                ? Colors.orange
+                                                : const Color(0xFF1E40AF),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 10),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Reste: ${_formatCurrency(budgetState.totalRemaining)}',
+                                        style: const TextStyle(
+                                          fontSize: 13,
+                                          color: Color(0xFF6B7280),
+                                        ),
+                                      ),
+                                      Text(
+                                        '${(progress * 100).toStringAsFixed(0)}%',
+                                        style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold,
+                                          color: progress > 0.9
+                                              ? Colors.red
+                                              : const Color(0xFF1E40AF),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                      ),
+                    ),
+                  ),
+
+                  // === ACTIONS RAPIDES ===
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Actions rapides',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF1F2937),
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+                        Row(
+                          children: [
+                            _QuickAction(
+                              icon: Icons.add_circle_rounded,
+                              label: 'Dépense',
+                              color: const Color(0xFF1E40AF),
+                              onTap: () async {
+                                await context.pushSlideFade(const AddTransactionPage());
+                                _loadData();
+                              },
+                            ),
+                            const SizedBox(width: 12),
+                            _QuickAction(
+                              icon: Icons.account_balance_wallet_rounded,
+                              label: 'Budgets',
+                              color: const Color(0xFF059669),
+                              onTap: () => context.pushSlideFade(const BudgetListPage()),
+                            ),
+                            const SizedBox(width: 12),
+                            _QuickAction(
+                              icon: Icons.flag_rounded,
+                              label: 'Objectifs',
+                              color: const Color(0xFFF59E0B),
+                              onTap: () => context.pushSlideFade(const GoalsListPage()),
+                            ),
+                            const SizedBox(width: 12),
+                            _QuickAction(
+                              icon: Icons.history_rounded,
+                              label: 'Historique',
+                              color: const Color(0xFF7C3AED),
+                              onTap: () => context.pushSlideFade(const TransactionHistoryPage()),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  const SizedBox(height: 24),
+
+                  // === MES OBJECTIFS ===
+                  if (goalState.activeGoals.isNotEmpty) ...[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Mes objectifs',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF1F2937),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () => context.pushSlideFade(const GoalsListPage()),
+                            child: const Text(
+                              'Voir tout',
+                              style: TextStyle(color: Color(0xFF1E40AF)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    SizedBox(
+                      height: 160,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        itemCount: goalState.activeGoals.take(4).length,
+                        itemBuilder: (context, index) {
+                          final goal = goalState.activeGoals[index];
+                          final goalProgress = goal.targetAmount > 0
+                              ? (goal.currentAmount / goal.targetAmount).clamp(0.0, 1.0)
+                              : 0.0;
+                          final goalColors = [
+                            const Color(0xFF1E40AF),
+                            const Color(0xFF059669),
+                            const Color(0xFFF59E0B),
+                            const Color(0xFF7C3AED),
+                          ];
+                          final color = goalColors[index % goalColors.length];
+
+                          return Container(
+                            width: 180,
+                            margin: const EdgeInsets.only(right: 12),
+                            padding: const EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [color, color.withValues(alpha: 0.7)],
+                              ),
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: color.withValues(alpha: 0.3),
+                                  blurRadius: 12,
+                                  offset: const Offset(0, 6),
+                                ),
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  goal.name,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14,
+                                  ),
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                const Spacer(),
+                                Text(
+                                  '${(goalProgress * 100).toStringAsFixed(0)}%',
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 28,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(height: 8),
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(10),
+                                  child: LinearProgressIndicator(
+                                    value: goalProgress,
+                                    minHeight: 6,
+                                    backgroundColor: Colors.white.withValues(alpha: 0.3),
+                                    valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+                                  ),
+                                ),
+                                const SizedBox(height: 6),
+                                Text(
+                                  _formatCurrency(goal.targetAmount),
+                                  style: TextStyle(
+                                    color: Colors.white.withValues(alpha: 0.85),
+                                    fontSize: 11,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+                  ],
+
+                  // === SIKA AI ===
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: const SikaSetupCard(),
+                  ),
+
+                  const SizedBox(height: 24),
+
+                  // === TRANSACTIONS RECENTES ===
+                  if (transactionState.recentTransactions.isNotEmpty) ...[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Transactions récentes',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF1F2937),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () => context.pushSlideFade(const TransactionHistoryPage()),
+                            child: const Text(
+                              'Voir tout',
+                              style: TextStyle(color: Color(0xFF1E40AF)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    ...transactionState.recentTransactions.take(5).map((transaction) {
+                      return Container(
+                        margin: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(16),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.04),
+                              blurRadius: 10,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF1E40AF).withValues(alpha: 0.08),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Text(
+                                transaction.categoryIcon,
+                                style: const TextStyle(fontSize: 22),
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    transaction.description ?? transaction.categoryName,
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 14,
+                                      color: Color(0xFF1F2937),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 3),
+                                  Text(
+                                    transaction.formattedDate,
+                                    style: const TextStyle(
+                                      fontSize: 12,
+                                      color: Color(0xFF9CA3AF),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Text(
+                              transaction.formattedAmount,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                color: transaction.type.name == 'expense'
+                                    ? Colors.red
+                                    : const Color(0xFF059669),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    }),
+                  ] else ...[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      child: Container(
+                        padding: const EdgeInsets.all(24),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Column(
+                          children: [
+                            const Text('💸', style: TextStyle(fontSize: 40)),
+                            const SizedBox(height: 12),
+                            const Text(
+                              'Aucune transaction pour l\'instant',
+                              style: TextStyle(
+                                color: Color(0xFF6B7280),
+                                fontSize: 14,
+                              ),
+                            ),
+                            const SizedBox(height: 12),
+                            ElevatedButton(
+                              onPressed: () async {
+                                await context.pushSlideFade(const AddTransactionPage());
+                                _loadData();
+                              },
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFF1E40AF),
+                                foregroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                              child: const Text('Ajouter une dépense'),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+
+                  const SizedBox(height: 100),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
-class _ActionCard extends StatelessWidget {
+class _QuickAction extends StatelessWidget {
   final IconData icon;
-  final String title;
-  final String subtitle;
+  final String label;
   final Color color;
   final VoidCallback onTap;
 
-  const _ActionCard({
+  const _QuickAction({
     required this.icon,
-    required this.title,
-    required this.subtitle,
+    required this.label,
     required this.color,
     required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return HoverCard(
-      onTap: onTap,
-      padding: EdgeInsets.all(AppSpacing.md),
-      child: Column(
-        children: [
-          Container(
-            padding: EdgeInsets.all(AppSpacing.sm),
-            decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(AppRadius.md),
+    return Expanded(
+      child: GestureDetector(
+        onTap: onTap,
+        child: Column(
+          children: [
+            Container(
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(
+                color: color.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Icon(icon, color: color, size: 28),
             ),
-            child: Icon(
-              icon,
-              color: color,
-              size: 28,
+            const SizedBox(height: 6),
+            Text(
+              label,
+              style: const TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w600,
+                color: Color(0xFF374151),
+              ),
+              textAlign: TextAlign.center,
             ),
-          ),
-          SizedBox(height: AppSpacing.sm),
-          Text(
-            title,
-            textAlign: TextAlign.center,
-            style: AppTextStyles.bodyMedium.copyWith(
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          SizedBox(height: AppSpacing.xs),
-          Text(
-            subtitle,
-            textAlign: TextAlign.center,
-            style: AppTextStyles.caption.copyWith(
-              color: AppColors.textSecondary,
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

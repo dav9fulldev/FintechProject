@@ -40,9 +40,25 @@ class LoginRequest(BaseModel):
     email: EmailStr
     password: str
 
+class UserResponse(BaseModel):
+    id: int
+    email: str
+    username: str
+    first_name: Optional[str] = None
+    last_name: Optional[str] = None
+    profession: Optional[str] = None
+    income_range: Optional[str] = None
+    phone: Optional[str] = None
+    is_active: bool = True
+    created_at: datetime
+
+    class Config:
+        from_attributes = True
+
 class Token(BaseModel):
     access_token: str
     token_type: str
+    user: Optional[UserResponse] = None
 
 class GoogleAuthRequest(BaseModel):
     id_token: str
@@ -162,8 +178,23 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
     
     db.commit()
     
-    access_token = create_access_token(data={"sub": user.email})
-    return {"access_token": access_token, "token_type": "bearer"}
+    access_token = create_access_token(data={"sub": new_user.email})
+    return {
+        "access_token": access_token,
+        "token_type": "bearer",
+        "user": {
+            "id": new_user.id,
+            "email": new_user.email,
+            "username": new_user.username,
+            "first_name": new_user.first_name,
+            "last_name": new_user.last_name,
+            "profession": new_user.profession,
+            "income_range": new_user.income_range,
+            "phone": new_user.phone,
+            "is_active": new_user.is_active,
+            "created_at": new_user.created_at.isoformat() if new_user.created_at else datetime.utcnow().isoformat(),
+        }
+    }
 
 @router.post("/login", response_model=Token)
 def login(login_data: LoginRequest, db: Session = Depends(get_db)):
@@ -175,7 +206,22 @@ def login(login_data: LoginRequest, db: Session = Depends(get_db)):
         )
 
     access_token = create_access_token(data={"sub": user.email})
-    return {"access_token": access_token, "token_type": "bearer"}
+    return {
+        "access_token": access_token,
+        "token_type": "bearer",
+        "user": {
+            "id": user.id,
+            "email": user.email,
+            "username": user.username,
+            "first_name": user.first_name,
+            "last_name": user.last_name,
+            "profession": user.profession,
+            "income_range": user.income_range,
+            "phone": user.phone,
+            "is_active": user.is_active,
+            "created_at": user.created_at.isoformat() if user.created_at else datetime.utcnow().isoformat(),
+        }
+    }
 
 @router.post("/google", response_model=Token)
 def google_auth(google_data: GoogleAuthRequest, db: Session = Depends(get_db)):

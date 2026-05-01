@@ -10,7 +10,7 @@ services:
       POSTGRES_PASSWORD: dav05&ya
       POSTGRES_DB: gertonargent
     ports:
-      - "5433:5432"  # Utilise le port 5433 pour éviter le conflit
+      - "5434:5432"  # Utilise le port 5434 pour éviter le conflit
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:

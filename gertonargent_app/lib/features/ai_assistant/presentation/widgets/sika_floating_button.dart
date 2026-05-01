@@ -52,7 +52,7 @@ class SikaFloatingButton extends ConsumerWidget {
         },
         child: AvatarGlow(
           animate: isActive,
-          glowColor: const Color(0xFF00A86B),
+          glowColor: const Color(0xFF1E40AF),
           glowRadiusFactor: 0.7,
           child: Container(
             width: mini ? 50 : 60,
@@ -61,12 +61,12 @@ class SikaFloatingButton extends ConsumerWidget {
               gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Color(0xFF00A86B), Color(0xFF00D084)],
+                colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
               ),
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF00A86B).withValues(alpha: 0.4),
+                  color: const Color(0xFF1E40AF).withValues(alpha: 0.4),
                   blurRadius: 15,
                   offset: const Offset(0, 4),
                 ),
@@ -149,12 +149,12 @@ class SikaCompactCard extends ConsumerWidget {
           gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color(0xFF00A86B), Color(0xFF00D084)],
+            colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
           ),
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF00A86B).withValues(alpha: 0.3),
+              color: const Color(0xFF1E40AF).withValues(alpha: 0.3),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),

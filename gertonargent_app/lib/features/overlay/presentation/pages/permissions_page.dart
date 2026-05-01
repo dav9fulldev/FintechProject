@@ -57,7 +57,7 @@ class _PermissionsPageState extends State<PermissionsPage> {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         title: const Text(
           'Permissions',
@@ -117,14 +117,14 @@ class _PermissionsPageState extends State<PermissionsPage> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+                color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
                 children: [
                   const Icon(
                     Icons.shield,
-                    color: Color(0xFF00A86B),
+                    color: Color(0xFF1E40AF),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -185,12 +185,12 @@ class _PermissionCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+                  color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(
                   icon,
-                  color: const Color(0xFF00A86B),
+                  color: const Color(0xFF1E40AF),
                   size: 28,
                 ),
               ),
@@ -245,7 +245,7 @@ class _PermissionCard extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: onActivate,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF00A86B),
+                  backgroundColor: const Color(0xFF1E40AF),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),

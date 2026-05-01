@@ -91,7 +91,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('✅ Permission microphone accordée'),
-          backgroundColor: Color(0xFF00A86B),
+          backgroundColor: Color(0xFF1E40AF),
         ),
       );
     }
@@ -107,7 +107,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('🎤 Sika démarré ! Dis "Sika" pour tester'),
-            backgroundColor: Color(0xFF00A86B),
+            backgroundColor: Color(0xFF1E40AF),
             duration: Duration(seconds: 3),
           ),
         );
@@ -176,7 +176,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text('✅ Prénom défini: ${controller.text}'),
-                      backgroundColor: const Color(0xFF00A86B),
+                      backgroundColor: const Color(0xFF1E40AF),
                     ),
                   );
                 }
@@ -218,7 +218,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         title: const Text(
           'Test Sika Voice Assistant',
@@ -246,7 +246,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: allReady
-                      ? [const Color(0xFF00A86B), const Color(0xFF00D084)]
+                      ? [const Color(0xFF1E40AF), const Color(0xFF3B82F6)]
                       : [Colors.orange, Colors.deepOrange],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -254,7 +254,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
-                    color: (allReady ? const Color(0xFF00A86B) : Colors.orange)
+                    color: (allReady ? const Color(0xFF1E40AF) : Colors.orange)
                         .withValues(alpha: 0.3),
                     blurRadius: 12,
                     offset: const Offset(0, 4),
@@ -340,7 +340,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.mic_none, color: Color(0xFF00A86B)),
+                  const Icon(Icons.mic_none, color: Color(0xFF1E40AF)),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
@@ -466,10 +466,10 @@ class _TestSikaPageState extends State<TestSikaPage> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+                color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: const Color(0xFF00A86B).withValues(alpha: 0.3),
+                  color: const Color(0xFF1E40AF).withValues(alpha: 0.3),
                 ),
               ),
               child: Column(
@@ -477,14 +477,14 @@ class _TestSikaPageState extends State<TestSikaPage> {
                 children: [
                   const Row(
                     children: [
-                      Icon(Icons.lightbulb_outline, color: Color(0xFF00A86B)),
+                      Icon(Icons.lightbulb_outline, color: Color(0xFF1E40AF)),
                       SizedBox(width: 8),
                       Text(
                         'Exemples de commandes',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFF00A86B),
+                          color: Color(0xFF1E40AF),
                         ),
                       ),
                     ],
@@ -573,7 +573,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
             ElevatedButton(
               onPressed: onAction,
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF00A86B),
+                backgroundColor: const Color(0xFF1E40AF),
                 padding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               ),
@@ -598,7 +598,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+              color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
               shape: BoxShape.circle,
             ),
             child: Center(
@@ -607,7 +607,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF00A86B),
+                  color: Color(0xFF1E40AF),
                 ),
               ),
             ),
@@ -619,7 +619,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
               style: const TextStyle(fontSize: 14),
             ),
           ),
-          Icon(icon, color: const Color(0xFF00A86B)),
+          Icon(icon, color: const Color(0xFF1E40AF)),
         ],
       ),
     );
@@ -630,7 +630,7 @@ class _TestSikaPageState extends State<TestSikaPage> {
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
         children: [
-          const Icon(Icons.chevron_right, size: 16, color: Color(0xFF00A86B)),
+          const Icon(Icons.chevron_right, size: 16, color: Color(0xFF1E40AF)),
           const SizedBox(width: 8),
           Text(
             '"$command"',

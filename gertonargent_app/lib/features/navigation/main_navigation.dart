@@ -46,7 +46,7 @@ class _MainNavigationState extends ConsumerState<MainNavigation> {
           });
         },
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color(0xFF00A86B),
+        selectedItemColor: const Color(0xFF1E40AF),
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(
@@ -76,7 +76,7 @@ class _MainNavigationState extends ConsumerState<MainNavigation> {
             ),
           );
         },
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -93,7 +93,7 @@ class DashboardHome extends ConsumerWidget {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         title: Row(
           children: [
@@ -141,7 +141,7 @@ class DashboardHome extends ConsumerWidget {
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xFF00A86B), Color(0xFF00D084)],
+                  colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
                 ),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(30),
@@ -203,14 +203,14 @@ class DashboardHome extends ConsumerWidget {
                                 vertical: 6,
                               ),
                               decoration: BoxDecoration(
-                                color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+                                color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(20),
                               ),
                               child: const Text(
                                 'Novembre',
                                 style: TextStyle(
                                   fontSize: 12,
-                                  color: Color(0xFF00A86B),
+                                  color: Color(0xFF1E40AF),
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -223,7 +223,7 @@ class DashboardHome extends ConsumerWidget {
                           style: TextStyle(
                             fontSize: 32,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xFF00A86B),
+                            color: Color(0xFF1E40AF),
                           ),
                         ),
                         const SizedBox(height: 4),
@@ -242,7 +242,7 @@ class DashboardHome extends ConsumerWidget {
                             minHeight: 8,
                             backgroundColor: Colors.grey[200],
                             valueColor: const AlwaysStoppedAnimation<Color>(
-                              Color(0xFF00A86B),
+                              Color(0xFF1E40AF),
                             ),
                           ),
                         ),

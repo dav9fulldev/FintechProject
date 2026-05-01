@@ -69,7 +69,7 @@ class _EditProfilePageState extends ConsumerState<EditProfilePage> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('✅ Profil mis à jour avec succès'),
-            backgroundColor: Color(0xFF00A86B),
+            backgroundColor: Color(0xFF1E40AF),
           ),
         );
         Navigator.pop(context);
@@ -95,7 +95,7 @@ class _EditProfilePageState extends ConsumerState<EditProfilePage> {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         title: const Text('Modifier mon profil',
             style: TextStyle(color: Colors.white)),
@@ -212,7 +212,7 @@ class _EditProfilePageState extends ConsumerState<EditProfilePage> {
                 child: ElevatedButton(
                   onPressed: _isLoading ? null : _saveProfile,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF00A86B),
+                    backgroundColor: const Color(0xFF1E40AF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),

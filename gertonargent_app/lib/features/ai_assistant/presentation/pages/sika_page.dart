@@ -44,7 +44,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
     return Scaffold(
       backgroundColor: const Color(0xFFF5F5F5),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
@@ -131,7 +131,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.mic, color: Color(0xFF00A86B)),
+                  const Icon(Icons.mic, color: Color(0xFF1E40AF)),
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
@@ -187,7 +187,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                   width: 36,
                   height: 36,
                   decoration: BoxDecoration(
-                    color: const Color(0xFF00A86B),
+                    color: const Color(0xFF1E40AF),
                     borderRadius: BorderRadius.circular(18),
                   ),
                   child: const Center(
@@ -200,7 +200,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                 child: Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
-                    color: isUser ? const Color(0xFF00A86B) : Colors.white,
+                    color: isUser ? const Color(0xFF1E40AF) : Colors.white,
                     borderRadius: BorderRadius.only(
                       topLeft: const Radius.circular(16),
                       topRight: const Radius.circular(16),
@@ -255,7 +255,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                     icon: const Icon(Icons.check, size: 18),
                     label: const Text('Oui, enregistrer'),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF00A86B),
+                      backgroundColor: const Color(0xFF1E40AF),
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 16,
@@ -351,7 +351,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                           }
                         },
                   icon: const Icon(Icons.send),
-                  color: const Color(0xFF00A86B),
+                  color: const Color(0xFF1E40AF),
                 ),
               ],
             ),
@@ -362,7 +362,7 @@ class _SikaPageState extends ConsumerState<SikaPage> {
             Center(
               child: AvatarGlow(
                 animate: isListening,
-                glowColor: const Color(0xFF00A86B),
+                glowColor: const Color(0xFF1E40AF),
                 glowRadiusFactor: 0.7,
                 child: GestureDetector(
                   onTapDown: (_) {
@@ -391,14 +391,14 @@ class _SikaPageState extends ConsumerState<SikaPage> {
                             ? [const Color(0xFFFF6B00), const Color(0xFFFF8C00)]
                             : isProcessing
                                 ? [Colors.grey, Colors.grey]
-                                : [const Color(0xFF00A86B), const Color(0xFF00D084)],
+                                : [const Color(0xFF1E40AF), const Color(0xFF3B82F6)],
                       ),
                       shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow(
                           color: isListening
                               ? const Color(0xFFFF6B00).withValues(alpha: 0.4)
-                              : const Color(0xFF00A86B).withValues(alpha: 0.4),
+                              : const Color(0xFF1E40AF).withValues(alpha: 0.4),
                           blurRadius: 20,
                           offset: const Offset(0, 4),
                         ),

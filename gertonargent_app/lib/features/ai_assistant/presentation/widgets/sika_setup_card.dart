@@ -56,7 +56,7 @@ class _SikaSetupCardState extends State<SikaSetupCard> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('✅ Permission microphone accordée'),
-            backgroundColor: Color(0xFF00A86B),
+            backgroundColor: Color(0xFF1E40AF),
           ),
         );
       }
@@ -109,7 +109,7 @@ class _SikaSetupCardState extends State<SikaSetupCard> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('🎤 Sika activé ! Dites "Sika" pour parler'),
-            backgroundColor: Color(0xFF00A86B),
+            backgroundColor: Color(0xFF1E40AF),
             duration: Duration(seconds: 4),
           ),
         );
@@ -165,12 +165,12 @@ class _SikaSetupCardState extends State<SikaSetupCard> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF00A86B).withOpacity(0.1),
+                    color: const Color(0xFF1E40AF).withOpacity(0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: const Icon(
                     Icons.mic,
-                    color: Color(0xFF00A86B),
+                    color: Color(0xFF1E40AF),
                     size: 28,
                   ),
                 ),
@@ -192,7 +192,7 @@ class _SikaSetupCardState extends State<SikaSetupCard> {
                         style: TextStyle(
                           fontSize: 14,
                           color: _sikaRunning
-                              ? const Color(0xFF00A86B)
+                              ? const Color(0xFF1E40AF)
                               : Colors.grey[600],
                         ),
                       ),
@@ -208,7 +208,7 @@ class _SikaSetupCardState extends State<SikaSetupCard> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: _sikaRunning
                           ? Colors.grey[700]
-                          : const Color(0xFF00A86B),
+                          : const Color(0xFF1E40AF),
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -286,14 +286,14 @@ class _SikaSetupCardState extends State<SikaSetupCard> {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF00A86B).withOpacity(0.1),
+                  color: const Color(0xFF1E40AF).withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: const Color(0xFF00A86B), width: 1),
+                  border: Border.all(color: const Color(0xFF1E40AF), width: 1),
                 ),
                 child: Row(
                   children: [
                     const Icon(Icons.check_circle,
-                        color: Color(0xFF00A86B), size: 20),
+                        color: Color(0xFF1E40AF), size: 20),
                     const SizedBox(width: 8),
                     Expanded(
                       child: Column(
@@ -304,7 +304,7 @@ class _SikaSetupCardState extends State<SikaSetupCard> {
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xFF00A86B),
+                              color: Color(0xFF1E40AF),
                             ),
                           ),
                           const SizedBox(height: 4),

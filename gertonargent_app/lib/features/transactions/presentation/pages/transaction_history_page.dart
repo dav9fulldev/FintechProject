@@ -27,7 +27,7 @@ class _TransactionHistoryPageState extends ConsumerState<TransactionHistoryPage>
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         automaticallyImplyLeading: false,
         title: const Text('Historique', style: TextStyle(color: Colors.white)),
@@ -46,7 +46,7 @@ class _TransactionHistoryPageState extends ConsumerState<TransactionHistoryPage>
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0xFF00A86B), Color(0xFF00D084)],
+                colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
               ),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30),

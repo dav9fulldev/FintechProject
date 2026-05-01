@@ -34,14 +34,14 @@ class SikaServiceToggle extends ConsumerWidget {
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   color: sikaState.isServiceRunning
-                      ? const Color(0xFF00A86B).withValues(alpha: 0.1)
+                      ? const Color(0xFF1E40AF).withValues(alpha: 0.1)
                       : Colors.grey.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(
                   Icons.mic,
                   color: sikaState.isServiceRunning
-                      ? const Color(0xFF00A86B)
+                      ? const Color(0xFF1E40AF)
                       : Colors.grey,
                   size: 28,
                 ),
@@ -74,7 +74,7 @@ class SikaServiceToggle extends ConsumerWidget {
               Switch(
                 value: sikaState.isServiceRunning,
                 onChanged: (value) => sikaNotifier.toggleService(),
-                activeColor: const Color(0xFF00A86B),
+                activeColor: const Color(0xFF1E40AF),
               ),
             ],
           ),
@@ -109,8 +109,8 @@ class SikaServiceToggle extends ConsumerWidget {
               icon: const Icon(Icons.play_arrow),
               label: const Text('Tester Sika maintenant'),
               style: OutlinedButton.styleFrom(
-                foregroundColor: const Color(0xFF00A86B),
-                side: const BorderSide(color: Color(0xFF00A86B)),
+                foregroundColor: const Color(0xFF1E40AF),
+                side: const BorderSide(color: Color(0xFF1E40AF)),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),

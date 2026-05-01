@@ -52,7 +52,7 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Transaction ajoutee avec succes !'),
-            backgroundColor: Color(0xFF00A86B),
+            backgroundColor: Color(0xFF1E40AF),
           ),
         );
       } else if (mounted) {
@@ -71,7 +71,7 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.white),
@@ -217,7 +217,7 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                   child: ElevatedButton(
                     onPressed: _isLoading ? null : _addTransaction,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF00A86B),
+                      backgroundColor: const Color(0xFF1E40AF),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12)),
                     ),

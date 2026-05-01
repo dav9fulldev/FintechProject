@@ -195,7 +195,7 @@ class _AddPurchaseDialogState extends ConsumerState<AddPurchaseDialog> {
                       ElevatedButton(
                         onPressed: _submit,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF00A86B),
+                          backgroundColor: const Color(0xFF1E40AF),
                           padding: const EdgeInsets.symmetric(
                             horizontal: 24,
                             vertical: 12,

@@ -38,7 +38,7 @@ class _AddGoalPageState extends ConsumerState<AddGoalPage> {
       if (success && mounted) {
         Navigator.pop(context);
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Objectif cree avec succes !'), backgroundColor: Color(0xFF00A86B)),
+          const SnackBar(content: Text('Objectif cree avec succes !'), backgroundColor: Color(0xFF1E40AF)),
         );
       } else if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -65,7 +65,7 @@ class _AddGoalPageState extends ConsumerState<AddGoalPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         leading: IconButton(icon: const Icon(Icons.close, color: Colors.white), onPressed: () => Navigator.pop(context)),
         title: const Text('Nouvel objectif', style: TextStyle(color: Colors.white)),
@@ -81,8 +81,8 @@ class _AddGoalPageState extends ConsumerState<AddGoalPage> {
                 Center(
                   child: Container(
                     padding: const EdgeInsets.all(24),
-                    decoration: BoxDecoration(color: const Color(0xFF00A86B).withValues(alpha: 0.1), shape: BoxShape.circle),
-                    child: const Icon(Icons.flag, size: 80, color: Color(0xFF00A86B)),
+                    decoration: BoxDecoration(color: const Color(0xFF1E40AF).withValues(alpha: 0.1), shape: BoxShape.circle),
+                    child: const Icon(Icons.flag, size: 80, color: Color(0xFF1E40AF)),
                   ),
                 ),
                 const SizedBox(height: 32),
@@ -134,7 +134,7 @@ class _AddGoalPageState extends ConsumerState<AddGoalPage> {
                     ),
                     child: Row(
                       children: [
-                        const Icon(Icons.calendar_today, color: Color(0xFF00A86B)),
+                        const Icon(Icons.calendar_today, color: Color(0xFF1E40AF)),
                         const SizedBox(width: 12),
                         Text('${_selectedDate.day}/${_selectedDate.month}/${_selectedDate.year}', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500)),
                         const Spacer(),
@@ -149,7 +149,7 @@ class _AddGoalPageState extends ConsumerState<AddGoalPage> {
                   height: 50,
                   child: ElevatedButton(
                     onPressed: _isLoading ? null : _addGoal,
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF00A86B), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF1E40AF), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
                     child: _isLoading
                         ? const CircularProgressIndicator(color: Colors.white)
                         : const Text('Creer l\'objectif', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white)),

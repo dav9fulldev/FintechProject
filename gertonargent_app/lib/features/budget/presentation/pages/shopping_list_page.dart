@@ -37,7 +37,7 @@ class _ShoppingListPageState extends ConsumerState<ShoppingListPage> {
       backgroundColor: const Color(0xFFF5F5F5),
       appBar: AppBar(
         title: const Text('Ma Liste d\'Achats'),
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh),
@@ -80,14 +80,14 @@ class _ShoppingListPageState extends ConsumerState<ShoppingListPage> {
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFF00A86B), Color(0xFF00D084)],
+          colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF00A86B).withValues(alpha: 0.3),
+            color: const Color(0xFF1E40AF).withValues(alpha: 0.3),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -175,8 +175,8 @@ class _ShoppingListPageState extends ConsumerState<ShoppingListPage> {
       onSelected: (selected) {
         setState(() => _filterStatus = value);
       },
-      selectedColor: const Color(0xFF00A86B).withValues(alpha: 0.2),
-      checkmarkColor: const Color(0xFF00A86B),
+      selectedColor: const Color(0xFF1E40AF).withValues(alpha: 0.2),
+      checkmarkColor: const Color(0xFF1E40AF),
     );
   }
 
@@ -208,7 +208,7 @@ class _ShoppingListPageState extends ConsumerState<ShoppingListPage> {
             icon: const Icon(Icons.add),
             label: const Text('Ajouter un achat'),
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF00A86B),
+              backgroundColor: const Color(0xFF1E40AF),
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             ),
           ),
@@ -245,7 +245,7 @@ class _ShoppingListPageState extends ConsumerState<ShoppingListPage> {
                 decoration: BoxDecoration(
                   color: purchase.isPurchased
                       ? Colors.grey.withValues(alpha: 0.1)
-                      : const Color(0xFF00A86B).withValues(alpha: 0.1),
+                      : const Color(0xFF1E40AF).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
@@ -305,7 +305,7 @@ class _ShoppingListPageState extends ConsumerState<ShoppingListPage> {
                       fontWeight: FontWeight.bold,
                       color: purchase.isPurchased
                           ? Colors.grey
-                          : const Color(0xFF00A86B),
+                          : const Color(0xFF1E40AF),
                     ),
                   ),
                   const SizedBox(height: 4),

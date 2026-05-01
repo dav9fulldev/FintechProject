@@ -26,7 +26,7 @@ class _GoalsListPageState extends ConsumerState<GoalsListPage> {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         title:
             const Text('Mes Objectifs', style: TextStyle(color: Colors.white)),
@@ -49,7 +49,7 @@ class _GoalsListPageState extends ConsumerState<GoalsListPage> {
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xFF00A86B), Color(0xFF00D084)]),
+                  colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)]),
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30)),
@@ -238,7 +238,7 @@ class _GoalCard extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: daysLeft < 30
                         ? Colors.red.withValues(alpha: 0.1)
-                        : const Color(0xFF00A86B).withValues(alpha: 0.1),
+                        : const Color(0xFF1E40AF).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text('$daysLeft jours',
@@ -247,7 +247,7 @@ class _GoalCard extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                           color: daysLeft < 30
                               ? Colors.red
-                              : const Color(0xFF00A86B))),
+                              : const Color(0xFF1E40AF))),
                 ),
             ],
           ),
@@ -259,7 +259,7 @@ class _GoalCard extends StatelessWidget {
                   style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF00A86B))),
+                      color: Color(0xFF1E40AF))),
               Text('${NumberFormat('#,###').format(goal.targetAmount)} FCFA',
                   style: TextStyle(fontSize: 14, color: Colors.grey[600])),
             ],
@@ -272,7 +272,7 @@ class _GoalCard extends StatelessWidget {
               minHeight: 10,
               backgroundColor: Colors.grey[200],
               valueColor: AlwaysStoppedAnimation<Color>(percentage >= 80
-                  ? const Color(0xFF00A86B)
+                  ? const Color(0xFF1E40AF)
                   : percentage >= 50
                       ? Colors.orange
                       : Colors.red),

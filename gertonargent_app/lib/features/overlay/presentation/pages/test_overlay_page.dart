@@ -58,7 +58,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
           SnackBar(
             content: Text(
                 'Overlay affiché avec montant: ${amount.toStringAsFixed(0)} FCFA'),
-            backgroundColor: const Color(0xFF00A86B),
+            backgroundColor: const Color(0xFF1E40AF),
           ),
         );
       }
@@ -87,7 +87,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Alerte générique affichée'),
-            backgroundColor: Color(0xFF00A86B),
+            backgroundColor: Color(0xFF1E40AF),
           ),
         );
       }
@@ -145,7 +145,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
     return Scaffold(
       backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         title: const Text(
           'Test Overlay Mobile Money',
@@ -173,7 +173,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: allPermissionsGranted
-                      ? [const Color(0xFF00A86B), const Color(0xFF00D084)]
+                      ? [const Color(0xFF1E40AF), const Color(0xFF3B82F6)]
                       : [Colors.orange, Colors.deepOrange],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
@@ -182,7 +182,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
                 boxShadow: [
                   BoxShadow(
                     color: (allPermissionsGranted
-                            ? const Color(0xFF00A86B)
+                            ? const Color(0xFF1E40AF)
                             : Colors.orange)
                         .withValues(alpha: 0.3),
                     blurRadius: 12,
@@ -285,7 +285,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
               decoration: InputDecoration(
                 labelText: 'Montant de test (FCFA)',
                 prefixIcon:
-                    const Icon(Icons.attach_money, color: Color(0xFF00A86B)),
+                    const Icon(Icons.attach_money, color: Color(0xFF1E40AF)),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -296,7 +296,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide:
-                      const BorderSide(color: Color(0xFF00A86B), width: 2),
+                      const BorderSide(color: Color(0xFF1E40AF), width: 2),
                 ),
               ),
             ),
@@ -309,7 +309,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
               icon: const Icon(Icons.warning_amber),
               label: const Text('Tester alerte avec montant'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF00A86B),
+                backgroundColor: const Color(0xFF1E40AF),
                 disabledBackgroundColor: Colors.grey[300],
                 foregroundColor: Colors.white,
                 disabledForegroundColor: Colors.grey[600],
@@ -482,7 +482,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+              color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
               shape: BoxShape.circle,
             ),
             child: Center(
@@ -491,7 +491,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
                 style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF00A86B),
+                  color: Color(0xFF1E40AF),
                 ),
               ),
             ),
@@ -505,7 +505,7 @@ class _TestOverlayPageState extends State<TestOverlayPage> {
               ),
             ),
           ),
-          Icon(icon, color: const Color(0xFF00A86B)),
+          Icon(icon, color: const Color(0xFF1E40AF)),
         ],
       ),
     );

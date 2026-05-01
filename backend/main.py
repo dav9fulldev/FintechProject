@@ -9,7 +9,7 @@ Ce fichier initialise FastAPI, configure la sécurité (CORS) et agrège les rou
 """
 
 # Créer toutes les tables
-# Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(bind=engine)
 
 # Initialisation de l'application FastAPI avec métadonnées pour Swagger/Redoc
 app = FastAPI(

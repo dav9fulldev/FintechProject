@@ -45,7 +45,7 @@ class _ChangePasswordPageState extends ConsumerState<ChangePasswordPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Mot de passe modifié avec succès'),
-            backgroundColor: Color(0xFF00A86B),
+            backgroundColor: Color(0xFF1E40AF),
           ),
         );
         Navigator.pop(context);
@@ -70,7 +70,7 @@ class _ChangePasswordPageState extends ConsumerState<ChangePasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xFF00A86B),
+        backgroundColor: const Color(0xFF1E40AF),
         elevation: 0,
         title: const Text(
           'Changer le mot de passe',
@@ -92,17 +92,17 @@ class _ChangePasswordPageState extends ConsumerState<ChangePasswordPage> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF00A86B).withValues(alpha: 0.1),
+                  color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: const Color(0xFF00A86B).withValues(alpha: 0.3),
+                    color: const Color(0xFF1E40AF).withValues(alpha: 0.3),
                   ),
                 ),
                 child: Row(
                   children: [
                     const Icon(
                       Icons.info_outline,
-                      color: Color(0xFF00A86B),
+                      color: Color(0xFF1E40AF),
                     ),
                     const SizedBox(width: 12),
                     Expanded(
@@ -149,7 +149,7 @@ class _ChangePasswordPageState extends ConsumerState<ChangePasswordPage> {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: const BorderSide(
-                      color: Color(0xFF00A86B),
+                      color: Color(0xFF1E40AF),
                       width: 2,
                     ),
                   ),
@@ -193,7 +193,7 @@ class _ChangePasswordPageState extends ConsumerState<ChangePasswordPage> {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: const BorderSide(
-                      color: Color(0xFF00A86B),
+                      color: Color(0xFF1E40AF),
                       width: 2,
                     ),
                   ),
@@ -243,7 +243,7 @@ class _ChangePasswordPageState extends ConsumerState<ChangePasswordPage> {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
                     borderSide: const BorderSide(
-                      color: Color(0xFF00A86B),
+                      color: Color(0xFF1E40AF),
                       width: 2,
                     ),
                   ),
@@ -267,7 +267,7 @@ class _ChangePasswordPageState extends ConsumerState<ChangePasswordPage> {
                 child: ElevatedButton(
                   onPressed: _isLoading ? null : _changePassword,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF00A86B),
+                    backgroundColor: const Color(0xFF1E40AF),
                     disabledBackgroundColor: Colors.grey[300],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
