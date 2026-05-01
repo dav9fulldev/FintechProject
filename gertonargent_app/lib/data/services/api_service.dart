@@ -284,8 +284,9 @@ class ApiService {
         'offset': offset,
       };
       if (category != null) queryParams['category'] = category;
-      if (transactionType != null)
+      if (transactionType != null) {
         queryParams['transaction_type'] = transactionType;
+      }
 
       final response = await _dio.get(
         ApiConstants.transactions,
@@ -385,8 +386,9 @@ class ApiService {
         'color': color,
       };
       if (description != null) data['description'] = description;
-      if (targetDate != null)
+      if (targetDate != null) {
         data['target_date'] = targetDate.toIso8601String();
+      }
 
       final response = await _dio.post(
         ApiConstants.goals,
@@ -416,8 +418,9 @@ class ApiService {
       if (description != null) data['description'] = description;
       if (targetAmount != null) data['target_amount'] = targetAmount;
       if (currentAmount != null) data['current_amount'] = currentAmount;
-      if (targetDate != null)
+      if (targetDate != null) {
         data['target_date'] = targetDate.toIso8601String();
+      }
       if (icon != null) data['icon'] = icon;
       if (color != null) data['color'] = color;
       if (isCompleted != null) data['is_completed'] = isCompleted;
@@ -608,8 +611,9 @@ class ApiService {
       if (amount != null) data['amount'] = amount;
       if (category != null) data['category'] = category;
       if (description != null) data['description'] = description;
-      if (plannedDate != null)
+      if (plannedDate != null) {
         data['planned_date'] = plannedDate.toIso8601String();
+      }
       if (status != null) data['status'] = status;
 
       final response = await _dio.put(

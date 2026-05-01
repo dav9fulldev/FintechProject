@@ -4,7 +4,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'sika_sync.dart';
 
 class SikaControl extends StatefulWidget {
-  const SikaControl({Key? key}) : super(key: key);
+  const SikaControl({super.key});
 
   @override
   State<SikaControl> createState() => _SikaControlState();

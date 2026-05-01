@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
-import '../theme/app_durations.dart';
 
 /// Loading shimmer pour skeleton screens
 class ShimmerLoading extends StatefulWidget {

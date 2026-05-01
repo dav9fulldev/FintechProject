@@ -144,10 +144,12 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                   style: const TextStyle(
                       fontSize: 24, fontWeight: FontWeight.bold),
                   validator: (value) {
-                    if (value == null || value.isEmpty)
+                    if (value == null || value.isEmpty) {
                       return 'Entrez un montant';
-                    if (double.tryParse(value) == null)
+                    }
+                    if (double.tryParse(value) == null) {
                       return 'Montant invalide';
+                    }
                     return null;
                   },
                 ),
@@ -160,7 +162,7 @@ class _AddTransactionPageState extends ConsumerState<AddTransactionPage> {
                 ),
                 const SizedBox(height: 12),
                 DropdownButtonFormField<BudgetCategory>(
-                  value: _category,
+                  initialValue: _category,
                   decoration: InputDecoration(
                     prefixIcon: Padding(
                       padding: const EdgeInsets.all(12),

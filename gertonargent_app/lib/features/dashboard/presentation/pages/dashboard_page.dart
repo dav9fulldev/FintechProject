@@ -477,9 +477,9 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                   ],
 
                   // === SIKA AI ===
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    child: const SikaSetupCard(),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    child: SikaSetupCard(),
                   ),
 
                   const SizedBox(height: 24),

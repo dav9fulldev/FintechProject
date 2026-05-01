@@ -60,8 +60,9 @@ class _GoalsStepState extends ConsumerState<GoalsStep> {
   Widget build(BuildContext context) {
     // prefill
     final cached = RegistrationCache.getStepAs<List>('goals');
-    if (cached != null && _selectedGoals.isEmpty)
+    if (cached != null && _selectedGoals.isEmpty) {
       _selectedGoals.addAll(cached.cast<String>());
+    }
     return Padding(
       padding: const EdgeInsets.all(24),
       child: Column(

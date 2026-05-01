@@ -9,7 +9,7 @@ import '../../core/constants/api_constants.dart';
 /// Simple UI widget that displays Sika status and listens for native commands.
 /// The actual continuous voice listening (Sika detection) is handled by SikaVoiceService.
 class SikaAssistant extends StatefulWidget {
-  const SikaAssistant({Key? key}) : super(key: key);
+  const SikaAssistant({super.key});
 
   @override
   State<SikaAssistant> createState() => _SikaAssistantState();

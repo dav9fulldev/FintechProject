@@ -49,7 +49,7 @@ class _CreateBudgetPageState extends ConsumerState<CreateBudgetPage> {
           child: Column(
             children: [
               DropdownButtonFormField<BudgetCategory>(
-                value: _selectedCategory,
+                initialValue: _selectedCategory,
                 decoration: const InputDecoration(
                   labelText: 'Catégorie',
                   border: OutlineInputBorder(),

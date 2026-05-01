@@ -60,7 +60,7 @@ class WelcomeStep extends ConsumerWidget {
           await RegistrationCache.clear();
         }
       } catch (e) {
-        throw e;
+        rethrow;
       }
 
       // Fermer le loading

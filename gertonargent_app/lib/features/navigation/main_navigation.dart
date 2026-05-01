@@ -281,9 +281,9 @@ class DashboardHome extends ConsumerWidget {
             const SizedBox(height: 24),
 
             // Carte Sika - Assistant IA
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: const SikaCompactCard(),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: SikaCompactCard(),
             ),
 
             const SizedBox(height: 80), // Espace pour le FAB

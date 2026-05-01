@@ -208,7 +208,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
 
   void initializeFromToken({String? token, UserModel? user}) {
     if (token == null || token.isEmpty) return;
-    _apiService.setToken(token!);
+    _apiService.setToken(token);
     state = state.copyWith(
       isAuthenticated: true,
       token: token,

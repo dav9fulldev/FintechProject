@@ -77,7 +77,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         ),
                       ),
                       const SizedBox(height: 24),
-                      Text(
+                      const Text(
                         'Bienvenue',
                         style: TextStyle(
                           fontSize: 32,
@@ -160,10 +160,10 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         alignment: Alignment.centerRight,
                         child: TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             'Mot de passe oublié ?',
                             style: TextStyle(
-                              color: const Color(0xFF1E40AF),
+                              color: Color(0xFF1E40AF),
                               fontWeight: FontWeight.w600,
                             ),
                           ),

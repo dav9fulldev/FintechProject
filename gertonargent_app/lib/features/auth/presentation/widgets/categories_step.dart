@@ -86,8 +86,9 @@ class _CategoriesStepState extends ConsumerState<CategoriesStep> {
   Widget build(BuildContext context) {
     // prefill
     final cached = RegistrationCache.getStepAs<List>('categories');
-    if (cached != null && _selectedCategories.isEmpty)
+    if (cached != null && _selectedCategories.isEmpty) {
       _selectedCategories.addAll(cached.cast<String>());
+    }
     return Padding(
       padding: const EdgeInsets.all(24),
       child: Column(

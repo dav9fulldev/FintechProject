@@ -187,7 +187,7 @@ class AppTheme {
     ),
 
     // Bottom sheets
-    bottomSheetTheme: BottomSheetThemeData(
+    bottomSheetTheme: const BottomSheetThemeData(
       backgroundColor: AppColors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(

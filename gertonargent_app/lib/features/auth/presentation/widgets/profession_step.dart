@@ -51,8 +51,9 @@ class _ProfessionStepState extends ConsumerState<ProfessionStep> {
   Widget build(BuildContext context) {
     // prefill
     final cached = RegistrationCache.getStepAs<String>('profession');
-    if (cached != null && _selectedProfession == null)
+    if (cached != null && _selectedProfession == null) {
       _selectedProfession = cached;
+    }
     return Padding(
       padding: const EdgeInsets.all(24),
       child: Column(

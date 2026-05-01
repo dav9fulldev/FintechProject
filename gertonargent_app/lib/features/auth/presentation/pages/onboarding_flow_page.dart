@@ -100,7 +100,7 @@ class _OnboardingFlowPageState extends ConsumerState<OnboardingFlowPage> {
                   IncomeStep(onNext: _nextPage),
                   GoalsStep(onNext: _nextPage),
                   CategoriesStep(onNext: _nextPage),
-                  WelcomeStep(),
+                  const WelcomeStep(),
                 ],
               ),
             ),

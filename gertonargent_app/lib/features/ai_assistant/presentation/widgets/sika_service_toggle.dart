@@ -74,7 +74,7 @@ class SikaServiceToggle extends ConsumerWidget {
               Switch(
                 value: sikaState.isServiceRunning,
                 onChanged: (value) => sikaNotifier.toggleService(),
-                activeColor: const Color(0xFF1E40AF),
+                activeThumbColor: const Color(0xFF1E40AF),
               ),
             ],
           ),

@@ -112,7 +112,7 @@ class _AddPurchaseDialogState extends ConsumerState<AddPurchaseDialog> {
 
                   // Catégorie
                   DropdownButtonFormField<String>(
-                    value: _selectedCategory,
+                    initialValue: _selectedCategory,
                     decoration: InputDecoration(
                       labelText: 'Catégorie',
                       prefixIcon: const Icon(Icons.category),
