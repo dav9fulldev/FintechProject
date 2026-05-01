@@ -14,6 +14,7 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
+  bool _isPasswordVisible = false;
 
   @override
   void dispose() {
@@ -25,22 +26,20 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   void _login() async {
     if (_formKey.currentState!.validate()) {
       await ref.read(authProvider.notifier).login(
-            email: _emailController.text,
+            email: _emailController.text.trim(),
             password: _passwordController.text,
           );
-
-      if (mounted) {
-        final authState = ref.read(authProvider);
-        if (authState.isAuthenticated) {
-          Navigator.pushReplacementNamed(context, '/dashboard');
-        }
-      }
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final authState = ref.watch(authProvider);
+    ref.listen(authProvider, (previous, next) {
+      if (previous?.isAuthenticated != true && next.isAuthenticated) {
+        Navigator.pushReplacementNamed(context, '/dashboard');
+      }
+    });
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -126,13 +125,23 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         decoration: InputDecoration(
                           labelText: 'Mot de passe',
                           prefixIcon: const Icon(Icons.lock_outline),
+                          suffixIcon: IconButton(
+                            icon: Icon(
+                              _isPasswordVisible ? Icons.visibility_off : Icons.visibility,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                _isPasswordVisible = !_isPasswordVisible;
+                              });
+                            },
+                          ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
                           filled: true,
                           fillColor: Colors.grey[50],
                         ),
-                        obscureText: true,
+                        obscureText: !_isPasswordVisible,
                         validator: (value) {
                           if (value == null || value.isEmpty) {
                             return 'Entrez votre mot de passe';
@@ -222,6 +231,52 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                             ),
                           ),
                         ],
+                      ),
+                      const SizedBox(height: 32),
+                      Row(
+                        children: [
+                          Expanded(child: Divider(color: Colors.grey[300])),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 16),
+                            child: Text(
+                              'OU',
+                              style: TextStyle(
+                                color: Colors.grey[600],
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                          Expanded(child: Divider(color: Colors.grey[300])),
+                        ],
+                      ),
+                      const SizedBox(height: 32),
+                      SizedBox(
+                        width: double.infinity,
+                        height: 50,
+                        child: OutlinedButton.icon(
+                          onPressed: authState.isLoading
+                              ? null
+                              : () async {
+                                  await ref.read(authProvider.notifier).signInWithGoogle();
+                                },
+                          icon: Image.asset(
+                            'assets/images/google_logo.png',
+                            height: 24,
+                            width: 24,
+                            errorBuilder: (context, error, stackTrace) => const Icon(Icons.g_mobiledata, size: 24),
+                          ),
+                          label: const Text(
+                            'Continuer avec Google',
+                            style: TextStyle(color: Colors.black87),
+                          ),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: Colors.grey),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            backgroundColor: Colors.white,
+                          ),
+                        ),
                       ),
                     ],
                   ),

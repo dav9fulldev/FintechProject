@@ -42,6 +42,7 @@ dependencies:
   # Utilitaires
   intl: ^0.18.1
   uuid: ^4.3.3
+  google_sign_in: ^7.2.0
 
 dev_dependencies:
   flutter_test:
@@ -55,4 +56,4 @@ flutter:
   
   assets:
     - assets/images/
-    - assets/animations/
+    
