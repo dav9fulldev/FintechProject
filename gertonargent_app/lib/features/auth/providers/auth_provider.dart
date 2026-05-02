@@ -1,8 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../data/services/api_service.dart';
 import '../../../data/services/google_auth_service.dart';
 import '../../../data/models/user_model.dart';
-
 
 final googleAuthServiceProvider = Provider((ref) => GoogleAuthService());
 
@@ -76,6 +76,15 @@ class AuthNotifier extends StateNotifier<AuthState> {
         _apiService.setUserId(user.id);
       }
 
+      // Charger la photo de profil locale
+      if (user != null) {
+        final prefs = await SharedPreferences.getInstance();
+        final localPic = prefs.getString('profile_pic_${user.id}');
+        if (localPic != null) {
+          user = user.copyWith(profilePicture: localPic);
+        }
+      }
+
       state = state.copyWith(
         isAuthenticated: true,
         token: token,
@@ -123,6 +132,15 @@ class AuthNotifier extends StateNotifier<AuthState> {
       _apiService.setToken(token);
       if (user != null) {
         _apiService.setUserId(user.id);
+      }
+
+      // Charger la photo de profil locale
+      if (user != null) {
+        final prefs = await SharedPreferences.getInstance();
+        final localPic = prefs.getString('profile_pic_${user.id}');
+        if (localPic != null) {
+          user = user.copyWith(profilePicture: localPic);
+        }
       }
 
       state = state.copyWith(
@@ -196,6 +214,15 @@ class AuthNotifier extends StateNotifier<AuthState> {
       
       print('✅ Authentification réussie!');
 
+      // Charger la photo de profil locale
+      if (user != null) {
+        final prefs = await SharedPreferences.getInstance();
+        final localPic = prefs.getString('profile_pic_${user.id}');
+        if (localPic != null) {
+          user = user.copyWith(profilePicture: localPic);
+        }
+      }
+
       state = state.copyWith(
         isAuthenticated: true,
         token: token,
@@ -215,12 +242,27 @@ class AuthNotifier extends StateNotifier<AuthState> {
   void initializeFromToken({String? token, UserModel? user}) {
     if (token == null || token.isEmpty) return;
     _apiService.setToken(token);
+    
+    // Charger la photo de profil locale asynchronement si possible
+    // Note: initializeFromToken est synchrone, donc on peut faire un refreshUser après ou gérer ici
     state = state.copyWith(
       isAuthenticated: true,
       token: token,
       user: user ?? state.user,
       error: null,
     );
+    
+    // Charger la photo de profil locale
+    if (state.user != null) {
+      SharedPreferences.getInstance().then((prefs) {
+        final localPic = prefs.getString('profile_pic_${state.user!.id}');
+        if (localPic != null) {
+          state = state.copyWith(
+            user: state.user!.copyWith(profilePicture: localPic),
+          );
+        }
+      });
+    }
   }
 
   void clearError() {
@@ -230,7 +272,14 @@ class AuthNotifier extends StateNotifier<AuthState> {
   Future<void> refreshUser() async {
     try {
       final userResponse = await _apiService.getMe();
-      final user = UserModel.fromJson(userResponse);
+      var user = UserModel.fromJson(userResponse);
+
+      // Charger la photo de profil locale
+      final prefs = await SharedPreferences.getInstance();
+      final localPic = prefs.getString('profile_pic_${user.id}');
+      if (localPic != null) {
+        user = user.copyWith(profilePicture: localPic);
+      }
 
       state = state.copyWith(user: user);
     } catch (e) {
@@ -238,11 +287,14 @@ class AuthNotifier extends StateNotifier<AuthState> {
     }
   }
 
-  void updateProfilePicture(String path) {
+  Future<void> updateProfilePicture(String path) async {
     if (state.user != null) {
       state = state.copyWith(
         user: state.user!.copyWith(profilePicture: path),
       );
+      
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('profile_pic_${state.user!.id}', path);
     }
   }
 
