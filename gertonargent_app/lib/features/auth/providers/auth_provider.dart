@@ -121,6 +121,9 @@ class AuthNotifier extends StateNotifier<AuthState> {
       }
 
       _apiService.setToken(token);
+      if (user != null) {
+        _apiService.setUserId(user.id);
+      }
 
       state = state.copyWith(
         isAuthenticated: true,
@@ -187,6 +190,9 @@ class AuthNotifier extends StateNotifier<AuthState> {
       }
 
       _apiService.setToken(token);
+      if (user != null) {
+        _apiService.setUserId(user.id);
+      }
       
       print('✅ Authentification réussie!');
 
@@ -229,6 +235,14 @@ class AuthNotifier extends StateNotifier<AuthState> {
       state = state.copyWith(user: user);
     } catch (e) {
       // Ignorer les erreurs de rafraîchissement
+    }
+  }
+
+  void updateProfilePicture(String path) {
+    if (state.user != null) {
+      state = state.copyWith(
+        user: state.user!.copyWith(profilePicture: path),
+      );
     }
   }
 

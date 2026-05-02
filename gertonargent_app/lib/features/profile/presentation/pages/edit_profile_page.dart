@@ -25,8 +25,8 @@ class _EditProfilePageState extends ConsumerState<EditProfilePage> {
     _firstNameController.text = user?.firstName ?? '';
 
     // Extraire le numéro et l'indicatif si le téléphone existe
-    if (user?.phone != null && user!.phone.isNotEmpty) {
-      final phone = user.phone;
+    final phone = user?.phone;
+    if (phone != null && phone.isNotEmpty) {
       // Trouver le pays correspondant à l'indicatif
       for (var country in CountryCodes.all) {
         if (phone.startsWith(country.dialCode)) {

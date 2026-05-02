@@ -171,8 +171,8 @@ def register(user: UserCreate, db: Session = Depends(get_db)):
                 current_amount=0.0,
                 target_date=current_date + relativedelta(months=12),
                 description=f"Objectif: {goal_name}",
-                icon="flag",
-                color="#00A86B"
+                icon="target",
+                color="#1E40AF"
             )
             db.add(goal)
     

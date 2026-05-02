@@ -3,9 +3,10 @@ class UserModel {
   final String? firstName;
   final String email;
   final String username;
-  final String phone;
+  final String? phone;
   final bool isActive;
   final DateTime createdAt;
+  final String? profilePicture;
 
   UserModel({
     required this.id,
@@ -15,6 +16,7 @@ class UserModel {
     required this.phone,
     required this.isActive,
     required this.createdAt,
+    this.profilePicture,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
@@ -26,6 +28,7 @@ class UserModel {
       phone: json['phone'] ?? '',
       isActive: json['is_active'] ?? true,
       createdAt: DateTime.parse(json['created_at']),
+      profilePicture: json['profile_picture'],
     );
   }
 
@@ -38,6 +41,7 @@ class UserModel {
       'phone': phone,
       'is_active': isActive,
       'created_at': createdAt.toIso8601String(),
+      'profile_picture': profilePicture,
     };
   }
 
@@ -49,6 +53,7 @@ class UserModel {
     String? phone,
     bool? isActive,
     DateTime? createdAt,
+    String? profilePicture,
   }) {
     return UserModel(
       id: id ?? this.id,
@@ -58,6 +63,7 @@ class UserModel {
       phone: phone ?? this.phone,
       isActive: isActive ?? this.isActive,
       createdAt: createdAt ?? this.createdAt,
+      profilePicture: profilePicture ?? this.profilePicture,
     );
   }
 }

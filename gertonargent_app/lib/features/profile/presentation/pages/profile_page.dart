@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'dart:io';
 import '../../../auth/providers/auth_provider.dart';
 import '../../../overlay/presentation/pages/permissions_page.dart';
-import '../../../overlay/presentation/pages/test_overlay_page.dart';
-import '../../../ai_assistant/pages/test_sika_page.dart';
 import 'edit_profile_page.dart';
 import 'change_password_page.dart';
+import 'faq_page.dart';
 
 class ProfilePage extends ConsumerWidget {
   const ProfilePage({super.key});
@@ -59,33 +61,64 @@ class ProfilePage extends ConsumerWidget {
               padding: const EdgeInsets.all(24),
               child: Column(
                 children: [
-                  // Avatar
-                  Container(
-                    padding: const EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      shape: BoxShape.circle,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withValues(alpha: 0.1),
-                          blurRadius: 10,
-                          offset: const Offset(0, 4),
+                  // Avatar avec bouton d'édition
+                  Stack(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withValues(alpha: 0.1),
+                              blurRadius: 10,
+                              offset: const Offset(0, 4),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: CircleAvatar(
-                      radius: 50,
-                      backgroundColor:
-                          const Color(0xFF1E40AF).withValues(alpha: 0.2),
-                      child: Text(
-                        user?.firstName?.substring(0, 1).toUpperCase() ?? 'U',
-                        style: const TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF1E40AF),
+                        child: CircleAvatar(
+                          radius: 50,
+                          backgroundColor:
+                              const Color(0xFF1E40AF).withValues(alpha: 0.2),
+                          backgroundImage: user?.profilePicture != null
+                              ? FileImage(File(user!.profilePicture!))
+                              : null,
+                          child: user?.profilePicture == null
+                              ? Text(
+                                  user?.firstName
+                                          ?.substring(0, 1)
+                                          .toUpperCase() ??
+                                      'U',
+                                  style: const TextStyle(
+                                    fontSize: 40,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF1E40AF),
+                                  ),
+                                )
+                              : null,
                         ),
                       ),
-                    ),
+                      Positioned(
+                        bottom: 0,
+                        right: 0,
+                        child: GestureDetector(
+                          onTap: () => _pickImage(context, ref),
+                          child: Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: const BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              Icons.camera_alt,
+                              color: Color(0xFF1E40AF),
+                              size: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 16),
                   Text(
@@ -181,41 +214,33 @@ class ProfilePage extends ConsumerWidget {
                         const Divider(height: 1),
                         _buildActionTile(
                           icon: Icons.help_outline,
-                          title: 'Aide et support',
+                          title: 'Demander de l\'aide',
                           onTap: () {
-                            // TODO: Implémenter aide
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content:
-                                    Text('Fonctionnalité bientôt disponible'),
-                              ),
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const FAQPage()),
                             );
                           },
                         ),
                         const Divider(height: 1),
                         _buildActionTile(
-                          icon: Icons.bug_report_outlined,
-                          title: 'Tester la détection Mobile Money',
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const TestOverlayPage(),
-                              ),
+                          icon: Icons.support_agent_outlined,
+                          title: 'Contacter le support',
+                          onTap: () async {
+                            final Uri emailLaunchUri = Uri(
+                              scheme: 'mailto',
+                              path: 'support@gertonargent.ci',
+                              queryParameters: {
+                                'subject': 'Demande de support - GèrTonArgent'
+                              },
                             );
-                          },
-                        ),
-                        const Divider(height: 1),
-                        _buildActionTile(
-                          icon: Icons.mic_outlined,
-                          title: 'Tester l\'assistant vocal Sika',
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const TestSikaPage(),
-                              ),
-                            );
+                            if (await canLaunchUrl(emailLaunchUri)) {
+                              await launchUrl(emailLaunchUri);
+                            } else {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Impossible d\'ouvrir l\'email')),
+                              );
+                            }
                           },
                         ),
                       ],
@@ -276,6 +301,15 @@ class ProfilePage extends ConsumerWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _pickImage(BuildContext context, WidgetRef ref) async {
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+
+    if (image != null) {
+      ref.read(authProvider.notifier).updateProfilePicture(image.path);
+    }
   }
 
   Widget _buildProfileTile({

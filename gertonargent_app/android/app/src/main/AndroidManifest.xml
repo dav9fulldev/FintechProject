@@ -13,8 +13,16 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 
-    <!-- Queries pour speech_to_text -->
+    <!-- Queries pour url_launcher et speech_to_text -->
     <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="mailto" />
+        </intent>
         <intent>
             <action android:name="android.speech.RecognitionService" />
         </intent>
@@ -74,9 +82,23 @@
             android:foregroundServiceType="microphone">
         </service>
 
+        <service
+            android:name=".SikaWakeWordServiceV2"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="microphone">
+        </service>
+
         <!-- SIKA : Overlay Service pour assistant vocal -->
         <service
             android:name=".SikaOverlayService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+        </service>
+
+        <service
+            android:name=".SikaOverlayServiceV2"
             android:enabled="true"
             android:exported="false"
             android:foregroundServiceType="specialUse">

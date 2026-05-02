@@ -143,9 +143,9 @@ class GoalSummary {
       totalGoals: json['total_goals'] ?? 0,
       completed: json['completed'] ?? 0,
       inProgress: json['in_progress'] ?? 0,
-      totalTargetAmount: (json['total_target_amount'] as num).toDouble(),
-      totalSavedAmount: (json['total_saved_amount'] as num).toDouble(),
-      overallProgress: (json['overall_progress'] as num).toDouble(),
+      totalTargetAmount: (json['total_target_amount'] as num?)?.toDouble() ?? 0.0,
+      totalSavedAmount: (json['total_saved_amount'] as num?)?.toDouble() ?? 0.0,
+      overallProgress: (json['overall_progress'] as num?)?.toDouble() ?? 0.0,
     );
   }
 }

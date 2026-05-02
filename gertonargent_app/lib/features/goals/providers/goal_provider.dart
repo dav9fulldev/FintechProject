@@ -64,11 +64,17 @@ class GoalNotifier extends StateNotifier<GoalState> {
     state = state.copyWith(isLoading: true, error: null);
 
     try {
+      print('🚀 Début du chargement des objectifs...');
       final response = await _apiService.getGoals();
+      print('✅ Objectifs reçus: ${response.length} items');
+      
       final goals = response.map((json) => GoalModel.fromJson(json)).toList();
 
       // Charger le résumé
+      print('🚀 Chargement du résumé des objectifs...');
       final summaryResponse = await _apiService.getGoalsSummary();
+      print('✅ Résumé reçu: $summaryResponse');
+      
       final summary = GoalSummary.fromJson(summaryResponse);
 
       state = state.copyWith(
@@ -76,7 +82,9 @@ class GoalNotifier extends StateNotifier<GoalState> {
         summary: summary,
         isLoading: false,
       );
-    } catch (e) {
+    } catch (e, stack) {
+      print('❌ Erreur chargement objectifs: $e');
+      print(stack);
       state = state.copyWith(
         isLoading: false,
         error: e.toString(),

@@ -14,7 +14,9 @@ import '../../../budget/presentation/pages/budget_list_page.dart';
 import '../../../transactions/presentation/pages/add_transaction_page.dart';
 import '../../../transactions/presentation/pages/transaction_history_page.dart';
 import '../../../goals/presentation/pages/goals_list_page.dart';
-import '../../../ai_assistant/presentation/widgets/sika_setup_card.dart';
+import '../../../ai_assistant/presentation/pages/sika_page.dart';
+import '../../../profile/presentation/pages/profile_page.dart';
+
 
 class DashboardPage extends ConsumerStatefulWidget {
   const DashboardPage({super.key});
@@ -82,7 +84,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
           slivers: [
             // === HEADER SLIVER ===
             SliverAppBar(
-              expandedHeight: 220,
+              expandedHeight: 210,
               floating: false,
               pinned: true,
               backgroundColor: AppColors.primary,
@@ -95,8 +97,10 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    ref.read(authProvider.notifier).logout();
-                    Navigator.pushReplacementNamed(context, '/login');
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const ProfilePage()),
+                    );
                   },
                   child: Container(
                     margin: const EdgeInsets.only(right: 16),
@@ -127,10 +131,14 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                       end: Alignment.bottomRight,
                       colors: [Color(0xFF1E40AF), Color(0xFF3B82F6)],
                     ),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(50),
+                      bottomRight: Radius.circular(50),
+                    ),
                   ),
                   child: SafeArea(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(20, 16, 20, 20),
+                      padding: const EdgeInsets.fromLTRB(20, 8, 20, 12),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -161,7 +169,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                               ),
                             ],
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: 12),
                           // Greeting
                           Text(
                             '${_getGreeting()}, $firstName 👋',
@@ -173,7 +181,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                           ),
                           const SizedBox(height: 4),
                           Text(
-                            'Voici votre tableau de bord · ${_getCurrentMonth()}',
+                            'Voici votre tableau de bord',
                             style: TextStyle(
                               color: Colors.white.withValues(alpha: 0.75),
                               fontSize: 13,
@@ -199,7 +207,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                       child: Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(28),
                           boxShadow: [
                             BoxShadow(
                               color: const Color(0xFF1E40AF).withValues(alpha: 0.12),
@@ -217,27 +225,12 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      const Text(
-                                        'Budget du mois',
-                                        style: TextStyle(
+                                      Text(
+                                        'Budget de ${_getCurrentMonth()}',
+                                        style: const TextStyle(
                                           fontSize: 14,
                                           color: Color(0xFF6B7280),
                                           fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFF1E40AF).withValues(alpha: 0.1),
-                                          borderRadius: BorderRadius.circular(20),
-                                        ),
-                                        child: Text(
-                                          _getCurrentMonth(),
-                                          style: const TextStyle(
-                                            color: Color(0xFF1E40AF),
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                          ),
                                         ),
                                       ),
                                     ],
@@ -326,16 +319,6 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                         Row(
                           children: [
                             _QuickAction(
-                              icon: Icons.add_circle_rounded,
-                              label: 'Dépense',
-                              color: const Color(0xFF1E40AF),
-                              onTap: () async {
-                                await context.pushSlideFade(const AddTransactionPage());
-                                _loadData();
-                              },
-                            ),
-                            const SizedBox(width: 12),
-                            _QuickAction(
                               icon: Icons.account_balance_wallet_rounded,
                               label: 'Budgets',
                               color: const Color(0xFF059669),
@@ -343,18 +326,12 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                             ),
                             const SizedBox(width: 12),
                             _QuickAction(
-                              icon: Icons.flag_rounded,
-                              label: 'Objectifs',
-                              color: const Color(0xFFF59E0B),
-                              onTap: () => context.pushSlideFade(const GoalsListPage()),
+                              icon: Icons.smart_toy_rounded,
+                              label: 'Sika AI',
+                              color: const Color(0xFF1E40AF),
+                              onTap: () => context.pushSlideFade(SikaPage()),
                             ),
-                            const SizedBox(width: 12),
-                            _QuickAction(
-                              icon: Icons.history_rounded,
-                              label: 'Historique',
-                              color: const Color(0xFF7C3AED),
-                              onTap: () => context.pushSlideFade(const TransactionHistoryPage()),
-                            ),
+
                           ],
                         ),
                       ],
@@ -418,7 +395,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                                 end: Alignment.bottomRight,
                                 colors: [color, color.withValues(alpha: 0.7)],
                               ),
-                              borderRadius: BorderRadius.circular(20),
+                              borderRadius: BorderRadius.circular(28),
                               boxShadow: [
                                 BoxShadow(
                                   color: color.withValues(alpha: 0.3),
@@ -476,13 +453,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                     const SizedBox(height: 24),
                   ],
 
-                  // === SIKA AI ===
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    child: SikaSetupCard(),
-                  ),
 
-                  const SizedBox(height: 24),
 
                   // === TRANSACTIONS RECENTES ===
                   if (transactionState.recentTransactions.isNotEmpty) ...[
@@ -583,7 +554,7 @@ class _DashboardPageState extends ConsumerState<DashboardPage> {
                         padding: const EdgeInsets.all(24),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(28),
                         ),
                         child: Column(
                           children: [
@@ -653,7 +624,7 @@ class _QuickAction extends StatelessWidget {
               height: 60,
               decoration: BoxDecoration(
                 color: color.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(24),
               ),
               child: Icon(icon, color: color, size: 28),
             ),

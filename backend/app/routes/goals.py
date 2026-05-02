@@ -15,8 +15,8 @@ class GoalCreate(BaseModel):
     description: Optional[str] = None
     target_amount: float
     target_date: Optional[datetime] = None
-    icon: str = "flag"
-    color: str = "#00A86B"
+    icon: str = "target"
+    color: str = "#1E40AF"
 
 
 class GoalUpdate(BaseModel):

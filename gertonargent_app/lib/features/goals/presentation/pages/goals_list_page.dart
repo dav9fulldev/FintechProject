@@ -114,36 +114,73 @@ class _GoalsListPageState extends ConsumerState<GoalsListPage> {
           Expanded(
             child: goalState.isLoading
                 ? const Center(child: CircularProgressIndicator())
-                : goalState.activeGoals.isEmpty
+                : goalState.error != null
                     ? Center(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.flag_outlined,
-                                size: 80, color: Colors.grey[400]),
-                            const SizedBox(height: 16),
-                            Text('Aucun objectif',
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Icon(Icons.error_outline,
+                                  color: Colors.red, size: 60),
+                              const SizedBox(height: 16),
+                              Text(
+                                'Erreur de chargement',
                                 style: TextStyle(
-                                    fontSize: 18, color: Colors.grey[600])),
-                            const SizedBox(height: 8),
-                            Text('Creez votre premier objectif',
-                                style: TextStyle(
-                                    fontSize: 14, color: Colors.grey[500])),
-                          ],
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey[800]),
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                goalState.error!,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(color: Colors.grey[600]),
+                              ),
+                              const SizedBox(height: 24),
+                              ElevatedButton(
+                                onPressed: () => ref
+                                    .read(goalProvider.notifier)
+                                    .loadGoals(),
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: const Color(0xFF1E40AF),
+                                ),
+                                child: const Text('Réessayer'),
+                              ),
+                            ],
+                          ),
                         ),
                       )
-                    : RefreshIndicator(
-                        onRefresh: () =>
-                            ref.read(goalProvider.notifier).loadGoals(),
-                        child: ListView.builder(
-                          padding: const EdgeInsets.all(16),
-                          itemCount: goalState.activeGoals.length,
-                          itemBuilder: (context, index) {
-                            final goal = goalState.activeGoals[index];
-                            return _GoalCard(goal: goal);
-                          },
-                        ),
-                      ),
+                    : goalState.activeGoals.isEmpty
+                        ? Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.flag_outlined,
+                                    size: 80, color: Colors.grey[400]),
+                                const SizedBox(height: 16),
+                                Text('Aucun objectif',
+                                    style: TextStyle(
+                                        fontSize: 18, color: Colors.grey[600])),
+                                const SizedBox(height: 8),
+                                Text('Creez votre premier objectif',
+                                    style: TextStyle(
+                                        fontSize: 14, color: Colors.grey[500])),
+                              ],
+                            ),
+                          )
+                        : RefreshIndicator(
+                            onRefresh: () =>
+                                ref.read(goalProvider.notifier).loadGoals(),
+                            child: ListView.builder(
+                              padding: const EdgeInsets.all(16),
+                              itemCount: goalState.activeGoals.length,
+                              itemBuilder: (context, index) {
+                                final goal = goalState.activeGoals[index];
+                                return _GoalCard(goal: goal);
+                              },
+                            ),
+                          ),
           ),
         ],
       ),
